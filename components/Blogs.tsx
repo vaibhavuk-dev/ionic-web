@@ -22,14 +22,14 @@ export default function Blogs() {
   ];
 
   return (
-    <div id="blogs" className="p-10 bg-bgLogoBlue relative">
-      <h1 className="font-bold text-logoBlue text-4xl">Blogs</h1>
+    <div id="blogs" className="p-10 bg-blueb-50 relative">
+      <h1 className="font-bold text-blueb-700 text-4xl">Blogs</h1>
 
       <div className="grid grid-cols-4 cursor-pointer">
         {blogs.map((blog) => (
           <div className="pt-5 pe-10">
             <img src="/machine.jpg" alt="" />
-            <p className="pt-5 font-semibold text-lg text-logoBlue">{blog.title}</p>
+            <p className="pt-5 font-semibold text-lg text-blueb-700">{blog.title}</p>
             <p className="pt-2 truncate">{blog.desc}</p>
           </div>
         ))}

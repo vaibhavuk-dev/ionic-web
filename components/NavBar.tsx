@@ -83,7 +83,7 @@ export default function NavBar() {
         </div>
 
         <Link href="/brochure">
-          <button className="px-4 py-2 text-white rounded bg-logoBlue border-white hover:bg-opacity-70 text-lg"
+          <button className="px-4 py-2 text-white rounded bg-blueb-700 border-white hover:bg-opacity-70 text-lg"
             onMouseEnter={() => setIsMenuOpen("")}>
             Get Brochure
           </button>

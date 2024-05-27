@@ -15,7 +15,7 @@ export default function Products2Page() {
 
             <NavBar />
 
-            <div className="relative bg-logoBlue">
+            <div className="relative bg-blueb-700">
                 <video
                     className="w-screen h-[100vh] object-cover opacity-30"
                     src="/bg_video.mp4"

@@ -70,7 +70,7 @@ export default function ExpertReviews({ data }: { data: DataType }) {
                                 <p className="absolute -bottom-3 left-2 bg-white py-1 px-2 rounded-lg text-xs">Blog</p>
                             </div>
                             <div className="flex flex-col w-full pt-2 pb-3 px-4">
-                                <h3 className="font-semibold text-logoBlue text-xl">
+                                <h3 className="font-semibold text-blueb-700 text-xl">
                                     {post.post_title}
                                 </h3>
                                 <p className="mt-2 font-light text-base">The desalination plant Fluence provided via a BOOT contract supplies fresh water for a resort complex.</p>

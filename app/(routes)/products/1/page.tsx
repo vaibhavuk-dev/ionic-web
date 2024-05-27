@@ -15,7 +15,7 @@ export default function Products1Page() {
 
             <NavBar />
 
-            <div className="relative bg-logoBlue">
+            <div className="relative bg-blueb-700">
                 <img src='/waterharvester.png' alt="" className="w-screen h-[100vh] object-cover opacity-30" />
                 <div className="absolute w-full top-[45%] text-white flex flex-col items-center justify-center ">
                     <h1 className="text-center w-fit font-semibold text-7xl text-white">Quick Cycle Demineralization</h1>

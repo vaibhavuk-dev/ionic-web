@@ -17,7 +17,7 @@ export default function Home(props) {
           loop
         />
 
-        <div className="fixed inset-0 flex items-center justify-center bg-logoBlue bg-opacity-50">
+        <div className="fixed inset-0 flex items-center justify-center bg-blueb-700 bg-opacity-50">
           <h1 className="text-center font-bold text-white text-6xl">
             We Treat Water - Differently
           </h1>

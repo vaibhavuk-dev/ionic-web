@@ -48,14 +48,14 @@ const ProductSection = () => {
 
   return (
     <div id='products' className='p-10 bg-white relative'>
-      <h1 className='font-bold text-logoBlue text-4xl'>Our Products</h1>
+      <h1 className='font-bold text-blueb-700 text-4xl'>Our Products</h1>
       <div className="flex pt-5">
         {/* Categories on the left side */}
         <div className="w-1/4 items-center justify-center">
           {categories.map((category) => (
             <div
               key={category.id}
-              className={`py-4 cursor-pointer ${selectedCategory.id === category.id ? 'bg-logoBlue bg-opacity-20 rounded-lg mr-4 text-logoBlue font-bold' : 'text-textcolor'
+              className={`py-4 cursor-pointer ${selectedCategory.id === category.id ? 'bg-blueb-700 bg-opacity-20 rounded-lg mr-4 text-blueb-700 font-bold' : 'text-textcolor'
                 }`}
               onMouseEnter={() => handleCategoryHover(category.id)}
             >

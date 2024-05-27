@@ -17,11 +17,11 @@ export default function Brochure() {
   };
 
   return (
-    <div id="blogs" className="flex flex-col bg-bgLogoBlue relative">
+    <div id="blogs" className="flex flex-col bg-blueb-50 relative">
       <NavBar />
 
       <div className="p-10">
-        <h1 className="pt-20 font-bold text-logoBlue text-4xl">Brochures</h1>
+        <h1 className="pt-20 font-bold text-blueb-700 text-4xl">Brochures</h1>
 
         <div
           onClick={openPopup}

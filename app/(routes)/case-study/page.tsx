@@ -11,7 +11,7 @@ export default function CaseStudyPage() {
         <div>
             <NavBarWhite />
 
-            <div className="bg-bgLogoBlue mt-20 py-10 px-32 ">
+            <div className="bg-blueb-50 mt-20 py-10 px-32 ">
                 <h1 className="text-5xl font-semibold text-black">Case Studies</h1>
                 <p className="text-xl font-light mt-2">Explore our recent water, wastewater, and reuse projects from across the globe.</p>
             </div>

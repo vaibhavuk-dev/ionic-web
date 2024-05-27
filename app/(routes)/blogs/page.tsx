@@ -10,7 +10,7 @@ export default function BlogsPage() {
         <div>
             <NavBarWhite />
 
-            <div className="bg-bgLogoBlue mt-20 py-10 px-32 ">
+            <div className="bg-blueb-50 mt-20 py-10 px-32 ">
                 <h1 className="text-5xl font-semibold text-black">Blogs</h1>
                 <p className="text-xl font-light mt-2">News on the world's most precious resource, including the latest in research, trends, and treatment advances.</p>
             </div>
