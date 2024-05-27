@@ -3,6 +3,8 @@
 import Link from "next/link";
 import React from "react";
 import { useState, useEffect } from "react";
+import BlogsCarousal from "./BlogsCarousal";
+import BlogsCarousalNavBar from "./BlogsCarousalNavBar";
 
 export default function NavBar() {
 
@@ -12,7 +14,7 @@ export default function NavBar() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      const threshold1 = 100;
+      const threshold1 = 10;
       setIsScrolled(scrollY > threshold1);
     }
 
@@ -92,25 +94,27 @@ export default function NavBar() {
       {
         isMenuOpen === "Products" && <div className="flex bg-white py-10 px-32 transition-all duration-300 ease-in-out" onMouseEnter={() => setIsMenuOpen("Products")} onMouseLeave={() => setIsMenuOpen("")}>
           <div className="w-[40%] text-xl flex flex-col gap-3">
-            <p className="group w-fit hover:font-bold cursor-pointer">
+            <p className="group w-fit hover:font-bold cursor-pointer"
+              onMouseEnter={() => setSelectedCategory("")}>
               Category 1
             </p>
-            <p className="group w-fit hover:font-bold cursor-pointer">
+            <p className="group w-fit hover:font-bold cursor-pointer"
+              onMouseEnter={() => setSelectedCategory("")}>
               Category 2
             </p>
             <p className="group w-fit hover:font-bold cursor-pointer"
               onMouseEnter={() => setSelectedCategory("Category3")}
-              onMouseLeave={() => setSelectedCategory("")}>
+            >
             Category 3 >
             </p>
             <p className="group w-fit hover:font-bold cursor-pointer"
               onMouseEnter={() => setSelectedCategory("Category4")}
-              onMouseLeave={() => setSelectedCategory("")}>
+            >
             Category 4 >
             </p>
             <p className="group w-fit hover:font-bold cursor-pointer"
               onMouseEnter={() => setSelectedCategory("Category5")}
-              onMouseLeave={() => setSelectedCategory("")}>
+            >
             Category 5 >
             </p>
           </div>
@@ -165,17 +169,17 @@ export default function NavBar() {
             </p>
             <p className="group w-fit hover:font-bold cursor-pointer"
               onMouseEnter={() => setSelectedCategory("Application3")}
-              onMouseLeave={() => setSelectedCategory("")}>
+            >
             Application 3 >
             </p>
             <p className="group w-fit hover:font-bold cursor-pointer"
               onMouseEnter={() => setSelectedCategory("Application4")}
-              onMouseLeave={() => setSelectedCategory("")}>
+            >
             Application 4 >
             </p>
             <p className="group w-fit hover:font-bold cursor-pointer"
               onMouseEnter={() => setSelectedCategory("Application5")}
-              onMouseLeave={() => setSelectedCategory("")}>
+            >
             Application 5 >
             </p>
           </div>
@@ -222,10 +226,14 @@ export default function NavBar() {
       {
         isMenuOpen === "Knowledge" && <div className="flex bg-white py-10 px-32 transition-all duration-300 ease-in-out" onMouseEnter={() => setIsMenuOpen("Knowledge")} onMouseLeave={() => setIsMenuOpen("")}>
           <div className="w-[40%] text-xl flex flex-col gap-3">
-            <p className="group w-fit hover:font-bold cursor-pointer">
+            <p className="group w-fit hover:font-bold cursor-pointer"
+              onMouseEnter={() => setSelectedCategory("Blogs")}
+            >
               Blogs
             </p>
-            <p className="group w-fit hover:font-bold cursor-pointer">
+            <p className="group w-fit hover:font-bold cursor-pointer"
+              onMouseEnter={() => setSelectedCategory("Case Studies")}
+            >
               Case Studies
             </p>
           </div>
@@ -237,33 +245,25 @@ export default function NavBar() {
             </div>
           </div>}
 
-          {selectedCategory === "Category3" && <div className="w-[60%]">
-            <div className="text-lg flex flex-col gap-2">
-              <p className="text-sm text-gray-600">Category 3</p>
-              <p>Product 1</p>
-              <p>Product 2</p>
-              <p>Product 3</p>
+          {selectedCategory === "Blogs" && <div className="w-[60%]">
+            <div className="">
+              <p className="text-xl w-fit font-semibold">Blogs</p>
+              <BlogsCarousalNavBar
+                data={[
+                  { post_title: "Scientist found new way to treat Waste Water", post_slug: "", post_image: "/blogs/blog1.png" },
+                  { post_title: "Why Municipal Wastewater Treatment Is Important?", post_slug: "", post_image: "/blogs/blog4.png" },
+                ]} />
             </div>
           </div>}
 
-          {selectedCategory === "Category4" && <div className="w-[60%]">
-            <div className="text-lg flex flex-col gap-2">
-              <p className="text-sm text-gray-600">Category 4</p>
-              <p>Product 1</p>
-              <p>Product 2</p>
-              <p>Product 3</p>
-              <p>Product 4</p>
-            </div>
-          </div>}
-
-          {selectedCategory === "Category5" && <div className="w-[60%]">
-            <div className="text-lg flex flex-col gap-2">
-              <p className="text-sm text-gray-600">Category 5</p>
-              <p>Product 1</p>
-              <p>Product 2</p>
-              <p>Product 3</p>
-              <p>Product 4</p>
-              <p>Product 5</p>
+          {selectedCategory === "Case Studies" && <div className="w-[60%]">
+            <div className="">
+              <p className="text-xl w-fit font-semibold">Case Studies</p>
+              <BlogsCarousalNavBar
+                data={[
+                  { post_title: "Decentralized Wastewater Treatment for a Chinese Village", post_slug: "", post_image: "/casestudy/cs2.png" },
+                  { post_title: "Environment-Friendly Waste Water Treatment | Case Study", post_slug: "", post_image: "/casestudy/cs3.png" },
+                ]} />
             </div>
           </div>}
         </div>
@@ -287,35 +287,6 @@ export default function NavBar() {
             </div>
           </div>}
 
-          {selectedCategory === "Category3" && <div className="w-[60%]">
-            <div className="text-lg flex flex-col gap-2">
-              <p className="text-sm text-gray-600">Category 3</p>
-              <p>Product 1</p>
-              <p>Product 2</p>
-              <p>Product 3</p>
-            </div>
-          </div>}
-
-          {selectedCategory === "Category4" && <div className="w-[60%]">
-            <div className="text-lg flex flex-col gap-2">
-              <p className="text-sm text-gray-600">Category 4</p>
-              <p>Product 1</p>
-              <p>Product 2</p>
-              <p>Product 3</p>
-              <p>Product 4</p>
-            </div>
-          </div>}
-
-          {selectedCategory === "Category5" && <div className="w-[60%]">
-            <div className="text-lg flex flex-col gap-2">
-              <p className="text-sm text-gray-600">Category 5</p>
-              <p>Product 1</p>
-              <p>Product 2</p>
-              <p>Product 3</p>
-              <p>Product 4</p>
-              <p>Product 5</p>
-            </div>
-          </div>}
         </div>
       }
 
