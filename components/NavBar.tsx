@@ -32,7 +32,7 @@ export default function NavBar() {
     <nav className="fixed z-10 top-0 left-0 right-0  flex-col">
       <div
         className={`flex flex-row justify-between items-center w-full h-auto px-20 py-3 ${isScrolled || isMenuOpen ? `bg-white` : `bg-transperant`
-          } ${!isMenuOpen ? "drop-shadow-xl" : ""} transition-all duration-300 ease-in-out`}
+          } ${!isMenuOpen ? "border-b drop-shadow-xl" : "border-b"} transition-all duration-300 ease-in-out`}
       >
         <img
           src={`${isScrolled || isMenuOpen ? "/ioniclogo.png" : "/ioniclogo_white.png"}`}

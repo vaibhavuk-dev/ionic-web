@@ -17,7 +17,7 @@ export default function NavBar() {
   return (
     <nav className="fixed z-10 top-0 left-0 right-0  flex-col">
       <div
-        className={`flex flex-row justify-between items-center w-full h-auto px-20 py-3 bg-white ${!isMenuOpen ? "drop-shadow-xl" : ""} transition-all duration-300 ease-in-out`}
+        className={`flex flex-row justify-between items-center w-full h-auto px-20 py-3 bg-white ${!isMenuOpen ? "border-b drop-shadow-xl" : "border-b"} transition-all duration-300 ease-in-out`}
       >
         <img
           src="/ioniclogo.png"
