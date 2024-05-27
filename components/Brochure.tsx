@@ -27,7 +27,7 @@ export default function Brochure() {
           onClick={openPopup}
           className="w-1/4 hover:scale-110 transform transition-transform cursor-pointer"
         >
-          <img src="brochure.jpg" className="pt-10 rounded-lg" />
+          <img src="/brochure.jpg" className="pt-10 rounded-lg" />
           <p className="pt-3 text-center font-semiBold">
             Zero Liquid Discharge
           </p>

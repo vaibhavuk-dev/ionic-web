@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import NavBar from "@/components/NavBar";
 import { useState } from "react";
 
-export default function ProductsPage() {
+export default function Products1Page() {
 
     const [model, setModel] = useState("")
 
@@ -16,7 +16,7 @@ export default function ProductsPage() {
             <NavBar />
 
             <div className="relative bg-logoBlue">
-                <img src='waterharvester.png' alt="" className="w-screen h-[100vh] object-cover opacity-30" />
+                <img src='/waterharvester.png' alt="" className="w-screen h-[100vh] object-cover opacity-30" />
                 <div className="absolute w-full top-[45%] text-white flex flex-col items-center justify-center ">
                     <h1 className="text-center w-fit font-semibold text-7xl text-white">Quick Cycle Demineralization</h1>
                     <p className="text-center w-fit text-3xl text-white mt-3">Zero Liquid Discharge</p>
@@ -28,7 +28,7 @@ export default function ProductsPage() {
                 <div className="">
                     <div className="flex gap-5">
                         <div className="w-full">
-                            <img src='waterharvester.png' alt="" className="w-full h-full object-cover rounded-lg" />
+                            <img src='/waterharvester.png' alt="" className="w-full h-full object-cover rounded-lg" />
                             <p className="w-full text-center mt-2 text-sm">Water Harvester Plant</p>
                         </div>
                         <div className="w-full">
@@ -52,7 +52,7 @@ export default function ProductsPage() {
                                 Please do contact us with your specific requirements and Ionic will provide you the optimum solution. </p>
                         </div>
                         <div className="w-full">
-                            <img src='waterharvester.png' alt="" className="w-full h-full object-cover rounded-lg" />
+                            <img src='/waterharvester.png' alt="" className="w-full h-full object-cover rounded-lg" />
                             <p className="w-full text-center mt-2 text-sm">Water Harvester Plant</p>
                         </div>
                     </div>
@@ -62,11 +62,11 @@ export default function ProductsPage() {
                     <p className="text-xl w-fit font-semibold">Models of QCDM</p>
                     <div className="w-full flex gap-5 mt-10">
                         <div className="w-full flex flex-col items-center justify-center">
-                            <img src='qcdm_model.png' alt="" className="w-1/2 h-full object-cover rounded-lg" />
+                            <img src='/qcdm_model.png' alt="" className="w-1/2 h-full object-cover rounded-lg" />
                             <p className="w-full text-center mt-2 text-sm">Water Harvester Plant</p>
                         </div>
                         <div className="w-full flex flex-col items-center justify-center">
-                            <img src='qcdm_model.png' alt="" className="w-1/2 h-full object-cover rounded-lg" />
+                            <img src='/qcdm_model.png' alt="" className="w-1/2 h-full object-cover rounded-lg" />
                             <p className="w-full text-center mt-2 text-sm">Water Harvester Plant</p>
                         </div>
                     </div>
@@ -129,7 +129,7 @@ export default function ProductsPage() {
                 <div className="">
                     <p className="text-xl w-fit font-semibold">Brochure</p>
                     <div className="mt-5 w-fit flex flex-col gap-3">
-                        <img className="h-80 rounded-xl" src="brochure.png" />
+                        <img className="h-80 rounded-xl" src="/brochure.png" />
                         <p>Download Brochure (PDF)</p>
                     </div>
                 </div>

@@ -2,48 +2,48 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer id='footer'  className="bg-white text-gray-700 p-8 relative">
+    <footer id='footer' className="bg-white text-gray-700 p-8 relative">
       <div className="flex justify-between items-top">
         <div className="flex flex-col items-start  w-1/3">
-            
-          <img src="ioniclogo.png" alt="Logo" className="h-20" />
+
+          <img src="/ioniclogo.png" alt="Logo" className="h-20" />
 
           <div className="mt-4">
-            <p className='py-2'><b>Contact:</b> <br/> 020-27475272 / 8275486263</p>
-            <p className='py-2'><b>Email:</b> <br/> contact@ionic.co.in / support@ionic.co.in</p>
-            <p className='py-2'><b>Address:</b> <br/> No 1, 5 & 12, Ground Floor, B Wing, 
-                        Mahalaxmi Heights, Old Mumbai - 
-                        Pune Hwy, next to Keys Hotel, Pimpri 
-                        Colony, Pimpri-Chinchwad, 
-                        Maharashtra 411019
+            <p className='py-2'><b>Contact:</b> <br /> 020-27475272 / 8275486263</p>
+            <p className='py-2'><b>Email:</b> <br /> contact@ionic.co.in / support@ionic.co.in</p>
+            <p className='py-2'><b>Address:</b> <br /> No 1, 5 & 12, Ground Floor, B Wing,
+              Mahalaxmi Heights, Old Mumbai -
+              Pune Hwy, next to Keys Hotel, Pimpri
+              Colony, Pimpri-Chinchwad,
+              Maharashtra 411019
             </p>
           </div>
         </div>
 
         <div className="flex flex-row items-start p-10 w-2/3 justify-evenly">
           <div className='flex flex-col px-10 '>
-          <a href="#" className="mb-5"><b>Home</b></a>
-          <a href="#" className="mb-2">About Us</a>
-          <a href="#" className="mb-2">Products</a>
-          <a href="#" className="mb-2">Contact</a>
+            <a href="#" className="mb-5"><b>Home</b></a>
+            <a href="#" className="mb-2">About Us</a>
+            <a href="#" className="mb-2">Products</a>
+            <a href="#" className="mb-2">Contact</a>
           </div>
           <div className='flex flex-col px-10 '>
-          <a href="#" className="mb-5"><b>Home</b></a>
-          <a href="#" className="mb-2">About Us</a>
-          <a href="#" className="mb-2">Products</a>
-          <a href="#" className="mb-2">Contact</a>
+            <a href="#" className="mb-5"><b>Home</b></a>
+            <a href="#" className="mb-2">About Us</a>
+            <a href="#" className="mb-2">Products</a>
+            <a href="#" className="mb-2">Contact</a>
           </div>
           <div className='flex flex-col px-10 '>
-          <a href="#" className="mb-5"><b>Home</b></a>
-          <a href="#" className="mb-2">About Us</a>
-          <a href="#" className="mb-2">Products</a>
-          <a href="#" className="mb-2">Contact</a>
+            <a href="#" className="mb-5"><b>Home</b></a>
+            <a href="#" className="mb-2">About Us</a>
+            <a href="#" className="mb-2">Products</a>
+            <a href="#" className="mb-2">Contact</a>
           </div>
           <div className='flex flex-col px-10 '>
-          <a href="#" className="mb-5"><b>Home</b></a>
-          <a href="#" className="mb-2">About Us</a>
-          <a href="#" className="mb-2">Products</a>
-          <a href="#" className="mb-2">Contact</a>
+            <a href="#" className="mb-5"><b>Home</b></a>
+            <a href="#" className="mb-2">About Us</a>
+            <a href="#" className="mb-2">Products</a>
+            <a href="#" className="mb-2">Contact</a>
           </div>
         </div>
       </div>

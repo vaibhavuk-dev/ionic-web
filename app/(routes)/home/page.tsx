@@ -49,7 +49,7 @@ export default async function Home() {
             <div className="relative w-full h-screen">
                 <video
                     className="fixed w-full h-full object-cover overflow-hidden"
-                    src="./bg_video.mp4"
+                    src="/bg_video.mp4"
                     autoPlay
                     muted
                     loop

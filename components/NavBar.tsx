@@ -35,7 +35,7 @@ export default function NavBar() {
           } transition-all duration-300 ease-in-out`}
       >
         <img
-          src={`${isScrolled || isMenuOpen ? "./ioniclogo.png" : "./ioniclogo_white.png"}`}
+          src={`${isScrolled || isMenuOpen ? "/ioniclogo.png" : "/ioniclogo_white.png"}`}
           className="h-16"
           onMouseEnter={() => setIsMenuOpen("")}
         />

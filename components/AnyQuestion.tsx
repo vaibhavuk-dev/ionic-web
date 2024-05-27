@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function AnyQuestion() {
   return (
-    <div className='relative p-10' style={{ backgroundImage: 'url("anyquestionbg.png")' }}>
+    <div className='relative p-10' style={{ backgroundImage: 'url("/anyquestionbg.png")' }}>
       <div className='flex justify-evenly items-center'>
         <h1 className='text-4xl text-white text-underline'>Have any questions?</h1>
         <div className='flex relative items-center border-8 border-white rounded-lg bg-white'>
