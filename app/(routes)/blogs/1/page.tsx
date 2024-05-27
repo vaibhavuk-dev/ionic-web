@@ -2,7 +2,7 @@ import AnyQuestion from "@/components/AnyQuestion";
 import Footer from "@/components/Footer";
 import NavBarWhite from "@/components/NavBarWhite";
 
-export default function CaseStudy() {
+export default function Blog() {
 
     return (
         <div>
@@ -11,10 +11,10 @@ export default function CaseStudy() {
             <div className="w-full px-32 mt-20  py-16 flex gap-10">
                 <div className="w-[65%]">
                     <div className="">
-                        <p className="bg-blueb-50 py-1 px-2 rounded-lg text-sm w-fit text-blueb-800">Case Study</p>
-                        <h1 className="mt-3 text-3xl font-semibold text-black">Decentralized Wastewater Treatment for a Chinese Village</h1>
+                        <p className="bg-blueb-50 py-1 px-2 rounded-lg text-sm w-fit text-blueb-800">Blog</p>
+                        <h1 className="mt-3 text-3xl font-semibold text-black">Scientist found new way to treat Waste Water</h1>
                         {/* <p className="text-xl font-light mt-2">Explore our recent water, wastewater, and reuse projects from across the globe.</p> */}
-                        <img className="mt-5 w-full" src="/casestudy/cs2.png" alt="" />
+                        <img className="mt-5 w-full" src="/blogs/blog1.png" alt="" />
                     </div>
 
                     <p className="text-md mt-10">

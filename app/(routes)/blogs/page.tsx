@@ -39,14 +39,14 @@ export default function BlogsPage() {
                     {/* <p className="text-xl w-fit font-semibold">Blogs</p> */}
                     <BlogsGrid
                         data={[
-                            { post_title: "Algae-based Wastewater Treatment", post_slug: "", post_image: "/blogs/blog2.png" },
-                            { post_title: "Scientist found new way to treat Waste Water", post_slug: "", post_image: "/blogs/blog1.png" },
-                            { post_title: "7 Benefits Of Wastewater Treatment", post_slug: "", post_image: "/blogs/blog3.png" },
-                            { post_title: "Why Municipal Wastewater Treatment Is Important?", post_slug: "", post_image: "/blogs/blog4.png" },
-                            { post_title: "Case Studies: Successful Wastewater Treatment through Bioremediation", post_slug: "", post_image: "/casestudy/cs1.png" },
-                            { post_title: "Decentralized Wastewater Treatment for a Chinese Village", post_slug: "", post_image: "/casestudy/cs2.png" },
-                            { post_title: "Environment-Friendly Waste Water Treatment | Case Study", post_slug: "", post_image: "/casestudy/cs3.png" },
-                            { post_title: "Monroe Environmental Saves Steel Mill $145,000 on Clarifier Upgrade", post_slug: "", post_image: "/casestudy/cs4.png" },
+                            { post_title: "Algae-based Wastewater Treatment", post_slug: "/blogs/1", post_image: "/blogs/blog2.png" },
+                            { post_title: "Scientist found new way to treat Waste Water", post_slug: "/blogs/1", post_image: "/blogs/blog1.png" },
+                            { post_title: "7 Benefits Of Wastewater Treatment", post_slug: "/blogs/1", post_image: "/blogs/blog3.png" },
+                            { post_title: "Why Municipal Wastewater Treatment Is Important?", post_slug: "/blogs/1", post_image: "/blogs/blog4.png" },
+                            { post_title: "Case Studies: Successful Wastewater Treatment through Bioremediation", post_slug: "/blogs/1", post_image: "/casestudy/cs1.png" },
+                            { post_title: "Decentralized Wastewater Treatment for a Chinese Village", post_slug: "/blogs/1", post_image: "/casestudy/cs2.png" },
+                            { post_title: "Environment-Friendly Waste Water Treatment | Case Study", post_slug: "/blogs/1", post_image: "/casestudy/cs3.png" },
+                            { post_title: "Monroe Environmental Saves Steel Mill $145,000 on Clarifier Upgrade", post_slug: "/blogs/1", post_image: "/casestudy/cs4.png" },
                         ]} />
                 </div>
             </div>

@@ -210,16 +210,14 @@ export default function NavBar() {
       {
         isMenuOpen === "Knowledge" && <div className="flex bg-white py-10 px-32 shadow-xl transition-all duration-300 ease-in-out" onMouseEnter={() => setIsMenuOpen("Knowledge")} onMouseLeave={() => setIsMenuOpen("")}>
           <div className="w-[40%] text-xl flex flex-col gap-3">
-            <p className="group w-fit hover:font-bold cursor-pointer"
-              onMouseEnter={() => setSelectedCategory("Blogs")}
-            >
+            <Link className="group w-fit hover:font-bold cursor-pointer"
+              onMouseEnter={() => setSelectedCategory("Blogs")} href={"/blogs"}>
               Blogs
-            </p>
-            <p className="group w-fit hover:font-bold cursor-pointer"
-              onMouseEnter={() => setSelectedCategory("Case Studies")}
-            >
+            </Link>
+            <Link className="group w-fit hover:font-bold cursor-pointer"
+              onMouseEnter={() => setSelectedCategory("Case Studies")} href={"/case-study"}            >
               Case Studies
-            </p>
+            </Link>
           </div>
           <div className="border-r border-gray-300 mx-5"></div>
           {selectedCategory === "" && <div className="w-[60%]">
@@ -234,8 +232,8 @@ export default function NavBar() {
               <p className="text-xl w-fit font-semibold">Blogs</p>
               <BlogsCarousalNavBar
                 data={[
-                  { post_title: "Scientist found new way to treat Waste Water", post_slug: "", post_image: "/blogs/blog1.png" },
-                  { post_title: "Why Municipal Wastewater Treatment Is Important?", post_slug: "", post_image: "/blogs/blog4.png" },
+                  { post_title: "Scientist found new way to treat Waste Water", post_slug: "/blogs/1", post_image: "/blogs/blog1.png" },
+                  { post_title: "Why Municipal Wastewater Treatment Is Important?", post_slug: "/blogs/1", post_image: "/blogs/blog4.png" },
                 ]} />
             </div>
           </div>}
@@ -245,8 +243,8 @@ export default function NavBar() {
               <p className="text-xl w-fit font-semibold">Case Studies</p>
               <BlogsCarousalNavBar
                 data={[
-                  { post_title: "Decentralized Wastewater Treatment for a Chinese Village", post_slug: "", post_image: "/casestudy/cs2.png" },
-                  { post_title: "Environment-Friendly Waste Water Treatment | Case Study", post_slug: "", post_image: "/casestudy/cs3.png" },
+                  { post_title: "Decentralized Wastewater Treatment for a Chinese Village", post_slug: "/case-study/1", post_image: "/casestudy/cs2.png" },
+                  { post_title: "Environment-Friendly Waste Water Treatment | Case Study", post_slug: "/case-study/1", post_image: "/casestudy/cs3.png" },
                 ]} />
             </div>
           </div>}
