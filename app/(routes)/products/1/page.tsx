@@ -16,7 +16,7 @@ export default function Products1Page() {
             <NavBar />
 
             <div className="relative bg-blueb-700">
-                <img src='/waterharvester.png' alt="" className="w-screen h-[100vh] object-cover opacity-30" />
+                <img src="/waterharvester.png" alt="" className="w-screen h-[100vh] object-cover opacity-30" />
                 <div className="absolute w-full top-[45%] text-white flex flex-col items-center justify-center ">
                     <h1 className="text-center w-fit font-semibold text-7xl text-white">Quick Cycle Demineralization</h1>
                     <p className="text-center w-fit text-3xl text-white mt-3">Zero Liquid Discharge</p>
@@ -28,7 +28,7 @@ export default function Products1Page() {
                 <div className="">
                     <div className="flex gap-5">
                         <div className="w-full">
-                            <img src='/waterharvester.png' alt="" className="w-full h-full object-cover rounded-lg" />
+                            <img src="/waterharvester.png" alt="" className="w-full h-full object-cover rounded-lg" />
                             <p className="w-full text-center mt-2 text-sm">Water Harvester Plant</p>
                         </div>
                         <div className="w-full">
@@ -52,7 +52,7 @@ export default function Products1Page() {
                                 Please do contact us with your specific requirements and Ionic will provide you the optimum solution. </p>
                         </div>
                         <div className="w-full">
-                            <img src='/waterharvester.png' alt="" className="w-full h-full object-cover rounded-lg" />
+                            <img src="/waterharvester.png" alt="" className="w-full h-full object-cover rounded-lg" />
                             <p className="w-full text-center mt-2 text-sm">Water Harvester Plant</p>
                         </div>
                     </div>
@@ -62,11 +62,11 @@ export default function Products1Page() {
                     <p className="text-xl w-fit font-semibold">Models of QCDM</p>
                     <div className="w-full flex gap-5 mt-10">
                         <div className="w-full flex flex-col items-center justify-center">
-                            <img src='/qcdm_model.png' alt="" className="w-1/2 h-full object-cover rounded-lg" />
+                            <img src="/qcdm_model.png" alt="" className="w-1/2 h-full object-cover rounded-lg" />
                             <p className="w-full text-center mt-2 text-sm">Water Harvester Plant</p>
                         </div>
                         <div className="w-full flex flex-col items-center justify-center">
-                            <img src='/qcdm_model.png' alt="" className="w-1/2 h-full object-cover rounded-lg" />
+                            <img src="/qcdm_model.png" alt="" className="w-1/2 h-full object-cover rounded-lg" />
                             <p className="w-full text-center mt-2 text-sm">Water Harvester Plant</p>
                         </div>
                     </div>
@@ -92,7 +92,7 @@ export default function Products1Page() {
 
                     {
                         (model === "QCDM 1+" || model === "QCDM 2+" || model === "QCDM 3+" || model === "QCDM 4+") && <div>
-                            <p className="w-full h-[10vh] bg-[#d8f5fb] mx-10 mt-5 px-10 py-5 rounded-lg"> {model}'s details of model goes here...</p>
+                            <p className="w-full h-[10vh] bg-[#d8f5fb] mx-10 mt-5 px-10 py-5 rounded-lg"> {model}`&apos;`s details of model goes here...</p>
                         </div>
                     }
 
@@ -117,7 +117,7 @@ export default function Products1Page() {
 
                     {
                         (model === "QCDM 5+" || model === "QCDM 6+" || model === "QCDM 7+" || model === "QCDM 8+") && <div>
-                            <p className="w-full h-[10vh] bg-[#d8f5fb] mx-10 mt-5 px-10 py-5 rounded-lg"> {model}'s details of model goes here...</p>
+                            <p className="w-full h-[10vh] bg-[#d8f5fb] mx-10 mt-5 px-10 py-5 rounded-lg"> {model}`&apos;`s details of model goes here...</p>
                         </div>
                     }
 
@@ -146,7 +146,7 @@ export default function Products1Page() {
                 </div>
 
                 <div className="">
-                    <p className="text-xl w-fit font-semibold">Blogs</p>
+                    <p className="text-xl w-fit font-semibold">Blogs</p><hr />
                     <BlogsCarousal
                         data={[
                             { post_title: "Algae-based Wastewater Treatment", post_slug: "", post_image: "/blogs/blog2.png" },

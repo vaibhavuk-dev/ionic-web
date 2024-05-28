@@ -27,7 +27,7 @@ export default function Blogs() {
 
       <div className="grid grid-cols-4 cursor-pointer">
         {blogs.map((blog) => (
-          <div className="pt-5 pe-10">
+          <div className="pt-5 pe-10" key={blog.title}>
             <img src="/machine.jpg" alt="" />
             <p className="pt-5 font-semibold text-lg text-blueb-700">{blog.title}</p>
             <p className="pt-2 truncate">{blog.desc}</p>

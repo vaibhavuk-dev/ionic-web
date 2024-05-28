@@ -3,7 +3,7 @@
 import React from "react";
 import NavBar from "./NavBar";
 import { useState } from "react";
-import PopupForm from "./PopupForm";
+// import PopupForm from "./PopupForm";
 
 export default function Brochure() {
   const [isPopupOpen, setPopupOpen] = useState(true);
@@ -33,7 +33,7 @@ export default function Brochure() {
           </p>
         </div>
       </div>
-      {isPopupOpen && <PopupForm onClose={closePopup} />}
+      {/* {isPopupOpen && <PopupForm onClose={closePopup} />} */}
     </div>
   );
 }
