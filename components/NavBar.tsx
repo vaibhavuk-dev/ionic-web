@@ -3,7 +3,6 @@
 import Link from "next/link";
 import React from "react";
 import { useState, useEffect } from "react";
-import BlogsCarousal from "./BlogsCarousal";
 import BlogsCarousalNavBar from "./BlogsCarousalNavBar";
 
 export default function NavBar() {
@@ -94,7 +93,7 @@ export default function NavBar() {
       </div>
 
       {
-        isMenuOpen === "Products" && <div className="flex bg-white py-10 px-32 shadow-xl transition-all duration-300 ease-in-out" onMouseEnter={() => setIsMenuOpen("Products")} onMouseLeave={() => setIsMenuOpen("")}>
+        isMenuOpen === "Products" && <div className="flex bg-white py-10 px-32 shadow-xl transition-all duration-300 ease-in-out" onMouseEnter={() => setIsMenuOpen("Products")} onMouseLeave={() => { setIsMenuOpen(""); setSelectedCategory("") }}>
           <div className="w-[40%] text-xl flex flex-col gap-3">
             <p className="group w-fit hover:font-bold cursor-pointer"
               onMouseEnter={() => setSelectedCategory("")}>
@@ -129,11 +128,34 @@ export default function NavBar() {
           </div>}
 
           {selectedCategory === "Category3" && <div className="w-[60%]">
-            <div className="text-lg flex flex-col gap-2">
-              <p className="text-sm text-gray-600">Category 3</p>
-              <Link href={"/products/1"}><p>Product 1</p></Link>
-              <Link href={"/products/2"}><p>Product 2</p></Link>
-              <p>Product 3</p>
+            <div className="text-lg flex flex-col">
+              <p className="text-sm text-gray-600 py-3">Category 3</p>
+              <div className="grid grid-cols-2">
+                <Link href={"/products/1"}>
+                  <div className="flex items-center justify-start gap-3 rounded-lg w-[1/2] py-2 px-3 hover:border">
+                    <img className="w-8 h-8" src="/applications/ionicchemical.png" alt="" />
+                    <p>Product 1</p>
+                  </div>
+                </Link>
+                <Link href={"/products/1"}>
+                  <div className="flex items-center justify-start gap-3 rounded-lg w-[1/2] py-2 px-3 hover:border">
+                    <img className="w-8 h-8" src="/applications/ionicchemical.png" alt="" />
+                    <p>Product 2</p>
+                  </div>
+                </Link>
+                <Link href={"/products/1"}>
+                  <div className="flex items-center justify-start gap-3 rounded-lg w-[1/2] py-2 px-3 hover:border">
+                    <img className="w-8 h-8" src="/applications/ionicchemical.png" alt="" />
+                    <p>Product 3</p>
+                  </div>
+                </Link>
+                <Link href={"/products/1"}>
+                  <div className="flex items-center justify-start gap-3 rounded-lg w-[1/2] py-2 px-3 hover:border">
+                    <img className="w-8 h-8" src="/applications/ionicchemical.png" alt="" />
+                    <p>Product 4</p>
+                  </div>
+                </Link>
+              </div>
             </div>
           </div>}
 
@@ -161,7 +183,7 @@ export default function NavBar() {
       }
 
       {
-        isMenuOpen === "Applications" && <div className="flex bg-white py-10 px-32 shadow-xl transition-all duration-300 ease-in-out" onMouseEnter={() => setIsMenuOpen("Applications")} onMouseLeave={() => setIsMenuOpen("")}>
+        isMenuOpen === "Applications" && <div className="flex bg-white py-10 px-32 shadow-xl transition-all duration-300 ease-in-out" onMouseEnter={() => setIsMenuOpen("Applications")} onMouseLeave={() => { setIsMenuOpen(""); setSelectedCategory("") }}>
           <div className="w-[40%] text-xl flex flex-col gap-3">
             <p className="group w-fit hover:font-bold cursor-pointer">
               Application 1
@@ -226,7 +248,7 @@ export default function NavBar() {
       }
 
       {
-        isMenuOpen === "Knowledge" && <div className="flex bg-white py-10 px-32 shadow-xl transition-all duration-300 ease-in-out" onMouseEnter={() => setIsMenuOpen("Knowledge")} onMouseLeave={() => setIsMenuOpen("")}>
+        isMenuOpen === "Knowledge" && <div className="flex bg-white py-10 px-32 shadow-xl transition-all duration-300 ease-in-out" onMouseEnter={() => setIsMenuOpen("Knowledge")} onMouseLeave={() => { setIsMenuOpen(""); setSelectedCategory("") }}>
           <div className="w-[40%] text-xl flex flex-col gap-3">
             <Link className="group w-fit hover:font-bold cursor-pointer"
               onMouseEnter={() => setSelectedCategory("Blogs")} href={"/blogs"}>
@@ -270,7 +292,7 @@ export default function NavBar() {
       }
 
       {
-        isMenuOpen === "About" && <div className="flex bg-white py-10 px-32 shadow-xl transition-all duration-300 ease-in-out" onMouseEnter={() => setIsMenuOpen("About")} onMouseLeave={() => setIsMenuOpen("")}>
+        isMenuOpen === "About" && <div className="flex bg-white py-10 px-32 shadow-xl transition-all duration-300 ease-in-out" onMouseEnter={() => setIsMenuOpen("About")} onMouseLeave={() => { setIsMenuOpen(""); setSelectedCategory("") }}>
           <div className="w-[40%] text-xl flex flex-col gap-3">
             <p className="group w-fit hover:font-bold cursor-pointer">
               About Us
@@ -291,7 +313,7 @@ export default function NavBar() {
       }
 
       {
-        isMenuOpen === "Contact" && <div className="flex bg-white py-10 px-32 shadow-xl transition-all duration-300 ease-in-out" onMouseEnter={() => setIsMenuOpen("Contact")} onMouseLeave={() => setIsMenuOpen("")}>
+        isMenuOpen === "Contact" && <div className="flex bg-white py-10 px-32 shadow-xl transition-all duration-300 ease-in-out" onMouseEnter={() => setIsMenuOpen("Contact")} onMouseLeave={() => { setIsMenuOpen(""); setSelectedCategory("") }}>
           <div className="w-[40%] text-lg flex flex-col gap-3">
             <div className="mt-4">
               <p className='py-2'><b>Contact:</b> <br /> 020-27475272 / 8275486263</p>
