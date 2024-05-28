@@ -24,14 +24,14 @@ export default function About({ data }: { data: any }) {
                         : (<p>
                             Ionic Engineering Technology Pvt. Ltd., an ISO-9001/2015 certified company, brings over 35 years of expertise in water and wastewater treatment.
                             <br /><br />
-                            Founded and managed by Mr. K V Raman, and directed by Mrs. Lalitha Iyer, Ionic is a one-stop-shop for integrated water solutions. For 14 years, we've focused on technology, quality, and performance to "Remove Everything from Water – Except Hydrogen & Oxygen," prioritizing customer peace of mind.
+                            Founded and managed by Mr. K V Raman, and directed by Mrs. Lalitha Iyer, Ionic is a one-stop-shop for integrated water solutions. For 14 years, we&apos;ve focused on technology, quality, and performance to &quot;Remove Everything from Water – Except Hydrogen & Oxygen,&quot; prioritizing customer peace of mind.
                             <br /><br />
-                            We differentiate as business partners, emphasizing techno-economical value engineering. Water efficiency is crucial, often overlooked, leading to operational issues and financial leakage. Ionic addresses water scarcity by providing innovative solutions to reduce industries' water footprint.
+                            We differentiate as business partners, emphasizing techno-economical value engineering. Water efficiency is crucial, often overlooked, leading to operational issues and financial leakage. Ionic addresses water scarcity by providing innovative solutions to reduce industries&apos; water footprint.
                         </p>)}
                 </div>
                 <div className='w-1/2 grid grid-cols-2'>
                     {achievement.map((item) => (
-                        <div className='flex flex-col items-center'>
+                        <div className='flex flex-col items-center' key={item.number}>
                             <p className='text-5xl font-bold text-blueb-700'>{item.number}</p>
                             <p className='text-base font-semibold pt-3'>{item.text}</p>
                         </div>

@@ -105,17 +105,17 @@ export default function NavBar() {
             <p className="group w-fit hover:font-bold cursor-pointer"
               onMouseEnter={() => setSelectedCategory("Category3")}
             >
-            Category 3 >
+              Category 3 &gt;
             </p>
             <p className="group w-fit hover:font-bold cursor-pointer"
               onMouseEnter={() => setSelectedCategory("Category4")}
             >
-            Category 4 >
+              Category 4 &gt;
             </p>
             <p className="group w-fit hover:font-bold cursor-pointer"
               onMouseEnter={() => setSelectedCategory("Category5")}
             >
-            Category 5 >
+              Category 5 &gt;
             </p>
           </div>
           <div className="border-r border-gray-300 mx-5"></div>
@@ -170,17 +170,17 @@ export default function NavBar() {
             <p className="group w-fit hover:font-bold cursor-pointer"
               onMouseEnter={() => setSelectedCategory("Application3")}
             >
-            Application 3 >
+              Application 3 &gt;
             </p>
             <p className="group w-fit hover:font-bold cursor-pointer"
               onMouseEnter={() => setSelectedCategory("Application4")}
             >
-            Application 4 >
+              Application 4 &gt;
             </p>
             <p className="group w-fit hover:font-bold cursor-pointer"
               onMouseEnter={() => setSelectedCategory("Application5")}
             >
-            Application 5 >
+              Application 5 &gt;
             </p>
           </div>
           <div className="border-r border-gray-300 mx-5"></div>

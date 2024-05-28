@@ -5,7 +5,7 @@ import Blogs from "./Blogs";
 import Footer from "./Footer";
 import ProductSection from "./ProductSection";
 
-export default function Home(props) {
+export default function Home(props: any) {
   return (
     <div>
       <div className="relative w-full h-screen">

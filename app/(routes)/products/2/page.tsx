@@ -98,7 +98,7 @@ export default function Products2Page() {
 
                     {
                         (model === "QCDM 1+" || model === "QCDM 2+" || model === "QCDM 3+" || model === "QCDM 4+") && <div>
-                            <p className="w-full h-[10vh] bg-[#d8f5fb] mx-10 mt-5 px-10 py-5 rounded-lg"> {model}'s details of model goes here...</p>
+                            <p className="w-full h-[10vh] bg-[#d8f5fb] mx-10 mt-5 px-10 py-5 rounded-lg"> {model}&apos;s details of model goes here...</p>
                         </div>
                     }
 
@@ -123,7 +123,7 @@ export default function Products2Page() {
 
                     {
                         (model === "QCDM 5+" || model === "QCDM 6+" || model === "QCDM 7+" || model === "QCDM 8+") && <div>
-                            <p className="w-full h-[10vh] bg-[#d8f5fb] mx-10 mt-5 px-10 py-5 rounded-lg"> {model}'s details of model goes here...</p>
+                            <p className="w-full h-[10vh] bg-[#d8f5fb] mx-10 mt-5 px-10 py-5 rounded-lg"> {model}&apos;s details of model goes here...</p>
                         </div>
                     }
 
