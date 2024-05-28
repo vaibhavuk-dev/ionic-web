@@ -54,7 +54,7 @@ const PopupForm = ({ onClose }) => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-          <button className="mt-5 p-2 bg-logoBlue rounded text-white font-semibold hover:bg-opacity-75" type="submit">Submit</button>
+          <button className="mt-5 p-2 bg-blueb-700 rounded text-white font-semibold hover:bg-opacity-75" type="submit">Submit</button>
           <button className="mt-5 p-2 bg-white-300" onClick={onClose}>Close</button>
         </form>
       </div>

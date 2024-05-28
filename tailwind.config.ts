@@ -9,9 +9,24 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        logoBlue: 'rgb(5,86,167)',
+        logoBlue: "#0479fb",
         textcolor: "#1A202C",
-        bgLogoBlue: 'rgb(234,247,250)'
+        bgLogoBlue: "#edfaff",
+        complementary: "#fb8604",
+        'blueb': {
+          '50': '#edfaff',
+          '100': '#d6f2ff',
+          '200': '#b7e9ff',
+          '300': '#85deff',
+          '400': '#4bc9ff',
+          '500': '#22abff',
+          '600': '#0a8dff',
+          '700': '#0479fb',
+          '800': '#0a5dc3',
+          '900': '#0f5099',
+          '950': '#0f315c',
+        },
+
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

@@ -8,21 +8,7 @@ import BlogsCarousalNavBar from "./BlogsCarousalNavBar";
 
 export default function NavBar() {
 
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState("");
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      const threshold1 = 10;
-      setIsScrolled(scrollY > threshold1);
-    }
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   const [selectedCategory, setSelectedCategory] = useState("")
 
@@ -31,18 +17,16 @@ export default function NavBar() {
   return (
     <nav className="fixed z-10 top-0 left-0 right-0  flex-col">
       <div
-        className={`flex flex-row justify-between items-center w-full h-auto px-20 py-3 ${isScrolled || isMenuOpen ? `bg-white` : `bg-transperant`
-          } ${!isMenuOpen ? "drop-shadow-xl" : "border-b"} transition-all duration-300 ease-in-out`}
+        className={`flex flex-row justify-between items-center w-full h-auto px-20 pt-3 pb-5 bg-white ${!isMenuOpen ? "border-b" : "border-b"} transition-all duration-300 ease-in-out`}
       >
         <img
-          src={`${isScrolled || isMenuOpen ? "/ioniclogo.png" : "/ioniclogo_white.png"}`}
+          src="/ioniclogo.png"
           className="h-16"
           onMouseEnter={() => setIsMenuOpen("")}
         />
 
         <div
-          className={`${isScrolled || isMenuOpen ? `text-black` : `text-white`
-            } transition-all duration-300 ease-in-out text-lg font-normal`}
+          className={`text-black transition-all duration-300 ease-in-out text-lg font-normal`}
         >
           <a
             className={`border-expand mx-5 py-2 cursor-pointer ${isHovered ? '' : 'mouse-leave'}`}
