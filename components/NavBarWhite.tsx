@@ -19,11 +19,13 @@ export default function NavBar() {
       <div
         className={`flex flex-row justify-between items-center w-full h-auto px-20 pt-3 pb-5 bg-white ${!isMenuOpen ? "border-b" : "border-b"} transition-all duration-300 ease-in-out`}
       >
-        <img
-          src="/ioniclogo.png"
-          className="h-16"
-          onMouseEnter={() => setIsMenuOpen("")}
-        />
+        <Link href={"/home"}>
+          <img
+            src="/ioniclogo.png"
+            className="h-16"
+            onMouseEnter={() => setIsMenuOpen("")}
+          />
+        </Link>
 
         <div
           className={`text-black transition-all duration-300 ease-in-out text-lg font-normal`}

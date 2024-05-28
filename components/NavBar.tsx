@@ -34,11 +34,13 @@ export default function NavBar() {
         className={`flex flex-row justify-between items-center w-full h-auto px-20 py-3 ${isScrolled || isMenuOpen ? `bg-white` : `bg-transperant`
           } ${!isMenuOpen ? "drop-shadow-xl" : "border-b"} transition-all duration-300 ease-in-out`}
       >
-        <img
-          src={`${isScrolled || isMenuOpen ? "/ioniclogo.png" : "/ioniclogo_white.png"}`}
-          className="h-16"
-          onMouseEnter={() => setIsMenuOpen("")}
-        />
+        <Link href={"/home"}>
+          <img
+            src={`${isScrolled || isMenuOpen ? "/ioniclogo.png" : "/ioniclogo_white.png"}`}
+            className="h-16"
+            onMouseEnter={() => setIsMenuOpen("")}
+          />
+        </Link>
 
         <div
           className={`${isScrolled || isMenuOpen ? `text-black` : `text-white`
@@ -129,8 +131,8 @@ export default function NavBar() {
           {selectedCategory === "Category3" && <div className="w-[60%]">
             <div className="text-lg flex flex-col gap-2">
               <p className="text-sm text-gray-600">Category 3</p>
-              <p>Product 1</p>
-              <p>Product 2</p>
+              <Link href={"/products/1"}><p>Product 1</p></Link>
+              <Link href={"/products/2"}><p>Product 2</p></Link>
               <p>Product 3</p>
             </div>
           </div>}
