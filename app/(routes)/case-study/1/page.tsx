@@ -19,16 +19,16 @@ export default function CaseStudy() {
 
                     <p className="text-md mt-10">
                         <b className="text-lg">Background</b><br />
-                        To comply with new and expanding government regulations for wastewater reuse, Taiping village, a community of 5,000 residents in China`&apos;`s Henan Province, needed a wastewater treatment plant to deal with effluent that previously had gone untreated in this rural setting.
+                        To comply with new and expanding government regulations for wastewater reuse, Taiping village, a community of 5,000 residents in China&apos;s Henan Province, needed a wastewater treatment plant to deal with effluent that previously had gone untreated in this rural setting.
                         <br /><br />
                         <b className="text-lg">Challenges</b><br />
-                        The village`&apos;`s remote location and limited accessibility made it difficult to deliver the system and equipment by normal methods. And, the schedule for complete installation and commissioning was very tight at 10 days. Installation was scheduled during the region`&apos;`s rainy season, which caused occasional water flows that impacted influent design parameters and equipment scope.
+                        The village&apos;s remote location and limited accessibility made it difficult to deliver the system and equipment by normal methods. And, the schedule for complete installation and commissioning was very tight at 10 days. Installation was scheduled during the region&apos;s rainy season, which caused occasional water flows that impacted influent design parameters and equipment scope.
                         <br /><br />
                         <b className="text-lg">Solutions</b><br />
                         A 300 m³/d Fluence Aspiral™ MABR-based plant was chosen due to its innovative capabilities and unique advantages, including low energy consumption, smart remote monitoring and control, efficient nitrogen and phosphorus removal, and its modular, portable, scalable design.
                         <br /><br />
                         <b className="text-lg">Results</b><br />
-                        The decentralized treatment plant, which doesn`&apos;`t need to be tied in to a central treatment facility, produces an effluent that exceeds the rigid Class 1A standards mandated by China`&apos;`s latest five-year plan. It`&apos;`s environmentally friendly and economical, with low capital and operating expenses. Because Aspiral is modular and scalable, the plant can be expanded as needed.
+                        The decentralized treatment plant, which doesn&apos;t need to be tied in to a central treatment facility, produces an effluent that exceeds the rigid Class 1A standards mandated by China&apos;s latest five-year plan. It&apos;s environmentally friendly and economical, with low capital and operating expenses. Because Aspiral is modular and scalable, the plant can be expanded as needed.
                         <br /><br />
                         Are you interested in learning more about the advantages of Aspiral™ Smart Packaged wastewater plants? Contact Fluence to discuss your wastewater treatment needs with our experts.
                     </p>

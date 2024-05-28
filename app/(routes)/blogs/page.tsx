@@ -12,7 +12,7 @@ export default function BlogsPage() {
 
             <div className="bg-blueb-50 mt-20 py-10 px-32 ">
                 <h1 className="text-5xl font-semibold text-black">Blogs</h1>
-                <p className="text-xl font-light mt-2">News on the world`&apos;`s most precious resource, including the latest in research, trends, and treatment advances.</p>
+                <p className="text-xl font-light mt-2">News on the world&apos;s most precious resource, including the latest in research, trends, and treatment advances.</p>
             </div>
 
             <div className="px-32 my-10 flex flex-col gap-10">
