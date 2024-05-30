@@ -2,6 +2,7 @@
 
 import AnyQuestion from "@/components/AnyQuestion";
 import BlogsCarousal from "@/components/BlogsCarousal";
+import CaseStudiesCarousal from "@/components/CaseStudiesCarousal";
 import Footer from "@/components/Footer";
 import NavBar from "@/components/NavBar";
 import ProductGallery from "@/components/ProductGallery";
@@ -18,7 +19,7 @@ export default function Products1Page() {
 
             <div className="relative bg-blueb-700">
                 <img src="/waterharvester.png" alt="" className="w-screen h-[100vh] object-cover opacity-30" />
-                <div className="absolute w-full top-[45%] text-white flex flex-col items-center justify-center ">
+                <div className="absolute w-full top-[45%] text-white flex flex-col items-center justify-center">
                     <h1 className="text-center w-fit font-semibold text-7xl text-white">Quick Cycle Demineralization</h1>
                     <p className="text-center w-fit text-3xl text-white mt-3">Zero Liquid Discharge</p>
                 </div>
@@ -143,17 +144,17 @@ export default function Products1Page() {
 
                 <div className="">
                     <p className="text-xl w-fit font-semibold">Case Studies</p>
-                    <BlogsCarousal
+                    <CaseStudiesCarousal
                         data={[
-                            { post_title: "Case Studies: Successful Wastewater Treatment through Bioremediation", post_slug: "/case-study/1", post_image: "/casestudy/cs1.png" },
-                            { post_title: "Decentralized Wastewater Treatment for a Chinese Village", post_slug: "/case-study/1", post_image: "/casestudy/cs2.png" },
-                            { post_title: "Environment-Friendly Waste Water Treatment | Case Study", post_slug: "/case-study/1", post_image: "/casestudy/cs3.png" },
-                            { post_title: "Monroe Environmental Saves Steel Mill $145,000 on Clarifier Upgrade", post_slug: "/case-study/1", post_image: "/casestudy/cs4.png" },
+                            { post_title: "Case Studies: Successful Wastewater Treatment through Bioremediation", post_slug: "/case-study/1", post_image: "/blogs/blog2.png" },
+                            { post_title: "Why Municipal Wastewater Treatment Is Important?", post_slug: "/blogs/1", post_image: "/blogs/blog4.png" },
+                            { post_title: "7 Benefits Of Wastewater Treatment", post_slug: "/blogs/1", post_image: "/blogs/blog3.png" },
+                            // { post_title: "Monroe Environmental Saves Steel Mill $145,000 on Clarifier Upgrade", post_slug: "/case-study/1", post_image: "/casestudy/cs4.png" },
                         ]} />
                 </div>
 
                 <div className="">
-                    <p className="text-xl w-fit font-semibold">Blogs</p><hr />
+                    <p className="text-xl w-fit font-semibold">Blogs</p>
                     <BlogsCarousal
                         data={[
                             { post_title: "Algae-based Wastewater Treatment", post_slug: "/blogs/1", post_image: "/blogs/blog2.png" },
