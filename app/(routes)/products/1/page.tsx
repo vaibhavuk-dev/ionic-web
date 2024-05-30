@@ -4,6 +4,7 @@ import AnyQuestion from "@/components/AnyQuestion";
 import BlogsCarousal from "@/components/BlogsCarousal";
 import Footer from "@/components/Footer";
 import NavBar from "@/components/NavBar";
+import ProductGallery from "@/components/ProductGallery";
 import { useState } from "react";
 
 export default function Products1Page() {
@@ -121,10 +122,16 @@ export default function Products1Page() {
                         </div>
                     }
 
-
                 </div>
 
                 {/* <div className="h-[50vh]"></div> */}
+
+                <div className="">
+                    <p className="text-xl w-fit font-semibold">Gallery</p>
+                    <div className="mt-5 ">
+                        <ProductGallery />
+                    </div>
+                </div>
 
                 <div className="">
                     <p className="text-xl w-fit font-semibold">Brochure</p>

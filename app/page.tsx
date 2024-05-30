@@ -2,6 +2,7 @@ import About from "@/components/About";
 import AnyQuestion from "@/components/AnyQuestion";
 import Blogs from "@/components/Blogs";
 import Footer from "@/components/Footer";
+import ImageCarousalHome from "@/components/ImageCarousalHome";
 import NavBar from "@/components/NavBar";
 import ProductSection from "@/components/ProductSection";
 
@@ -55,11 +56,14 @@ export default async function Home() {
                     loop
                 />
 
-                <div className="fixed inset-0 flex items-center justify-center bg-blueb-700 bg-opacity-50">
+                <div className="fixed inset-0 flex items-center justify-center bg-blueb-700 bg-opacity-50 pb-14">
                     <h1 className="text-center font-bold text-white text-6xl">
                         We Treat Water - Differently
                     </h1>
                 </div>
+
+                <ImageCarousalHome />
+
             </div>
 
             <div className="">
