@@ -1,6 +1,7 @@
 import About from "@/components/About";
 import AnyQuestion from "@/components/AnyQuestion";
 import Blogs from "@/components/Blogs";
+import BlogsCarousal from "@/components/BlogsCarousal";
 import Footer from "@/components/Footer";
 import ImageCarousalHome from "@/components/ImageCarousalHome";
 import NavBar from "@/components/NavBar";
@@ -66,17 +67,17 @@ export default async function Home() {
 
             </div>
 
-            <div className="">
+            <div className="w-full bg-white">
                 <About data={data} />
 
                 <ProductSection />
 
-                <Blogs />
 
-                <AnyQuestion />
-
-                <Footer />
             </div>
+
+            <AnyQuestion />
+
+            <Footer />
         </div>
     );
 }

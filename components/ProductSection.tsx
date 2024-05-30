@@ -47,7 +47,7 @@ const ProductSection = () => {
   };
 
   return (
-    <div id='products' className='p-10 bg-white relative'>
+    <div id='products' className='px-32 p-10 bg-white relative'>
       <h1 className='font-bold text-blueb-700 text-4xl'>Our Products</h1>
       <div className="flex pt-5">
         {/* Categories on the left side */}

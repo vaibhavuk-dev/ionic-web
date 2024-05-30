@@ -51,28 +51,37 @@ export default function ExpertReviews({ data }: { data: DataType }) {
     };
     return (
         <div className="w-full h-full px-7 mt-4  relative flex flex-col items-center justify-center md:items-start md:overflow-hidden md:px-0 lg:px-0 bg-white">
-            <div className=" flex w-full h-full overflow-hidden ">
+            <div className=" flex w-full h-full overflow-hidden gap-5">
                 {data &&
                     data.map((post, index) => (
-                        <a
-                            key={index}
-                            style={{ translate: `${-100 * imageIndex}%` }}
-                            className={`h-full w-full  md:w-[50%] lg:w-[25%] md:px-2 flex flex-col transition-all bg-[#f9f9f9]  ease-in-out duration-300   gap-3 items-center  flex-shrink-0 flex-grow-0 justify-start bg-transparent bg-opacity-30 hover:scale-105`}
-                            href={post.post_slug}
-                            target="_blank"
-                        >
+                        <div className="h-[60vh] w-[33%] flex relative">
                             <img
+                                className="border border-white animate-slideInFromLeft object-cover"
                                 src={post.post_image ? post.post_image : ""}
-                                alt="postimgae"
-                                className=" w-full h-[12rem] object-cover rounded-xl"
+                                alt=""
                             />
-                            <div className="flex flex-col w-full h-full items-center justify-center py-2 ">
-                                <h3 className="font-semibold text-[#444444]">
-                                    {post.post_title}
-                                </h3>
-                                {/* <p className="text-[#929292] text-xs">{post.post_date}</p> */}
-                            </div>
-                        </a>
+                            <p className="absolute bottom-0 left-0 w-full backdrop-blur-3xl px-5 py-3 text-white text-lg">{post.post_title}
+                            </p>
+                        </div>
+                        // <a
+                        //     key={index}
+                        //     style={{ translate: `${-100 * imageIndex}%` }}
+                        //     className={`relative h-[70vh] w-full  md:w-[50%] lg:w-[33%] px-5 flex flex-col transition-all bg-[#f9f9f9]  ease-in-out duration-300 flex-shrink-0 flex-grow-0 bg-transparent bg-opacity-30 hover:scale-105`}
+                        //     href={post.post_slug}
+                        //     target="_blank"
+                        // >
+                        //     <img
+                        //         src={post.post_image ? post.post_image : ""}
+                        //         alt="postimgae"
+                        //         className=" w-full h-full object-cover"
+                        //     />
+                        //     <div className="absolute bottom-0 left-5 mr-5 flex flex-col w-full h-full items-center justify-center py-2">
+                        //         <h3 className="w-full font-semibold text-white backdrop-blur-lg p-3 mx-5">
+                        //             {post.post_title}
+                        //         </h3>
+                        //         {/* <p className="text-[#929292] text-xs">{post.post_date}</p> */}
+                        //     </div>
+                        // </a>
                     ))}
             </div>
             {/* {data.length > 4 ? (

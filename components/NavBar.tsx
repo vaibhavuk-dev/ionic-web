@@ -5,10 +5,15 @@ import React from "react";
 import { useState, useEffect } from "react";
 import BlogsCarousalNavBar from "./BlogsCarousalNavBar";
 
-export default function NavBar() {
+export default function NavBar({ shouldWhite }: { shouldWhite?: boolean }) {
 
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState("");
+  const [selectedMenu, setSelectedMenu] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("")
+  const [isHovered, setIsHovered] = useState(false);
+  const [hoveredProduct, setHoveredProduct] = useState<string | null>(null);
+
+  const isWhite = shouldWhite || isScrolled || selectedMenu;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,60 +28,111 @@ export default function NavBar() {
     };
   }, []);
 
-  const [selectedCategory, setSelectedCategory] = useState("")
+  const navItems = [
+    { label: "Products" },
+    { label: "Applications" },
+    { label: "Knowledge" },
+    { label: "About" },
+    { label: "Contact" },
+  ];
 
-  const [isHovered, setIsHovered] = useState(false);
+  const dropdownContent: { [key: string]: { label: string; }[] } = {
+    Products: [
+      { label: "Water Treatment" },
+      { label: "Industrial Waste Water Treatment" },
+    ],
+    Applications: [
+      { label: "Water Treatment" },
+      { label: "Industrial Waste Water Treatment" },
+      { label: "Application 3" },
+      { label: "Application 4" },
+      { label: "Application 5" },
+    ],
+  };
 
+  const productItems: { [key: string]: { src: string; label: string; href: string }[] } = {
+    "Water Treatment": [
+      { src: "/water_drop.svg", label: "Capacitive Electro Desalination", href: "/products/1" },
+      { src: "/water_drop.svg", label: "Quick Cycle Auto DM Plant", href: "/products/1" },
+      { src: "/water_drop.svg", label: "Turbiloc Active Media Filtration", href: "/products/1" },
+      { src: "/water_drop.svg", label: "Ultrafiltration", href: "/products/1" },
+      { src: "/water_drop.svg", label: "Nanofiltration", href: "/products/1" },
+      { src: "/water_drop.svg", label: "Hi - Purity Water Systems", href: "/products/1" },
+      { src: "/water_drop.svg", label: "Hot Water Generation Systems", href: "/products/1" },
+    ],
+    "Industrial Waste Water Treatment": [
+      { src: "/water_drop.svg", label: "Water Harvester Zero liquid Discharge", href: "/products/1" },
+      { src: "/water_drop.svg", label: "Eutectic Freeze Crystallization", href: "/products/1" },
+      { src: "/water_drop.svg", label: "Advanced Photochemical Oxidation", href: "/products/1" },
+    ]
+  };
+
+  const applicationItems: { [key: string]: { src: string; label: string; href: string }[] } = {
+    "Water Treatment": [
+      { src: "/water_drop.svg", label: "Capacitive Electro Desalination", href: "/products/1" },
+      { src: "/water_drop.svg", label: "Quick Cycle Auto DM Plant", href: "/products/1" },
+      { src: "/water_drop.svg", label: "Turbiloc Active Media Filtration", href: "/products/1" },
+      { src: "/water_drop.svg", label: "Ultrafiltration", href: "/products/1" },
+      { src: "/water_drop.svg", label: "Nanofiltration", href: "/products/1" },
+      { src: "/water_drop.svg", label: "Hi - Purity Water Systems", href: "/products/1" },
+      { src: "/water_drop.svg", label: "Hot Water Generation Systems", href: "/products/1" },
+    ],
+    "Industrial Waste Water Treatment": [
+      { src: "/water_drop.svg", label: "Water Harvester Zero liquid Discharge", href: "/products/1" },
+      { src: "/water_drop.svg", label: "Eutectic Freeze Crystallization", href: "/products/1" },
+      { src: "/water_drop.svg", label: "Advanced Photochemical Oxidation", href: "/products/1" },
+    ]
+  };
   return (
     <nav className="fixed z-10 top-0 left-0 right-0  flex-col backdrop-blur-sm">
       <div
-        className={`flex flex-row justify-between items-center w-full h-auto px-20 py-3 ${isScrolled || isMenuOpen ? `bg-white` : `bg-transperant`
-          } ${!isMenuOpen ? "drop-shadow-xl" : "border-b"} transition-all duration-300 ease-in-out`}
+        className={`flex flex-row justify-between items-center w-full h-auto px-20 py-3 ${isWhite ? `bg-white` : `bg-transperant`
+          } ${!selectedMenu ? "drop-shadow-xl" : "border-b"} transition-all duration-300 ease-in-out`}
       >
         <Link href={"/"}>
           <img
-            src={`${isScrolled || isMenuOpen ? "/ioniclogo.png" : "/ioniclogo_white.png"}`}
+            src={`${isWhite ? "/ioniclogo.png" : "/ioniclogo_white.png"}`}
             className="h-16"
-            onMouseEnter={() => setIsMenuOpen("")}
+            onMouseEnter={() => setSelectedMenu("")}
           />
         </Link>
 
         <div
-          className={`${isScrolled || isMenuOpen ? `text-black` : `text-white`
+          className={`${isWhite ? `text-black` : `text-white`
             } transition-all duration-300 ease-in-out text-lg font-normal`}
         >
           <a
             className={`border-expand mx-5 py-2 cursor-pointer ${isHovered ? '' : 'mouse-leave'}`}
             aria-current="page"
-            onMouseEnter={() => { setIsMenuOpen("Products"); setIsHovered(true) }}
+            onMouseEnter={() => { setSelectedMenu("Products"); setIsHovered(true) }}
             onMouseLeave={() => setIsHovered(false)}
           >
             Products
           </a>
-          <a href="#about"
+          <a href="#"
             className={`border-expand mx-5 py-2 cursor-pointer ${isHovered ? '' : 'mouse-leave'}`}
-            onMouseEnter={() => { setIsMenuOpen("Applications"); setIsHovered(true) }}
+            onMouseEnter={() => { setSelectedMenu("Applications"); setIsHovered(true) }}
             onMouseLeave={() => setIsHovered(false)}
           >
             Applications
           </a>
-          <a href="#products"
+          <a href="#"
             className={`border-expand mx-5 py-2 cursor-pointer ${isHovered ? '' : 'mouse-leave'}`}
-            onMouseEnter={() => { setIsMenuOpen("Knowledge"); setIsHovered(true) }}
+            onMouseEnter={() => { setSelectedMenu("Knowledge"); setIsHovered(true) }}
             onMouseLeave={() => setIsHovered(false)}
           >
             Knowledge
           </a>
-          <a href="#blogs"
+          <a href="#"
             className={`border-expand mx-5 py-2 cursor-pointer ${isHovered ? '' : 'mouse-leave'}`}
-            onMouseEnter={() => { setIsMenuOpen("About"); setIsHovered(true) }}
+            onMouseEnter={() => { setSelectedMenu("About"); setIsHovered(true) }}
             onMouseLeave={() => setIsHovered(false)}
           >
             About
           </a>
-          <a href="#footer"
+          <a href="#"
             className={`border-expand mx-5 py-2 cursor-pointer ${isHovered ? '' : 'mouse-leave'}`}
-            onMouseEnter={() => { setIsMenuOpen("Contact"); setIsHovered(true) }}
+            onMouseEnter={() => { setSelectedMenu("Contact"); setIsHovered(true) }}
             onMouseLeave={() => setIsHovered(false)}
           >
             Contact
@@ -85,38 +141,92 @@ export default function NavBar() {
 
         <Link href="/brochure">
           <button className="px-4 py-2 text-white rounded bg-blueb-700 border-white hover:bg-opacity-70 text-lg"
-            onMouseEnter={() => setIsMenuOpen("")}>
+            onMouseEnter={() => setSelectedMenu("")}>
             Get Brochure
           </button>
         </Link>
 
       </div>
 
-      {
+      {selectedMenu && dropdownContent[selectedMenu] && (
+        <div
+          className="flex bg-white py-10 px-32 shadow-xl transition-all duration-300 ease-in-out"
+          onMouseEnter={() => setSelectedMenu(selectedMenu)}
+          onMouseLeave={() => {
+            setSelectedMenu("");
+            setSelectedCategory("");
+          }}
+        >
+          <div className="w-[40%] text-xl flex flex-col gap-3">
+            {dropdownContent[selectedMenu].map((item) => (
+              <p
+                key={item.label}
+                className={`flex items-center px-2 w-fit hover:font-semibold cursor-pointer ${selectedCategory === item.label && "font-semibold"}`}
+                onMouseEnter={() => setSelectedCategory(item.label)}
+              >
+                {item.label}
+                {item.label in productItems && <img className="w-5 h-5" src="/right-arrow.svg" alt="" />}
+              </p>
+            ))}
+          </div>
+          <div className="border-r border-gray-300 mx-5"></div>
+          {selectedCategory === "" && (
+            <div className="w-[60%]">
+              <div>
+                <p className="font-bold text-3xl">{selectedMenu}</p>
+                {selectedMenu === "Products" ? <p className="font-medium text-lg mt-3">Explore our wide range of products.</p> : <p className="font-medium text-lg mt-3">Explore wide range of applications of our products.</p>}
+              </div>
+            </div>
+          )}
+          {selectedMenu === "Products" && selectedCategory && selectedCategory in productItems && (
+            <div className="w-[60%]">
+              <div className="text-lg flex flex-col">
+                <p className="text-sm text-gray-600 py-3">{selectedCategory}</p>
+                <div className="grid grid-cols-2 gap-3">
+                  {productItems[selectedCategory].map((product) => (
+                    <Link key={product.label} href={product.href}>
+                      <div className="group flex items-center justify-start gap-2 rounded-lg w-[1/2] py-2 px-3 hover:border hover:bg-blueb-700 hover:drop-shadow-xl" onMouseEnter={() => setHoveredProduct(product.label)}
+                        onMouseLeave={() => setHoveredProduct(null)}>
+                        <img className="w-7 h-7" src={hoveredProduct === product.label ? "/water_drop_white.svg" : product.src} alt="" />
+                        <p className="group-hover:text-white">{product.label}</p>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+          )}
+          {selectedMenu === "Applications" && selectedCategory && selectedCategory in applicationItems && (
+            <div className="w-[60%]">
+              <div className="text-lg flex flex-col">
+                <p className="text-sm text-gray-600 py-3">{selectedCategory}</p>
+                <div className="grid grid-cols-2 gap-3">
+                  {productItems[selectedCategory].map((product) => (
+                    <Link key={product.label} href={product.href}>
+                      <div className="group flex items-center justify-start gap-2 rounded-lg w-[1/2] py-2 px-3 hover:border hover:bg-blueb-700" onMouseEnter={() => setHoveredProduct(product.label)}
+                        onMouseLeave={() => setHoveredProduct(null)}>
+                        <img className="w-7 h-7" src={hoveredProduct === product.label ? "/water_drop_white.svg" : product.src} alt="" />
+                        <p className="group-hover:text-white">{product.label}</p>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* {
         isMenuOpen === "Products" && <div className="flex bg-white py-10 px-32 shadow-xl transition-all duration-300 ease-in-out" onMouseEnter={() => setIsMenuOpen("Products")} onMouseLeave={() => { setIsMenuOpen(""); setSelectedCategory("") }}>
           <div className="w-[40%] text-xl flex flex-col gap-3">
             <p className="group w-fit hover:font-bold cursor-pointer"
-              onMouseEnter={() => setSelectedCategory("")}>
-              Category 1
+              onMouseEnter={() => setSelectedCategory("Water Treatment")}>
+              Water Treatment &gt;
             </p>
             <p className="group w-fit hover:font-bold cursor-pointer"
-              onMouseEnter={() => setSelectedCategory("")}>
-              Category 2
-            </p>
-            <p className="group w-fit hover:font-bold cursor-pointer"
-              onMouseEnter={() => setSelectedCategory("Category3")}
-            >
-              Category 3 &gt;
-            </p>
-            <p className="group w-fit hover:font-bold cursor-pointer"
-              onMouseEnter={() => setSelectedCategory("Category4")}
-            >
-              Category 4 &gt;
-            </p>
-            <p className="group w-fit hover:font-bold cursor-pointer"
-              onMouseEnter={() => setSelectedCategory("Category5")}
-            >
-              Category 5 &gt;
+              onMouseEnter={() => setSelectedCategory("Industrial Waste Water Treatment")}>
+              Industrial Waste Water Treatment &gt;
             </p>
           </div>
           <div className="border-r border-gray-300 mx-5"></div>
@@ -127,31 +237,31 @@ export default function NavBar() {
             </div>
           </div>}
 
-          {selectedCategory === "Category3" && <div className="w-[60%]">
+          {selectedCategory === "Water Treatment" && <div className="w-[60%]">
             <div className="text-lg flex flex-col">
               <p className="text-sm text-gray-600 py-3">Category 3</p>
               <div className="grid grid-cols-2">
                 <Link href={"/products/1"}>
                   <div className="flex items-center justify-start gap-3 rounded-lg w-[1/2] py-2 px-3 hover:border">
-                    <img className="w-8 h-8" src="/applications/ionicchemical.png" alt="" />
+                    <img className="w-8 h-8" src="/water_drop.svg" alt="" />
                     <p>Product 1</p>
                   </div>
                 </Link>
                 <Link href={"/products/1"}>
                   <div className="flex items-center justify-start gap-3 rounded-lg w-[1/2] py-2 px-3 hover:border">
-                    <img className="w-8 h-8" src="/applications/ionicchemical.png" alt="" />
+                    <img className="w-8 h-8" src="/water_drop.svg" alt="" />
                     <p>Product 2</p>
                   </div>
                 </Link>
                 <Link href={"/products/1"}>
                   <div className="flex items-center justify-start gap-3 rounded-lg w-[1/2] py-2 px-3 hover:border">
-                    <img className="w-8 h-8" src="/applications/ionicchemical.png" alt="" />
+                    <img className="w-8 h-8" src="/water_drop.svg" alt="" />
                     <p>Product 3</p>
                   </div>
                 </Link>
                 <Link href={"/products/1"}>
                   <div className="flex items-center justify-start gap-3 rounded-lg w-[1/2] py-2 px-3 hover:border">
-                    <img className="w-8 h-8" src="/applications/ionicchemical.png" alt="" />
+                    <img className="w-8 h-8" src="/water_drop.svg" alt="" />
                     <p>Product 4</p>
                   </div>
                 </Link>
@@ -245,16 +355,16 @@ export default function NavBar() {
             </div>
           </div>}
         </div>
-      }
+      } */}
 
       {
-        isMenuOpen === "Knowledge" && <div className="flex bg-white py-10 px-32 shadow-xl transition-all duration-300 ease-in-out" onMouseEnter={() => setIsMenuOpen("Knowledge")} onMouseLeave={() => { setIsMenuOpen(""); setSelectedCategory("") }}>
+        selectedMenu === "Knowledge" && <div className="flex bg-white py-10 px-32 shadow-xl transition-all duration-300 ease-in-out" onMouseEnter={() => setSelectedMenu("Knowledge")} onMouseLeave={() => { setSelectedMenu(""); setSelectedCategory("") }}>
           <div className="w-[40%] text-xl flex flex-col gap-3">
-            <Link className="group w-fit hover:font-bold cursor-pointer"
+            <Link className={`flex items-center px-2 w-fit hover:font-semibold cursor-pointer ${selectedCategory === "Blogs" && "font-semibold"}`}
               onMouseEnter={() => setSelectedCategory("Blogs")} href={"/blogs"}>
               Blogs
             </Link>
-            <Link className="group w-fit hover:font-bold cursor-pointer"
+            <Link className={`flex items-center px-2 w-fit hover:font-semibold cursor-pointer ${selectedCategory === "Case Studies" && "font-semibold"}`}
               onMouseEnter={() => setSelectedCategory("Case Studies")} href={"/case-study"}            >
               Case Studies
             </Link>
@@ -292,12 +402,12 @@ export default function NavBar() {
       }
 
       {
-        isMenuOpen === "About" && <div className="flex bg-white py-10 px-32 shadow-xl transition-all duration-300 ease-in-out" onMouseEnter={() => setIsMenuOpen("About")} onMouseLeave={() => { setIsMenuOpen(""); setSelectedCategory("") }}>
+        selectedMenu === "About" && <div className="flex bg-white py-10 px-32 shadow-xl transition-all duration-300 ease-in-out" onMouseEnter={() => setSelectedMenu("About")} onMouseLeave={() => { setSelectedMenu(""); setSelectedCategory("") }}>
           <div className="w-[40%] text-xl flex flex-col gap-3">
-            <p className="group w-fit hover:font-bold cursor-pointer">
+            <p className={`flex items-center px-2 w-fit hover:font-semibold cursor-pointer ${selectedCategory === "About Us" && "font-semibold"}`} onMouseEnter={() => setSelectedCategory("About Us")}>
               About Us
             </p>
-            <p className="group w-fit hover:font-bold cursor-pointer">
+            <p className={`flex items-center px-2 w-fit hover:font-semibold cursor-pointer ${selectedCategory === "Careers" && "font-semibold"}`} onMouseEnter={() => setSelectedCategory("Careers")}>
               Careers
             </p>
           </div>
@@ -313,7 +423,7 @@ export default function NavBar() {
       }
 
       {
-        isMenuOpen === "Contact" && <div className="flex bg-white py-10 px-32 shadow-xl transition-all duration-300 ease-in-out" onMouseEnter={() => setIsMenuOpen("Contact")} onMouseLeave={() => { setIsMenuOpen(""); setSelectedCategory("") }}>
+        selectedMenu === "Contact" && <div className="flex bg-white py-10 px-32 shadow-xl transition-all duration-300 ease-in-out" onMouseEnter={() => setSelectedMenu("Contact")} onMouseLeave={() => { setSelectedMenu(""); setSelectedCategory("") }}>
           <div className="w-[40%] text-lg flex flex-col gap-3">
             <div className="mt-4">
               <p className='py-2'><b>Contact:</b> <br /> 020-27475272 / 8275486263</p>
