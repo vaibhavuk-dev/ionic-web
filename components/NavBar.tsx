@@ -28,7 +28,7 @@ export default function NavBar() {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <nav className="fixed z-10 top-0 left-0 right-0  flex-col">
+    <nav className="fixed z-10 top-0 left-0 right-0  flex-col backdrop-blur-sm">
       <div
         className={`flex flex-row justify-between items-center w-full h-auto px-20 py-3 ${isScrolled || isMenuOpen ? `bg-white` : `bg-transperant`
           } ${!isMenuOpen ? "drop-shadow-xl" : "border-b"} transition-all duration-300 ease-in-out`}
