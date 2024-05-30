@@ -2,13 +2,13 @@ import AnyQuestion from "@/components/AnyQuestion";
 import BlogsCarousalNavBar from "@/components/BlogsCarousalNavBar";
 import BlogsGrid from "@/components/BlogsGrid";
 import Footer from "@/components/Footer";
-import NavBarWhite from "@/components/NavBarWhite";
+import NavBar from "@/components/NavBar";
 
 export default function BlogsPage() {
 
     return (
         <div>
-            <NavBarWhite />
+            <NavBar shouldWhite={true} />
 
             <div className="bg-blueb-50 mt-20 py-10 px-32 ">
                 <h1 className="text-5xl font-semibold text-black">Blogs</h1>

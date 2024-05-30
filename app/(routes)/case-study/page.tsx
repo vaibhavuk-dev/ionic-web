@@ -3,13 +3,12 @@ import BlogsGrid from "@/components/BlogsGrid";
 import CaseStudiesGrid from "@/components/CaseStudiesGrid";
 import Footer from "@/components/Footer";
 import NavBar from "@/components/NavBar";
-import NavBarWhite from "@/components/NavBarWhite";
 
 export default function CaseStudyPage() {
 
     return (
         <div>
-            <NavBarWhite />
+            <NavBar shouldWhite={true} />
 
             <div className="bg-blueb-50 mt-20 py-10 px-32 ">
                 <h1 className="text-5xl font-semibold text-black">Case Studies</h1>

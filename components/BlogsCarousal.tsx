@@ -50,7 +50,7 @@ export default function ExpertReviews({ data }: { data: DataType }) {
         }
     };
     return (
-        <div className="w-full h-full px-7 mt-4  relative flex flex-col items-center justify-center md:items-start md:overflow-hidden md:px-0 lg:px-0">
+        <div className="w-full h-full px-7 mt-4  relative flex flex-col items-center justify-center md:items-start md:overflow-hidden md:px-0 lg:px-0 bg-white">
             <div className=" flex w-full h-full overflow-hidden ">
                 {data &&
                     data.map((post, index) => (

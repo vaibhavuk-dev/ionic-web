@@ -5,7 +5,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import BlogsCarousalNavBar from "./BlogsCarousalNavBar";
 
-export default function NavBar() {
+export default function NavBar({ shouldWhite }: { shouldWhite?: boolean }) {
 
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState("");
@@ -27,22 +27,24 @@ export default function NavBar() {
 
   const [isHovered, setIsHovered] = useState(false);
 
+  const isWhite = shouldWhite || (isScrolled || isMenuOpen)
+
   return (
     <nav className="fixed z-10 top-0 left-0 right-0  flex-col backdrop-blur-sm">
       <div
-        className={`flex flex-row justify-between items-center w-full h-auto px-20 py-3 ${isScrolled || isMenuOpen ? `bg-white` : `bg-transperant`
+        className={`flex flex-row justify-between items-center w-full h-auto px-20 py-3 ${isWhite ? `bg-white` : `bg-transperant`
           } ${!isMenuOpen ? "drop-shadow-xl" : "border-b"} transition-all duration-300 ease-in-out`}
       >
         <Link href={"/"}>
           <img
-            src={`${isScrolled || isMenuOpen ? "/ioniclogo.png" : "/ioniclogo_white.png"}`}
+            src={`${isWhite ? "/ioniclogo.png" : "/ioniclogo_white.png"}`}
             className="h-16"
             onMouseEnter={() => setIsMenuOpen("")}
           />
         </Link>
 
         <div
-          className={`${isScrolled || isMenuOpen ? `text-black` : `text-white`
+          className={`${isWhite ? `text-black` : `text-white`
             } transition-all duration-300 ease-in-out text-lg font-normal`}
         >
           <a
@@ -53,28 +55,28 @@ export default function NavBar() {
           >
             Products
           </a>
-          <a href="#about"
+          <a href="#"
             className={`border-expand mx-5 py-2 cursor-pointer ${isHovered ? '' : 'mouse-leave'}`}
             onMouseEnter={() => { setIsMenuOpen("Applications"); setIsHovered(true) }}
             onMouseLeave={() => setIsHovered(false)}
           >
             Applications
           </a>
-          <a href="#products"
+          <a href="#"
             className={`border-expand mx-5 py-2 cursor-pointer ${isHovered ? '' : 'mouse-leave'}`}
             onMouseEnter={() => { setIsMenuOpen("Knowledge"); setIsHovered(true) }}
             onMouseLeave={() => setIsHovered(false)}
           >
             Knowledge
           </a>
-          <a href="#blogs"
+          <a href="#"
             className={`border-expand mx-5 py-2 cursor-pointer ${isHovered ? '' : 'mouse-leave'}`}
             onMouseEnter={() => { setIsMenuOpen("About"); setIsHovered(true) }}
             onMouseLeave={() => setIsHovered(false)}
           >
             About
           </a>
-          <a href="#footer"
+          <a href="#"
             className={`border-expand mx-5 py-2 cursor-pointer ${isHovered ? '' : 'mouse-leave'}`}
             onMouseEnter={() => { setIsMenuOpen("Contact"); setIsHovered(true) }}
             onMouseLeave={() => setIsHovered(false)}
@@ -96,27 +98,12 @@ export default function NavBar() {
         isMenuOpen === "Products" && <div className="flex bg-white py-10 px-32 shadow-xl transition-all duration-300 ease-in-out" onMouseEnter={() => setIsMenuOpen("Products")} onMouseLeave={() => { setIsMenuOpen(""); setSelectedCategory("") }}>
           <div className="w-[40%] text-xl flex flex-col gap-3">
             <p className="group w-fit hover:font-bold cursor-pointer"
-              onMouseEnter={() => setSelectedCategory("")}>
-              Category 1
+              onMouseEnter={() => setSelectedCategory("Water Treatment")}>
+              Water Treatment &gt;
             </p>
             <p className="group w-fit hover:font-bold cursor-pointer"
-              onMouseEnter={() => setSelectedCategory("")}>
-              Category 2
-            </p>
-            <p className="group w-fit hover:font-bold cursor-pointer"
-              onMouseEnter={() => setSelectedCategory("Category3")}
-            >
-              Category 3 &gt;
-            </p>
-            <p className="group w-fit hover:font-bold cursor-pointer"
-              onMouseEnter={() => setSelectedCategory("Category4")}
-            >
-              Category 4 &gt;
-            </p>
-            <p className="group w-fit hover:font-bold cursor-pointer"
-              onMouseEnter={() => setSelectedCategory("Category5")}
-            >
-              Category 5 &gt;
+              onMouseEnter={() => setSelectedCategory("Industrial Waste Water Treatment")}>
+              Industrial Waste Water Treatment &gt;
             </p>
           </div>
           <div className="border-r border-gray-300 mx-5"></div>
@@ -127,7 +114,7 @@ export default function NavBar() {
             </div>
           </div>}
 
-          {selectedCategory === "Category3" && <div className="w-[60%]">
+          {selectedCategory === "Water Treatment" && <div className="w-[60%]">
             <div className="text-lg flex flex-col">
               <p className="text-sm text-gray-600 py-3">Category 3</p>
               <div className="grid grid-cols-2">
