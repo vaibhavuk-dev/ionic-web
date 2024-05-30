@@ -54,7 +54,7 @@ export default function ExpertReviews({ data }: { data: DataType }) {
             <div className=" flex w-full h-full overflow-hidden gap-5">
                 {data &&
                     data.map((post, index) => (
-                        <div className="h-[60vh] w-[33%] flex relative">
+                        <div className="h-[60vh] w-[33%] flex relative" key={index}>
                             <img
                                 className="border border-white animate-slideInFromLeft object-cover"
                                 src={post.post_image ? post.post_image : ""}
