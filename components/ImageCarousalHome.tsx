@@ -14,7 +14,7 @@ export default function ImageCarousalHome() {
     const [currentImage, setCurrentImage] = useState("");
 
     return (
-        <div className={`h-full w-full ${currentImage ? "backdrop-blur-lg" : ""} transition-all duration-300 ease-in-out`}>
+        <div className={`h-full w-full ${currentImage ? "backdrop-blur-lg" : ""} basic-transition`}>
             <div className={`fixed w-full bottom-0 flex flex-col items-center justify-center `}>
                 {currentImage && (
                     <div className="w-full flex items-center justify-center py-10">

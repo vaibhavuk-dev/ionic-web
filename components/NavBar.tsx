@@ -124,7 +124,7 @@ export default function NavBar({ shouldWhite }: { shouldWhite?: boolean }) {
     <nav className="fixed z-10 top-0 left-0 right-0  flex-col backdrop-blur-sm">
       <div
         className={`flex flex-row justify-between items-center w-full h-auto px-20 py-3 ${isWhite ? `bg-white` : `bg-transperant`
-          } ${!selectedMenu ? "drop-shadow-xl" : "border-b"} transition-all duration-300 ease-in-out`}
+          } ${!selectedMenu ? "drop-shadow-xl" : "border-b"} basic-transition`}
       >
         <Link href={"/"}>
           <img
@@ -136,7 +136,7 @@ export default function NavBar({ shouldWhite }: { shouldWhite?: boolean }) {
 
         <div
           className={`${isWhite ? `text-black` : `text-white`
-            } transition-all duration-300 ease-in-out text-lg font-normal`}
+            } basic-transition text-lg font-normal`}
         >
           <a
             className={`border-expand mx-5 py-2 cursor-pointer ${isHovered ? '' : 'mouse-leave'}`}
@@ -187,7 +187,7 @@ export default function NavBar({ shouldWhite }: { shouldWhite?: boolean }) {
 
       {selectedMenu && dropdownContent[selectedMenu] && (
         <div
-          className="flex bg-white py-10 px-32 shadow-xl transition-all duration-300 ease-in-out max-h-[80vh]"
+          className="flex bg-white py-10 px-32 shadow-xl basic-transition max-h-[80vh]"
           onMouseEnter={() => setSelectedMenu(selectedMenu)}
           onMouseLeave={() => {
             setSelectedMenu("");
@@ -255,7 +255,7 @@ export default function NavBar({ shouldWhite }: { shouldWhite?: boolean }) {
       )}
 
       {/* {
-        isMenuOpen === "Products" && <div className="flex bg-white py-10 px-32 shadow-xl transition-all duration-300 ease-in-out" onMouseEnter={() => setIsMenuOpen("Products")} onMouseLeave={() => { setIsMenuOpen(""); setSelectedCategory("") }}>
+        isMenuOpen === "Products" && <div className="flex bg-white py-10 px-32 shadow-xl basic-transition" onMouseEnter={() => setIsMenuOpen("Products")} onMouseLeave={() => { setIsMenuOpen(""); setSelectedCategory("") }}>
           <div className="w-[40%] text-xl flex flex-col gap-3">
             <p className="group w-fit hover:font-bold cursor-pointer"
               onMouseEnter={() => setSelectedCategory("Water Treatment")}>
@@ -330,7 +330,7 @@ export default function NavBar({ shouldWhite }: { shouldWhite?: boolean }) {
       }
 
       {
-        isMenuOpen === "Applications" && <div className="flex bg-white py-10 px-32 shadow-xl transition-all duration-300 ease-in-out" onMouseEnter={() => setIsMenuOpen("Applications")} onMouseLeave={() => { setIsMenuOpen(""); setSelectedCategory("") }}>
+        isMenuOpen === "Applications" && <div className="flex bg-white py-10 px-32 shadow-xl basic-transition" onMouseEnter={() => setIsMenuOpen("Applications")} onMouseLeave={() => { setIsMenuOpen(""); setSelectedCategory("") }}>
           <div className="w-[40%] text-xl flex flex-col gap-3">
             <p className="group w-fit hover:font-bold cursor-pointer">
               Application 1
@@ -395,7 +395,7 @@ export default function NavBar({ shouldWhite }: { shouldWhite?: boolean }) {
       } */}
 
       {
-        selectedMenu === "Knowledge" && <div className="flex bg-white py-10 px-32 shadow-xl transition-all duration-300 ease-in-out" onMouseEnter={() => setSelectedMenu("Knowledge")} onMouseLeave={() => { setSelectedMenu(""); setSelectedCategory("") }}>
+        selectedMenu === "Knowledge" && <div className="flex bg-white py-10 px-32 shadow-xl basic-transition" onMouseEnter={() => setSelectedMenu("Knowledge")} onMouseLeave={() => { setSelectedMenu(""); setSelectedCategory("") }}>
           <div className="w-[40%] text-xl flex flex-col gap-3">
             <Link className={`flex items-center px-2 w-fit hover:font-semibold cursor-pointer ${selectedCategory === "Blogs" && "font-semibold"}`}
               onMouseEnter={() => setSelectedCategory("Blogs")} href={"/blogs"}>
@@ -439,7 +439,7 @@ export default function NavBar({ shouldWhite }: { shouldWhite?: boolean }) {
       }
 
       {
-        selectedMenu === "About" && <div className="flex bg-white py-10 px-32 shadow-xl transition-all duration-300 ease-in-out" onMouseEnter={() => setSelectedMenu("About")} onMouseLeave={() => { setSelectedMenu(""); setSelectedCategory("") }}>
+        selectedMenu === "About" && <div className="flex bg-white py-10 px-32 shadow-xl basic-transition" onMouseEnter={() => setSelectedMenu("About")} onMouseLeave={() => { setSelectedMenu(""); setSelectedCategory("") }}>
           <div className="w-[40%] text-xl flex flex-col gap-3">
             <p className={`flex items-center px-2 w-fit hover:font-semibold cursor-pointer ${selectedCategory === "About Us" && "font-semibold"}`} onMouseEnter={() => setSelectedCategory("About Us")}>
               About Us
@@ -460,7 +460,7 @@ export default function NavBar({ shouldWhite }: { shouldWhite?: boolean }) {
       }
 
       {
-        selectedMenu === "Contact" && <div className="flex bg-white py-10 px-32 shadow-xl transition-all duration-300 ease-in-out" onMouseEnter={() => setSelectedMenu("Contact")} onMouseLeave={() => { setSelectedMenu(""); setSelectedCategory("") }}>
+        selectedMenu === "Contact" && <div className="flex bg-white py-10 px-32 shadow-xl basic-transition" onMouseEnter={() => setSelectedMenu("Contact")} onMouseLeave={() => { setSelectedMenu(""); setSelectedCategory("") }}>
           <div className="w-[40%] text-lg flex flex-col gap-3">
             <div className="mt-4">
               <p className='py-2'><b>Contact:</b> <br /> 020-27475272 / 8275486263</p>

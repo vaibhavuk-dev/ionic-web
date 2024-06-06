@@ -57,7 +57,7 @@ export default function ExpertReviews({ data }: { data: DataType }) {
                         <a
                             key={index}
                             style={{ translate: `${-100 * imageIndex}%` }}
-                            className={`h-full w-full  md:w-[50%] lg:w-[50%] md:px-2 flex flex-col transition-all bg-[#f9f9f9]  ease-in-out duration-300   gap-3 items-center  flex-shrink-0 flex-grow-0 justify-start bg-transparent bg-opacity-30 `}
+                            className={`h-full w-full  md:w-[50%] lg:w-[50%] md:px-2 flex flex-col transition-all bg-[#f9f9f9] basic-transition gap-3 items-center  flex-shrink-0 flex-grow-0 justify-start bg-transparent bg-opacity-30 `}
                             href={post.post_slug}
                             target="_blank"
                         >
