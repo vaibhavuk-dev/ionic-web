@@ -141,20 +141,19 @@ export default function Products1Page() {
                         <p>Download Brochure (PDF)</p>
                     </div>
                 </div>
+            </div>
 
-                <div className="">
-                    <p className="text-xl w-fit font-semibold">Case Studies</p>
+            <div className="pb-5">
                     <CaseStudiesCarousal
                         data={[
                             { post_title: "Case Studies: Successful Wastewater Treatment through Bioremediation", post_slug: "/case-study/1", post_image: "/blogs/blog2.png" },
                             { post_title: "Why Municipal Wastewater Treatment Is Important?", post_slug: "/blogs/1", post_image: "/blogs/blog4.png" },
                             { post_title: "7 Benefits Of Wastewater Treatment", post_slug: "/blogs/1", post_image: "/blogs/blog3.png" },
-                            // { post_title: "Monroe Environmental Saves Steel Mill $145,000 on Clarifier Upgrade", post_slug: "/case-study/1", post_image: "/casestudy/cs4.png" },
+                            { post_title: "Monroe Environmental Saves Steel Mill $145,000 on Clarifier Upgrade", post_slug: "/case-study/1", post_image: "/casestudy/cs4.png" },
                         ]} />
                 </div>
 
-                <div className="">
-                    <p className="text-xl w-fit font-semibold">Blogs</p>
+                <div className="pb-5">
                     <BlogsCarousal
                         data={[
                             { post_title: "Algae-based Wastewater Treatment", post_slug: "/blogs/1", post_image: "/blogs/blog2.png" },
@@ -163,7 +162,6 @@ export default function Products1Page() {
                             { post_title: "Why Municipal Wastewater Treatment Is Important?", post_slug: "/blogs/1", post_image: "/blogs/blog4.png" },
                         ]} />
                 </div>
-            </div>
 
             <AnyQuestion />
             <Footer />

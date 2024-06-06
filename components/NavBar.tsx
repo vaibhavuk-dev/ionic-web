@@ -42,46 +42,83 @@ export default function NavBar({ shouldWhite }: { shouldWhite?: boolean }) {
       { label: "Industrial Waste Water Treatment" },
     ],
     Applications: [
-      { label: "Water Treatment" },
-      { label: "Industrial Waste Water Treatment" },
-      { label: "Application 3" },
-      { label: "Application 4" },
-      { label: "Application 5" },
+      { "label": "Water Treatment" },
+      { "label": "Brine Treatment" },
+      { "label": "Ammonia Removal" },
+      { "label": "Silica Removal" },
+      { "label": "Resource Recovery" },
+      { "label": "BOD/COD Reduction" },
+      { "label": "Lithium Extraction" },
+      { "label": "Zero liquid Discharge" },
+      { "label": "Cooling water Treatment" },
+      { "label": "Potable water disinfection" },
+      { "label": "Industrial Waste Water Treatment" },
     ],
   };
 
   const productItems: { [key: string]: { src: string; label: string; href: string }[] } = {
     "Water Treatment": [
-      { src: "/water_drop.svg", label: "Capacitive Electro Desalination", href: "/products/1" },
-      { src: "/water_drop.svg", label: "Quick Cycle Auto DM Plant", href: "/products/1" },
-      { src: "/water_drop.svg", label: "Turbiloc Active Media Filtration", href: "/products/1" },
-      { src: "/water_drop.svg", label: "Ultrafiltration", href: "/products/1" },
-      { src: "/water_drop.svg", label: "Nanofiltration", href: "/products/1" },
-      { src: "/water_drop.svg", label: "Hi - Purity Water Systems", href: "/products/1" },
-      { src: "/water_drop.svg", label: "Hot Water Generation Systems", href: "/products/1" },
-    ],
+      { "src": "/water_drop.svg", "label": "Oil-Loc", "href": "/products/1" },
+      { "src": "/water_drop.svg", "label": "Silica-Loc", "href": "/products/1" },
+      { "src": "/water_drop.svg", "label": "Nanofiltration", "href": "/products/1" },
+      { "src": "/water_drop.svg", "label": "Ultrafiltration", "href": "/products/1" },
+      { "src": "/water_drop.svg", "label": "Polymix Dosing System", "href": "/products/1" },
+      { "src": "/water_drop.svg", "label": "Seawater Desalination", "href": "/products/1" },
+      { "src": "/water_drop.svg", "label": "Quick Cycle Auto DM Plant", "href": "/products/1" },
+      { "src": "/water_drop.svg", "label": "Hi - Purity Water Systems", "href": "/products/1" },
+      { "src": "/water_drop.svg", "label": "Brackish Water Desalination", "href": "/products/1" },
+      { "src": "/water_drop.svg", "label": "Closed Loop Desal RO Matrix", "href": "/products/1" },
+      { "src": "/water_drop.svg", "label": "Hot Water Generation Systems", "href": "/products/1" },
+      { "src": "/water_drop.svg", "label": "I-Dose Chemical Dosing System", "href": "/products/1" },
+      { "src": "/water_drop.svg", "label": "Technology for Ammonia Removal", "href": "/products/1" },
+      { "src": "/water_drop.svg", "label": "Capacitive Electro Desalination", "href": "/products/1" },
+      { "src": "/water_drop.svg", "label": "Turbiloc Active Media Filtration", "href": "/products/1" },
+      { "src": "/water_drop.svg", "label": "Lamella Inclined Plate Clarifier", "href": "/products/1" },
+      { "src": "/water_drop.svg", "label": "Genox Smart Digital Chlorine Dioxide Generator", "href": "/products/1" },
+    ]
+    ,
     "Industrial Waste Water Treatment": [
-      { src: "/water_drop.svg", label: "Water Harvester Zero liquid Discharge", href: "/products/1" },
       { src: "/water_drop.svg", label: "Eutectic Freeze Crystallization", href: "/products/1" },
       { src: "/water_drop.svg", label: "Advanced Photochemical Oxidation", href: "/products/1" },
+      { src: "/water_drop.svg", label: "Water Harvester Zero liquid Discharge", href: "/products/1" },
     ]
   };
 
   const applicationItems: { [key: string]: { src: string; label: string; href: string }[] } = {
-    "Water Treatment": [
-      { src: "/water_drop.svg", label: "Capacitive Electro Desalination", href: "/products/1" },
-      { src: "/water_drop.svg", label: "Quick Cycle Auto DM Plant", href: "/products/1" },
-      { src: "/water_drop.svg", label: "Turbiloc Active Media Filtration", href: "/products/1" },
-      { src: "/water_drop.svg", label: "Ultrafiltration", href: "/products/1" },
-      { src: "/water_drop.svg", label: "Nanofiltration", href: "/products/1" },
-      { src: "/water_drop.svg", label: "Hi - Purity Water Systems", href: "/products/1" },
-      { src: "/water_drop.svg", label: "Hot Water Generation Systems", href: "/products/1" },
-    ],
-    "Industrial Waste Water Treatment": [
-      { src: "/water_drop.svg", label: "Water Harvester Zero liquid Discharge", href: "/products/1" },
-      { src: "/water_drop.svg", label: "Eutectic Freeze Crystallization", href: "/products/1" },
-      { src: "/water_drop.svg", label: "Advanced Photochemical Oxidation", href: "/products/1" },
-    ]
+      "BOD/COD Reduction": [
+        { src: "/water_drop.svg", label: "Advanced Photochemical Oxidation", href: "/products/1" }
+      ],
+      "Brine Treatment": [
+        { src: "/water_drop.svg", label: "Closed Loop Desal RO Matrix", href: "/products/1" },
+        { src: "/water_drop.svg", label: "Ultrafiltration", href: "/products/1" }
+      ],
+      "Ammonia Removal": [
+        { src: "/water_drop.svg", label: "Technology for Ammonia Removal", href: "/products/1" }
+      ],
+      "Resource Recovery (Brief writeup to be provided by ionic)": [
+        { src: "/water_drop.svg", label: "Eutectic Freeze Crystallization", href: "/products/1" },
+        { src: "/water_drop.svg", label: "Water Harvester Zero liquid Discharge", href: "/products/1" }
+      ],
+      "Zero liquid Discharge": [
+        { src: "/water_drop.svg", label: "Eutectic Freeze Crystallization", href: "/products/1" },
+        { src: "/water_drop.svg", label: "Water Harvester Zero liquid Discharge", href: "/products/1" }
+      ],
+      "Potable water disinfection": [
+        { src: "/water_drop.svg", label: "Genox Smart Digital Chlorine Dioxide Generator", href: "/products/1" }
+      ],
+      "Cooling water Treatment": [
+        { src: "/water_drop.svg", label: "Genox Smart Digital Chlorine Dioxide Generator", href: "/products/1" },
+        { src: "/water_drop.svg", label: "Water Harvester Zero liquid Discharge", href: "/products/1" }
+      ],
+      "Lithium Extraction": [
+        { src: "/water_drop.svg", label: "Water Harvester Zero liquid Discharge", href: "/products/1" }
+      ],
+      "Water Treatment": [
+        { src: "/water_drop.svg", label: "Brackish Water Desalination", href: "/products/1" },
+        { src: "/water_drop.svg", label: "Capacitive Electro Desalination", href: "/products/1" },
+        { src: "/water_drop.svg", label: "Seawater Desalination", href: "/products/1" },
+        { src: "/water_drop.svg", label: "Ultrafiltration", href: "/products/1" }
+      ]    
   };
   return (
     <nav className="fixed z-10 top-0 left-0 right-0  flex-col backdrop-blur-sm">
@@ -150,14 +187,14 @@ export default function NavBar({ shouldWhite }: { shouldWhite?: boolean }) {
 
       {selectedMenu && dropdownContent[selectedMenu] && (
         <div
-          className="flex bg-white py-10 px-32 shadow-xl transition-all duration-300 ease-in-out"
+          className="flex bg-white py-10 px-32 shadow-xl transition-all duration-300 ease-in-out max-h-[80vh]"
           onMouseEnter={() => setSelectedMenu(selectedMenu)}
           onMouseLeave={() => {
             setSelectedMenu("");
             setSelectedCategory("");
           }}
         >
-          <div className="w-[40%] text-xl flex flex-col gap-3">
+          <div className="w-[40%] text-xl flex flex-col gap-3 overflow-y-scroll">
             {dropdownContent[selectedMenu].map((item) => (
               <p
                 key={item.label}
@@ -165,7 +202,7 @@ export default function NavBar({ shouldWhite }: { shouldWhite?: boolean }) {
                 onMouseEnter={() => setSelectedCategory(item.label)}
               >
                 {item.label}
-                {item.label in productItems && <img className="w-5 h-5" src="/right-arrow.svg" alt="" />}
+                {((selectedMenu == "Products" && item.label in productItems) || (selectedMenu == "Applications" && item.label in applicationItems)) && <img className="w-5 h-5" src="/right-arrow.svg" alt="" />}
               </p>
             ))}
           </div>
@@ -179,15 +216,15 @@ export default function NavBar({ shouldWhite }: { shouldWhite?: boolean }) {
             </div>
           )}
           {selectedMenu === "Products" && selectedCategory && selectedCategory in productItems && (
-            <div className="w-[60%]">
-              <div className="text-lg flex flex-col">
+            <div className="w-[60%] overflow-y-scroll">
+              <div className="text-md flex flex-col">
                 <p className="text-sm text-gray-600 py-3">{selectedCategory}</p>
                 <div className="grid grid-cols-2 gap-3">
                   {productItems[selectedCategory].map((product) => (
                     <Link key={product.label} href={product.href}>
                       <div className="group flex items-center justify-start gap-2 rounded-lg w-[1/2] py-2 px-3 hover:border hover:bg-blueb-700 hover:drop-shadow-xl" onMouseEnter={() => setHoveredProduct(product.label)}
                         onMouseLeave={() => setHoveredProduct(null)}>
-                        <img className="w-7 h-7" src={hoveredProduct === product.label ? "/water_drop_white.svg" : product.src} alt="" />
+                        <img className="w-5 h-5" src={hoveredProduct === product.label ? "/water_drop_white.svg" : product.src} alt="" />
                         <p className="group-hover:text-white">{product.label}</p>
                       </div>
                     </Link>
@@ -197,15 +234,15 @@ export default function NavBar({ shouldWhite }: { shouldWhite?: boolean }) {
             </div>
           )}
           {selectedMenu === "Applications" && selectedCategory && selectedCategory in applicationItems && (
-            <div className="w-[60%]">
-              <div className="text-lg flex flex-col">
+            <div className="w-[60%] overflow-y-scroll">
+              <div className="text-md flex flex-col">
                 <p className="text-sm text-gray-600 py-3">{selectedCategory}</p>
                 <div className="grid grid-cols-2 gap-3">
-                  {productItems[selectedCategory].map((product) => (
+                  {applicationItems[selectedCategory].map((product) => (
                     <Link key={product.label} href={product.href}>
                       <div className="group flex items-center justify-start gap-2 rounded-lg w-[1/2] py-2 px-3 hover:border hover:bg-blueb-700" onMouseEnter={() => setHoveredProduct(product.label)}
                         onMouseLeave={() => setHoveredProduct(null)}>
-                        <img className="w-7 h-7" src={hoveredProduct === product.label ? "/water_drop_white.svg" : product.src} alt="" />
+                        <img className="w-5 h-5" src={hoveredProduct === product.label ? "/water_drop_white.svg" : product.src} alt="" />
                         <p className="group-hover:text-white">{product.label}</p>
                       </div>
                     </Link>
