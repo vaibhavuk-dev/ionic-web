@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import { useEffect, useState } from "react";
 
 type PostData = {
@@ -50,22 +49,22 @@ export default function ExpertReviews({ data }: { data: DataType }) {
         }
     };
     return (
-        <div className="w-full h-full px-7 mt-4  relative flex flex-col items-center justify-center md:items-start md:overflow-hidden md:px-0 lg:px-0 bg-white my-5">
+        <div className="w-full h-full px-7 relative flex flex-col items-center justify-center md:items-start md:overflow-hidden md:px-0 lg:px-0 bg-white py-5">
 
             <div className="px-32 flex flex-col gap-2">
                 <p className="text-xl w-fit font-semibold">Case Studies</p>
                 <div className=" flex items-center h-[65vh] w-full overflow-hidden gap-5">
                     {data &&
                         data.map((post, index) => (
-                            <div className="group h-[60vh] w-[30%] flex relative flex-shrink-0 flex-grow-0 hover:h-[65vh] cursor-pointer" key={index} style={{ translate: `${-110 * imageIndex}%` }}>
+                            <div className="group h-[60vh] w-[30%] flex relative flex-shrink-0 flex-grow-0 hover:h-[65vh] cursor-pointer basic-transition" key={index} style={{ translate: `${-110 * imageIndex}%` }}>
                                 <img
                                     className="border border-white object-cover"
                                     src={post.post_image ? post.post_image : ""}
                                     alt=""
                                 />
-                                <div className="absolute bottom-0 left-0 w-full backdrop-blur-xl px-5 py-3 h-[20%] group-hover:h-[80%] group-hover:bg-blueb-700">
-                                    <p className="text-white text-md group-hover:font-semibold line-clamp-2 group-hover:line-clamp-none">{post.post_title}</p>
-                                    <p className="hidden group-hover:flex font-light text-white text-sm pt-2">
+                                <div className="absolute bottom-0 left-0 w-full backdrop-blur-xl px-5 py-3 h-[20%] group-hover:h-[80%] group-hover:bg-blueb-700 basic-transition">
+                                    <p className="text-white text-md group-hover:font-semibold line-clamp-2 group-hover:line-clamp-none basic-transition">{post.post_title}</p>
+                                    <p className="hidden group-hover:flex font-light text-white text-sm pt-2 basic-transition">
                                         30 models of fully automatic “Quick Cycle” demineralizers use 5th Generation Premium grade proprietary ion exchange resin process technology that provides unparalleled manufacturing advantage to industries that wants to reduce their water, waste water and chemical foot print. The flow rate ranges from 2.0- 60.0 m3/hr.
 
                                     </p>

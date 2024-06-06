@@ -25,7 +25,7 @@ export default function Products1Page() {
                 </div>
             </div>
 
-            <div className="flex flex-col gap-20 my-20 px-32">
+            <div className="flex flex-col gap-20 my-20 px-32 bg-white">
 
                 <div className="">
                     <div className="flex gap-5">
@@ -143,25 +143,25 @@ export default function Products1Page() {
                 </div>
             </div>
 
-            <div className="pb-5">
-                    <CaseStudiesCarousal
-                        data={[
-                            { post_title: "Case Studies: Successful Wastewater Treatment through Bioremediation", post_slug: "/case-study/1", post_image: "/blogs/blog2.png" },
-                            { post_title: "Why Municipal Wastewater Treatment Is Important?", post_slug: "/blogs/1", post_image: "/blogs/blog4.png" },
-                            { post_title: "7 Benefits Of Wastewater Treatment", post_slug: "/blogs/1", post_image: "/blogs/blog3.png" },
-                            { post_title: "Monroe Environmental Saves Steel Mill $145,000 on Clarifier Upgrade", post_slug: "/case-study/1", post_image: "/casestudy/cs4.png" },
-                        ]} />
-                </div>
+            <div className="bg-white">
+                <CaseStudiesCarousal
+                    data={[
+                        { post_title: "Case Studies: Successful Wastewater Treatment through Bioremediation", post_slug: "/case-study/1", post_image: "/blogs/blog2.png" },
+                        { post_title: "Why Municipal Wastewater Treatment Is Important?", post_slug: "/blogs/1", post_image: "/blogs/blog4.png" },
+                        { post_title: "7 Benefits Of Wastewater Treatment", post_slug: "/blogs/1", post_image: "/blogs/blog3.png" },
+                        { post_title: "Monroe Environmental Saves Steel Mill $145,000 on Clarifier Upgrade", post_slug: "/case-study/1", post_image: "/casestudy/cs4.png" },
+                    ]} />
+            </div>
 
-                <div className="pb-5">
-                    <BlogsCarousal
-                        data={[
-                            { post_title: "Algae-based Wastewater Treatment", post_slug: "/blogs/1", post_image: "/blogs/blog2.png" },
-                            { post_title: "Scientist found new way to treat Waste Water", post_slug: "/blogs/1", post_image: "/blogs/blog1.png" },
-                            { post_title: "7 Benefits Of Wastewater Treatment", post_slug: "/blogs/1", post_image: "/blogs/blog3.png" },
-                            { post_title: "Why Municipal Wastewater Treatment Is Important?", post_slug: "/blogs/1", post_image: "/blogs/blog4.png" },
-                        ]} />
-                </div>
+            <div className="bg-white">
+                <BlogsCarousal
+                    data={[
+                        { post_title: "Algae-based Wastewater Treatment", post_slug: "/blogs/1", post_image: "/blogs/blog2.png" },
+                        { post_title: "Scientist found new way to treat Waste Water", post_slug: "/blogs/1", post_image: "/blogs/blog1.png" },
+                        { post_title: "7 Benefits Of Wastewater Treatment", post_slug: "/blogs/1", post_image: "/blogs/blog3.png" },
+                        { post_title: "Why Municipal Wastewater Treatment Is Important?", post_slug: "/blogs/1", post_image: "/blogs/blog4.png" },
+                    ]} />
+            </div>
 
             <AnyQuestion />
             <Footer />

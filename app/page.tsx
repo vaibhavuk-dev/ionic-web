@@ -2,6 +2,7 @@ import About from "@/components/About";
 import AnyQuestion from "@/components/AnyQuestion";
 import Blogs from "@/components/Blogs";
 import BlogsCarousal from "@/components/BlogsCarousal";
+import CaseStudiesCarousal from "@/components/CaseStudiesCarousal";
 import Footer from "@/components/Footer";
 import ImageCarousalHome from "@/components/ImageCarousalHome";
 import NavBar from "@/components/NavBar";
@@ -73,6 +74,26 @@ export default async function Home() {
                 <ProductSection />
 
 
+            </div>
+
+            <div className="bg-white">
+                <CaseStudiesCarousal
+                    data={[
+                        { post_title: "Case Studies: Successful Wastewater Treatment through Bioremediation", post_slug: "/case-study/1", post_image: "/blogs/blog2.png" },
+                        { post_title: "Why Municipal Wastewater Treatment Is Important?", post_slug: "/blogs/1", post_image: "/blogs/blog4.png" },
+                        { post_title: "7 Benefits Of Wastewater Treatment", post_slug: "/blogs/1", post_image: "/blogs/blog3.png" },
+                        { post_title: "Monroe Environmental Saves Steel Mill $145,000 on Clarifier Upgrade", post_slug: "/case-study/1", post_image: "/casestudy/cs4.png" },
+                    ]} />
+            </div>
+
+            <div className="bg-white">
+                <BlogsCarousal
+                    data={[
+                        { post_title: "Algae-based Wastewater Treatment", post_slug: "/blogs/1", post_image: "/blogs/blog2.png" },
+                        { post_title: "Scientist found new way to treat Waste Water", post_slug: "/blogs/1", post_image: "/blogs/blog1.png" },
+                        { post_title: "7 Benefits Of Wastewater Treatment", post_slug: "/blogs/1", post_image: "/blogs/blog3.png" },
+                        { post_title: "Why Municipal Wastewater Treatment Is Important?", post_slug: "/blogs/1", post_image: "/blogs/blog4.png" },
+                    ]} />
             </div>
 
             <AnyQuestion />
