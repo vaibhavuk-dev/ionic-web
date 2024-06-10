@@ -53,7 +53,13 @@ export default function ExpertReviews({ data }: { data: DataType }) {
         <div className="w-full h-full px-7 relative flex flex-col items-center justify-center md:items-start md:overflow-hidden md:px-0 lg:px-0 bg-white py-5">
 
             <div className="px-32 flex flex-col gap-2">
-                <p className="text-xl w-fit font-semibold">Blogs</p>
+                <div className="flex flex-col gap-2">
+                    <p className="text-3xl font-semibold">Blogs</p>
+                    <div className=" flex gap-2 justify-between">
+                        <p className="text-xl w-[80%] font-light">News on the world&amp;s most precious resource, including the latest in research, trends, and treatment advances.</p>
+                        <p className="text-lg font-light">View all blogs <img className="w-5 h-5 inline" src="/right-arrow.svg" alt="" /></p>
+                    </div>
+                </div>
                 <div className=" flex items-center h-[65vh] w-full overflow-hidden gap-5">
                     {data &&
                         data.map((post, index) => (

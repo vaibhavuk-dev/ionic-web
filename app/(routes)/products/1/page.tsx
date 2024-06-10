@@ -35,7 +35,7 @@ export default function Products1Page() {
                         </div>
                         <div className="w-full">
                             <p className="text-lg w-fit font-semibold">Applications of QCDM</p>
-                            <p className="text-md w-fit  mt-3">Ionic redefines the way water is demineralized. Water treatment is important. More important is how  efficiently you treat water. With Minimum and Zero liquid discharge manufacturing facilities becoming the  regulatory norms and with rising water shortage, environmental problems and operating cost we need to  seriously think about lowering Life Cycle cost and consider “Cleaner Production” and Quick Cycle  demineralizers just offers that!</p>
+                            <p className="text-md w-fit text-justify mt-3">Enhance your water treatment process with Ionic&amp;s &quote;Quick Cycle&quote; Fully Automatic Demineralisers, the ultimate solution for efficient and sustainable water demineralization. Designed to meet the rising demand for minimal waste and compliance with environmental regulations, these advanced demineralizers use proprietary 5th Generation ion exchange resin technology. This innovative approach offers industries an unparalleled advantage by reducing water, wastewater, and chemical footprints. Available in 30 models with flow rates ranging from 2.0 to 60.0 m³/hr, our Quick Cycle systems cater to diverse operational needs with three distinct series providing various treated water qualities. Unlike traditional systems, Ionic&apos;s Quick Cycle demineralizers deliver ultra-short service cycles and rapid regeneration, driving down operational costs and boosting productivity. Optimize your water treatment process today with Ionic&apos;s state-of-the-art Quick Cycle technology.</p>
                         </div>
                     </div>
                 </div>
@@ -44,14 +44,7 @@ export default function Products1Page() {
                     <div className="flex gap-5">
                         <div className="w-full">
                             <p className="text-lg w-fit font-semibold">Working of QCDM</p>
-                            <p className="text-md w-fit  mt-3">30 models of fully automatic “Quick Cycle” demineralizers use 5th Generation Premium grade proprietary ion
-                                exchange resin process technology that provides unparalleled manufacturing advantage to industries that
-                                wants to reduce their water, waste water and chemical foot print. The flow rate ranges from 2.0- 60.0 m3/hr.
-                                Three different series produces 3 different treated water qualities for meeting different end user
-                                requirements.
-                                Unlike conventional manually operated demineralisers “Quick Cycle” plant requires very short service cycle
-                                and regeneration time offering many direct and intangible benefits to the end user!
-                                Please do contact us with your specific requirements and Ionic will provide you the optimum solution. </p>
+                            <p className="text-md w-fit text-justify mt-3">Ionic&apos;s Quick Cycle Fully Automatic Demineralisers are compact, skid-mounted units engineered for maximum reliability and efficiency. Featuring fully automated PLC controls, these systems are Industry 4.0 and Water 4.0 ready, ensuring seamless integration with modern, smart factories. They consistently produce high-quality demineralized water with conductivity below 1.0 µS/cm, thanks to their advanced ion exchange resin technology. Our demineralizers stand out for their low chemical, water, and power consumption, significantly lowering operational costs. Constructed with premium materials like UPVC piping and SS 316 process pumps, these units promise longevity and low maintenance. Optional features include real-time remote monitoring and printout facilities for enhanced operational oversight. Suitable for a wide range of applications from pharmaceuticals and cosmetics to automotive and aerospace, Ionic&apos;s Quick Cycle demineralizers provide a robust and eco-friendly solution for your water treatment needs. Contact us today to customize a system tailored to your specific requirements. </p>
                         </div>
                         <div className="w-full">
                             <img src="/waterharvester.png" alt="" className="w-full h-full object-cover rounded-lg" />

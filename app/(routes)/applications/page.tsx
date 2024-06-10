@@ -1,10 +1,10 @@
 import NavBar from "@/components/NavBar";
 
-export default function BrochurePage() {
+export default function ApplicationsPage() {
 
     return (
         <div>
-            <NavBar shouldWhite={true}/>
+            <NavBar shouldWhite={true} />
         </div>
     )
 }

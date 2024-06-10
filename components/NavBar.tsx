@@ -120,10 +120,11 @@ export default function NavBar({ shouldWhite }: { shouldWhite?: boolean }) {
         { src: "/water_drop.svg", label: "Ultrafiltration", href: "/products/1" }
       ]    
   };
+  
   return (
     <nav className="fixed z-10 top-0 left-0 right-0  flex-col backdrop-blur-sm">
       <div
-        className={`flex flex-row justify-between items-center w-full h-auto px-20 py-3 ${isWhite ? `bg-white` : `bg-transperant`
+        className={`flex flex-row justify-between items-center w-full h-auto px-32 py-3 ${isWhite ? `bg-white` : `bg-transperant`
           } ${!selectedMenu ? "drop-shadow-xl" : "border-b"} basic-transition`}
       >
         <Link href={"/"}>
@@ -167,7 +168,7 @@ export default function NavBar({ shouldWhite }: { shouldWhite?: boolean }) {
           >
             About
           </a>
-          <a href="#"
+          <a href="/contact"
             className={`border-expand mx-5 py-2 cursor-pointer ${isHovered ? '' : 'mouse-leave'}`}
             onMouseEnter={() => { setSelectedMenu("Contact"); setIsHovered(true) }}
             onMouseLeave={() => setIsHovered(false)}
@@ -441,12 +442,12 @@ export default function NavBar({ shouldWhite }: { shouldWhite?: boolean }) {
       {
         selectedMenu === "About" && <div className="flex bg-white py-10 px-32 shadow-xl basic-transition" onMouseEnter={() => setSelectedMenu("About")} onMouseLeave={() => { setSelectedMenu(""); setSelectedCategory("") }}>
           <div className="w-[40%] text-xl flex flex-col gap-3">
-            <p className={`flex items-center px-2 w-fit hover:font-semibold cursor-pointer ${selectedCategory === "About Us" && "font-semibold"}`} onMouseEnter={() => setSelectedCategory("About Us")}>
+            <Link href={"/about"} className={`flex items-center px-2 w-fit hover:font-semibold cursor-pointer ${selectedCategory === "About Us" && "font-semibold"}`} onMouseEnter={() => setSelectedCategory("")}>
               About Us
-            </p>
-            <p className={`flex items-center px-2 w-fit hover:font-semibold cursor-pointer ${selectedCategory === "Careers" && "font-semibold"}`} onMouseEnter={() => setSelectedCategory("Careers")}>
+            </Link>
+            <Link href={"/careers"} className={`flex items-center px-2 w-fit hover:font-semibold cursor-pointer ${selectedCategory === "Careers" && "font-semibold"}`} onMouseEnter={() => setSelectedCategory("")}>
               Careers
-            </p>
+            </Link>
           </div>
           <div className="border-r border-gray-300 mx-5"></div>
           {selectedCategory === "" && <div className="w-[60%]">

@@ -7,6 +7,8 @@ import Footer from "@/components/Footer";
 import ImageCarousalHome from "@/components/ImageCarousalHome";
 import NavBar from "@/components/NavBar";
 import ProductSection from "@/components/ProductSection";
+import GlobalPresence from "@/components/homepage/GlobalPresence";
+import NewsLetter from "@/components/homepage/NewsLetter";
 
 export default async function Home() {
 
@@ -72,8 +74,6 @@ export default async function Home() {
                 <About data={data} />
 
                 <ProductSection />
-
-
             </div>
 
             <div className="bg-white">
@@ -94,9 +94,37 @@ export default async function Home() {
                         { post_title: "7 Benefits Of Wastewater Treatment", post_slug: "/blogs/1", post_image: "/blogs/blog3.png" },
                         { post_title: "Why Municipal Wastewater Treatment Is Important?", post_slug: "/blogs/1", post_image: "/blogs/blog4.png" },
                     ]} />
+
             </div>
 
-            <AnyQuestion />
+            <div className="flex w-full gap-10 mx-auto bg-white px-32 py-8 rounded shadow-md relative">
+
+                <form className="w-[40%]">
+                    <h2 className="text-2xl font-semibold mb-6">Contact Us</h2>
+                    <div className="mb-4">
+                        <label htmlFor="name" className="block text-sm font-bold mb-2">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name" className="w-full px-3 py-2 border rounded-md outline-none focus:border-blue-500" />
+                    </div>
+                    <div className="mb-4">
+                        <label htmlFor="email" className="block text-sm font-bold mb-2">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Your Email" className="w-full px-3 py-2 border rounded-md outline-none focus:border-blue-500" />
+                    </div>
+                    <div className="mb-6">
+                        <label htmlFor="message" className="block text-sm font-bold mb-2">Message</label>
+                        <textarea id="message" name="message" rows={5} placeholder="Your Message" className="w-full px-3 py-2 border rounded-md outline-none focus:border-blue-500"></textarea>
+                    </div>
+                    <div>
+                        <button type="submit" className="w-full bg-blueb-700 text-white font-bold py-2 px-4 rounded hover:bg-blue-700">Send Message</button>
+                    </div>
+                </form>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15122.922505541159!2d73.79250328511964!3d18.63118198564944!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b84e62f8c169%3A0xf6df110a3e44ab98!2sIonic%20Engineering%20Technology%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1716738071408!5m2!1sen!2sin" className="w-[60%] h-[400px]" loading="lazy" ></iframe>
+            </div>
+
+            <GlobalPresence />
+
+            {/* <AnyQuestion /> */}
+
+            <NewsLetter />
 
             <Footer />
         </div>
