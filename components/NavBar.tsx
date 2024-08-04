@@ -217,14 +217,14 @@ export default function NavBar({ shouldWhite }: { shouldWhite?: boolean }) {
           >
             Knowledge
           </a>
-          <a href="/about"
+          <a href="#"
             className={`border-expand mx-5 py-2 cursor-pointer ${isHovered ? '' : 'mouse-leave'}`}
             onMouseEnter={() => { setSelectedMenu("About"); setIsHovered(true) }}
             onMouseLeave={() => setIsHovered(false)}
           >
             About
           </a>
-          <a href="/contact"
+          <a href="#"
             className={`border-expand mx-5 py-2 cursor-pointer ${isHovered ? '' : 'mouse-leave'}`}
             onMouseEnter={() => { setSelectedMenu("Contact"); setIsHovered(true) }}
             onMouseLeave={() => setIsHovered(false)}
@@ -311,146 +311,6 @@ export default function NavBar({ shouldWhite }: { shouldWhite?: boolean }) {
         </div>
       )}
 
-      {/* {
-        isMenuOpen === "Products" && <div className="flex bg-white py-10 px-32 shadow-xl basic-transition" onMouseEnter={() => setIsMenuOpen("Products")} onMouseLeave={() => { setIsMenuOpen(""); setSelectedCategory("") }}>
-          <div className="w-[40%] text-xl flex flex-col gap-3">
-            <p className="group w-fit hover:font-bold cursor-pointer"
-              onMouseEnter={() => setSelectedCategory("Water Treatment")}>
-              Water Treatment &gt;
-            </p>
-            <p className="group w-fit hover:font-bold cursor-pointer"
-              onMouseEnter={() => setSelectedCategory("Industrial Waste Water Treatment")}>
-              Industrial Waste Water Treatment &gt;
-            </p>
-          </div>
-          <div className="border-r border-gray-300 mx-5"></div>
-          {selectedCategory === "" && <div className="w-[60%]">
-            <div className="">
-              <p className="font-bold text-3xl">Products</p>
-              <p className="font-medium text-lg mt-3">Explore our wide range of products.</p>
-            </div>
-          </div>}
-
-          {selectedCategory === "Water Treatment" && <div className="w-[60%]">
-            <div className="text-lg flex flex-col">
-              <p className="text-sm text-gray-600 py-3">Category 3</p>
-              <div className="grid grid-cols-2">
-                <Link href={"/products/1"}>
-                  <div className="flex items-center justify-start gap-3 rounded-lg w-[1/2] py-2 px-3 hover:border">
-                    <img className="w-8 h-8" src="/water_drop.svg" alt="" />
-                    <p>Product 1</p>
-                  </div>
-                </Link>
-                <Link href={"/products/1"}>
-                  <div className="flex items-center justify-start gap-3 rounded-lg w-[1/2] py-2 px-3 hover:border">
-                    <img className="w-8 h-8" src="/water_drop.svg" alt="" />
-                    <p>Product 2</p>
-                  </div>
-                </Link>
-                <Link href={"/products/1"}>
-                  <div className="flex items-center justify-start gap-3 rounded-lg w-[1/2] py-2 px-3 hover:border">
-                    <img className="w-8 h-8" src="/water_drop.svg" alt="" />
-                    <p>Product 3</p>
-                  </div>
-                </Link>
-                <Link href={"/products/1"}>
-                  <div className="flex items-center justify-start gap-3 rounded-lg w-[1/2] py-2 px-3 hover:border">
-                    <img className="w-8 h-8" src="/water_drop.svg" alt="" />
-                    <p>Product 4</p>
-                  </div>
-                </Link>
-              </div>
-            </div>
-          </div>}
-
-          {selectedCategory === "Category4" && <div className="w-[60%]">
-            <div className="text-lg flex flex-col gap-2">
-              <p className="text-sm text-gray-600">Category 4</p>
-              <p>Product 1</p>
-              <p>Product 2</p>
-              <p>Product 3</p>
-              <p>Product 4</p>
-            </div>
-          </div>}
-
-          {selectedCategory === "Category5" && <div className="w-[60%]">
-            <div className="text-lg flex flex-col gap-2">
-              <p className="text-sm text-gray-600">Category 5</p>
-              <p>Product 1</p>
-              <p>Product 2</p>
-              <p>Product 3</p>
-              <p>Product 4</p>
-              <p>Product 5</p>
-            </div>
-          </div>}
-        </div>
-      }
-
-      {
-        isMenuOpen === "Applications" && <div className="flex bg-white py-10 px-32 shadow-xl basic-transition" onMouseEnter={() => setIsMenuOpen("Applications")} onMouseLeave={() => { setIsMenuOpen(""); setSelectedCategory("") }}>
-          <div className="w-[40%] text-xl flex flex-col gap-3">
-            <p className="group w-fit hover:font-bold cursor-pointer">
-              Application 1
-            </p>
-            <p className="group w-fit hover:font-bold cursor-pointer">
-              Application 2
-            </p>
-            <p className="group w-fit hover:font-bold cursor-pointer"
-              onMouseEnter={() => setSelectedCategory("Application3")}
-            >
-              Application 3 &gt;
-            </p>
-            <p className="group w-fit hover:font-bold cursor-pointer"
-              onMouseEnter={() => setSelectedCategory("Application4")}
-            >
-              Application 4 &gt;
-            </p>
-            <p className="group w-fit hover:font-bold cursor-pointer"
-              onMouseEnter={() => setSelectedCategory("Application5")}
-            >
-              Application 5 &gt;
-            </p>
-          </div>
-          <div className="border-r border-gray-300 mx-5"></div>
-          {selectedCategory === "" && <div className="w-[60%]">
-            <div className="">
-              <p className="font-bold text-3xl">Applications</p>
-              <p className="font-medium text-lg mt-3">Explore wide range of applications of our products.</p>
-            </div>
-          </div>}
-
-          {selectedCategory === "Application3" && <div className="w-[60%]">
-            <div className="text-lg flex flex-col gap-2">
-              <p className="text-sm text-gray-600">Application 3</p>
-              <p>Product 1</p>
-              <p>Product 2</p>
-              <p>Product 3</p>
-            </div>
-          </div>}
-
-          {selectedCategory === "Application4" && <div className="w-[60%]">
-            <div className="text-lg flex flex-col gap-2">
-              <p className="text-sm text-gray-600">Application 4</p>
-              <p>Product 1</p>
-              <p>Product 2</p>
-              <p>Product 3</p>
-              <p>Product 4</p>
-            </div>
-          </div>}
-
-          {selectedCategory === "Application5" && <div className="w-[60%]">
-            <div className="text-lg flex flex-col gap-2">
-              <p className="text-sm text-gray-600">Application 5</p>
-              <p>Product 1</p>
-              <p>Product 2</p>
-              <p>Product 3</p>
-              <p>Product 4</p>
-              <p>Product 5</p>
-            </div>
-          </div>}
-        </div>
-      } */}
-
       {
         selectedMenu === "Knowledge" && <div className="flex bg-white py-10 px-32 shadow-xl basic-transition" onMouseEnter={() => setSelectedMenu("Knowledge")} onMouseLeave={() => { setSelectedMenu(""); setSelectedCategory("") }}>
           <div className="w-[40%] text-xl flex flex-col gap-3">
@@ -518,7 +378,10 @@ export default function NavBar({ shouldWhite }: { shouldWhite?: boolean }) {
 
       {
         selectedMenu === "Contact" && <div className="flex bg-white py-10 px-32 shadow-xl basic-transition" onMouseEnter={() => setSelectedMenu("Contact")} onMouseLeave={() => { setSelectedMenu(""); setSelectedCategory("") }}>
-          <div className="w-[40%] text-lg flex flex-col gap-3">
+
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15122.922505541159!2d73.79250328511964!3d18.63118198564944!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b84e62f8c169%3A0xf6df110a3e44ab98!2sIonic%20Engineering%20Technology%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1716738071408!5m2!1sen!2sin" className="w-[80%] h-[400px]" loading="lazy" ></iframe>
+          <div className="border-r border-gray-300 mx-5"></div>
+          <div className="w-[50%] text-lg flex flex-col gap-3">
             <div className="mt-4">
               <p className='py-2'><b>Contact:</b> <br /> 020-27475272 / 8275486263</p>
               <p className='py-2'><b>Email:</b> <br /> contact@ionic.co.in / support@ionic.co.in</p>
@@ -526,12 +389,15 @@ export default function NavBar({ shouldWhite }: { shouldWhite?: boolean }) {
                 Mahalaxmi Heights, Old Mumbai -
                 Pune Hwy, next to Keys Hotel, Pimpri
                 Colony, Pimpri-Chinchwad,
-                Maharashtra 411019
+                Maharashtra, INDIA
               </p>
+              <Link href="/contact">
+                <button className="mt-3 px-4 py-2 text-white rounded bg-blueb-700 border-white hover:bg-opacity-70 text-md">
+                  Contact Us
+                </button>
+              </Link>
             </div>
           </div>
-          <div className="border-r border-gray-300 mx-5"></div>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15122.922505541159!2d73.79250328511964!3d18.63118198564944!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b84e62f8c169%3A0xf6df110a3e44ab98!2sIonic%20Engineering%20Technology%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1716738071408!5m2!1sen!2sin" className="w-[80%] h-[400px]" loading="lazy" ></iframe>
         </div>
       }
 

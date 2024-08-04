@@ -23,27 +23,29 @@ const Footer = () => {
         <div className="flex flex-row items-start p-10 w-2/3 justify-evenly">
           <div className='flex flex-col px-10 '>
             <a href="#" className="mb-5"><b>Home</b></a>
-            <a href="#" className="mb-2">About Us</a>
+            <a href="#" className="mb-2">About</a>
             <a href="#" className="mb-2">Products</a>
+            <a href="#" className="mb-2">Applications</a>
+            <a href="#" className="mb-2">Knowledge</a>
             <a href="#" className="mb-2">Contact</a>
           </div>
           <div className='flex flex-col px-10 '>
-            <a href="#" className="mb-5"><b>Home</b></a>
-            <a href="#" className="mb-2">About Us</a>
-            <a href="#" className="mb-2">Products</a>
-            <a href="#" className="mb-2">Contact</a>
+            <a href="#" className="mb-5"><b>Products</b></a>
+            <a href="#" className="mb-2">Product 1</a>
+            <a href="#" className="mb-2">Product 2</a>
+            <a href="#" className="mb-2">Product 3</a>
           </div>
           <div className='flex flex-col px-10 '>
-            <a href="#" className="mb-5"><b>Home</b></a>
-            <a href="#" className="mb-2">About Us</a>
-            <a href="#" className="mb-2">Products</a>
-            <a href="#" className="mb-2">Contact</a>
+            <a href="#" className="mb-5"><b>Applications</b></a>
+            <a href="#" className="mb-2">Application 1</a>
+            <a href="#" className="mb-2">Application 2</a>
+            <a href="#" className="mb-2">Application 3</a>
           </div>
           <div className='flex flex-col px-10 '>
-            <a href="#" className="mb-5"><b>Home</b></a>
-            <a href="#" className="mb-2">About Us</a>
-            <a href="#" className="mb-2">Products</a>
-            <a href="#" className="mb-2">Contact</a>
+            <a href="#" className="mb-5"><b>Knowledge</b></a>
+            <a href="#" className="mb-2">Knowledge 1</a>
+            <a href="#" className="mb-2">Knowledge 2</a>
+            <a href="#" className="mb-2">Knowledge 3</a>
           </div>
         </div>
       </div>
