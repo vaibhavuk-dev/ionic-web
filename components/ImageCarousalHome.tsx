@@ -14,22 +14,22 @@ export default function ImageCarousalHome() {
     const [currentImage, setCurrentImage] = useState("");
 
     return (
-        <div className={`h-full w-full ${currentImage ? "backdrop-blur-lg" : ""} basic-transition`}>
-            <div className={`fixed w-full bottom-0 flex flex-col items-center justify-center `}>
+        <div className={`h-full w-full  basic-transition`}>
+            <div className={`fixed h-[90vh] right-0 flex flex-col items-center justify-center `}>
                 {currentImage && (
-                    <div className="w-full flex items-center justify-center py-10">
+                    <div className="w-full flex flex-col items-center justify-center py-10">
                         <img
-                            className="h-[50vh]  rounded-xl border border-white animate-popUp"
+                            className="h-[50vh] rounded-xl border border-white animate-popUp"
                             src={currentImage}
                             alt=""
                         />
                     </div>
                 )}
 
-                <div className="flex overflow-hidden gap-5 justify-center items-center">
+                <div className="flex flex-col overflow-hidden gap-5 justify-center items-center px-10">
                     {images.map((image) => (
                         <img
-                            className="w-30 h-14 rounded-xl border border-white cursor-pointer"
+                            className="w-24 h-14 rounded-xl border border-white cursor-pointer"
                             src={image}
                             alt=""
                             key={image}
@@ -39,7 +39,7 @@ export default function ImageCarousalHome() {
                     ))}
                 </div>
 
-                <img className="my-3 h-7" src="/down-chevron.svg" alt="" />
+                {/* <img className="my-3 h-7" src="/down-chevron.svg" alt="" /> */}
             </div>
         </div>
     )

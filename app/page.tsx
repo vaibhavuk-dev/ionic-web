@@ -9,6 +9,7 @@ import NavBar from "@/components/NavBar";
 import ProductSection from "@/components/ProductSection";
 import GlobalPresence from "@/components/homepage/GlobalPresence";
 import NewsLetter from "@/components/homepage/NewsLetter";
+import WaterflowComponent from "@/components/homepage/WaterflowComponent ";
 
 export default async function Home() {
 
@@ -66,9 +67,11 @@ export default async function Home() {
                     </h1>
                 </div>
 
-                <ImageCarousalHome />
+                <WaterflowComponent />
+                {/* <ImageCarousalHome /> */}
 
             </div>
+
 
             <div className="w-full bg-white">
                 <About data={data} />

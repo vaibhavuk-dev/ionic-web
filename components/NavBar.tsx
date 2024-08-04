@@ -40,6 +40,10 @@ export default function NavBar({ shouldWhite }: { shouldWhite?: boolean }) {
     Products: [
       { label: "Water Treatment" },
       { label: "Industrial Waste Water Treatment" },
+      { label: "Pi Products" },
+      { label: "Pulsation Dampeners" },
+      { label: "HIDRACAR For Industry" },
+      { label: "HIDRACAR For Agriculture" },
     ],
     Applications: [
       { "label": "Water Treatment" },
@@ -58,69 +62,121 @@ export default function NavBar({ shouldWhite }: { shouldWhite?: boolean }) {
 
   const productItems: { [key: string]: { src: string; label: string; href: string }[] } = {
     "Water Treatment": [
-      { "src": "/water_drop.svg", "label": "Oil-Loc", "href": "/products/1" },
-      { "src": "/water_drop.svg", "label": "Silica-Loc", "href": "/products/1" },
-      { "src": "/water_drop.svg", "label": "Nanofiltration", "href": "/products/1" },
-      { "src": "/water_drop.svg", "label": "Ultrafiltration", "href": "/products/1" },
-      { "src": "/water_drop.svg", "label": "Polymix Dosing System", "href": "/products/1" },
-      { "src": "/water_drop.svg", "label": "Seawater Desalination", "href": "/products/1" },
-      { "src": "/water_drop.svg", "label": "Quick Cycle Auto DM Plant", "href": "/products/1" },
-      { "src": "/water_drop.svg", "label": "Hi - Purity Water Systems", "href": "/products/1" },
-      { "src": "/water_drop.svg", "label": "Brackish Water Desalination", "href": "/products/1" },
-      { "src": "/water_drop.svg", "label": "Closed Loop Desal RO Matrix", "href": "/products/1" },
-      { "src": "/water_drop.svg", "label": "Hot Water Generation Systems", "href": "/products/1" },
-      { "src": "/water_drop.svg", "label": "I-Dose Chemical Dosing System", "href": "/products/1" },
-      { "src": "/water_drop.svg", "label": "Technology for Ammonia Removal", "href": "/products/1" },
-      { "src": "/water_drop.svg", "label": "Capacitive Electro Desalination", "href": "/products/1" },
-      { "src": "/water_drop.svg", "label": "Turbiloc Active Media Filtration", "href": "/products/1" },
-      { "src": "/water_drop.svg", "label": "Lamella Inclined Plate Clarifier", "href": "/products/1" },
-      { "src": "/water_drop.svg", "label": "Genox Smart Digital Chlorine Dioxide Generator", "href": "/products/1" },
-    ]
-    ,
+      { src: "/water_drop.svg", label: "Oil-Loc", href: "/products/1" },
+      { src: "/water_drop.svg", label: "Silica-Loc", href: "/products/1" },
+      { src: "/water_drop.svg", label: "Nanofiltration", href: "/products/1" },
+      { src: "/water_drop.svg", label: "Ultrafiltration", href: "/products/1" },
+      { src: "/water_drop.svg", label: "Polymix Dosing System", href: "/products/1" },
+      { src: "/water_drop.svg", label: "Seawater Desalination", href: "/products/1" },
+      { src: "/water_drop.svg", label: "Quick Cycle Auto DM Plant", href: "/products/1" },
+      { src: "/water_drop.svg", label: "Hi - Purity Water Systems", href: "/products/1" },
+      { src: "/water_drop.svg", label: "Brackish Water Desalination", href: "/products/1" },
+      { src: "/water_drop.svg", label: "Closed Loop Desal RO Matrix", href: "/products/1" },
+      { src: "/water_drop.svg", label: "Hot Water Generation Systems", href: "/products/1" },
+      { src: "/water_drop.svg", label: "I-Dose Chemical Dosing System", href: "/products/1" },
+      { src: "/water_drop.svg", label: "Technology for Ammonia Removal", href: "/products/1" },
+      { src: "/water_drop.svg", label: "Capacitive Electro Desalination", href: "/products/1" },
+      { src: "/water_drop.svg", label: "Turbiloc Active Media Filtration", href: "/products/1" },
+      { src: "/water_drop.svg", label: "Lamella Inclined Plate Clarifier", href: "/products/1" },
+      { src: "/water_drop.svg", label: "Genox Smart Digital Chlorine Dioxide Generator", href: "/products/1" },
+    ],
     "Industrial Waste Water Treatment": [
       { src: "/water_drop.svg", label: "Eutectic Freeze Crystallization", href: "/products/1" },
       { src: "/water_drop.svg", label: "Advanced Photochemical Oxidation", href: "/products/1" },
       { src: "/water_drop.svg", label: "Water Harvester Zero liquid Discharge", href: "/products/1" },
+    ],
+    "Pi Products": [
+      { src: "/water_drop.svg", label: "Total Alkalinity - AlkaSense®", href: "/products/1" },
+      { src: "/water_drop.svg", label: "Dissolved Air Flotation (DAF) - DAFSense", href: "/products/1" },
+      { src: "/water_drop.svg", label: "Charge Analyser - ChargeSense", href: "/products/1" },
+      { src: "/water_drop.svg", label: "Coagulation Controller - CoagSense", href: "/products/1" },
+      { src: "/water_drop.svg", label: "Conductivity Meter - ConductiSense", href: "/products/1" },
+      { src: "/water_drop.svg", label: "Chlorine Dioxide Analyser – DioSense", href: "/products/1" },
+      { src: "/water_drop.svg", label: "High Range Chlorine Dioxide Analyser - DioSense HR", href: "/products/1" },
+      { src: "/water_drop.svg", label: "UV254 Analyser – UV254Sense Probe", href: "/products/1" },
+      { src: "/water_drop.svg", label: "Turbidity Meter - TurbSense®", href: "/products/1" },
+      { src: "/water_drop.svg", label: "Dissolved Oxygen Meter - OxySense", href: "/products/1" },
+      { src: "/water_drop.svg", label: "UV254 Analyser - UV254Sense", href: "/products/1" },
+      { src: "/water_drop.svg", label: "Automatic Sensor Cleaning System", href: "/products/1" },
+      { src: "/water_drop.svg", label: "Remote Access - Control InSite - CRIUS®4.0", href: "/products/1" },
+      { src: "/water_drop.svg", label: "Streaming Current Monitor - StreamerSense", href: "/products/1" },
+      { src: "/water_drop.svg", label: "Residual Chlorine Monitoring - HaloSense", href: "/products/1" },
+      { src: "/water_drop.svg", label: "Residual Chlorine Monitoring - DPDSense", href: "/products/1" },
+      { src: "/water_drop.svg", label: "Residual Chlorine Monitoring - Chloribrid", href: "/products/1" },
+      { src: "/water_drop.svg", label: "Chlorine in Sodium Hypochlorite - HypoSense", href: "/products/1" },
+      { src: "/water_drop.svg", label: "Laboratory Charge Analyser - LabSense", href: "/products/1" },
+      { src: "/water_drop.svg", label: "Fluoride Monitor - FluoriSense", href: "/products/1" },
+      { src: "/water_drop.svg", label: "Particle Counter - ParticleSense", href: "/products/1" },
+      { src: "/water_drop.svg", label: "Peracetic Acid Analyser - PeraSense", href: "/products/1" },
+      { src: "/water_drop.svg", label: "Hydrogen Peroxide Analyser - PeroxiSense", href: "/products/1" },
+      { src: "/water_drop.svg", label: "pH Meter - pHSense", href: "/products/1" },
+      { src: "/water_drop.svg", label: "Suspended Solids Monitor - SoliSense®", href: "/products/1" },
+      { src: "/water_drop.svg", label: "Ozone Analyser - OzoSense", href: "/products/1" },
+      { src: "/water_drop.svg", label: "ORP Monitor - ORPSense", href: "/products/1" },
+    ],
+    "Pulsation Dampeners": [
+      { "src": "/water_drop.svg", "label": "Bladder pulsation damper", "href": "/products/bladder-pulsation-damper" },
+      { "src": "/water_drop.svg", "label": "Bellows pulsation damper", "href": "/products/bellows-pulsation-damper" },
+      { "src": "/water_drop.svg", "label": "Membrane pulsation damper", "href": "/products/membrane-pulsation-damper" },
+      { "src": "/water_drop.svg", "label": "In-line pulsation damper", "href": "/products/in-line-pulsation-damper" },
+      { "src": "/water_drop.svg", "label": "Accessories", "href": "/products/accessories" },
+      { "src": "/water_drop.svg", "label": "Parts and spares", "href": "/products/parts-and-spares" }
+    ],
+    "HIDRACAR For Industry": [
+      { "src": "/water_drop.svg", "label": "Oleo-pneumatic accumulators", "href": "/products/oleo-pneumatic-accumulators" },
+      { "src": "/water_drop.svg", "label": "Nitrogen gas spring", "href": "/products/nitrogen-gas-spring" },
+      { "src": "/water_drop.svg", "label": "Oleo-pneumatic shockabsorber", "href": "/products/oleo-pneumatic-shockabsorber" },
+      { "src": "/water_drop.svg", "label": "Hydrostatic dynamometers", "href": "/products/hydrostatic-dynamometers" },
+      { "src": "/water_drop.svg", "label": "Tensioners for conveyor belts", "href": "/products/tensioners-for-conveyor-belts" },
+      { "src": "/water_drop.svg", "label": "Air storage tank", "href": "/products/air-storage-tank" },
+      { "src": "/water_drop.svg", "label": "Starters for diesel engines", "href": "/products/starters-for-diesel-engines" }
+    ],
+    "HIDRACAR For Agriculture": [
+      { "src": "/water_drop.svg", "label": "Accumulators for agriculture", "href": "/products/accumulators-for-agriculture" },
+      { "src": "/water_drop.svg", "label": "Oleo-pneumatic suspension cylinders", "href": "/products/oleo-pneumatic-suspension-cylinders" },
+      { "src": "/water_drop.svg", "label": "Integrated oleo-pneumatic suspension cylinders", "href": "/products/integrated-oleo-pneumatic-suspension-cylinders" },
+      { "src": "/water_drop.svg", "label": "Ole-pneumatic springs", "href": "/products/ole-pneumatic-springs" }
     ]
   };
 
+
   const applicationItems: { [key: string]: { src: string; label: string; href: string }[] } = {
-      "BOD/COD Reduction": [
-        { src: "/water_drop.svg", label: "Advanced Photochemical Oxidation", href: "/products/1" }
-      ],
-      "Brine Treatment": [
-        { src: "/water_drop.svg", label: "Closed Loop Desal RO Matrix", href: "/products/1" },
-        { src: "/water_drop.svg", label: "Ultrafiltration", href: "/products/1" }
-      ],
-      "Ammonia Removal": [
-        { src: "/water_drop.svg", label: "Technology for Ammonia Removal", href: "/products/1" }
-      ],
-      "Resource Recovery (Brief writeup to be provided by ionic)": [
-        { src: "/water_drop.svg", label: "Eutectic Freeze Crystallization", href: "/products/1" },
-        { src: "/water_drop.svg", label: "Water Harvester Zero liquid Discharge", href: "/products/1" }
-      ],
-      "Zero liquid Discharge": [
-        { src: "/water_drop.svg", label: "Eutectic Freeze Crystallization", href: "/products/1" },
-        { src: "/water_drop.svg", label: "Water Harvester Zero liquid Discharge", href: "/products/1" }
-      ],
-      "Potable water disinfection": [
-        { src: "/water_drop.svg", label: "Genox Smart Digital Chlorine Dioxide Generator", href: "/products/1" }
-      ],
-      "Cooling water Treatment": [
-        { src: "/water_drop.svg", label: "Genox Smart Digital Chlorine Dioxide Generator", href: "/products/1" },
-        { src: "/water_drop.svg", label: "Water Harvester Zero liquid Discharge", href: "/products/1" }
-      ],
-      "Lithium Extraction": [
-        { src: "/water_drop.svg", label: "Water Harvester Zero liquid Discharge", href: "/products/1" }
-      ],
-      "Water Treatment": [
-        { src: "/water_drop.svg", label: "Brackish Water Desalination", href: "/products/1" },
-        { src: "/water_drop.svg", label: "Capacitive Electro Desalination", href: "/products/1" },
-        { src: "/water_drop.svg", label: "Seawater Desalination", href: "/products/1" },
-        { src: "/water_drop.svg", label: "Ultrafiltration", href: "/products/1" }
-      ]    
+    "BOD/COD Reduction": [
+      { src: "/water_drop.svg", label: "Advanced Photochemical Oxidation", href: "/products/1" }
+    ],
+    "Brine Treatment": [
+      { src: "/water_drop.svg", label: "Closed Loop Desal RO Matrix", href: "/products/1" },
+      { src: "/water_drop.svg", label: "Ultrafiltration", href: "/products/1" }
+    ],
+    "Ammonia Removal": [
+      { src: "/water_drop.svg", label: "Technology for Ammonia Removal", href: "/products/1" }
+    ],
+    "Resource Recovery (Brief writeup to be provided by ionic)": [
+      { src: "/water_drop.svg", label: "Eutectic Freeze Crystallization", href: "/products/1" },
+      { src: "/water_drop.svg", label: "Water Harvester Zero liquid Discharge", href: "/products/1" }
+    ],
+    "Zero liquid Discharge": [
+      { src: "/water_drop.svg", label: "Eutectic Freeze Crystallization", href: "/products/1" },
+      { src: "/water_drop.svg", label: "Water Harvester Zero liquid Discharge", href: "/products/1" }
+    ],
+    "Potable water disinfection": [
+      { src: "/water_drop.svg", label: "Genox Smart Digital Chlorine Dioxide Generator", href: "/products/1" }
+    ],
+    "Cooling water Treatment": [
+      { src: "/water_drop.svg", label: "Genox Smart Digital Chlorine Dioxide Generator", href: "/products/1" },
+      { src: "/water_drop.svg", label: "Water Harvester Zero liquid Discharge", href: "/products/1" }
+    ],
+    "Lithium Extraction": [
+      { src: "/water_drop.svg", label: "Water Harvester Zero liquid Discharge", href: "/products/1" }
+    ],
+    "Water Treatment": [
+      { src: "/water_drop.svg", label: "Brackish Water Desalination", href: "/products/1" },
+      { src: "/water_drop.svg", label: "Capacitive Electro Desalination", href: "/products/1" },
+      { src: "/water_drop.svg", label: "Seawater Desalination", href: "/products/1" },
+      { src: "/water_drop.svg", label: "Ultrafiltration", href: "/products/1" }
+    ]
   };
-  
+
   return (
     <nav className="fixed z-10 top-0 left-0 right-0  flex-col backdrop-blur-sm">
       <div
@@ -161,7 +217,7 @@ export default function NavBar({ shouldWhite }: { shouldWhite?: boolean }) {
           >
             Knowledge
           </a>
-          <a href="#"
+          <a href="/about"
             className={`border-expand mx-5 py-2 cursor-pointer ${isHovered ? '' : 'mouse-leave'}`}
             onMouseEnter={() => { setSelectedMenu("About"); setIsHovered(true) }}
             onMouseLeave={() => setIsHovered(false)}
