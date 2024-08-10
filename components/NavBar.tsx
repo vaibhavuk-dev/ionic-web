@@ -180,7 +180,7 @@ export default function NavBar({ shouldWhite }: { shouldWhite?: boolean }) {
   return (
     <nav className="fixed z-10 top-0 left-0 right-0  flex-col backdrop-blur-sm">
       <div
-        className={`flex flex-row justify-between items-center w-full h-auto px-32 py-3 ${isWhite ? `bg-white` : `bg-transperant`
+        className={`flex flex-row justify-between items-center w-full h-auto px-32 py-6 ${isWhite ? `bg-white` : `bg-transperant`
           } ${!selectedMenu ? "drop-shadow-xl" : "border-b"} basic-transition`}
       >
         <Link href={"/"}>

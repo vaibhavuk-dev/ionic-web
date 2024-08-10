@@ -2,6 +2,7 @@ import AnyQuestion from "@/components/AnyQuestion";
 import BlogsGrid from "@/components/BlogsGrid";
 import CaseStudiesGrid from "@/components/CaseStudiesGrid";
 import Footer from "@/components/Footer";
+import NewsLetter from "@/components/homepage/NewsLetter";
 import NavBar from "@/components/NavBar";
 
 export default function CaseStudyPage() {
@@ -10,9 +11,20 @@ export default function CaseStudyPage() {
         <div>
             <NavBar shouldWhite={true} />
 
-            <div className="bg-blueb-50 mt-20 py-10 px-32 ">
-                <h1 className="text-5xl font-semibold text-black">Case Studies</h1>
-                <p className="text-xl font-light mt-2">Explore our recent water, wastewater, and reuse projects from across the globe.</p>
+            <div
+                className="mt-[110px] flex items-center gap-3 h-[200px]"
+                style={{
+                    backgroundImage: "url('/banner/bridge-banner.jpg')",
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                }}
+            >
+                <div className="flex flex-col justify-center bg-blueb-700 w-full h-full bg-opacity-60 text-center">
+                    <h1 className="text-5xl font-bold text-white drop-shadow-lg">Case Studies</h1>
+                    <p className="mt-4 text-xl font-light text-white drop-shadow-lg">
+                    Explore our recent water, wastewater, and reuse projects from across the globe.
+                    </p>
+                </div>
             </div>
 
             <div className="px-32 my-10 flex flex-col gap-10">
@@ -51,7 +63,7 @@ export default function CaseStudyPage() {
                 </div>
             </div>
 
-            <AnyQuestion />
+            <NewsLetter />
             <Footer />
         </div>
     )

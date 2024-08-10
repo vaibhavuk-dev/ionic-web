@@ -18,9 +18,20 @@ export default function AboutPage() {
         <div>
             <NavBar shouldWhite={true} />
 
-            <div className="bg-blueb-700 mt-[90px] py-6 px-32 flex items-center gap-3">
-                <img className="h-10" src="/icons/arrow-small-left.svg" alt="" />
-                <h1 className="text-3xl font-semibold text-white">About Us</h1>
+            <div
+                className="mt-[100px] flex items-center gap-3 h-[200px]"
+                style={{
+                    backgroundImage: "url('/banner/bridge-banner.jpg')",
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                }}
+            >
+                <div className="flex flex-col justify-center bg-blueb-700 w-full h-full bg-opacity-60 text-center">
+                    <h1 className="text-5xl font-bold text-white drop-shadow-lg">About Ionic</h1>
+                    <p className="mt-4 text-2xl font-light text-white drop-shadow-lg">
+                    Our Journey, Your Success. Discover Who We Are.
+                    </p>
+                </div>
             </div>
 
             <div className="flex flex-col py-10 px-32 gap-5 items-center justify-center">
@@ -44,11 +55,31 @@ export default function AboutPage() {
                         </div>
                     </div>
                 </div>
+
+
+                <div className="w-full flex gap-10 mt-10">
+                    <div className="w-full border border-blueb-500 p-5 rounded-lg justify-start items-center flex flex-col gap-3">
+                        <p className="text-2xl font-bold text-blueb-700 uppercase">OUR MISSION</p>
+                        <p className="text-lmd font-bold uppercase">Mission – To Treat Water "Differently"</p>
+                        <p className="text-center">IONIC will be a performance oriented and customer centric company to present globally.</p>
+                        <p className="text-center">Increasing our footprint and market share Year On Year (YOY) in the markets we operate.</p>
+                        <p className="text-center">Be one of the best solutions provider with innovative solutions which will be different, stimulating and productive, and one that can significantly reduce technical risks and costs, ensuring maximum returns to our customers and shareholders.</p>
+                    </div>
+                    <div className="w-full border border-blueb-500 p-5 rounded-lg justify-start items-center flex flex-col gap-3">
+                        <p className="text-2xl font-bold text-green-700 uppercase">OUR VISION</p>
+                        <p className="text-lmd font-bold uppercase">Vision – Helping Create a Livable Planet</p>
+                        <p className="text-center">To Supply and implement solutions which meets and exceeds the needs and expectations of our clients by continuously providing them the solutions to reduce their water foot print and life cycle cost of water and waste water treatment by research and development(R&D) on new processes, technologies and products.</p>
+                        <p className="text-center">To help customer understand the True Cost of Water and help them take an informed decision to reach their sustainable goals.</p>
+                        <p className="text-center"></p>
+                    </div>
+                </div>
+
             </div>
 
-            <div style={{backgroundImage: `url("/about/water-drop-bg.jpeg")`}}>
+            <div style={{ backgroundImage: `url("/about/water-drop-bg.jpeg")` }}>
 
             </div>
+
 
             <GlobalPresence />
 

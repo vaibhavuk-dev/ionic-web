@@ -67,9 +67,9 @@ export default async function Home() {
                     </h1>
                 </div>
 
-                {/* <img className="px-32 w-full fixed bottom-0 flex flex-col items-center justify-center" src="/waterflow/flow.png"/> */}
+                <img className="px-32 w-full fixed bottom-0 flex flex-col items-center justify-center" src="/waterflow/flow.png"/>
 
-                <WaterflowComponent />
+                {/* <WaterflowComponent /> */}
                 {/* <ImageCarousalHome /> */}
 
             </div>

@@ -14,9 +14,20 @@ export default function ContactPage() {
         <div>
             <NavBar shouldWhite={true} />
 
-            <div className="bg-blueb-700 mt-[90px] py-6 px-32 flex items-center gap-3 relative">
-                <img className="h-10" src="/icons/arrow-small-left.svg" alt="" />
-                <h1 className="text-3xl font-semibold text-white">Contact us</h1>
+            <div
+                className="bg-blueb-700 mt-[110px] py-6 flex items-center gap-3 h-[200px]"
+                style={{
+                    backgroundImage: "url('/banner/bridge-banner.jpg')",
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                }}
+            >
+                <div className="flex flex-col gap-3 px-32 bg-blueb-700 py-6 rounded-e-3xl bg-opacity-80">
+                    <h1 className="text-4xl font-bold text-white drop-shadow-lg">Contact Us</h1>
+                    <p className="text-xl font-light text-white drop-shadow-lg">
+                    Have Questions? We Have Answers. Get in Touch!
+                    </p>
+                </div>
             </div>
 
             <div className="flex w-full px-32 py-10 justify-evenly">
