@@ -38,7 +38,7 @@ export default function CareerPage() {
                     <div className="flex gap-20">
                         <div className="w-full">
                             <p className="text-2xl w-fit font-semibold">Join a Legacy of Excellence</p>
-                            <p className="text-lg w-fit text-justify mt-3">With over 35 years of experience in water and wastewater treatment, Ionic Engineering Technology Pvt. Ltd. is at the forefront of innovation and quality. Our commitment to excellence in design, supply, service, and maintenance ensures that we don't just treat water—we treat it differently. Be part of a team that values efficiency, sustainability, and the well-being of our clients.</p>
+                            <p className="text-lg w-fit text-justify mt-3">With over 35 years of experience in water and wastewater treatment, Ionic Engineering Technology Pvt. Ltd. is at the forefront of innovation and quality. Our commitment to excellence in design, supply, service, and maintenance ensures that we dont just treat water—we treat it differently. Be part of a team that values efficiency, sustainability, and the well-being of our clients.</p>
                         </div>
                         <div className="w-full">
                             <img src="/careers/career2.jpg" alt="" className="w-full h-full object-cover rounded-lg" />
@@ -56,7 +56,7 @@ export default function CareerPage() {
                         </div>
                         <div className="w-full">
                             <p className="text-2xl w-fit font-semibold">Shape the Future of Water Treatment</p>
-                            <p className="text-lg w-fit text-justify mt-3">At Ionic, we believe in more than just providing solutions—we believe in making a difference. Founded by industry veterans, our company is driven by a passion for delivering the best possible outcomes for our clients. If you're looking to be part of a company that values technology, quality, and customer well-being, Ionic is the place for you.</p>
+                            <p className="text-lg w-fit text-justify mt-3">At Ionic, we believe in more than just providing solutions—we believe in making a difference. Founded by industry veterans, our company is driven by a passion for delivering the best possible outcomes for our clients. If you are looking to be part of a company that values technology, quality, and customer well-being, Ionic is the place for you.</p>
                         </div>
                     </div>
                 </div>

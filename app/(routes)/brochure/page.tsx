@@ -26,8 +26,8 @@ export default function BrochurePage() {
             <div className="px-32 py-10">
                 <p className="text-xl font-semibold">Brochure</p>
                 <div className="grid grid-cols-4 gap-5">
-                    {[1, 2, 3, 4, 5, 6, 7, 8, 9, 0].map(() => (
-                        <div className="mt-5 w-fit flex flex-col gap-3 items-center">
+                    {[1, 2, 3, 4, 5, 6, 7, 8, 9, 0].map((id, index) => (
+                        <div key={index} className="mt-5 w-fit flex flex-col gap-3 items-center">
                             <img className="h-64 w-fit rounded-xl" src="/brochure.png" />
                             <p>Download (PDF)</p>
                         </div>

@@ -60,7 +60,7 @@ export default function AboutPage() {
                 <div className="w-full flex gap-10 mt-10">
                     <div className="w-full border border-blueb-500 p-5 rounded-lg justify-start items-center flex flex-col gap-3">
                         <p className="text-2xl font-bold text-blueb-700 uppercase">OUR MISSION</p>
-                        <p className="text-lmd font-bold uppercase">Mission – To Treat Water "Differently"</p>
+                        <p className="text-lmd font-bold uppercase">Mission – To Treat Water `&quot;`Differently`&quot;`</p>
                         <p className="text-center">IONIC will be a performance oriented and customer centric company to present globally.</p>
                         <p className="text-center">Increasing our footprint and market share Year On Year (YOY) in the markets we operate.</p>
                         <p className="text-center">Be one of the best solutions provider with innovative solutions which will be different, stimulating and productive, and one that can significantly reduce technical risks and costs, ensuring maximum returns to our customers and shareholders.</p>
