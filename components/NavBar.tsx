@@ -32,6 +32,7 @@ export default function NavBar({ shouldWhite }: { shouldWhite?: boolean }) {
     { label: "Products" },
     { label: "Applications" },
     { label: "Knowledge" },
+    { label: "News" },
     { label: "About" },
     { label: "Contact" },
   ];
@@ -216,6 +217,13 @@ export default function NavBar({ shouldWhite }: { shouldWhite?: boolean }) {
             onMouseLeave={() => setIsHovered(false)}
           >
             Knowledge
+          </a>
+          <a href="/news"
+            className={`border-expand mx-5 py-2 cursor-pointer ${isHovered ? '' : 'mouse-leave'}`}
+            onMouseEnter={() => { setSelectedMenu("News"); setIsHovered(true) }}
+            onMouseLeave={() => setIsHovered(false)}
+          >
+            News
           </a>
           <a href="#"
             className={`border-expand mx-5 py-2 cursor-pointer ${isHovered ? '' : 'mouse-leave'}`}
