@@ -59,7 +59,7 @@ export default function ContactPage() {
                             The nearest metro station is PCMC Metro Station, located just 500 meters away.
                             <br /><br />
                             <span className="font-semibold">By Train:</span><br />
-                            If you're traveling by train, the Pune Railway Station is the closest major station, providing convenient access to our location.
+                            If you are traveling by train, the Pune Railway Station is the closest major station, providing convenient access to our location.
                             <br /><br />
                             <span className="font-semibold">By Air:</span><br />
                             For those flying in, Pune International Airport is the nearest airport, making it easy to reach us by taxi or rideshare.
