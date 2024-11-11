@@ -1,5 +1,7 @@
 import Footer from "@/components/Footer";
 import NavBar from "@/components/NavBar";
+import JobApplicationForm from "@/components/careers/JobApplicationForm";
+import JobOpenings from "@/components/careers/JobOpenings";
 import NewsLetter from "@/components/homepage/NewsLetter";
 import { Metadata } from "next";
 
@@ -23,7 +25,7 @@ export default function CareerPage() {
                 }}
             >
                 <div className="flex flex-col gap-3 px-32 bg-blueb-700 py-6 rounded-e-3xl bg-opacity-80">
-                    <h1 className="text-4xl font-bold text-white drop-shadow-lg">Careers at Ionic</h1>
+                    <h1 className="text-4xl font-bold text-white drop-shadow-lg">Careers at Ionic Engineering Technology Pvt. Ltd.</h1>
                     <p className="text-xl font-light text-white drop-shadow-lg">
                         Opportunities Await. Step Into Your Next Challenge.
                     </p>
@@ -37,8 +39,8 @@ export default function CareerPage() {
                 <div className="">
                     <div className="flex gap-20">
                         <div className="w-full">
-                            <p className="text-2xl w-fit font-semibold">Join a Legacy of Excellence</p>
-                            <p className="text-lg w-fit text-justify mt-3">With over 35 years of experience in water and wastewater treatment, Ionic Engineering Technology Pvt. Ltd. is at the forefront of innovation and quality. Our commitment to excellence in design, supply, service, and maintenance ensures that we dont just treat water—we treat it differently. Be part of a team that values efficiency, sustainability, and the well-being of our clients.</p>
+                            <p className="text-2xl w-fit font-semibold"></p>
+                            <p className="text-lg w-fit text-justify mt-3">At Ionic Engineering Technology Pvt. Ltd., we are not just a company, we are a family of passionate professionals dedicated to innovating and providing cutting-edge water and wastewater treatment solutions. As an ISO-9001/2015 certified company with over 35 years of experience, we are proud to deliver sustainable, efficient, and cost-effective water management solutions to industries worldwide. If you're looking for a career that makes an impact, offers growth, and fosters an innovative environment, Ionic is the place for you.</p>
                         </div>
                         <div className="w-full">
                             <img src="/careers/career2.jpg" alt="" className="w-full h-full object-cover rounded-lg" />
@@ -55,30 +57,30 @@ export default function CareerPage() {
                             {/* <p className="w-full text-center mt-2 text-sm">Water Harvester Plant</p> */}
                         </div>
                         <div className="w-full">
-                            <p className="text-2xl w-fit font-semibold">Shape the Future of Water Treatment</p>
-                            <p className="text-lg w-fit text-justify mt-3">At Ionic, we believe in more than just providing solutions—we believe in making a difference. Founded by industry veterans, our company is driven by a passion for delivering the best possible outcomes for our clients. If you are looking to be part of a company that values technology, quality, and customer well-being, Ionic is the place for you.</p>
+                            <p className="text-2xl w-fit font-semibold">Why Work With Us?</p>
+                            <p className="text-lg w-fit text-justify mt-3">At Ionic, we believe in career growth and continuous learning. We offer our employees opportunities to develop their skills and advance their careers through mentorship, training programs, and hands-on experience with the latest technologies in water treatment. You will work with a team of experts who share a passion for innovation, excellence, and sustainability, and you’ll have a chance to contribute to meaningful projects that make a difference in water management worldwide.
+                                <br></br><br></br>
+                                Our work environment is collaborative, inclusive, and designed to help you succeed. You’ll also be part of a company that values diversity, with equal opportunities for all, and encourages fresh ideas and creativity. We believe that your success is our success, and together we can shape the future of water treatment.
+                            </p>
                         </div>
                     </div>
                 </div>
 
                 <div className="">
-                    <div className="flex gap-20">
-                        <div className="w-full">
-                            <p className="text-2xl w-fit font-semibold">Innovate with Impact</p>
-                            <p className="text-lg w-fit text-justify mt-3">Water scarcity and waste management are global challenges, but at Ionic, we see them as opportunities for innovation. Our integrated, step-by-step approach to water and wastewater treatment helps industries reduce their water footprint and operate more efficiently. Join us in our mission to offer sustainable solutions that truly make a difference.</p>
-                        </div>
-                        <div className="w-full">
-                            <img src="/careers/career2.jpg" alt="" className="w-full h-full object-cover rounded-lg" />
-                            {/* <p className="w-full text-center mt-2 text-sm">Water Harvester Plant</p> */}
-                        </div>
-                    </div>
+                    {/* <h1 className="text-4xl text-center text-blue-700 font-bold drop-shadow-lg">Explore Career Opprtuities at Ionic</h1>
+                    <p className="text-xl text-center font-light drop-shadow-lg">
+                        See current openings <span><img src="icons/angle-right-white.svg" className="w-4 h-4 inline-block fill-current text-blue-500"></img></span>
+                    </p> */}
+                    <JobOpenings />
+                    <JobApplicationForm />
                 </div>
             </div>
 
 
 
-            <div
-                className="bg-blueb-700 mt-[100px] flex items-center gap-3 h-[200px] border-b-8 border-b-blueb-700"
+
+            {/* <div
+                className="bg-blueb-700 mt-12 flex items-center gap-3 h-[200px] border-b-8 border-b-blueb-700"
                 style={{
                     backgroundImage: "url('/careers/join-us.jpg')",
                     backgroundSize: 'cover',
@@ -90,10 +92,10 @@ export default function CareerPage() {
                     <p className="text-xl font-light text-white drop-shadow-lg">
                         See current openings <span><img src="icons/angle-right-white.svg" className="w-4 h-4 inline-block fill-current text-blue-500"></img></span>
                     </p>
-                </div> 
-            </div>
+                </div>
+            </div> */}
 
-            {/* <NewsLetter /> */}
+            <NewsLetter />
             <Footer />
         </div>
     )
