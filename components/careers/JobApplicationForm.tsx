@@ -145,8 +145,8 @@ const JobApplicationForm = () => {
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg"
               >
                 <option value="">Select Degree</option>
-                <option value="Bachelor's">Bachelor's</option>
-                <option value="Master's">Master's</option>
+                <option value="Bachelor's">Bachelors</option>
+                <option value="Master's">Masters</option>
                 <option value="Other">Other</option>
               </select>
             </div>

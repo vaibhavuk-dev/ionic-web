@@ -40,7 +40,7 @@ export default function CareerPage() {
                     <div className="flex gap-20">
                         <div className="w-full">
                             <p className="text-2xl w-fit font-semibold"></p>
-                            <p className="text-lg w-fit text-justify mt-3">At Ionic Engineering Technology Pvt. Ltd., we are not just a company, we are a family of passionate professionals dedicated to innovating and providing cutting-edge water and wastewater treatment solutions. As an ISO-9001/2015 certified company with over 35 years of experience, we are proud to deliver sustainable, efficient, and cost-effective water management solutions to industries worldwide. If you're looking for a career that makes an impact, offers growth, and fosters an innovative environment, Ionic is the place for you.</p>
+                            <p className="text-lg w-fit text-justify mt-3">At Ionic Engineering Technology Pvt. Ltd., we are not just a company, we are a family of passionate professionals dedicated to innovating and providing cutting-edge water and wastewater treatment solutions. As an ISO-9001/2015 certified company with over 35 years of experience, we are proud to deliver sustainable, efficient, and cost-effective water management solutions to industries worldwide. If you are looking for a career that makes an impact, offers growth, and fosters an innovative environment, Ionic is the place for you.</p>
                         </div>
                         <div className="w-full">
                             <img src="/careers/career2.jpg" alt="" className="w-full h-full object-cover rounded-lg" />

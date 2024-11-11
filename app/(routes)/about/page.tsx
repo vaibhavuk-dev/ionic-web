@@ -88,7 +88,7 @@ export default function AboutPage() {
                         <div className="w-full">
                             <p className="text-2xl font-semibold">An Integrated Approach</p>
                             <p className="text-md w-fit  mt-3 text-justify">
-                                To truly solve water challenges, isolated approaches don’t work. What’s needed is a step-by-step, integrated approach. We've seen firsthand how the non-availability of clean water and challenges with wastewater disposal can severely hamper industrial operations, sometimes even threatening business closure or expansion.
+                                To truly solve water challenges, isolated approaches do not work. What is needed is a step-by-step, integrated approach. We have seen firsthand how the non-availability of clean water and challenges with wastewater disposal can severely hamper industrial operations, sometimes even threatening business closure or expansion.
                                 <br></br><br></br>
                                 The shortage of potable water can lead to the migration of populations, disrupting industries and agriculture alike. In cases where water is available, it may come at a considerable cost and in poor quality, requiring expensive and complex treatment solutions.
                                 Water is a vital utility, just like electricity or fuel, and the more efficiently it is used, the more money is saved.
