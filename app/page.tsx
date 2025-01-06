@@ -1,52 +1,11 @@
-import About from "@/components/About";
-import AnyQuestion from "@/components/AnyQuestion";
-import Blogs from "@/components/Blogs";
-import BlogsCarousal from "@/components/BlogsCarousal";
-import CaseStudiesCarousal from "@/components/CaseStudiesCarousal";
 import Footer from "@/components/Footer";
-import ImageCarousalHome from "@/components/ImageCarousalHome";
 import NavBar from "@/components/NavBar";
-import ProductSection from "@/components/ProductSection";
-import GlobalPresence from "@/components/homepage/GlobalPresence";
-import NewsLetter from "@/components/homepage/NewsLetter";
-import WaterflowComponent from "@/components/homepage/WaterflowComponent ";
+import BlogArticlesGrid from "@/components/homepage/BlogArticlesGrid";
+import ContactForm from "@/components/homepage/ContactForm";
+import NewsArticlesGrid from "@/components/homepage/NewsArticlesGrid";
+import Testimonials from "@/components/homepage/Testimonials";
 
 export default async function Home() {
-
-    const data = null;
-
-    // const token = '61a38a965c943172f18269cd3fc43155f7125816c6c291706b5b7de42d574a99bfda3a6d99257600c4a619a371943faff7cacd3aff974d7e0667db14f1572103c183b74f594af0c81849a5ebf80abda8654c8f5418339f0877a961f8162314276f041eb35ff6405b6c38cde17cb12abdefa1437a8573cb28216c7eee3c8d0644';
-
-    // const promises = [fetch('http://localhost:1337/api/texts', {
-    //     method: 'GET',
-    //     headers: {
-    //         'Authorization': `Bearer ${token}`
-    //     }
-    // })];
-
-    // const [data] = await Promise.all(promises);
-
-    // const scrollToTop = () => {
-    //     document.documentElement.scrollIntoView({
-    //         behavior: "smooth",
-    //         block: "start",
-    //     });
-    // };
-
-    // const [isVisible, setIsVisible] = useState(false);
-
-    // useEffect(() => {
-    //     const handleScroll = () => {
-    //         const threshold = 300;
-    //         const currentScrollY = window.scrollY;
-    //         setIsVisible(currentScrollY > threshold);
-    //     };
-
-    //     window.addEventListener("scroll", handleScroll);
-    //     return () => {
-    //         window.removeEventListener("scroll", handleScroll);
-    //     };
-    // }, []);
 
     return (
         <div>
@@ -67,69 +26,109 @@ export default async function Home() {
                     </h1>
                 </div>
 
-                <img className="px-32 w-full fixed bottom-0 flex flex-col items-center justify-center" src="/waterflow/flow.png"/>
+                <img className="px-32 w-full fixed bottom-0 flex flex-col items-center justify-center" src="/waterflow/flow.png" />
 
                 {/* <WaterflowComponent /> */}
                 {/* <ImageCarousalHome /> */}
 
             </div>
 
+            <div className="flex w-full gap-10 mx-auto bg-white px-32 rounded shadow-md relative">
 
-            <div className="w-full bg-white">
-                <About data={data} />
+                <section className="bg-white mt-16">
+                    <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                        {/* Left Column */}
+                        <div>
+                            {/* Section Label with Background */}
+                            <div className="relative flex mb-4 gap-5 items-center">
+                                <span className="absolute inset-y-0 left-0 w-full h-full bg-primaryLight -z-10 rounded-md"></span>
+                                <p className="inline-block text-primary font-semibold uppercase px-2 bg-primaryLight rounded-md">
+                                    Our Vision & Mission
+                                </p>
+                                <div className="border-t-2 border-primary mt-1 w-16"></div>
+                            </div>
 
-                <ProductSection />
+                            {/* Main Heading */}
+                            <h2 className="text-3xl md:text-4xl font-bold text-textColorDark leading-tight mb-4">
+                                Transforming Finances With Strategic Wealth Management
+                            </h2>
+
+                            {/* Supporting Text */}
+                            <p className="text-textcolor mb-6">
+                                Guiding you on your global financial success journey through
+                                customized & personalized financial consulting services. Achieve
+                                your goals with data-driven expertise and secure your financial
+                                future, successfully navigating the ever-changing finance.
+                            </p>
+                            <p className="text-textcolor mb-6">
+                                We're committed to providing you with expert guidance, proven
+                                strategies & personalized approach to ensure financial prosperity.
+                            </p>
+
+                            {/* Button */}
+                            <button className="px-6 py-3 text-white bg-primary rounded shadow hover:bg-blue-700">
+                                Explore Products
+                            </button>
+                        </div>
+
+                        {/* Right Column */}
+                        <div className="bg-secondaryLight rounded-lg h-64 md:h-full"></div>
+                    </div>
+                </section>
             </div>
 
-            <div className="bg-white">
-                <CaseStudiesCarousal
-                    data={[
-                        { post_title: "Case Studies: Successful Wastewater Treatment through Bioremediation", post_slug: "/case-study/1", post_image: "/blogs/blog2.png" },
-                        { post_title: "Why Municipal Wastewater Treatment Is Important?", post_slug: "/blogs/1", post_image: "/blogs/blog4.png" },
-                        { post_title: "7 Benefits Of Wastewater Treatment", post_slug: "/blogs/1", post_image: "/blogs/blog3.png" },
-                        { post_title: "Monroe Environmental Saves Steel Mill $145,000 on Clarifier Upgrade", post_slug: "/case-study/1", post_image: "/casestudy/cs4.png" },
-                    ]} />
+            <div className="flex w-full gap-10 mx-auto bg-white px-32 rounded shadow-md relative">
+
+                <section className="bg-white mt-16">
+                    <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+
+                        {/* Right Column */}
+                        <div className="bg-secondaryLight rounded-lg h-64 md:h-full"></div>
+
+                        {/* Left Column */}
+                        <div>
+                            {/* Section Label with Background */}
+                            <div className="relative flex mb-4 gap-5 items-center">
+                                <span className="absolute inset-y-0 left-0 w-full h-full bg-primaryLight -z-10 rounded-md"></span>
+                                <p className="inline-block text-primary font-semibold uppercase px-2 bg-primaryLight rounded-md">
+                                    Our Vision & Mission
+                                </p>
+                                <div className="border-t-2 border-primary mt-1 w-16"></div>
+                            </div>
+
+                            {/* Main Heading */}
+                            <h2 className="text-3xl md:text-4xl font-bold text-textColorDark leading-tight mb-4">
+                                Transforming Finances With Strategic Wealth Management
+                            </h2>
+
+                            {/* Supporting Text */}
+                            <p className="text-textcolor mb-6">
+                                Guiding you on your global financial success journey through
+                                customized & personalized financial consulting services. Achieve
+                                your goals with data-driven expertise and secure your financial
+                                future, successfully navigating the ever-changing finance.
+                            </p>
+                            <p className="text-textcolor mb-6">
+                                We're committed to providing you with expert guidance, proven
+                                strategies & personalized approach to ensure financial prosperity.
+                            </p>
+
+                            {/* Button */}
+                            <button className="px-6 py-3 text-white bg-primary rounded shadow hover:bg-blue-700">
+                                Explore Products
+                            </button>
+                        </div>
+
+                    </div>
+                </section>
             </div>
 
-            <div className="bg-white">
-                <BlogsCarousal
-                    data={[
-                        { post_title: "Algae-based Wastewater Treatment", post_slug: "/blogs/1", post_image: "/blogs/blog2.png" },
-                        { post_title: "Scientist found new way to treat Waste Water", post_slug: "/blogs/1", post_image: "/blogs/blog1.png" },
-                        { post_title: "7 Benefits Of Wastewater Treatment", post_slug: "/blogs/1", post_image: "/blogs/blog3.png" },
-                        { post_title: "Why Municipal Wastewater Treatment Is Important?", post_slug: "/blogs/1", post_image: "/blogs/blog4.png" },
-                    ]} />
-
+            <div className="flex flex-col w-full py-16 gap-16 mx-auto bg-white px-32 rounded shadow-md relative">
+                <Testimonials />
+                <NewsArticlesGrid />
+                <BlogArticlesGrid />
+                <ContactForm />
             </div>
-
-            <div className="flex w-full gap-10 mx-auto bg-white px-32 py-8 rounded shadow-md relative">
-
-                <form className="w-[40%]">
-                    <h2 className="text-2xl font-semibold mb-6">Contact Us</h2>
-                    <div className="mb-4">
-                        <label htmlFor="name" className="block text-sm font-bold mb-2">Name</label>
-                        <input type="text" id="name" name="name" placeholder="Your Name" className="w-full px-3 py-2 border rounded-md outline-none focus:border-blue-500" />
-                    </div>
-                    <div className="mb-4">
-                        <label htmlFor="email" className="block text-sm font-bold mb-2">Email</label>
-                        <input type="email" id="email" name="email" placeholder="Your Email" className="w-full px-3 py-2 border rounded-md outline-none focus:border-blue-500" />
-                    </div>
-                    <div className="mb-6">
-                        <label htmlFor="message" className="block text-sm font-bold mb-2">Message</label>
-                        <textarea id="message" name="message" rows={5} placeholder="Your Message" className="w-full px-3 py-2 border rounded-md outline-none focus:border-blue-500"></textarea>
-                    </div>
-                    <div>
-                        <button type="submit" className="w-full bg-blueb-700 text-white font-bold py-2 px-4 rounded hover:bg-blue-700">Send Message</button>
-                    </div>
-                </form>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15122.922505541159!2d73.79250328511964!3d18.63118198564944!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b84e62f8c169%3A0xf6df110a3e44ab98!2sIonic%20Engineering%20Technology%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1716738071408!5m2!1sen!2sin" className="w-[60%] h-[400px]" loading="lazy" ></iframe>
-            </div>
-
-            <GlobalPresence />
-
-            {/* <AnyQuestion /> */}
-
-            <NewsLetter />
 
             <Footer />
         </div>

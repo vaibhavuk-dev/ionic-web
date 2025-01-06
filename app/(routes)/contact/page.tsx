@@ -14,7 +14,7 @@ export default function ContactPage() {
             <NavBar shouldWhite={true} />
 
             <div
-                className="bg-blueb-700 mt-[110px] py-6 flex items-center gap-3 h-[200px]"
+                className="bg-blueb-700 py-6 flex items-center gap-3 h-[200px]"
                 style={{
                     backgroundImage: "url('/banner/bridge-banner.jpg')",
                     backgroundSize: 'cover',

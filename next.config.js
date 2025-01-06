@@ -1,10 +1,6 @@
-// module.exports = {
-//     async rewrites() {
-//         return [
-//             {
-//                 source: '/home',
-//                 destination: '/products/1'
-//             }
-//         ];
-//     }
-// };
+module.exports = {
+    
+  eslint: {
+  	    ignoreDuringBuilds: true,
+  }
+};

@@ -12,7 +12,7 @@ export default function NewsPage() {
             <NavBar shouldWhite={true} />
 
             <div
-                className="mt-[110px] flex items-center gap-3 h-[200px]"
+                className="flex items-center gap-3 h-[200px]"
                 style={{
                     backgroundImage: "url('/banner/bridge-banner.jpg')",
                     backgroundSize: 'cover',

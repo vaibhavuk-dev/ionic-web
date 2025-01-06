@@ -5,7 +5,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import BlogsCarousalNavBar from "./BlogsCarousalNavBar";
 
-export default function NavBar({ shouldWhite }: { shouldWhite?: boolean }) {
+export default function NavBar({ shouldWhite = true }: { shouldWhite?: boolean }) {
 
   const [isScrolled, setIsScrolled] = useState(false);
   const [selectedMenu, setSelectedMenu] = useState("");
@@ -29,12 +29,12 @@ export default function NavBar({ shouldWhite }: { shouldWhite?: boolean }) {
   }, []);
 
   const navItems = [
+    { label: "About us" },
     { label: "Products" },
-    { label: "Applications" },
-    { label: "Knowledge" },
-    { label: "News" },
-    { label: "About" },
-    { label: "Contact" },
+    { label: "Services" },
+    { label: "News & Blogs" },
+    { label: "Gallery" },
+    { label: "Contact us" },
   ];
 
   const dropdownContent: { [key: string]: { label: string; }[] } = {
@@ -46,18 +46,10 @@ export default function NavBar({ shouldWhite }: { shouldWhite?: boolean }) {
       { label: "HIDRACAR For Industry" },
       { label: "HIDRACAR For Agriculture" },
     ],
-    Applications: [
-      { "label": "Water Treatment" },
-      { "label": "Brine Treatment" },
-      { "label": "Ammonia Removal" },
-      { "label": "Silica Removal" },
-      { "label": "Resource Recovery" },
-      { "label": "BOD/COD Reduction" },
-      { "label": "Lithium Extraction" },
-      { "label": "Zero liquid Discharge" },
-      { "label": "Cooling water Treatment" },
-      { "label": "Potable water disinfection" },
-      { "label": "Industrial Waste Water Treatment" },
+    Services: [
+      { "label": "Consulting" },
+      { "label": "Maintenance" },
+      { "label": "Installation" },
     ],
   };
 
@@ -179,74 +171,43 @@ export default function NavBar({ shouldWhite }: { shouldWhite?: boolean }) {
   };
 
   return (
-    <nav className="fixed z-10 top-0 left-0 right-0  flex-col backdrop-blur-sm">
+    <nav className="sticky z-10 top-0 left-0 right-0  flex-col backdrop-blur-sm">
       <div
-        className={`flex flex-row justify-between items-center w-full h-auto px-32 py-6 ${isWhite ? `bg-white` : `bg-transperant`
-          } ${!selectedMenu ? "drop-shadow-xl" : "border-b"} basic-transition`}
+        className={`flex flex-row items-center w-full ${isWhite ? `bg-white` : `bg-transperant`
+          } ${isScrolled ? "drop-shadow-xl" : ""} basic-transition`}
       >
         <Link href={"/"}>
           <img
             src={`${isWhite ? "/ioniclogo.png" : "/ioniclogo_white.png"}`}
-            className="h-16"
+            className="h-16 ml-32"
             onMouseEnter={() => setSelectedMenu("")}
           />
         </Link>
 
         <div
-          className={`${isWhite ? `text-black` : `text-white`
-            } basic-transition text-lg font-normal`}
+          className={`w-full py-6 flex ${isWhite ? `text-black` : `text-white`
+            } basic-transition text-lg font-normal  h-full justify-between ml-28 pl-4 pr-32 bg-primary`}
         >
-          <a
-            className={`border-expand mx-5 py-2 cursor-pointer ${isHovered ? '' : 'mouse-leave'}`}
-            aria-current="page"
-            onMouseEnter={() => { setSelectedMenu("Products"); setIsHovered(true) }}
-            onMouseLeave={() => setIsHovered(false)}
-          >
-            Products
-          </a>
-          <a href="#"
-            className={`border-expand mx-5 py-2 cursor-pointer ${isHovered ? '' : 'mouse-leave'}`}
-            onMouseEnter={() => { setSelectedMenu("Applications"); setIsHovered(true) }}
-            onMouseLeave={() => setIsHovered(false)}
-          >
-            Applications
-          </a>
-          <a href="#"
-            className={`border-expand mx-5 py-2 cursor-pointer ${isHovered ? '' : 'mouse-leave'}`}
-            onMouseEnter={() => { setSelectedMenu("Knowledge"); setIsHovered(true) }}
-            onMouseLeave={() => setIsHovered(false)}
-          >
-            Knowledge
-          </a>
-          <a href="/news"
-            className={`border-expand mx-5 py-2 cursor-pointer ${isHovered ? '' : 'mouse-leave'}`}
-            onMouseEnter={() => { setSelectedMenu("News"); setIsHovered(true) }}
-            onMouseLeave={() => setIsHovered(false)}
-          >
-            News
-          </a>
-          <a href="#"
-            className={`border-expand mx-5 py-2 cursor-pointer ${isHovered ? '' : 'mouse-leave'}`}
-            onMouseEnter={() => { setSelectedMenu("About"); setIsHovered(true) }}
-            onMouseLeave={() => setIsHovered(false)}
-          >
-            About
-          </a>
-          <a href="#"
-            className={`border-expand mx-5 py-2 cursor-pointer ${isHovered ? '' : 'mouse-leave'}`}
-            onMouseEnter={() => { setSelectedMenu("Contact"); setIsHovered(true) }}
-            onMouseLeave={() => setIsHovered(false)}
-          >
-            Contact
-          </a>
-        </div>
+          {navItems.map((item) => (
+            <Link key={item.label} href={item.label === "Products" ? "/products" : "#"}>
+              <p
+                className={`text-white border-expand mx-5 py-2 cursor-pointer ${isHovered ? '' : 'mouse-leave'}`}
+                aria-current="page"
+                onMouseEnter={() => { setSelectedMenu(item.label); setIsHovered(true) }}
+                onMouseLeave={() => setIsHovered(false)}
+              >
+                {item.label}
+              </p>
+            </Link>
+          ))}
 
         <Link href="/brochure">
-          <button className="px-4 py-2 text-white rounded bg-blueb-700 border-white hover:bg-opacity-70 text-lg"
+          <button className="px-4 py-2 text-white rounded bg-secondary border-white hover:bg-opacity-70 text-lg font-semibold"
             onMouseEnter={() => setSelectedMenu("")}>
             Get Brochure
           </button>
         </Link>
+        </div>
 
       </div>
 
@@ -267,7 +228,7 @@ export default function NavBar({ shouldWhite }: { shouldWhite?: boolean }) {
                 onMouseEnter={() => setSelectedCategory(item.label)}
               >
                 {item.label}
-                {((selectedMenu == "Products" && item.label in productItems) || (selectedMenu == "Applications" && item.label in applicationItems)) && <img className="w-5 h-5" src="/right-arrow.svg" alt="" />}
+                {((selectedMenu == "Products" && item.label in productItems) || (selectedMenu == "Services" && item.label in productItems)) && <img className="w-5 h-5" src="/right-arrow.svg" alt="" />}
               </p>
             ))}
           </div>
@@ -276,7 +237,7 @@ export default function NavBar({ shouldWhite }: { shouldWhite?: boolean }) {
             <div className="w-[60%]">
               <div>
                 <p className="font-bold text-3xl">{selectedMenu}</p>
-                {selectedMenu === "Products" ? <p className="font-medium text-lg mt-3">Explore our wide range of products.</p> : <p className="font-medium text-lg mt-3">Explore wide range of applications of our products.</p>}
+                {selectedMenu === "Products" ? <p className="font-medium text-lg mt-3">Explore our wide range of products.</p> : <p className="font-medium text-lg mt-3">Explore our services.</p>}
               </div>
             </div>
           )}
@@ -298,44 +259,26 @@ export default function NavBar({ shouldWhite }: { shouldWhite?: boolean }) {
               </div>
             </div>
           )}
-          {selectedMenu === "Applications" && selectedCategory && selectedCategory in applicationItems && (
-            <div className="w-[60%] overflow-y-scroll">
-              <div className="text-md flex flex-col">
-                <p className="text-sm text-gray-600 py-3">{selectedCategory}</p>
-                <div className="grid grid-cols-2 gap-3">
-                  {applicationItems[selectedCategory].map((product) => (
-                    <Link key={product.label} href={product.href}>
-                      <div className="group flex items-center justify-start gap-2 rounded-lg w-[1/2] py-2 px-3 hover:border hover:bg-blueb-700" onMouseEnter={() => setHoveredProduct(product.label)}
-                        onMouseLeave={() => setHoveredProduct(null)}>
-                        <img className="w-5 h-5" src={hoveredProduct === product.label ? "/water_drop_white.svg" : product.src} alt="" />
-                        <p className="group-hover:text-white">{product.label}</p>
-                      </div>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            </div>
-          )}
         </div>
       )}
 
       {
-        selectedMenu === "Knowledge" && <div className="flex bg-white py-10 px-32 shadow-xl basic-transition" onMouseEnter={() => setSelectedMenu("Knowledge")} onMouseLeave={() => { setSelectedMenu(""); setSelectedCategory("") }}>
+        selectedMenu === "News & Blogs" && <div className="flex bg-white py-10 px-32 shadow-xl basic-transition" onMouseEnter={() => setSelectedMenu("News & Blogs")} onMouseLeave={() => { setSelectedMenu(""); setSelectedCategory("") }}>
           <div className="w-[40%] text-xl flex flex-col gap-3">
             <Link className={`flex items-center px-2 w-fit hover:font-semibold cursor-pointer ${selectedCategory === "Blogs" && "font-semibold"}`}
               onMouseEnter={() => setSelectedCategory("Blogs")} href={"/blogs"}>
               Blogs
             </Link>
-            <Link className={`flex items-center px-2 w-fit hover:font-semibold cursor-pointer ${selectedCategory === "Case Studies" && "font-semibold"}`}
-              onMouseEnter={() => setSelectedCategory("Case Studies")} href={"/case-study"}            >
-              Case Studies
+            <Link className={`flex items-center px-2 w-fit hover:font-semibold cursor-pointer ${selectedCategory === "News" && "font-semibold"}`}
+              onMouseEnter={() => setSelectedCategory("News")} href={"/news"}            >
+              News
             </Link>
           </div>
           <div className="border-r border-gray-300 mx-5"></div>
           {selectedCategory === "" && <div className="w-[60%]">
             <div className="">
-              <p className="font-bold text-3xl">Knowledge</p>
-              <p className="font-medium text-lg mt-3">Explore our wide range of products.</p>
+              <p className="font-bold text-3xl">News & Blogs</p>
+              <p className="font-medium text-lg mt-3">Explore our latest news and blogs.</p>
             </div>
           </div>}
 
@@ -350,13 +293,13 @@ export default function NavBar({ shouldWhite }: { shouldWhite?: boolean }) {
             </div>
           </div>}
 
-          {selectedCategory === "Case Studies" && <div className="w-[60%]">
+          {selectedCategory === "News" && <div className="w-[60%]">
             <div className="">
-              <p className="text-xl w-fit font-semibold">Case Studies</p>
+              <p className="text-xl w-fit font-semibold">News</p>
               <BlogsCarousalNavBar
                 data={[
-                  { post_title: "Decentralized Wastewater Treatment for a Chinese Village", post_slug: "/case-study/1", post_image: "/casestudy/cs2.png" },
-                  { post_title: "Environment-Friendly Waste Water Treatment | Case Study", post_slug: "/case-study/1", post_image: "/casestudy/cs3.png" },
+                  { post_title: "Decentralized Wastewater Treatment for a Chinese Village", post_slug: "/news/1", post_image: "/casestudy/cs2.png" },
+                  { post_title: "Environment-Friendly Waste Water Treatment | Case Study", post_slug: "/news/1", post_image: "/casestudy/cs3.png" },
                 ]} />
             </div>
           </div>}
@@ -364,7 +307,7 @@ export default function NavBar({ shouldWhite }: { shouldWhite?: boolean }) {
       }
 
       {
-        selectedMenu === "About" && <div className="flex bg-white py-10 px-32 shadow-xl basic-transition" onMouseEnter={() => setSelectedMenu("About")} onMouseLeave={() => { setSelectedMenu(""); setSelectedCategory("") }}>
+        selectedMenu === "About us" && <div className="flex bg-white py-10 px-32 shadow-xl basic-transition" onMouseEnter={() => setSelectedMenu("About us")} onMouseLeave={() => { setSelectedMenu(""); setSelectedCategory("") }}>
           <div className="w-[40%] text-xl flex flex-col gap-3">
             <Link href={"/about"} className={`flex items-center px-2 w-fit hover:font-semibold cursor-pointer ${selectedCategory === "About Us" && "font-semibold"}`} onMouseEnter={() => setSelectedCategory("")}>
               About Us
@@ -385,7 +328,7 @@ export default function NavBar({ shouldWhite }: { shouldWhite?: boolean }) {
       }
 
       {
-        selectedMenu === "Contact" && <div className="flex bg-white py-10 px-32 shadow-xl basic-transition" onMouseEnter={() => setSelectedMenu("Contact")} onMouseLeave={() => { setSelectedMenu(""); setSelectedCategory("") }}>
+        selectedMenu === "Contact us" && <div className="flex bg-white py-10 px-32 shadow-xl basic-transition" onMouseEnter={() => setSelectedMenu("Contact us")} onMouseLeave={() => { setSelectedMenu(""); setSelectedCategory("") }}>
 
           <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15122.922505541159!2d73.79250328511964!3d18.63118198564944!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b84e62f8c169%3A0xf6df110a3e44ab98!2sIonic%20Engineering%20Technology%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1716738071408!5m2!1sen!2sin" className="w-[80%] h-[400px]" loading="lazy" ></iframe>
           <div className="border-r border-gray-300 mx-5"></div>

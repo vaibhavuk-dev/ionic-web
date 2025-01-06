@@ -12,7 +12,7 @@ export default function BlogsPage() {
             <NavBar shouldWhite={true} />
 
             <div
-                className="mt-[110px] flex items-center gap-3 h-[200px]"
+                className="flex items-center gap-3 h-[200px]"
                 style={{
                     backgroundImage: "url('/banner/bridge-banner.jpg')",
                     backgroundSize: 'cover',
@@ -34,7 +34,7 @@ export default function BlogsPage() {
                         name="variant"
                         id="variant"
                         title="variant"
-                        className="bg-gray-100 py-3 px-5 outline-none border rounded-lg"
+                        className="bg-gray-100 py-3 px-5 cursor-pointer outline-none border rounded-lg"
                     // onChange={handleSelectChange}
                     // value={currentVariant}
                     >

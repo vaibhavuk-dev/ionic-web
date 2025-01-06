@@ -38,7 +38,7 @@ html {
   left: 50%;
   width: 0;
   height: 3px;
-  background-color: #1A202C;
+  background-color: #FFFFFF;
   transition: width 0.3s ease, left 0.3s ease;
 }
 

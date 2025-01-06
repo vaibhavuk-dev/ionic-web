@@ -4,8 +4,12 @@ import AnyQuestion from "@/components/AnyQuestion";
 import BlogsCarousal from "@/components/BlogsCarousal";
 import CaseStudiesCarousal from "@/components/CaseStudiesCarousal";
 import Footer from "@/components/Footer";
+import BlogArticlesGrid from "@/components/homepage/BlogArticlesGrid";
+import ContactForm from "@/components/homepage/ContactForm";
+import NewsArticlesGrid from "@/components/homepage/NewsArticlesGrid";
 import NavBar from "@/components/NavBar";
 import ProductGallery from "@/components/ProductGallery";
+import ProductHeroCard from "@/components/products/ProductHeroCard";
 import { useState } from "react";
 
 export default function Products1Page() {
@@ -15,17 +19,19 @@ export default function Products1Page() {
     return (
         <>
 
-            <NavBar />
+            <NavBar shouldWhite={true} />
 
-            <div className="relative bg-blueb-700">
+            <ProductHeroCard />
+
+            {/* <div className="relative bg-blueb-700">
                 <img src="/waterharvester.png" alt="" className="w-screen h-[100vh] object-cover opacity-30" />
                 <div className="absolute w-full top-[45%] text-white flex flex-col items-center justify-center">
                     <h1 className="text-center w-fit font-semibold text-7xl text-white">Quick Cycle Demineralization</h1>
                     <p className="text-center w-fit text-3xl text-white mt-3">Zero Liquid Discharge</p>
                 </div>
-            </div>
+            </div> */}
 
-            <div className="flex flex-col gap-20 my-20 px-32 bg-white">
+            <div className="flex flex-col gap-20 my-16 px-32 bg-white">
 
                 <div className="">
                     <div className="flex gap-5">
@@ -53,7 +59,7 @@ export default function Products1Page() {
                     </div>
                 </div>
 
-                <div className="">
+                {/* <div className="">
                     <p className="text-xl w-fit font-semibold">Models of QCDM</p>
                     <div className="w-full flex gap-5 mt-10">
                         <div className="w-full flex flex-col items-center justify-center">
@@ -116,7 +122,7 @@ export default function Products1Page() {
                         </div>
                     }
 
-                </div>
+                </div> */}
 
                 {/* <div className="h-[50vh]"></div> */}
 
@@ -136,24 +142,10 @@ export default function Products1Page() {
                 </div>
             </div>
 
-            <div className="bg-white">
-                <CaseStudiesCarousal
-                    data={[
-                        { post_title: "Case Studies: Successful Wastewater Treatment through Bioremediation", post_slug: "/case-study/1", post_image: "/blogs/blog2.png" },
-                        { post_title: "Why Municipal Wastewater Treatment Is Important?", post_slug: "/blogs/1", post_image: "/blogs/blog4.png" },
-                        { post_title: "7 Benefits Of Wastewater Treatment", post_slug: "/blogs/1", post_image: "/blogs/blog3.png" },
-                        { post_title: "Monroe Environmental Saves Steel Mill $145,000 on Clarifier Upgrade", post_slug: "/case-study/1", post_image: "/casestudy/cs4.png" },
-                    ]} />
-            </div>
-
-            <div className="bg-white">
-                <BlogsCarousal
-                    data={[
-                        { post_title: "Algae-based Wastewater Treatment", post_slug: "/blogs/1", post_image: "/blogs/blog2.png" },
-                        { post_title: "Scientist found new way to treat Waste Water", post_slug: "/blogs/1", post_image: "/blogs/blog1.png" },
-                        { post_title: "7 Benefits Of Wastewater Treatment", post_slug: "/blogs/1", post_image: "/blogs/blog3.png" },
-                        { post_title: "Why Municipal Wastewater Treatment Is Important?", post_slug: "/blogs/1", post_image: "/blogs/blog4.png" },
-                    ]} />
+            <div className="flex flex-col w-full py-16 gap-16 mx-auto bg-white px-32 rounded shadow-md relative">
+                <NewsArticlesGrid />
+                <BlogArticlesGrid />
+                <ContactForm />
             </div>
 
             <AnyQuestion />
