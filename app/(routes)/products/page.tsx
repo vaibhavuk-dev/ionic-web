@@ -20,15 +20,23 @@ export default function ProductsPage() {
         <div>
             <NavBar shouldWhite={true} />
 
-            <div className="w-full mx-auto px-32 py-12 bg-primaryLight">
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-                    <div className="flex-1">
-                        <h1 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+            <div
+                className="w-full"
+                style={{
+                    backgroundImage: "url('/banner/bridge-banner.jpg')",
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                }}
+            >
+                <div className="px-32 py-12 flex items-center justify-between bg-secondary w-full h-full bg-opacity-90 text-center">
+
+                    <div className="flex flex-col items-start justify-start">
+                        <h1 className="text-4xl font-bold text-white drop-shadow-lg">                            
                             Our Products
                         </h1>
-                        <p className="text-lg text-gray-600 max-w-3xl">
-                            Discover the Success Stories and Satisfaction of Clients Who Have
-                            Benefited from Our Expertise and Personalized Financial Guidance
+                        <p className="mt-4 text-xl font-light text-white drop-shadow-lg text-start pr-20">
+                        Discover the Success Stories and Satisfaction of Clients Who Have
+                        Benefited from Our Expertise and Personalized Financial Guidance
                         </p>
                     </div>
 
@@ -39,7 +47,7 @@ export default function ProductsPage() {
                                 placeholder="Search...."
                                 value={searchQuery}
                                 onChange={(e) => setSearchQuery(e.target.value)}
-                                className="w-full px-4 py-3 pr-12 rounded-full border border-gray-200 shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                                className="w-full px-4 py-3 pr-12 rounded-xl border border-gray-200 shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                             />
                             <button
                                 type="submit"
@@ -49,12 +57,14 @@ export default function ProductsPage() {
                             </button>
                         </form>
                     </div>
+
                 </div>
             </div>
 
             <div className="flex flex-col w-full py-16 gap-16 mx-auto bg-white px-32 rounded shadow-md relative">
 
                 <ProductsGrid />
+                <hr></hr>
                 <ContactForm />
 
             </div>

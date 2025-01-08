@@ -21,7 +21,7 @@ export default function ContactPage() {
                     backgroundPosition: 'center',
                 }}
             >
-                <div className="flex flex-col gap-3 px-32 bg-blueb-700 py-6 rounded-e-3xl bg-opacity-80">
+                <div className="flex flex-col gap-3 px-32 bg-blueb-700 py-6 rounded-e-3xl bg-opacity-90">
                     <h1 className="text-4xl font-bold text-white drop-shadow-lg">Contact Us</h1>
                     <p className="text-xl font-light text-white drop-shadow-lg">
                         Have Questions? We Have Answers. Get in Touch!

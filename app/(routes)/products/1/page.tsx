@@ -34,23 +34,23 @@ export default function Products1Page() {
             <div className="flex flex-col gap-20 my-16 px-32 bg-white">
 
                 <div className="">
-                    <div className="flex gap-5">
+                    <div className="flex gap-10">
                         <div className="w-full">
                             <img src="/waterharvester.png" alt="" className="w-full h-full object-cover rounded-lg" />
                             <p className="w-full text-center mt-2 text-sm">Water Harvester Plant</p>
                         </div>
                         <div className="w-full">
-                            <p className="text-lg w-fit font-semibold">Applications of QCDM</p>
+                            <p className="text-2xl w-fit font-semibold">Applications of QCDM</p>
                             <p className="text-md w-fit text-justify mt-3">Enhance your water treatment process with Ionic&amp;s &quote;Quick Cycle&quote; Fully Automatic Demineralisers, the ultimate solution for efficient and sustainable water demineralization. Designed to meet the rising demand for minimal waste and compliance with environmental regulations, these advanced demineralizers use proprietary 5th Generation ion exchange resin technology. This innovative approach offers industries an unparalleled advantage by reducing water, wastewater, and chemical footprints. Available in 30 models with flow rates ranging from 2.0 to 60.0 m³/hr, our Quick Cycle systems cater to diverse operational needs with three distinct series providing various treated water qualities. Unlike traditional systems, Ionic&apos;s Quick Cycle demineralizers deliver ultra-short service cycles and rapid regeneration, driving down operational costs and boosting productivity. Optimize your water treatment process today with Ionic&apos;s state-of-the-art Quick Cycle technology.</p>
                         </div>
                     </div>
                 </div>
 
                 <div className="">
-                    <div className="flex gap-5">
+                    <div className="flex gap-10">
                         <div className="w-full">
-                            <p className="text-lg w-fit font-semibold">Working of QCDM</p>
-                            <p className="text-md w-fit text-justify mt-3">Ionic&apos;s Quick Cycle Fully Automatic Demineralisers are compact, skid-mounted units engineered for maximum reliability and efficiency. Featuring fully automated PLC controls, these systems are Industry 4.0 and Water 4.0 ready, ensuring seamless integration with modern, smart factories. They consistently produce high-quality demineralized water with conductivity below 1.0 µS/cm, thanks to their advanced ion exchange resin technology. Our demineralizers stand out for their low chemical, water, and power consumption, significantly lowering operational costs. Constructed with premium materials like UPVC piping and SS 316 process pumps, these units promise longevity and low maintenance. Optional features include real-time remote monitoring and printout facilities for enhanced operational oversight. Suitable for a wide range of applications from pharmaceuticals and cosmetics to automotive and aerospace, Ionic&apos;s Quick Cycle demineralizers provide a robust and eco-friendly solution for your water treatment needs. Contact us today to customize a system tailored to your specific requirements. </p>
+                            <p className="text-2xl w-fit font-semibold">Uses of QCDM</p>
+                            <p className="text-md w-fit text-justify mt-3">Enhance your water treatment process with Ionic&amp;s &quote;Quick Cycle&quote; Fully Automatic Demineralisers, the ultimate solution for efficient and sustainable water demineralization. Designed to meet the rising demand for minimal waste and compliance with environmental regulations, these advanced demineralizers use proprietary 5th Generation ion exchange resin technology. This innovative approach offers industries an unparalleled advantage by reducing water, wastewater, and chemical footprints. Available in 30 models with flow rates ranging from 2.0 to 60.0 m³/hr, our Quick Cycle systems cater to diverse operational needs with three distinct series providing various treated water qualities. Unlike traditional systems, Ionic&apos;s Quick Cycle demineralizers deliver ultra-short service cycles and rapid regeneration, driving down operational costs and boosting productivity. Optimize your water treatment process today with Ionic&apos;s state-of-the-art Quick Cycle technology.</p>
                         </div>
                         <div className="w-full">
                             <img src="/waterharvester.png" alt="" className="w-full h-full object-cover rounded-lg" />
@@ -127,24 +127,42 @@ export default function Products1Page() {
                 {/* <div className="h-[50vh]"></div> */}
 
                 <div className="">
-                    <p className="text-xl w-fit font-semibold">Gallery</p>
+                    <p className="text-2xl w-fit font-semibold">Gallery</p>
                     <div className="mt-5 ">
                         <ProductGallery />
                     </div>
                 </div>
 
                 <div className="">
-                    <p className="text-xl w-fit font-semibold">Brochure</p>
+                    <p className="text-2xl w-fit font-semibold">Brochure</p>
                     <div className="mt-5 w-fit flex flex-col gap-3">
                         <img className="h-80 rounded-xl" src="/brochure.png" />
                         <p>Download Brochure (PDF)</p>
                     </div>
                 </div>
+
+                <div className="">
+                    <p className="text-2xl w-fit font-semibold">Documents</p>
+                    <div className="mt-5 w-fit flex flex-col gap-3">
+                        <ul className="list-item list-inside">
+                            <li><a href="/documents/document1.pdf" className="text-blue-700">Document 1</a></li>
+                            <li><a href="/documents/document2.pdf" className="text-blue-700">Document 2</a></li>
+                            <li><a href="/documents/document3.pdf" className="text-blue-700">Document 3</a></li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
 
             <div className="flex flex-col w-full py-16 gap-16 mx-auto bg-white px-32 rounded shadow-md relative">
                 <NewsArticlesGrid />
+            </div>
+
+            <div className="flex flex-col w-full py-16 gap-16 mx-auto  bg-blueb-gradient  px-32 rounded shadow-md relative">
                 <BlogArticlesGrid />
+            </div>
+
+            <div className="flex flex-col w-full py-16 gap-16 mx-auto bg-white px-32 rounded shadow-md relative">
                 <ContactForm />
             </div>
 

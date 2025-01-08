@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function ProductHeroCard () {
   return (
-    <div className="mx-32 mt-12 bg-primary overflow-hidden rounded-tl-3xl rounded-br-3xl">
+    <div className="mx-32 mt-12 bg-blueb-gradient overflow-hidden rounded-tl-3xl rounded-br-3xl">
       <div className="grid md:grid-cols-2 gap-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Left Content Section */}
         <div className="flex flex-col justify-center">

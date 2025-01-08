@@ -21,17 +21,24 @@ export default function Testimonials() {
     ];
 
     return (
-      <div className="w-full bg-white relative">
+      <div className="w-full relative">
         <div className="container mx-auto px-4">
-          <h2 className="text-primary text-3xl md:text-4xl font-bold">What Our Customers Say</h2>
-          <p className="text-textcolor mt-2">
+        <div className="relative flex mb-4 gap-5 items-center">
+          <span className="absolute inset-y-0 left-0 w-full h-full bg-primaryLight -z-10 rounded-md"></span>
+          <p className="inline-block text-primary font-semibold uppercase px-2 bg-primaryLight rounded-md">
+            Testimonials
+          </p>
+          <div className="border-t-2 border-primaryLight mt-1 w-16"></div>
+        </div>
+          <h2 className="text-white text-3xl md:text-4xl font-bold">What Our Customers Say</h2>
+          <p className="text-primaryLight mt-2">
             Discover the Success Stories and Satisfaction of Clients Who Have Benefited from Our Expertise and Personalized Financial Guidance
           </p>
           <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
             {testimonials.map((testimonial, index) => (
                   <div
                   key={index}
-                  className="bg-white p-6 rounded-tl-3xl rounded-br-3xl shadow-md transition duration-300 hover:bg-primary group transform hover:scale-105"
+                  className="cursor-pointer bg-white p-6 rounded-tl-3xl rounded-br-3xl shadow-md transition duration-300 hover:bg-blueb-500 hover:border hover:border-white group transform hover:scale-105"
                   >
                   <img src={testimonial.image} alt={testimonial.name} className="w-16 h-16 rounded-full mb-4" />
                   <h3 className="text-primary font-semibold group-hover:text-white">{testimonial.name}</h3>

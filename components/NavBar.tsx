@@ -4,6 +4,7 @@ import Link from "next/link";
 import React from "react";
 import { useState, useEffect } from "react";
 import BlogsCarousalNavBar from "./BlogsCarousalNavBar";
+import { usePathname } from "next/navigation";
 
 export default function NavBar({ shouldWhite = true }: { shouldWhite?: boolean }) {
 
@@ -12,6 +13,8 @@ export default function NavBar({ shouldWhite = true }: { shouldWhite?: boolean }
   const [selectedCategory, setSelectedCategory] = useState("")
   const [isHovered, setIsHovered] = useState(false);
   const [hoveredProduct, setHoveredProduct] = useState<string | null>(null);
+
+  const pathname = usePathname();
 
   const isWhite = shouldWhite || isScrolled || selectedMenu;
 
@@ -171,7 +174,7 @@ export default function NavBar({ shouldWhite = true }: { shouldWhite?: boolean }
   };
 
   return (
-    <nav className="sticky z-10 top-0 left-0 right-0  flex-col backdrop-blur-sm">
+    <nav className="sticky z-20 top-0 left-0 right-0  flex-col backdrop-blur-sm">
       <div
         className={`flex flex-row items-center w-full ${isWhite ? `bg-white` : `bg-transperant`
           } ${isScrolled ? "drop-shadow-xl" : ""} basic-transition`}
@@ -186,12 +189,12 @@ export default function NavBar({ shouldWhite = true }: { shouldWhite?: boolean }
 
         <div
           className={`w-full py-6 flex ${isWhite ? `text-black` : `text-white`
-            } basic-transition text-lg font-normal  h-full justify-between ml-28 pl-4 pr-32 bg-primary`}
+            } basic-transition text-lg font-normal  h-full justify-between ml-28 pl-4 pr-32 bg-white`}
         >
           {navItems.map((item) => (
-            <Link key={item.label} href={item.label === "Products" ? "/products" : "#"}>
+            <Link key={item.label} href={item.label === "Products" ? "/products" : item.label === "About us" ? "/about" :"#"}>
               <p
-                className={`text-white border-expand mx-5 py-2 cursor-pointer ${isHovered ? '' : 'mouse-leave'}`}
+                className={`text-textcolor font-medium border-expand mx-5 py-2 cursor-pointer ${isHovered ? '' : 'mouse-leave'} ${item.label.toLowerCase()?.includes(pathname?.split("/")?.[1]) ? 'border-b-2 border-secondary' : ''}`}
                 aria-current="page"
                 onMouseEnter={() => { setSelectedMenu(item.label); setIsHovered(true) }}
                 onMouseLeave={() => setIsHovered(false)}

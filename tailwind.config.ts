@@ -1,5 +1,5 @@
 const withMT = require("@material-tailwind/react/utils/withMT");
- 
+
 module.exports = withMT({
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -19,25 +19,27 @@ module.exports = withMT({
         bgLogoBlue: "#edfaff",
         complementary: "#fb8604",
         'blueb': {
-          '50': '#edfaff',
-          '100': '#d6f2ff',
-          '200': '#b7e9ff',
-          '300': '#85deff',
-          '400': '#4bc9ff',
-          '500': '#22abff',
-          '600': '#0a8dff',
-          '700': '#0479fb',
-          '800': '#0a5dc3',
-          '900': '#0f5099',
-          '950': '#0f315c',
+          50: '#f0f7ff',
+          100: '#e0eefe',
+          200: '#bbddfc',
+          300: '#7ec0fb',
+          400: '#3aa1f6',
+          500: '#1085e7',
+          600: '#0467c5',
+          700: '#0556a7',
+          800: '#084784',
+          900: '#0d3c6d',
+          950: '#092648',
         },
-
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        'blueb-gradient': 'linear-gradient(to right, #0556a7, #1085e7, #0556a7)',
+        'blueb-gradient-opacity-50': 'linear-gradient(to right, rgba(5, 86, 167, 0.9), rgba(16, 133, 231, 0.9), rgba(5, 86, 167, 0.9))',
       },
+
     },
   },
   plugins: [],

@@ -38,7 +38,7 @@ html {
   left: 50%;
   width: 0;
   height: 3px;
-  background-color: #FFFFFF;
+  background-color: #74AD19;
   transition: width 0.3s ease, left 0.3s ease;
 }
 
@@ -95,4 +95,9 @@ html {
   /* IE and Edge */
   scrollbar-width: none;
   /* Firefox */
+}
+
+.img-gradient-opacity {
+  -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+  mask-image: linear-gradient(to right, rgba(0,0,0,0.1), rgba(0,0,0,0.1), rgba(0,0,0,0), rgba(0,0,0,0));
 }

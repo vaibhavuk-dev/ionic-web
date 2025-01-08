@@ -6,6 +6,9 @@ export default function ProductGallery() {
     const images = [
         "/waterharvester.png",
         "/machine.jpg",
+        "/blogs/blog1.png",
+        "/blogs/blog2.png",
+        "/blogs/blog3.png",
     ]
 
     const [currentImage, setCurrentImage] = useState("/waterharvester.png");
@@ -28,11 +31,13 @@ export default function ProductGallery() {
             {currentImage && (
                 <div className="h-[500px]  flex relative">
                     <img
-                        className="border border-white animate-slideInFromLeft"
+                        className="border border-white animate-slideInFromLeft transition-all duration-500 ease-in-out"
                         src={currentImage}
                         alt=""
                     />
-                    <p className="absolute bottom-0 left-0 w-full backdrop-blur-3xl px-5 py-3 text-white text-lg">More important is how efficiently you treat water. With Minimum and Zero liquid discharge manufacturing facilities.</p>
+                    <p className="absolute bottom-0 left-0 w-full backdrop-blur-3xl px-5 py-3 text-white text-lg animate-fadeIn transition-opacity duration-500 ease-in-out">
+                        More important is how efficiently you treat water. With Minimum and Zero liquid discharge manufacturing facilities.
+                    </p>
                 </div>
             )}
         </div>
