@@ -38,12 +38,12 @@ export default function Testimonials() {
             {testimonials.map((testimonial, index) => (
                   <div
                   key={index}
-                  className="cursor-pointer bg-white p-6 rounded-tl-3xl rounded-br-3xl shadow-md transition duration-300 hover:bg-blueb-500 hover:border hover:border-white group transform hover:scale-105"
+                  className="cursor-pointer bg-white p-6 rounded-tl-3xl rounded-br-3xl shadow-md transition duration-300 transform hover:scale-105"
                   >
                   <img src={testimonial.image} alt={testimonial.name} className="w-16 h-16 rounded-full mb-4" />
-                  <h3 className="text-primary font-semibold group-hover:text-white">{testimonial.name}</h3>
-                  <p className="text-textcolorDark group-hover:text-white">{testimonial.role}</p>
-                  <p className="text-textcolor mt-4 group-hover:text-white">{testimonial.text}</p>
+                  <h3 className="text-primary font-semibold">{testimonial.name}</h3>
+                  <p className="text-textcolorDark">{testimonial.role}</p>
+                  <p className="text-textcolor mt-4">{testimonial.text}</p>
                   </div>
             ))}
           </div>

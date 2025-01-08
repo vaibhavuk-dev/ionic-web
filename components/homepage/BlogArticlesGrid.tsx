@@ -34,12 +34,14 @@ export default function BlogArticlesGrid() {
               <div className="p-4">
                 <h3 className="text-textcolor font-semibold">{blog.title}</h3>
                 <p className="text-textcolor mt-2">{blog.description}</p>
-                <a
+                <div className="flex justify-end">
+                  <a
                   href="#"
-                  className="text-secondary mt-4 inline-block font-semibold"
-                >
+                  className="text-secondary mt-4 inline-block font-semibold text-lg"
+                  >
                   Read Blog →
-                </a>
+                  </a>
+                </div>
               </div>
             </div>
           ))}

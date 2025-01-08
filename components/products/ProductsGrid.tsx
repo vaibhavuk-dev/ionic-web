@@ -3,7 +3,7 @@ import React from 'react';
 
 const TreatmentCard = ({ image, title, description }: any) => {
   return (
-    <div className="bg-white border border-gray-200 rounded-lg overflow-hidden">
+    <div className="cursor-pointer bg-white border border-gray-200 rounded-lg overflow-hidden transition duration-300 transform hover:scale-105 hover:shadow-lg">
       <div className="flex space-x-4 p-4">
         <img 
           src={image} 
