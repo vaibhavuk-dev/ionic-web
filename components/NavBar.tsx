@@ -194,7 +194,7 @@ export default function NavBar({ shouldWhite = true }: { shouldWhite?: boolean }
           {navItems.map((item) => (
             <Link key={item.label} href={item.label === "Products" ? "/products" : item.label === "About us" ? "/about" :"#"}>
               <p
-                className={`text-textcolor font-medium border-expand mx-5 py-2 cursor-pointer ${isHovered ? '' : 'mouse-leave'} ${item.label.toLowerCase()?.includes(pathname?.split("/")?.[1]) ? 'border-b-2 border-secondary' : ''}`}
+                className={`text-textcolor font-medium border-expand mx-5 py-2 cursor-pointer ${isHovered ? '' : 'mouse-leave'} ${pathname?.split("/")?.[1] && item.label.toLowerCase()?.includes(pathname?.split("/")?.[1]) ? 'border-b-2 border-secondary' : ''}`}
                 aria-current="page"
                 onMouseEnter={() => { setSelectedMenu(item.label); setIsHovered(true) }}
                 onMouseLeave={() => setIsHovered(false)}
