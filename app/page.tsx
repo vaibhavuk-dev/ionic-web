@@ -1,15 +1,21 @@
 import Footer from "@/components/Footer";
 import NavBar from "@/components/NavBar";
 import BlogArticlesGrid from "@/components/homepage/BlogArticlesGrid";
+import ClientsSection from "@/components/homepage/ClientsSection";
 import ContactForm from "@/components/homepage/ContactForm";
 import NewsArticlesGrid from "@/components/homepage/NewsArticlesGrid";
+import SolutionsSection from "@/components/homepage/SolutionsSection";
+import StickySidebar from "@/components/homepage/StickySidebar";
 import Testimonials from "@/components/homepage/Testimonials";
+import VisionMissionSection from "@/components/homepage/VisionMissionSection";
+import Link from "next/link";
 
 export default async function Home() {
 
     return (
         <div>
-            <NavBar />
+
+            <StickySidebar />
 
             <div className="relative w-full h-screen">
                 <video
@@ -20,13 +26,24 @@ export default async function Home() {
                     loop
                 />
 
-                <div className="fixed inset-0 flex items-center justify-center bg-blueb-gradient-opacity-50 pb-14">
-                    <h1 className="text-center font-bold text-white text-6xl">
-                        We Treat Water - Differently
-                    </h1>
+                <div className="fixed inset-0 flex flex-col gap-8 items-center justify-center bg-blueb-gradient-opacity-50 pb-14">
+                    <div className="flex flex-col gap-4 items-center">
+                        <h1 className="text-center font-bold text-white text-4xl">
+                            We Treat Water - Differently
+                        </h1>
+                        <h2 className="text-center font-semibold text-white text-2xl">
+                            "Clear solution for trouble waters"
+                        </h2>
+                    </div>
+                    <p className="text-center font-light text-white text-lg w-1/3">
+                        Ionic Engineering Technology Pvt. Ltd. pioneers ISO-certified water and wastewater treatment solutions with over 35 years of expertise. Led by industry veterans, we offer tailored services, emphasizing quality, performance, and sustainability.
+                    </p>
+                    <p className="text-center font-medium text-white text-lg w-full bg-secondary py-2">
+                        We Remove Everything from Water <span className="font-bold">Except - “Hydrogen & Oxygen”</span>
+                    </p>
                 </div>
 
-                <img className="px-32 w-full fixed bottom-0 flex flex-col items-center justify-center" src="/waterflow/flow.png" />
+                <img className="w-full fixed bottom-0 flex flex-col items-center justify-center" src="/waterflow/flow.png" />
 
                 {/* <WaterflowComponent /> */}
                 {/* <ImageCarousalHome /> */}
@@ -39,7 +56,7 @@ export default async function Home() {
                     <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
 
                         {/* Right Column */}
-                        <img className="bg-secondaryLight rounded-lg h-64 md:h-full object-cover" src="/blogs/blog2.png" alt="Descriptive Alt Text" />
+                        <img className="w-full rounded-lg h-2/3 md:h-2/3 object-contain" src="/homepage/ionicglobe.png" alt="Descriptive Alt Text" />
 
                         {/* Left Column */}
                         <div>
@@ -47,26 +64,19 @@ export default async function Home() {
                             <div className="relative flex mb-4 gap-5 items-center">
                                 <span className="absolute inset-y-0 left-0 w-full h-full bg-primaryLight -z-10 rounded-md"></span>
                                 <p className="inline-block text-primary font-semibold uppercase px-2 bg-primaryLight rounded-md">
-                                    Our Vision & Mission
+                                    Secure Water, Secure Tomorrow
                                 </p>
                                 <div className="border-t-2 border-primary mt-1 w-16"></div>
                             </div>
 
                             {/* Main Heading */}
                             <h2 className="text-3xl md:text-4xl font-bold text-textColorDark leading-tight mb-4">
-                                Transforming Finances With Strategic Wealth Management
+                                Securing Tomorrow by Saving Water Today
                             </h2>
 
                             {/* Supporting Text */}
                             <p className="text-textcolor mb-6">
-                                Guiding you on your global financial success journey through
-                                customized & personalized financial consulting services. Achieve
-                                your goals with data-driven expertise and secure your financial
-                                future, successfully navigating the ever-changing finance.
-                            </p>
-                            <p className="text-textcolor mb-6">
-                                We're committed to providing you with expert guidance, proven
-                                strategies & personalized approach to ensure financial prosperity.
+                                Water is the most precious resource, essential for life, yet often taken for granted. Despite its critical importance, water scarcity has led to conflicts, exploitation, and commercialization, transforming what was once free into an expensive necessity. If we don't act responsibly now, we risk leaving future generations a world with insufficient water, threatening livelihoods and society itself. While nature offers abundant seawater, its conversion remains costly, and no alternative to water exists. As individuals with the ability to think and act, let us commit to conserving water and addressing the crisis as part of our responsibility toward a sustainable future. At Ionic, we invite you to explore our innovative water and wastewater solutions, designed to highlight the true value of water and secure a better tomorrow.
                             </p>
 
                             {/* Button */}
@@ -83,7 +93,7 @@ export default async function Home() {
 
                 <img
                     className="absolute inset-0 w-full h-full object-cover img-gradient-opacity "
-                    src="/blogs/blog2.png"
+                    src="/homepage/ionicaward.jpg"
                     alt="Background"
                 />
 
@@ -94,86 +104,40 @@ export default async function Home() {
                             {/* Section Label with Background */}
                             <div className="relative flex mb-4 gap-5 items-center justify-start w-full">
                                 <p className="inline-block text-primary font-semibold uppercase px-2 bg-primaryLight rounded-md">
-                                    Our Vision & Mission
+                                    Our Achievements
                                 </p>
                                 <div className="border-t-2 border-primaryLight mt-1 w-16"></div>
                             </div>
 
                             {/* Main Heading */}
                             <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight mb-4">
-                                Transforming Finances With Strategic Wealth Management
+                                Awards & Recognitions
                             </h2>
 
                             {/* Supporting Text */}
                             <p className="text-white mb-6">
-                                Guiding you on your global financial success journey through
-                                customized & personalized financial consulting services. Achieve
-                                your goals with data-driven expertise and secure your financial
-                                future, successfully navigating the ever-changing finance.
+                                We are delighted to share that Ionic Engineering Technology Pvt. Ltd. has been awarded the prestigious. "G.S.Parkhe Award for Innovation In Entrepreneurship" by MCCIA ( Mahratta Chamber Of Commerce, Industries and Agriculture). MCCIA is a ninety year old chamber of commerce. Ionic was selected out of 160 entries for the innovation award and adjudged the winner by a panel of Eminent Industrialist. The innovation award was provided for the "Water Harvester" Zero Liquid Discharge Project we completed for Toyota Industries India at Bangalore in which we convert the industrial waste water into reusable water. The technological process of converting Wastewater into Clear and Clean reusable water helps the industries achieve sustainable environment friendly manufacturing operations meeting Corporate Social Environmental Responsibility (CSER) initiative and government environmental compliance regulatory requirement.
                             </p>
-                            <p className="text-white mb-6">
-                                We're committed to providing you with expert guidance, proven
-                                strategies & personalized approach to ensure financial prosperity.
-                            </p>
-
-                            {/* Button */}
-                            <button className="px-6 py-3 text-white border border-white rounded shadow hover:bg-blue-700">
-                                Explore Products
-                            </button>
                         </div>
 
                         {/* Right Column */}
-                        <img className="bg-secondaryLight rounded-lg h-64 md:h-full object-cover" src="/blogs/blog2.png" alt="Descriptive Alt Text" />
+                        <img className="bg-secondaryLight rounded-lg h-64 md:h-full object-cover" src="/homepage/ionicaward.jpg" alt="Descriptive Alt Text" />
                     </div>
                 </section>
             </div>
 
-            <div className="flex w-full gap-10 mx-auto bg-white px-32 rounded shadow-md relative">
-
-                <section className="bg-white my-16">
-                    <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-
-                        {/* Right Column */}
-                        <img className="bg-secondaryLight rounded-lg h-64 md:h-full object-cover" src="/blogs/blog2.png" alt="Descriptive Alt Text" />
-
-                        {/* Left Column */}
-                        <div>
-                            {/* Section Label with Background */}
-                            <div className="relative flex mb-4 gap-5 items-center">
-                                <span className="absolute inset-y-0 left-0 w-full h-full bg-primaryLight -z-10 rounded-md"></span>
-                                <p className="inline-block text-primary font-semibold uppercase px-2 bg-primaryLight rounded-md">
-                                    Our Vision & Mission
-                                </p>
-                                <div className="border-t-2 border-primary mt-1 w-16"></div>
-                            </div>
-
-                            {/* Main Heading */}
-                            <h2 className="text-3xl md:text-4xl font-bold text-textColorDark leading-tight mb-4">
-                                Transforming Finances With Strategic Wealth Management
-                            </h2>
-
-                            {/* Supporting Text */}
-                            <p className="text-textcolor mb-6">
-                                Guiding you on your global financial success journey through
-                                customized & personalized financial consulting services. Achieve
-                                your goals with data-driven expertise and secure your financial
-                                future, successfully navigating the ever-changing finance.
-                            </p>
-                            <p className="text-textcolor mb-6">
-                                We're committed to providing you with expert guidance, proven
-                                strategies & personalized approach to ensure financial prosperity.
-                            </p>
-
-                            {/* Button */}
-                            <button className="px-6 py-3 text-white bg-blueb-gradient rounded shadow hover:bg-blue-700">
-                                Explore Products
-                            </button>
-                        </div>
-
-                    </div>
-                </section>
+            <div className="flex flex-col w-full py-12 gap-16 mx-auto bg-white px-32 rounded shadow-md relative">
+                <SolutionsSection />
             </div>
-            
+
+            <div className="flex flex-col w-full py-16 gap-16 mx-auto  bg-blueb-gradient  px-32 rounded shadow-md relative">
+                <ClientsSection />
+            </div>
+
+            <div className="flex flex-col w-full py-12 gap-16 mx-auto bg-white px-32 rounded shadow-md relative">
+                <VisionMissionSection />
+            </div>
+
             <div className="flex flex-col w-full py-16 gap-16 mx-auto  bg-blueb-gradient  px-32 rounded shadow-md relative">
                 <Testimonials />
             </div>
@@ -190,7 +154,7 @@ export default async function Home() {
                 <ContactForm />
             </div>
 
-            <Footer />
+
         </div>
     );
 }

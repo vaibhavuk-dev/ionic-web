@@ -50,7 +50,7 @@ export default async function Home() {
 
     return (
         <div>
-            <NavBar />
+            
 
             <div className="relative w-full h-screen">
                 <video
@@ -131,7 +131,7 @@ export default async function Home() {
 
             <NewsLetter />
 
-            <Footer />
+            
         </div>
     );
 }

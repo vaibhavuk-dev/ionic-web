@@ -33,7 +33,7 @@ export default function Home(props: any) {
 
         <AnyQuestion />
 
-        <Footer />
+        
       </div>
     </div>
   )

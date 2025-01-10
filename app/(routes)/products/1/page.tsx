@@ -19,7 +19,7 @@ export default function Products1Page() {
     return (
         <>
 
-            <NavBar shouldWhite={true} />
+            
 
             <ProductHeroCard />
 
@@ -167,7 +167,7 @@ export default function Products1Page() {
             </div>
 
             <AnyQuestion />
-            <Footer />
+            
         </>
     )
 }

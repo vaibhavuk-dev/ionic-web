@@ -174,10 +174,9 @@ export default function NavBar({ shouldWhite = true }: { shouldWhite?: boolean }
   };
 
   return (
-    <nav className="sticky z-20 top-0 left-0 right-0  flex-col backdrop-blur-sm">
+    <nav className={`sticky z-20 top-0 left-0 right-0  flex-col backdrop-blur-sm ${isScrolled ? "drop-shadow-xl" : ""} basic-transition`}>
       <div
-        className={`flex flex-row items-center w-full ${isWhite ? `bg-white` : `bg-transperant`
-          } ${isScrolled ? "drop-shadow-xl" : ""} basic-transition`}
+        className={`flex flex-row items-center w-full bg-white`}
       >
         <Link href={"/"}>
           <img
@@ -213,6 +212,10 @@ export default function NavBar({ shouldWhite = true }: { shouldWhite?: boolean }
         </div>
 
       </div>
+
+      {
+        selectedMenu && <hr className="bg-gray-300 h-1"></hr>
+      }
 
       {selectedMenu && dropdownContent[selectedMenu] && (
         <div

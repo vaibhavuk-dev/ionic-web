@@ -17,7 +17,7 @@ export default function AboutPage() {
 
     return (
         <div>
-            <NavBar shouldWhite={true} />
+            
 
             <div
                 className="flex items-center"
@@ -256,7 +256,7 @@ export default function AboutPage() {
                 <ContactForm />
             </div>
 
-            <Footer />
+            
         </div>
     )
 }

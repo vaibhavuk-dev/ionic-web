@@ -5,20 +5,19 @@ export default function BrochurePage() {
 
     return (
         <div>
-            <NavBar shouldWhite={true} />
-
+            
             <div
-                className="bg-blueb-700 mt-[110px] py-6 flex items-center gap-3 h-[200px]"
+                className="flex items-center"
                 style={{
                     backgroundImage: "url('/banner/bridge-banner.jpg')",
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                 }}
             >
-                <div className="flex flex-col gap-3 px-32 bg-blueb-700 py-6 rounded-e-3xl bg-opacity-80">
+                <div className="pt-12 pb-6 flex flex-col justify-center bg-secondary w-full h-full bg-opacity-90 text-center">
                     <h1 className="text-4xl font-bold text-white drop-shadow-lg">Product Brochures</h1>
-                    <p className="text-xl font-light text-white drop-shadow-lg">
-                        Discover Our Solutions – Explore the Product Brochure!
+                    <p className="mt-4 text-xl font-light text-white drop-shadow-lg px-32">
+                    Discover Our Solutions – Explore the Product Brochure!
                     </p>
                 </div>
             </div>

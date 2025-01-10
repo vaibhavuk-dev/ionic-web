@@ -18,7 +18,7 @@ export default function ProductsPage() {
 
     return (
         <div>
-            <NavBar shouldWhite={true} />
+            
 
             <div
                 className="w-full"
@@ -70,7 +70,7 @@ export default function ProductsPage() {
             </div>
 
 
-            <Footer />
+            
 
         </div>
     );

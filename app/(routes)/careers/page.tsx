@@ -14,7 +14,7 @@ export default function CareerPage() {
 
     return (
         <div>
-            <NavBar shouldWhite={true} />
+            
 
             <div
                 className="bg-blueb-700 mt-[110px] py-6 flex items-center gap-3 h-[200px]"
@@ -96,7 +96,7 @@ export default function CareerPage() {
             </div> */}
 
             <NewsLetter />
-            <Footer />
+            
         </div>
     )
 }

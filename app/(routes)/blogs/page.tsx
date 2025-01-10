@@ -9,7 +9,7 @@ export default function BlogsPage() {
 
     return (
         <div>
-            <NavBar shouldWhite={true} />
+            
 
             <div
                 className="flex items-center gap-3 h-[200px]"
@@ -64,7 +64,7 @@ export default function BlogsPage() {
             </div>
 
             <NewsLetter />
-            <Footer />
+            
         </div>
     )
 }

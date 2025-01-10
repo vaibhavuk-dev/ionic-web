@@ -6,7 +6,7 @@ export default function Blog() {
 
     return (
         <div>
-            <NavBar shouldWhite={true} />
+            
 
             <div className="w-full px-32 mt-20  py-16 flex gap-10">
                 <div className="w-[65%]">
@@ -48,7 +48,7 @@ export default function Blog() {
             </div>
 
             <AnyQuestion />
-            <Footer />
+            
         </div>
     )
 }

@@ -9,7 +9,7 @@ export default function CaseStudyPage() {
 
     return (
         <div>
-            <NavBar shouldWhite={true} />
+            
 
             <div
                 className="mt-[110px] flex items-center gap-3 h-[200px]"
@@ -64,7 +64,7 @@ export default function CaseStudyPage() {
             </div>
 
             <NewsLetter />
-            <Footer />
+            
         </div>
     )
 }

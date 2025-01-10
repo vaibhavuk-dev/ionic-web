@@ -11,7 +11,7 @@ export default function ContactPage() {
 
     return (
         <div>
-            <NavBar shouldWhite={true} />
+            
 
             <div
                 className="bg-blueb-700 py-6 flex items-center gap-3 h-[200px]"
@@ -124,7 +124,7 @@ export default function ContactPage() {
             </div>
 
             <NewsLetter />
-            <Footer />
+            
         </div>
     )
 }

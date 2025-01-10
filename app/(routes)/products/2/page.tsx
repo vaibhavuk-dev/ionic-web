@@ -13,7 +13,7 @@ export default function Products2Page() {
     return (
         <>
 
-            <NavBar />
+            
 
             <div className="relative bg-blueb-700">
                 <video
@@ -164,7 +164,7 @@ export default function Products2Page() {
             </div>
 
             <AnyQuestion />
-            <Footer />
+            
         </>
     )
 }
