@@ -55,7 +55,7 @@ export default function SolutionsSection() {
           {solutions.map((solution) => (
             <div 
               key={solution.id}
-              className="cursor-pointer bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:-translate-y-4"
+              className="cursor-pointer bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105"
             >
               {/* Image Container */}
               <div className="relative">

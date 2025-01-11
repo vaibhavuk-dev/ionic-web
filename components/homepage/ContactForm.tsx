@@ -18,14 +18,14 @@ export default function ContactForm() {
     };
 
     return (
-        <div className="w-full relative bg-white">
+        <div className="w-full relative bg-white mx-auto px-4 container">
             <h1 className="text-4xl font-bold text-textcolorDark mb-8">Chat to our friendly team</h1>
             <p className="text-textcolor mb-12">We'd love to hear from you. Please fill out this form or shoot us an email.</p>
 
             <div className="w-full flex gap-12">
                 {/* Contact Methods */}
-                <div className='w-1/2 h-full flex flex-col gap-12'>
-                    <div className="w-full h-1/2 grid grid-cols-2 gap-12">
+                <div className='w-1/4 h-full flex flex-col gap-12'>
+                    <div className="w-full h-1/2 grid grid-cols-1 gap-12">
                         {/* Email */}
                         <div>
                             <div className="flex items-center mb-4">
@@ -57,7 +57,7 @@ export default function ContactForm() {
                         </div>
 
                         {/* Office */}
-                        <div className='col-span-2'>
+                        <div>
                             <div className="flex items-center mb-4">
                                 <div className="w-10 h-10 rounded-full bg-primaryLight flex items-center justify-center">
                                     <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -76,7 +76,9 @@ export default function ContactForm() {
                             </p>
                         </div>
                     </div>
-                    <div className="w-full h-[300px]">
+                </div>
+
+                <div className="w-1/4">
                         <iframe 
                             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15122.922505541159!2d73.79250328511964!3d18.63118198564944!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b84e62f8c169%3A0xf6df110a3e44ab98!2sIonic%20Engineering%20Technology%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1716738071408!5m2!1sen!2sin" 
                             className="w-full h-full" 
@@ -84,7 +86,6 @@ export default function ContactForm() {
                             style={{ height: '100%' }}
                         ></iframe>
                     </div>
-                </div>
 
                 {/* Contact Form */}
                 <div className="w-1/2 bg-primary rounded-2xl p-8">

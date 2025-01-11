@@ -19,7 +19,7 @@ export function StickySidebar() {
     ];
 
     return (
-        <div className="fixed right-0 top-1/2 -translate-y-1/2 z-50">
+        <div className="fixed right-0 top-3/4 md:top-1/2 md:-translate-y-1/2 z-50">
             <div className="flex flex-col gap-2">
                 {sidebarItems.map((item) => (
                     <div

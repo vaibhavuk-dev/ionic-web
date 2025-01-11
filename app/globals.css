@@ -13,7 +13,18 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+
+  .responsive-padding {
+    @apply px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32;
+  }
 }
+
+@layer base {
+  p {
+    @apply text-justify;
+  }
+}
+
 
 html {
   p {
@@ -98,14 +109,15 @@ html {
 }
 
 .img-gradient-opacity {
-  -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
-  mask-image: linear-gradient(to right, rgba(0,0,0,0.1), rgba(0,0,0,0.1), rgba(0,0,0,0), rgba(0,0,0,0));
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 1)), to(rgba(0, 0, 0, 0)));
+  mask-image: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
 }
 
 @keyframes scroll {
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-100%);
   }

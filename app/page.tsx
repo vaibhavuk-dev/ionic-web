@@ -26,19 +26,19 @@ export default async function Home() {
                     loop
                 />
 
-                <div className="fixed inset-0 flex flex-col gap-8 items-center justify-center bg-blueb-gradient-opacity-50 pb-14">
+                <div className="fixed inset-0 flex flex-col gap-8 items-center justify-center bg-blueb-gradient-opacity-50 py-14">
                     <div className="flex flex-col gap-4 items-center">
-                        <h1 className="text-center font-bold text-white text-4xl">
+                        <h1 className="text-center font-bold text-white text-4xl responsive-padding">
                             We Treat Water - Differently
                         </h1>
-                        <h2 className="text-center font-semibold text-white text-2xl">
+                        <h2 className="text-center font-semibold text-white text-2xl responsive-padding">
                             "Clear solution for trouble waters"
                         </h2>
                     </div>
-                    <p className="text-center font-light text-white text-lg w-1/3">
+                    <p className="font-light text-white text-lg responsive-padding text-justify responsive-padding lg:w-1/2">
                         Ionic Engineering Technology Pvt. Ltd. pioneers ISO-certified water and wastewater treatment solutions with over 35 years of expertise. Led by industry veterans, we offer tailored services, emphasizing quality, performance, and sustainability.
                     </p>
-                    <p className="text-center font-medium text-white text-lg w-full bg-secondary py-2">
+                    <p className="text-center font-medium text-white text-lg w-full bg-secondary responsive-padding">
                         We Remove Everything from Water <span className="font-bold">Except - “Hydrogen & Oxygen”</span>
                     </p>
                 </div>
@@ -50,7 +50,7 @@ export default async function Home() {
 
             </div>
 
-            <div className="flex w-full gap-10 mx-auto bg-white px-32 rounded shadow-md relative">
+            <div className="flex w-full gap-10 mx-auto bg-white responsive-padding rounded shadow-md relative justify-center">
 
                 <section className="bg-white my-16">
                     <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
@@ -89,7 +89,7 @@ export default async function Home() {
                 </section>
             </div>
 
-            <div className="flex w-full gap-10 mx-auto bg-blueb-gradient px-32 rounded shadow-md relative border-t">
+            <div className="flex w-full gap-10 mx-auto bg-blueb-gradient responsive-padding rounded shadow-md relative border-t justify-center">
 
                 <img
                     className="absolute inset-0 w-full h-full object-cover img-gradient-opacity "
@@ -126,31 +126,31 @@ export default async function Home() {
                 </section>
             </div>
 
-            <div className="flex flex-col w-full py-12 gap-16 mx-auto bg-white px-32 rounded shadow-md relative">
+            <div className="flex flex-col w-full py-12 gap-16 mx-auto bg-white responsive-padding rounded shadow-md relative">
                 <SolutionsSection />
             </div>
 
-            <div className="flex flex-col w-full py-16 gap-16 mx-auto  bg-blueb-gradient  px-32 rounded shadow-md relative">
+            <div className="flex flex-col w-full py-16 gap-16 mx-auto  bg-blueb-gradient  responsive-padding rounded shadow-md relative">
                 <ClientsSection />
             </div>
 
-            <div className="flex flex-col w-full py-12 gap-16 mx-auto bg-white px-32 rounded shadow-md relative">
+            <div className="flex flex-col w-full py-16 gap-16 mx-auto bg-white responsive-padding rounded shadow-md relative">
                 <VisionMissionSection />
             </div>
 
-            <div className="flex flex-col w-full py-16 gap-16 mx-auto  bg-blueb-gradient  px-32 rounded shadow-md relative">
+            <div className="flex flex-col w-full py-16 gap-16 mx-auto  bg-blueb-gradient  responsive-padding rounded shadow-md relative">
                 <Testimonials />
             </div>
 
-            <div className="flex flex-col w-full py-16 gap-16 mx-auto bg-white px-32 rounded shadow-md relative">
+            <div className="flex flex-col w-full py-16 gap-16 mx-auto bg-white responsive-padding rounded shadow-md relative">
                 <NewsArticlesGrid />
             </div>
 
-            <div className="flex flex-col w-full py-16 gap-16 mx-auto  bg-blueb-gradient  px-32 rounded shadow-md relative">
+            <div className="flex flex-col w-full py-16 gap-16 mx-auto  bg-blueb-gradient  responsive-padding rounded shadow-md relative">
                 <BlogArticlesGrid />
             </div>
 
-            <div className="flex flex-col w-full py-16 gap-16 mx-auto bg-white px-32 rounded shadow-md relative">
+            <div className="flex flex-col w-full py-16 gap-16 mx-auto bg-white responsive-padding rounded shadow-md relative">
                 <ContactForm />
             </div>
 

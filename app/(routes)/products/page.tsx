@@ -35,8 +35,7 @@ export default function ProductsPage() {
                             Our Products
                         </h1>
                         <p className="mt-4 text-xl font-light text-white drop-shadow-lg text-start pr-20">
-                        Discover the Success Stories and Satisfaction of Clients Who Have
-                        Benefited from Our Expertise and Personalized Financial Guidance
+                        Advanced Water Treatment Technologies for Industrial Excellence
                         </p>
                     </div>
 
@@ -61,9 +60,9 @@ export default function ProductsPage() {
                 </div>
             </div>
 
+            <ProductsGrid />
             <div className="flex flex-col w-full py-16 gap-16 mx-auto bg-white px-32 rounded shadow-md relative">
 
-                <ProductsGrid />
                 <hr></hr>
                 <ContactForm />
 
