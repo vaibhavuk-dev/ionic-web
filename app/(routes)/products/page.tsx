@@ -28,13 +28,13 @@ export default function ProductsPage() {
                     backgroundPosition: 'center',
                 }}
             >
-                <div className="px-32 py-12 flex items-center justify-between bg-secondary w-full h-full bg-opacity-90 text-center">
+                <div className="responsive-padding py-12 flex flex-col lg:flex-row lg:justify-between gap-6 items-center justify-between bg-secondary w-full h-full bg-opacity-90 text-center">
 
-                    <div className="flex flex-col items-start justify-start">
+                    <div className="w-full flex flex-col items-start justify-start">
                         <h1 className="text-4xl font-bold text-white drop-shadow-lg">                            
                             Our Products
                         </h1>
-                        <p className="mt-4 text-xl font-light text-white drop-shadow-lg text-start pr-20">
+                        <p className="mt-4 text-xl font-light text-white drop-shadow-lg text-start">
                         Advanced Water Treatment Technologies for Industrial Excellence
                         </p>
                     </div>
@@ -46,7 +46,7 @@ export default function ProductsPage() {
                                 placeholder="Search...."
                                 value={searchQuery}
                                 onChange={(e) => setSearchQuery(e.target.value)}
-                                className="w-full px-4 py-3 pr-12 rounded-xl border border-gray-200 shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                                className="w-full px-4 py-3 rounded-xl border border-gray-200 shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                             />
                             <button
                                 type="submit"
@@ -59,10 +59,10 @@ export default function ProductsPage() {
 
                 </div>
             </div>
+            {/* bg-gradient-to-b from-gray-50 to-white py-16 */}
+            <div className="flex flex-col w-full py-16 gap-16 mx-auto bg-white responsive-padding rounded shadow-md relative">
 
             <ProductsGrid />
-            <div className="flex flex-col w-full py-16 gap-16 mx-auto bg-white px-32 rounded shadow-md relative">
-
                 <hr></hr>
                 <ContactForm />
 

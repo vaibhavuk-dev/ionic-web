@@ -12,11 +12,11 @@ export default function GalleryPage() {
                     backgroundPosition: 'center',
                 }}
             >
-                <div className="pt-12 pb-6 flex flex-col justify-center bg-secondary w-full h-full bg-opacity-90 text-center">
-                    <h1 className="text-4xl font-bold text-white drop-shadow-lg">Our Gallery</h1>
-                    <p className="mt-4 text-xl font-light text-white drop-shadow-lg px-32">
+                <div className="flex flex-col justify-center bg-secondary w-full h-full bg-opacity-90 text-center responsive-padding py-4 lg:py-8">
+                    <h1 className="text-3xl lg:text-4xl font-bold text-white drop-shadow-lg">Our Gallery</h1>
+                    <h2 className="text-md lg:text-xl font-light text-white drop-shadow-lg mt-2">
                         Discover Our Project Excellence: A Visual Journey Through Our Water Treatment Solutions.
-                    </p>
+                    </h2>
                 </div>
             </div>
 

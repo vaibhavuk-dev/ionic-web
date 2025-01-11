@@ -31,7 +31,7 @@ const WaterflowComponent = () => {
               alt={item.name}
               className="object-contain w-full h-full"
             />
-            <p className="text-[0.9rem] text-center mt-2 text-white">{toSentenceCase(item.name)}</p>
+            <p className="text-base text-center mt-2 text-white">{toSentenceCase(item.name)}</p>
           </div>
         ))}
         <div className="absolute h-3 pl-48 pr-52 -z-10 bg-opacity-45 mt-32 w-screen"><div className="bg-[#cccdcf]   h-3"></div></div>

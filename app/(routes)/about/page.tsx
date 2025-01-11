@@ -1,10 +1,5 @@
-import Footer from "@/components/Footer";
-import NavBar from "@/components/NavBar";
 import ImageCarousal from "@/components/about/ImageCarousal";
 import ContactForm from "@/components/homepage/ContactForm";
-import GlobalPresence from "@/components/homepage/GlobalPresence";
-import NewsLetter from "@/components/homepage/NewsLetter";
-import { url } from "inspector";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -17,7 +12,7 @@ export default function AboutPage() {
 
     return (
         <div>
-            
+
 
             <div
                 className="flex items-center"
@@ -27,28 +22,15 @@ export default function AboutPage() {
                     backgroundPosition: 'center',
                 }}
             >
-                <div className="pt-12 pb-6 flex flex-col justify-center bg-secondary w-full h-full bg-opacity-90 text-center">
-                    <h1 className="text-4xl font-bold text-white drop-shadow-lg">About Ionic</h1>
-                    <p className="mt-4 text-xl font-light text-white drop-shadow-lg">
+                <div className="flex flex-col justify-center bg-secondary w-full h-full bg-opacity-90 text-center responsive-padding py-4 lg:py-8">
+                    <h1 className="text-3xl lg:text-4xl font-bold text-white drop-shadow-lg">About Ionic</h1>
+                    <h2 className="text-md lg:text-xl font-light text-white drop-shadow-lg mt-2">
                         Our Journey, Your Success. Discover Who We Are.
-                    </p> 
+                    </h2>
                 </div>
             </div>
 
-            {/* <div className="w-full mx-auto px-32 py-12 bg-primaryLight">
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-                    <div className="flex-1">
-                        <h1 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-                            About us
-                        </h1>
-                        <p className="text-lg text-gray-600 max-w-3xl">
-                            Our Journey, Your Success. Discover Who We Are.
-                        </p>
-                    </div>
-                </div>
-            </div> */}
-
-            <div className="flex flex-col w-full gap-10 my-10 bg-white px-32 rounded relative">
+            <div className="flex flex-col w-full gap-10 my-10 bg-white responsive-padding rounded relative">
 
                 <div className="flex justify-center">
                     <ImageCarousal />
@@ -56,12 +38,12 @@ export default function AboutPage() {
 
 
                 <div className="flex flex-col gap-5">
-                    <p className="text-3xl text-center font-semibold">We are revolutionizing Water Treatment Solutions</p>
-                    <p className="text-center font-light px-24 text-xl">Ionic Engineering Technology Pvt. Ltd. pioneers ISO-certified water and wastewater treatment solutions with over 35 years of expertise. Led by industry veterans, we offer tailored services, emphasizing quality, performance, and sustainability.</p>
+                    <p className="text-2xl lg:text-3xl text-center font-semibold">We are revolutionizing Water Treatment Solutions</p>
+                    <p className="text-center font-light text-lg lg:text-xl">Ionic Engineering Technology Pvt. Ltd. pioneers ISO-certified water and wastewater treatment solutions with over 35 years of expertise. Led by industry veterans, we offer tailored services, emphasizing quality, performance, and sustainability.</p>
                 </div>
             </div>
 
-            <div className="flex w-full gap-10 mx-auto bg-blueb-gradient px-32 rounded relative">
+            <div className="flex w-full gap-10 mx-auto bg-blueb-gradient responsive-padding rounded relative">
 
                 <img
                     className="absolute inset-0 w-full h-full object-cover img-gradient-opacity "
@@ -70,7 +52,7 @@ export default function AboutPage() {
                 />
 
                 <section className="relative z-10 my-16">
-                    <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div className="container mx-auto px-4  grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                         {/* Left Colum</section>n */}
                         <div>
                             {/* Section Label with Background */}
@@ -103,7 +85,7 @@ export default function AboutPage() {
                 </section>
             </div>
 
-            <div className="flex w-full gap-10 mx-auto bg-white px-32 rounded relative">
+            <div className="flex w-full gap-10 mx-auto bg-white responsive-padding rounded relative">
 
                 <section className="bg-white my-16">
                     <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
@@ -141,9 +123,7 @@ export default function AboutPage() {
                 </section>
             </div>
 
-
-
-            <div className="flex w-full gap-10 mx-auto bg-blueb-gradient px-32 rounded relative">
+            <div className="flex w-full gap-10 mx-auto bg-blueb-gradient responsive-padding rounded relative">
 
                 <img
                     className="absolute inset-0 w-full h-full object-cover img-gradient-opacity "
@@ -183,7 +163,7 @@ export default function AboutPage() {
                 </section>
             </div>
 
-            <div className="flex w-full gap-10 mx-auto bg-white px-32 rounded relative">
+            <div className="flex w-full gap-10 mx-auto bg-white responsive-padding rounded relative">
 
                 <section className="bg-white my-16">
                     <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
@@ -222,12 +202,12 @@ export default function AboutPage() {
             </div>
 
 
-            <div className="flex flex-col pt-5 pb-10 px-32 gap-5 items-center justify-center">
+            <div className="flex flex-col pt-5 pb-10 responsive-padding gap-5 items-center justify-center">
 
-                <div className="w-full flex gap-10 mt-10">
+                <div className="w-full flex flex-col lg:flex-row gap-10 mt-10">
                     <div className="w-full border border-blueb-500 p-5 rounded-lg justify-start items-center flex flex-col gap-3">
                         <p className="text-2xl font-bold text-blueb-700 uppercase">OUR MISSION</p>
-                        <p className="text-lmd font-bold uppercase">Mission – To Treat Water `&quot;`Differently`&quot;`</p>
+                        <p className="text-lmd font-bold uppercase">Mission – To Treat Water &quot;Differently&quot;</p>
                         <p className="text-center">IONIC will be a performance oriented and customer centric company to present globally.</p>
                         <p className="text-center">Increasing our footprint and market share Year On Year (YOY) in the markets we operate.</p>
                         <p className="text-center">Be one of the best solutions providers with innovative solutions which will be different, stimulating and productive, and one that can significantly reduce technical risks and costs, ensuring maximum returns to our customers and shareholders.</p>
@@ -252,11 +232,11 @@ export default function AboutPage() {
 
             {/* <NewsLetter /> */}
 
-            <div className="flex flex-col w-full py-16 gap-16 mx-auto bg-white px-32 rounded shadow-md relative">
+            <div className="flex flex-col w-full py-16 gap-16 mx-auto bg-white responsive-padding rounded shadow-md relative">
                 <ContactForm />
             </div>
 
-            
+
         </div>
     )
 }
