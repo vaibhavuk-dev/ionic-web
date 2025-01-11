@@ -22,9 +22,9 @@ export default function ContactForm() {
             <h1 className="text-4xl font-bold text-textcolorDark mb-8">Chat to our friendly team</h1>
             <p className="text-textcolor mb-12">We'd love to hear from you. Please fill out this form or shoot us an email.</p>
 
-            <div className="w-full flex gap-12">
+            <div className="w-full flex flex-col lg:flex-row gap-12">
                 {/* Contact Methods */}
-                <div className='w-1/4 h-full flex flex-col gap-12'>
+                <div className='w-full lg:w-1/4 h-full flex flex-col gap-12'>
                     <div className="w-full h-1/2 grid grid-cols-1 gap-12">
                         {/* Email */}
                         <div>
@@ -78,7 +78,7 @@ export default function ContactForm() {
                     </div>
                 </div>
 
-                <div className="w-1/4">
+                <div className="w-full lg:w-1/4">
                         <iframe 
                             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15122.922505541159!2d73.79250328511964!3d18.63118198564944!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b84e62f8c169%3A0xf6df110a3e44ab98!2sIonic%20Engineering%20Technology%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1716738071408!5m2!1sen!2sin" 
                             className="w-full h-full" 
@@ -88,7 +88,7 @@ export default function ContactForm() {
                     </div>
 
                 {/* Contact Form */}
-                <div className="w-1/2 bg-primary rounded-2xl p-8">
+                <div className="w-full lg:w-1/2 bg-primary rounded-2xl p-8">
                     <form onSubmit={handleSubmit} className="space-y-6">
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             <div>

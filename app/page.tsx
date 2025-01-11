@@ -63,9 +63,9 @@ export default async function Home() {
                             {/* Section Label with Background */}
                             <div className="relative flex mb-4 gap-5 items-center">
                                 <span className="absolute inset-y-0 left-0 w-full h-full bg-primaryLight -z-10 rounded-md"></span>
-                                <p className="inline-block text-primary font-semibold uppercase px-2 bg-primaryLight rounded-md">
+                                <h2 className="inline-block text-primary font-semibold uppercase px-2 bg-primaryLight rounded-md">
                                     Secure Water, Secure Tomorrow
-                                </p>
+                                </h2>
                                 <div className="border-t-2 border-primary mt-1 w-16"></div>
                             </div>
 
