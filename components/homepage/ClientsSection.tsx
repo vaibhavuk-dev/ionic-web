@@ -54,7 +54,7 @@ export default function ClientsSection() {
 
     return (
         <div className="w-full relative">
-            <div className="container mx-auto px-4">
+            <div className="container mx-auto ">
                 <div className="relative flex mb-4 gap-5 items-center">
                     <span className="absolute inset-y-0 left-0 w-full h-full bg-primaryLight -z-10 rounded-md"></span>
                     <p className="inline-block text-primary font-semibold uppercase px-2 bg-primaryLight rounded-md">

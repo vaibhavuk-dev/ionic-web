@@ -53,7 +53,7 @@ export default async function Home() {
             <div className="flex w-full gap-10 mx-auto bg-white responsive-padding rounded shadow-md relative justify-center">
 
                 <section className="bg-white my-16">
-                    <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div className="container mx-auto  grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
 
                         {/* Right Column */}
                         <img className="w-full rounded-lg h-2/3 md:h-2/3 object-contain" src="/homepage/ionicglobe.png" alt="Descriptive Alt Text" />
@@ -98,7 +98,7 @@ export default async function Home() {
                 />
 
                 <section className="relative z-10 my-16">
-                    <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div className="container mx-auto  grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                         {/* Left Colum</section>n */}
                         <div>
                             {/* Section Label with Background */}

@@ -5,6 +5,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import BlogsCarousalNavBar from "./BlogsCarousalNavBar";
 import { usePathname } from "next/navigation";
+import { Menu } from "lucide-react";
 
 export default function NavBar({ shouldWhite = true }: { shouldWhite?: boolean }) {
 
@@ -175,42 +176,69 @@ export default function NavBar({ shouldWhite = true }: { shouldWhite?: boolean }
 
   return (
     <nav className={`sticky z-20 top-0 left-0 right-0  flex-col backdrop-blur-sm ${isScrolled ? "drop-shadow-xl" : ""} basic-transition`}>
-      <div
-        className={`flex flex-row items-center w-full bg-white`}
-      >
-        <Link href={"/"}>
-          <img
-            src={`${isWhite ? "/ioniclogo.png" : "/ioniclogo_white.png"}`}
-            className="h-16 ml-32"
-            onMouseEnter={() => setSelectedMenu("")}
-          />
-        </Link>
-
+      <div className="hidden lg:flex w-full bg-white items-center justify-center">
         <div
-          className={`w-full py-6 flex ${isWhite ? `text-black` : `text-white`
-            } basic-transition text-lg font-normal  h-full justify-between ml-28 pl-4 pr-32 bg-white`}
+          className={`container flex items-center w-full bg-white justify-between`}
         >
-          {navItems.map((item) => (
-            <Link key={item.label} href={item.label === "Products" ? "/products" : item.label === "About us" ? "/about" :"#"}>
-              <p
-                className={`text-textcolor font-medium border-expand mx-5 py-2 cursor-pointer ${isHovered ? '' : 'mouse-leave'} ${pathname?.split("/")?.[1] && item.label.toLowerCase()?.includes(pathname?.split("/")?.[1]) ? 'border-b-2 border-secondary' : ''}`}
-                aria-current="page"
-                onMouseEnter={() => { setSelectedMenu(item.label); setIsHovered(true) }}
-                onMouseLeave={() => setIsHovered(false)}
-              >
-                {item.label}
-              </p>
-            </Link>
-          ))}
+          <Link href={"/"}>
+            <img
+              src={`${isWhite ? "/ioniclogo.png" : "/ioniclogo_white.png"}`}
+              className="h-16"
+              onMouseEnter={() => setSelectedMenu("")}
+            />
+          </Link>
 
-        <Link href="/brochure">
-          <button className="px-4 py-2 text-white rounded bg-secondary border-white hover:bg-opacity-70 text-lg font-semibold"
-            onMouseEnter={() => setSelectedMenu("")}>
-            Get Brochure
-          </button>
-        </Link>
+          <div
+            className={` py-6 flex ${isWhite ? `text-black` : `text-white`
+              } basic-transition text-lg font-normal  h-full gap-6 bg-white`}
+          >
+            {navItems.map((item) => (
+              <Link key={item.label} href={item.label === "Products" ? "/products" : item.label === "About us" ? "/about" : "#"}>
+                <p
+                  className={`text-textcolor font-medium border-expand mx-5 py-2 cursor-pointer ${isHovered ? '' : 'mouse-leave'} ${pathname?.split("/")?.[1] && item.label.toLowerCase()?.includes(pathname?.split("/")?.[1]) ? 'border-b-2 border-secondary' : ''}`}
+                  aria-current="page"
+                  onMouseEnter={() => { setSelectedMenu(item.label); setIsHovered(true) }}
+                  onMouseLeave={() => setIsHovered(false)}
+                >
+                  {item.label}
+                </p>
+              </Link>
+            ))}
+          </div>
+
+          <Link href="/brochure">
+            <button className="px-4 py-2 text-white rounded bg-secondary border-white hover:bg-opacity-70 text-lg font-semibold"
+              onMouseEnter={() => setSelectedMenu("")}>
+              Get Brochure
+            </button>
+          </Link>
+
         </div>
+      </div>
 
+      <div className="flex lg:hidden w-full bg-white items-center justify-center">
+        <div
+          className={`flex items-center w-full bg-white justify-between responsive-padding py-4`}
+        >
+          <div className="flex gap-4 items-center">
+          <Menu size={24} />
+          <Link href={"/"}>
+            <img
+              src={`${isWhite ? "/ioniclogo.png" : "/ioniclogo_white.png"}`}
+              className="h-12 w-auto"
+              onMouseEnter={() => setSelectedMenu("")}
+            />
+          </Link>
+          </div>
+
+          <Link href="/brochure">
+            <button className="px-2 py-2 text-white rounded bg-secondary border-white hover:bg-opacity-70 text-md font-semibold"
+              onMouseEnter={() => setSelectedMenu("")}>
+              Get Brochure
+            </button>
+          </Link>
+
+        </div>
       </div>
 
       {

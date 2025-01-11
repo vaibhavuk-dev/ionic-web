@@ -18,7 +18,7 @@ export default function ContactForm() {
     };
 
     return (
-        <div className="w-full relative bg-white mx-auto px-4 container">
+        <div className="w-full relative bg-white mx-auto  container">
             <h1 className="text-4xl font-bold text-textcolorDark mb-8">Chat to our friendly team</h1>
             <p className="text-textcolor mb-12">We'd love to hear from you. Please fill out this form or shoot us an email.</p>
 

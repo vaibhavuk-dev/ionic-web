@@ -48,7 +48,7 @@ export default function VisionMissionSection() {
 
   return (
     <div className="w-full relative">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto ">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           {features.map((feature, index) => (
             <div key={index} className="flex flex-col items-center text-center">
