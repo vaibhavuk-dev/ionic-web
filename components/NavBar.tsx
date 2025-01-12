@@ -19,7 +19,7 @@ export default function NavBar({ shouldWhite = false }: { shouldWhite?: boolean 
 
   const pathname = usePathname();
 
-  const isWhite = shouldWhite;
+  const isWhite = shouldWhite || pathname == "/";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -157,7 +157,7 @@ export default function NavBar({ shouldWhite = false }: { shouldWhite?: boolean 
               } basic-transition text-lg font-normal  h-full gap-6`}
           >
             {navItems.map((item) => (
-              <Link key={item.label} href={item.route}>
+              <Link key={item.label} href={item.route} onClick={() => setSelectedMenu("")}>
                 <p
                   className={`${isWhite ? `text-textcolor` : `text-white`
                     } text-lg font-medium border-expand mx-5 py-2 cursor-pointer ${isHovered ? '' : 'mouse-leave'} ${pathname?.split("/")?.[1] && item.label.toLowerCase()?.includes(pathname?.split("/")?.[1]) ? 'border-b-2 border-secondary' : ''}`}

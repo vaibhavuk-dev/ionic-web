@@ -10,9 +10,11 @@ import { Navigation, Pagination } from 'swiper/modules';
 
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { useRouter } from 'next/navigation';
 
 export default function ProductSection({ products, type = "grid" }: { products: any, type?: string }) {
   const [activeCategory, setActiveCategory] = useState('water-treatment');
+  const router = useRouter();
 
   return (
     <div className="">
@@ -25,6 +27,7 @@ export default function ProductSection({ products, type = "grid" }: { products: 
             <div
               key={index}
               className="cursor-pointer group relative bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 border border-blueb-950"
+              onClick={() => router.push("/products/1")}
             >
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blueb-500 to-blueb-600 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
 
@@ -100,6 +103,7 @@ export default function ProductSection({ products, type = "grid" }: { products: 
               <div
                 key={index}
                 className="cursor-pointer group relative bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 border border-blueb-950"
+              onClick={() => router.push("/products/1")}
               >
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blueb-500 to-blueb-600 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
 
