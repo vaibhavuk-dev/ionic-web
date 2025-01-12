@@ -80,7 +80,7 @@ export default function SolutionsSection() {
                 <p className="text-gray-600 text-sm mb-6 line-clamp-4">
                   {solution.description}
                 </p>
-                <button className="text-blueb-700 font-semibold hover:text-sky-400 transition-colors duration-300 flex items-center gap-2">
+                {/* <button className="text-blueb-700 font-semibold hover:text-sky-400 transition-colors duration-300 flex items-center gap-2">
                   READ MORE
                   <svg 
                     className="w-4 h-4" 
@@ -91,7 +91,7 @@ export default function SolutionsSection() {
                   >
                     <path d="M5 12h14M12 5l7 7-7 7" />
                   </svg>
-                </button>
+                </button> */}
               </div>
             </div>
           ))}

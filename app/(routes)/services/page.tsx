@@ -161,10 +161,10 @@ const ServicesPage = () => {
                                 </ul>
 
                                 {/* CTA Button */}
-                                <button className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-800 transition-colors duration-300">
+                                {/* <button className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-800 transition-colors duration-300">
                                     Learn More
                                     <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
-                                </button>
+                                </button> */}
                             </div>
                         </div>
                     );
@@ -180,9 +180,9 @@ const ServicesPage = () => {
                     <p className="text-gray-600 mb-6 text-center">
                         Our experts are here to understand your requirements and recommend the best solutions.
                     </p>
-                    <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-300">
+                    <a href="#contact-form" className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-300">
                         Contact Us Today
-                    </button>
+                    </a>
                 </div>
             </div>
 

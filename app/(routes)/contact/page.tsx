@@ -1,6 +1,7 @@
 "use client"
 import Footer from "@/components/Footer";
 import NavBar from "@/components/NavBar";
+import ContactForm from "@/components/homepage/ContactForm";
 import NewsLetter from "@/components/homepage/NewsLetter";
 import { Metadata } from "next";
 import { useState } from "react";
@@ -28,7 +29,7 @@ export default function ContactPage() {
                 </div>
             </div>
 
-            <div className='w-full h-full gap-12 responsive-padding'>
+            {false && <div className='w-full h-full gap-12 responsive-padding'>
                 <div className="flex flex-col lg:flex-row my-12 w-full gap-12 justify-between">
                     {/* Email */}
                     <div>
@@ -80,7 +81,7 @@ export default function ContactPage() {
                         </p>
                     </div>
                 </div>
-            </div>
+            </div>}
 
             <div className="mt-12 responsive-padding">
                 <div className="container lg:flex gap-10">
@@ -104,56 +105,9 @@ export default function ContactPage() {
                 </div>
             </div>
 
-            <div className="container lg:flex w-full gap-10 responsive-padding py-16 rounded shadow-md relative">
-
-                <form className="w-full lg:w-[40%]">
-                    <p className="text-2xl font-semibold text-textcolorDark">Have any query?</p>
-                    <div className="flex w-full pt-5">
-                        <p className={`ml-3 text-center px-2 py-4 text-lg cursor-pointer ${contactType == "Write" ? "font-semibold border-b-2 border-blueb-700 text-blueb-700" : "text-gray-500"}`} onClick={() => setContactType("Write")}>Write Us</p>
-                        <p className={`ml-3 text-center px-2 py-4 text-lg cursor-pointer ${contactType == "Appointment" ? "font-semibold border-b-2 border-blueb-700 text-blueb-700" : "text-gray-500"}`} onClick={() => setContactType("Appointment")}>Schedule Appointment</p>
-                    </div>
-                    <div className="mt-6 mb-4">
-                        <label htmlFor="name" className="block text-sm font-semibold mb-2">Name</label>
-                        <input type="text" id="name" name="name" placeholder="Your Name" className="w-full px-3 py-2 border rounded-md outline-none focus:border-blueb-500" />
-                    </div>
-                    <div className="mb-4">
-                        <label htmlFor="email" className="block text-sm font-semibold mb-2">Phone</label>
-                        <input type="phone" id="phone" name="phone" placeholder="Your Phone" className="w-full px-3 py-2 border rounded-md outline-none focus:border-blueb-500" />
-                    </div>
-                    <div className="mb-4">
-                        <label htmlFor="email" className="block text-sm font-semibold mb-2">Email</label>
-                        <input type="email" id="email" name="email" placeholder="Your Email" className="w-full px-3 py-2 border rounded-md outline-none focus:border-blueb-500" />
-                    </div>
-                    <div className="mb-4">
-                        <label htmlFor="email" className="block text-sm font-semibold mb-2">Industry</label>
-                        <input type="email" id="email" name="email" placeholder="Your Industry" className="w-full px-3 py-2 border rounded-md outline-none focus:border-blueb-500" />
-                    </div>
-                    <div className="mb-4">
-                        <label htmlFor="email" className="block text-sm font-semibold mb-2">Organization</label>
-                        <input type="email" id="email" name="email" placeholder="Your Organization" className="w-full px-3 py-2 border rounded-md outline-none focus:border-blueb-500" />
-                    </div>
-                    {
-                        contactType == "Appointment" && <>
-                            <div className="mb-4">
-                                <label htmlFor="appointment-date" className="block text-sm font-semibold mb-2">Preferred Date</label>
-                                <input type="date" id="appointment-date" name="appointment-date" className="w-full px-3 py-2 border rounded-md outline-none focus:border-blueb-500" />
-                            </div>
-                            <div className="mb-4">
-                                <label htmlFor="appointment-time" className="block text-sm font-semibold mb-2">Preferred Time</label>
-                                <input type="time" id="appointment-time" name="appointment-time" className="w-full px-3 py-2 border rounded-md outline-none focus:border-blueb-500" />
-                            </div>
-                        </>
-                    }
-                    <div className="mb-6">
-                        <label htmlFor="message" className="block text-sm font-semibold mb-2">Query</label>
-                        <textarea id="message" name="message" rows={5} placeholder="Your Query" className="w-full px-3 py-2 border rounded-md outline-none focus:border-blueb-500"></textarea>
-                    </div>
-                    <div>
-                        <button type="submit" className="w-full bg-greeng-600 text-white font-semibold py-2 px-4 rounded hover:bg-blueb-700">{contactType == "Appointment" ? "Schedule Appointment" : "Send Message"}</button>
-                    </div>
-                </form>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15122.922505541159!2d73.79250328511964!3d18.63118198564944!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b84e62f8c169%3A0xf6df110a3e44ab98!2sIonic%20Engineering%20Technology%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1716738071408!5m2!1sen!2sin" className="w-full mt-10 lg:mt-0 lg:w-[60%] min-h-96" loading="lazy" ></iframe>
-            </div>
+           <div className="flex flex-col w-full py-16 gap-16 mx-auto bg-white responsive-padding rounded shadow-md relative">
+                           <ContactForm />
+                       </div>
 
             {/* <NewsLetter /> */}
 

@@ -22,10 +22,11 @@ export function StickySidebar() {
         <div className="fixed right-0 bottom-4 md:top-1/2 md:-translate-y-1/2 z-50">
             <div className="flex flex-col gap-2">
                 {sidebarItems.map((item) => (
-                    <div
+                    <a
                         key={item.id}
                         className="relative flex items-center justify-end cursor-pointer"
                         onClick={item.onClick}
+                        href='#contact-form'
                     >
                         {/* Expandable Button */}
                         <div
@@ -51,7 +52,7 @@ export function StickySidebar() {
                                 {item.label}
                             </span>
                         </div>
-                    </div>
+                    </a>
                 ))}
             </div>
         </div>

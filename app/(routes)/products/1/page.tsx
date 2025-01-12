@@ -1,6 +1,6 @@
 "use client"
 
-import { products } from "@/app/utils/const";
+import { products } from "@/utils/const";
 import AnyQuestion from "@/components/AnyQuestion";
 import BlogsCarousal from "@/components/BlogsCarousal";
 import CaseStudiesCarousal from "@/components/CaseStudiesCarousal";

@@ -5,7 +5,7 @@ import { useState } from "react";
 import { Search } from 'lucide-react';
 import ContactForm from "@/components/homepage/ContactForm";
 import Footer from "@/components/Footer";
-import {products} from "../../utils/const"
+import {products} from "../../../utils/const"
 
 export default function ProductsPage() {
 

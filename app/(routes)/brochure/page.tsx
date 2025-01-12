@@ -16,7 +16,7 @@ export default function BrochurePage() {
             >
                 <div className="pt-12 pb-6 flex flex-col justify-center bg-secondary w-full h-full bg-opacity-90 text-center">
                     <h1 className="text-4xl font-bold text-white drop-shadow-lg">Product Brochures</h1>
-                    <p className="mt-4 text-xl font-light text-white drop-shadow-lg px-32">
+                    <p className="mt-4 text-xl font-light text-white drop-shadow-lg px-32 text-center">
                     Discover Our Solutions – Explore the Product Brochure!
                     </p>
                 </div>

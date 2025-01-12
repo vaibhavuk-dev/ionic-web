@@ -142,7 +142,7 @@ export default function NavBar({ shouldWhite = false }: { shouldWhite?: boolean 
     <nav className={`sticky z-20 top-0 left-0 right-0  flex-col backdrop-blur-sm ${isScrolled ? "drop-shadow-xl" : ""} basic-transition`}>
       <div className={`hidden lg:flex w-full ${isWhite ? "bg-white" : "bg-blueb-gradient"} items-center justify-center`}>
         <div
-          className={`container flex items-center w-full justify-between`}
+          className={`flex items-center w-full justify-between responsive-padding py-4`}
         >
           <Link href={"/"}>
             <img
@@ -253,7 +253,7 @@ export default function NavBar({ shouldWhite = false }: { shouldWhite?: boolean 
       }
 
       {
-        selectedMenu && dropdownContent[selectedMenu] && (
+        selectedMenu && selectedMenu == "Products" && dropdownContent[selectedMenu] && (
           <div
             className="flex bg-white py-10 px-32 shadow-xl basic-transition max-h-[80vh]"
             onMouseEnter={() => setSelectedMenu(selectedMenu)}
@@ -270,7 +270,7 @@ export default function NavBar({ shouldWhite = false }: { shouldWhite?: boolean 
                   onMouseEnter={() => setSelectedCategory(item.label)}
                 >
                   {item.label}
-                  {((selectedMenu == "Products" && item.label in productItems) || (selectedMenu == "Services" && item.label in productItems)) && <img className="w-5 h-5" src="/right-arrow.svg" alt="" />}
+                  {(selectedMenu == "Products" && item.label in productItems) && <img className="w-5 h-5" src="/right-arrow.svg" alt="" />}
                 </p>
               ))}
             </div>

@@ -38,7 +38,7 @@ export default async function Home() {
                     <p className="font-light text-white text-lg responsive-padding text-justify responsive-padding lg:w-1/2">
                         Ionic Engineering Technology Pvt. Ltd. pioneers ISO-certified water and wastewater treatment solutions with over 35 years of expertise. Led by industry veterans, we offer tailored services, emphasizing quality, performance, and sustainability.
                     </p>
-                    <p className="text-center py-3 font-medium text-white text-lg lg:text-xl w-full bg-secondary responsive-padding">
+                    <p className="text-center py-3 font-medium text-white text-lg lg:text-xl w-full bg-secondary responsive-padding mb-4">
                         We Remove Everything from Water <span className="font-bold">Except - “Hydrogen & Oxygen”</span>
                     </p>
                     <img className="w-full flex lg:hidden flex-col items-center justify-center" src="/waterflow/flow.png" />
