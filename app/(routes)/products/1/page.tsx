@@ -1,5 +1,6 @@
 "use client"
 
+import { products } from "@/app/utils/const";
 import AnyQuestion from "@/components/AnyQuestion";
 import BlogsCarousal from "@/components/BlogsCarousal";
 import CaseStudiesCarousal from "@/components/CaseStudiesCarousal";
@@ -163,7 +164,7 @@ export default function Products1Page() {
 
            <div className="flex flex-col w-full py-16 gap-16 mx-auto bg-white responsive-padding rounded shadow-md relative">
            
-                           <ProductsGrid type="carousel"/>
+                           <ProductsGrid type="carousel" products={products}/>
                            <hr></hr>
                            <ContactForm />
            
