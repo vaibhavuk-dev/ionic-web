@@ -30,7 +30,7 @@
 
 //   return (
 //     <div className="absolute flex items-center justify-center z-30 h-screen w-screen bg-white bg-opacity-60">
-//       <div className="popup-form z-30 items-center bg-blue-200 w-fit rounded-xl">
+//       <div className="popup-form z-30 items-center bg-blueb-200 w-fit rounded-xl">
 //         <form
 //           onSubmit={handleSubmit}
 //           className="flex flex-col p-5 w-fit"

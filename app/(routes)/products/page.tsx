@@ -5,6 +5,7 @@ import { useState } from "react";
 import { Search } from 'lucide-react';
 import ContactForm from "@/components/homepage/ContactForm";
 import Footer from "@/components/Footer";
+import {products} from "../../utils/const"
 
 export default function ProductsPage() {
 
@@ -18,7 +19,7 @@ export default function ProductsPage() {
 
     return (
         <div>
-            
+
 
             <div
                 className="w-full"
@@ -31,11 +32,11 @@ export default function ProductsPage() {
                 <div className="responsive-padding py-12 flex flex-col lg:flex-row lg:justify-between gap-6 items-center justify-between bg-secondary w-full h-full bg-opacity-90 text-center">
 
                     <div className="w-full flex flex-col items-start justify-start">
-                        <h1 className="text-4xl font-bold text-white drop-shadow-lg">                            
+                        <h1 className="text-4xl font-bold text-white drop-shadow-lg">
                             Our Products
                         </h1>
                         <p className="mt-4 text-xl font-light text-white drop-shadow-lg text-start">
-                        Advanced Water Treatment Technologies for Industrial Excellence
+                            Advanced Water Treatment Technologies for Industrial Excellence
                         </p>
                     </div>
 
@@ -62,14 +63,14 @@ export default function ProductsPage() {
             {/* bg-gradient-to-b from-gray-50 to-white py-16 */}
             <div className="flex flex-col w-full py-16 gap-16 mx-auto bg-white responsive-padding rounded shadow-md relative">
 
-            <ProductsGrid />
+                <ProductsGrid products={products?.filter((product: any) => product?.name?.toLowerCase()?.includes(searchQuery?.toLowerCase()))} />
                 <hr></hr>
                 <ContactForm />
 
             </div>
 
 
-            
+
 
         </div>
     );

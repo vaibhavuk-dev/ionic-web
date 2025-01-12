@@ -67,9 +67,9 @@ export default function CareerPage() {
                 </div>
 
                 <div className="">
-                    {/* <h1 className="text-4xl text-center text-blue-700 font-bold drop-shadow-lg">Explore Career Opprtuities at Ionic</h1>
+                    {/* <h1 className="text-4xl text-center text-blueb-700 font-bold drop-shadow-lg">Explore Career Opprtuities at Ionic</h1>
                     <p className="text-xl text-center font-light drop-shadow-lg">
-                        See current openings <span><img src="icons/angle-right-white.svg" className="w-4 h-4 inline-block fill-current text-blue-500"></img></span>
+                        See current openings <span><img src="icons/angle-right-white.svg" className="w-4 h-4 inline-block fill-current text-blueb-500"></img></span>
                     </p> */}
                     <JobOpenings />
                     <JobApplicationForm />
@@ -90,7 +90,7 @@ export default function CareerPage() {
                 <div className="flex flex-col gap-3 px-32 py-6 bg-blueb-700 bg-opacity-70  text-center items-center justify-center rounded-e-3xl">
                     <h1 className="text-4xl font-bold text-white drop-shadow-lg">Explore Career Opprtuities at Ionic</h1>
                     <p className="text-xl font-light text-white drop-shadow-lg">
-                        See current openings <span><img src="icons/angle-right-white.svg" className="w-4 h-4 inline-block fill-current text-blue-500"></img></span>
+                        See current openings <span><img src="icons/angle-right-white.svg" className="w-4 h-4 inline-block fill-current text-blueb-500"></img></span>
                     </p>
                 </div>
             </div> */}

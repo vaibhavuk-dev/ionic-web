@@ -49,7 +49,7 @@ const Footer = () => {
       </div>
 
       <hr></hr>
-      <div className='text-center pt-5 text-gray-400'>Ionic Engineering Pvt. Ltd. &copy; All Rights Reserved 2023</div>
+      <div className='text-center pt-5 text-gray-400'>Ionic Engineering Pvt. Ltd. &copy; All Rights Reserved 2025</div>
     </footer>
   );
 };

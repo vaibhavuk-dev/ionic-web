@@ -39,7 +39,7 @@ export default function CaseStudy() {
                     <div className="sticky top-32 bg-blueb-50 mx-5 p-5 flex flex-col gap-3 items-center justify-center rounded-lg">
                         <p className="text-lg text-gray-500">Our Products</p>
                         <img className="px-10" src="/qcdm_model.png" alt="" />
-                        <p className="text-xl font-semibold text-blue-950">Quick Cycle DM</p>
+                        <p className="text-xl font-semibold text-blueb-950">Quick Cycle DM</p>
                         <button className="bg-complementary py-2 text-white px-2 rounded-md text-sm">Contact Us</button>
                         <button className="bg-blueb-700 py-2 text-white px-2 rounded-md text-sm">Download Brochure</button>
                     </div>

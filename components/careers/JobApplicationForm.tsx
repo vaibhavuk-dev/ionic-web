@@ -231,7 +231,7 @@ const JobApplicationForm = () => {
             <div className="text-center mt-8">
               <button
                 type="submit"
-                className="bg-blue-600 text-white py-2 px-6 rounded-lg hover:bg-blue-700"
+                className="bg-blueb-600 text-white py-2 px-6 rounded-lg hover:bg-blueb-700"
               >
                 Submit Application
               </button>

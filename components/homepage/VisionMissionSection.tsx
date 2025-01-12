@@ -49,9 +49,9 @@ export default function VisionMissionSection() {
   return (
     <div className="w-full relative">
         <div className="container mx-auto ">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
           {features.map((feature, index) => (
-            <div key={index} className="flex flex-col items-center text-center">
+            <div key={index} className="flex flex-col items-center text-center border p-4 rounded-lg border-blueb-300">
               <div className="flex items-center justify-center h-20 w-20 rounded-full bg-greeng-50 text-greeng-600 mb-4">
                 {feature.icon}
               </div>
@@ -59,7 +59,7 @@ export default function VisionMissionSection() {
                 {feature.title}
               </h3>
               {feature.subtitle && (
-                <h4 className="text-base font-medium text-blue-500 mb-2">
+                <h4 className="text-base font-medium text-blueb-500 mb-2">
                   {feature.subtitle}
                 </h4>
               )}

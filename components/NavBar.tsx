@@ -7,7 +7,7 @@ import BlogsCarousalNavBar from "./BlogsCarousalNavBar";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 
-export default function NavBar({ shouldWhite = true }: { shouldWhite?: boolean }) {
+export default function NavBar({ shouldWhite = false }: { shouldWhite?: boolean }) {
 
   const [isScrolled, setIsScrolled] = useState(false);
   const [selectedMenu, setSelectedMenu] = useState("");
@@ -19,7 +19,7 @@ export default function NavBar({ shouldWhite = true }: { shouldWhite?: boolean }
 
   const pathname = usePathname();
 
-  const isWhite = shouldWhite || isScrolled || selectedMenu;
+  const isWhite = shouldWhite;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -140,9 +140,9 @@ export default function NavBar({ shouldWhite = true }: { shouldWhite?: boolean }
 
   return (
     <nav className={`sticky z-20 top-0 left-0 right-0  flex-col backdrop-blur-sm ${isScrolled ? "drop-shadow-xl" : ""} basic-transition`}>
-      <div className="hidden lg:flex w-full bg-white items-center justify-center">
+      <div className={`hidden lg:flex w-full ${isWhite ? "bg-white" : "bg-blueb-gradient"} items-center justify-center`}>
         <div
-          className={`container flex items-center w-full bg-white justify-between`}
+          className={`container flex items-center w-full justify-between`}
         >
           <Link href={"/"}>
             <img
@@ -154,12 +154,13 @@ export default function NavBar({ shouldWhite = true }: { shouldWhite?: boolean }
 
           <div
             className={` py-6 flex ${isWhite ? `text-black` : `text-white`
-              } basic-transition text-lg font-normal  h-full gap-6 bg-white`}
+              } basic-transition text-lg font-normal  h-full gap-6`}
           >
             {navItems.map((item) => (
               <Link key={item.label} href={item.route}>
                 <p
-                  className={`text-textcolor text-lg font-medium border-expand mx-5 py-2 cursor-pointer ${isHovered ? '' : 'mouse-leave'} ${pathname?.split("/")?.[1] && item.label.toLowerCase()?.includes(pathname?.split("/")?.[1]) ? 'border-b-2 border-secondary' : ''}`}
+                  className={`${isWhite ? `text-textcolor` : `text-white`
+                    } text-lg font-medium border-expand mx-5 py-2 cursor-pointer ${isHovered ? '' : 'mouse-leave'} ${pathname?.split("/")?.[1] && item.label.toLowerCase()?.includes(pathname?.split("/")?.[1]) ? 'border-b-2 border-secondary' : ''}`}
                   aria-current="page"
                   onMouseEnter={() => { setSelectedMenu(item.label); setIsHovered(true) }}
                   onMouseLeave={() => setIsHovered(false)}
@@ -180,12 +181,12 @@ export default function NavBar({ shouldWhite = true }: { shouldWhite?: boolean }
         </div>
       </div>
 
-      <div className="flex lg:hidden w-full bg-white items-center justify-center">
+      <div className={`flex lg:hidden w-full ${isWhite ? "bg-white" : "bg-blueb-gradient"}  items-center justify-center`}>
         <div
-          className={`flex items-center w-full bg-white justify-between responsive-padding py-4`}
+          className={`flex items-center w-full justify-between responsive-padding py-4`}
         >
           <div className="flex gap-4 items-center">
-            <Menu size={24} className="cursor-pointer" onClick={() => setIsSideBarActive(true)} />
+            <Menu size={24} className={`cursor-pointer ${isWhite ? "text-textcolor" : "text-white"} `} onClick={() => setIsSideBarActive(true)} />
             <Link href={"/"}>
               <img
                 src={`${isWhite ? "/ioniclogo.png" : "/ioniclogo_white.png"}`}
@@ -215,7 +216,7 @@ export default function NavBar({ shouldWhite = true }: { shouldWhite?: boolean }
             >
               <nav className="p-4">
                 <div className="h-[50px] flex items-center justify-end">
-                  <X size={20} />
+                  <X size={20} onClick={() => setIsSideBarActive(false)} className="cursor-pointer" />
                 </div>
                 <hr></hr>
                 <ul>
@@ -227,6 +228,12 @@ export default function NavBar({ shouldWhite = true }: { shouldWhite?: boolean }
                     </Link>
                   ))}
                 </ul>
+                <Link href="/brochure">
+                  <button className="mx-5 my-4 px-2 py-2 text-white rounded bg-secondary border-white hover:bg-opacity-70 text-md font-semibold"
+                    onMouseEnter={() => setSelectedMenu("")}>
+                    Get Brochure
+                  </button>
+                </Link>
               </nav>
             </div>
 

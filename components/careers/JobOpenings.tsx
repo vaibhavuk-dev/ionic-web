@@ -15,7 +15,7 @@ const JobOpenings = () => {
                         <h3 className="text-xl font-semibold mb-2">Technical Support Engineer</h3>
                         <p className="text-gray-700 mb-4">No of openings: X</p>
                         <Link href="/job-description/technical-support">
-                            <p className="text-blue-600 hover:underline">Download Job Description</p>
+                            <p className="text-blueb-600 hover:underline">Download Job Description</p>
                         </Link>
                     </div>
 
@@ -24,7 +24,7 @@ const JobOpenings = () => {
                         <h3 className="text-xl font-semibold mb-2">Design Engineer</h3>
                         <p className="text-gray-700 mb-4">No of openings: X</p>
                         <Link href="/job-description/design-engineer">
-                            <p className="text-blue-600 hover:underline">Download Job Description</p>
+                            <p className="text-blueb-600 hover:underline">Download Job Description</p>
                         </Link>
                     </div>
 
@@ -33,7 +33,7 @@ const JobOpenings = () => {
                         <h3 className="text-xl font-semibold mb-2">Electrical and Automation Engineer</h3>
                         <p className="text-gray-700 mb-4">No of openings: X</p>
                         <Link href="/job-description/electrical-automation">
-                            <p className="text-blue-600 hover:underline">Download Job Description</p>
+                            <p className="text-blueb-600 hover:underline">Download Job Description</p>
                         </Link>
                     </div>
                 </div>
@@ -42,11 +42,11 @@ const JobOpenings = () => {
                     <h3 className="text-xl font-semibold mb-4">How to Apply:</h3>
                     <p className="text-gray-700 mb-4">
                         Interested candidates can apply by sending their resume and cover letter to
-                        <a href="mailto:commercial@ionic.co.in" className="text-blue-600"> commercial@ionic.co.in</a> or click the
-                        <span className="font-semibold text-blue-600"> “Apply Now”</span> button below to submit your application.
+                        <a href="mailto:commercial@ionic.co.in" className="text-blueb-600"> commercial@ionic.co.in</a> or click the
+                        <span className="font-semibold text-blueb-600"> “Apply Now”</span> button below to submit your application.
                     </p>
                     {/* <Link href="/apply">
-            <p className="bg-blue-600 text-white py-2 px-6 rounded-lg hover:bg-blue-700">
+            <p className="bg-blueb-600 text-white py-2 px-6 rounded-lg hover:bg-blueb-700">
               Apply Now
             </p>
           </Link> */}

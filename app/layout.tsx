@@ -3,6 +3,7 @@ import { Montserrat } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
+import Breadcrumb from "@/components/homepage/Breadcrumb";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 

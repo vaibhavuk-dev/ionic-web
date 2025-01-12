@@ -5,11 +5,14 @@ import BlogsCarousal from "@/components/BlogsCarousal";
 import CaseStudiesCarousal from "@/components/CaseStudiesCarousal";
 import Footer from "@/components/Footer";
 import BlogArticlesGrid from "@/components/homepage/BlogArticlesGrid";
+import Breadcrumb from "@/components/homepage/Breadcrumb";
 import ContactForm from "@/components/homepage/ContactForm";
 import NewsArticlesGrid from "@/components/homepage/NewsArticlesGrid";
 import NavBar from "@/components/NavBar";
 import ProductGallery from "@/components/ProductGallery";
 import ProductHeroCard from "@/components/products/ProductHeroCard";
+import ProductPage from "@/components/products/ProductPage";
+import ProductsGrid from "@/components/products/ProductsGrid";
 import { useState } from "react";
 
 export default function Products1Page() {
@@ -18,20 +21,16 @@ export default function Products1Page() {
 
     return (
         <>
+            <Breadcrumb />
+
+            <ProductPage />
 
             
 
-            <ProductHeroCard />
+            {/* <ProductHeroCard /> */}
 
-            {/* <div className="relative bg-blueb-700">
-                <img src="/waterharvester.png" alt="" className="w-screen h-[100vh] object-cover opacity-30" />
-                <div className="absolute w-full top-[45%] text-white flex flex-col items-center justify-center">
-                    <h1 className="text-center w-fit font-semibold text-7xl text-white">Quick Cycle Demineralization</h1>
-                    <p className="text-center w-fit text-3xl text-white mt-3">Zero Liquid Discharge</p>
-                </div>
-            </div> */}
-
-            <div className="flex flex-col gap-20 my-16 px-32 bg-white">
+            {/* Discarded Design */}
+            {false && <div className="flex flex-col gap-20 my-16 px-32 bg-white">
 
                 <div className="">
                     <div className="flex gap-10">
@@ -145,29 +144,33 @@ export default function Products1Page() {
                     <p className="text-2xl w-fit font-semibold">Documents</p>
                     <div className="mt-5 w-fit flex flex-col gap-3">
                         <ul className="list-item list-inside">
-                            <li><a href="/documents/document1.pdf" className="text-blue-700">Document 1</a></li>
-                            <li><a href="/documents/document2.pdf" className="text-blue-700">Document 2</a></li>
-                            <li><a href="/documents/document3.pdf" className="text-blue-700">Document 3</a></li>
+                            <li><a href="/documents/document1.pdf" className="text-blueb-700">Document 1</a></li>
+                            <li><a href="/documents/document2.pdf" className="text-blueb-700">Document 2</a></li>
+                            <li><a href="/documents/document3.pdf" className="text-blueb-700">Document 3</a></li>
                         </ul>
                     </div>
                 </div>
 
-            </div>
+            </div>}
 
-            <div className="flex flex-col w-full py-16 gap-16 mx-auto bg-white px-32 rounded shadow-md relative">
+            {/* <div className="flex flex-col w-full py-16 gap-16 mx-auto bg-white px-32 rounded shadow-md relative">
                 <NewsArticlesGrid />
             </div>
 
             <div className="flex flex-col w-full py-16 gap-16 mx-auto  bg-blueb-gradient  px-32 rounded shadow-md relative">
                 <BlogArticlesGrid />
-            </div>
+            </div> */}
 
-            <div className="flex flex-col w-full py-16 gap-16 mx-auto bg-white px-32 rounded shadow-md relative">
-                <ContactForm />
-            </div>
+           <div className="flex flex-col w-full py-16 gap-16 mx-auto bg-white responsive-padding rounded shadow-md relative">
+           
+                           <ProductsGrid type="carousel"/>
+                           <hr></hr>
+                           <ContactForm />
+           
+                       </div>
 
             <AnyQuestion />
-            
+
         </>
     )
 }

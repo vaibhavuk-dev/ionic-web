@@ -8,7 +8,7 @@ export default function NewsArticlesGrid() {
   return (
     <div className="bg-white relative">
       <div className="container mx-auto ">
-      <div className="relative flex mb-4 gap-5 items-center">
+        <div className="relative flex mb-4 gap-5 items-center">
           <span className="absolute inset-y-0 left-0 w-full h-full bg-primaryLight -z-10 rounded-md"></span>
           <p className="inline-block text-primary font-semibold uppercase px-2 bg-primaryLight rounded-md">
             News
@@ -28,19 +28,26 @@ export default function NewsArticlesGrid() {
           {articles.map((article, index) => (
             <div
               key={index}
-              className="flex items-center justify-between border-b pb-4 transition duration-300 transform hover:scale-105"
+              className="flex rounded-lg hover:px-4 hover:py-2 items-center justify-between border-b pb-4 duration-300 transform transition-transform hover:scale-105 hover:shadow-lg group hover:bg-blueb-gradient cursor-pointer"
             >
-              <div className="flex items-start">
-                <div className="bg-primaryLight w-12 h-12 rounded-full"></div>
-                <div className="ml-4">
-                  <h3 className="text-textcolor font-semibold">{article.title}</h3>
-                  <p className="text-textcolor mt-1">{article.description}</p>
+              <div className="flex items-start space-x-4">
+                <img
+                  className="w-16 h-16 bg-primaryLight rounded-full object-cover transition-transform duration-300 group-hover:scale-110"
+                  src={"/blogs/blog1.png"}
+                  alt="Article"
+                />
+                <div className="flex-1">
+                  <h3 className="text-textcolor font-semibold text-md lg:text-lg leading-tight group-hover:text-white">
+                    {article.title}
+                  </h3>
+                  <p className="text-textcolor mt-2 text-sm group-hover:text-white">
+                    {article.description}
+                  </p>
                 </div>
               </div>
-              <div className="text-primary">
-                <span className="text-xl">➔</span>
-              </div>
+
             </div>
+
           ))}
         </div>
       </div>

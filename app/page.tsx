@@ -26,7 +26,7 @@ export default async function Home() {
                     loop
                 />
 
-                <div className="fixed inset-0 flex flex-col gap-8 items-center justify-center bg-blueb-gradient-opacity-50 py-14">
+                <div className="fixed inset-0 flex flex-col gap-8 items-center justify-center bg-blueb-gradient-opacity-50 py-14 mt-20">
                     <div className="flex flex-col gap-4 items-center">
                         <h1 className="text-center font-bold text-white text-4xl responsive-padding">
                             We Treat Water - Differently
@@ -38,12 +38,13 @@ export default async function Home() {
                     <p className="font-light text-white text-lg responsive-padding text-justify responsive-padding lg:w-1/2">
                         Ionic Engineering Technology Pvt. Ltd. pioneers ISO-certified water and wastewater treatment solutions with over 35 years of expertise. Led by industry veterans, we offer tailored services, emphasizing quality, performance, and sustainability.
                     </p>
-                    <p className="text-center font-medium text-white text-lg w-full bg-secondary responsive-padding">
+                    <p className="text-center py-3 font-medium text-white text-lg lg:text-xl w-full bg-secondary responsive-padding">
                         We Remove Everything from Water <span className="font-bold">Except - “Hydrogen & Oxygen”</span>
                     </p>
+                    <img className="w-full flex lg:hidden flex-col items-center justify-center" src="/waterflow/flow.png" />
                 </div>
 
-                <img className="w-full fixed bottom-0 flex flex-col items-center justify-center" src="/waterflow/flow.png" />
+                <img className="w-full hidden lg:flex fixed bottom-0 flex-col items-center justify-center" src="/waterflow/flow.png" />
 
                 {/* <WaterflowComponent /> */}
                 {/* <ImageCarousalHome /> */}
@@ -80,7 +81,7 @@ export default async function Home() {
                             </p>
 
                             {/* Button */}
-                            <button className="px-6 py-3 text-white bg-blueb-gradient rounded shadow hover:bg-blue-700">
+                            <button className="px-6 py-3 text-white bg-blueb-gradient rounded shadow hover:bg-blueb-700">
                                 Explore Products
                             </button>
                         </div>
@@ -121,7 +122,7 @@ export default async function Home() {
                         </div>
 
                         {/* Right Column */}
-                        <img className="bg-secondaryLight rounded-lg h-64 md:h-full object-cover" src="/homepage/ionicaward.jpg" alt="Descriptive Alt Text" />
+                        <img className="bg-secondaryLight rounded-lg object-cover" src="/homepage/ionicaward.jpg" alt="Descriptive Alt Text" />
                     </div>
                 </section>
             </div>

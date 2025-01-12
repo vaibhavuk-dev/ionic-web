@@ -45,9 +45,9 @@ export default function SolutionsSection() {
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-2">
             <span className="text-sky-400">OUR</span>
-            <span className="text-blue-700"> SOLUTIONS</span>
+            <span className="text-blueb-700"> SOLUTIONS</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-sky-400 to-blue-700 mx-auto"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-sky-400 to-blueb-700 mx-auto"></div>
         </div>
 
         {/* Solutions Grid */}
@@ -71,7 +71,7 @@ export default function SolutionsSection() {
 
               {/* Content */}
               <div className="p-6">
-                <h3 className="text-xl font-bold text-blue-700 mb-1">
+                <h3 className="text-xl font-bold text-blueb-700 mb-1">
                   {solution.title.main}
                 </h3>
                 <h4 className="text-lg text-sky-400 mb-4">
@@ -80,7 +80,7 @@ export default function SolutionsSection() {
                 <p className="text-gray-600 text-sm mb-6 line-clamp-4">
                   {solution.description}
                 </p>
-                <button className="text-blue-700 font-semibold hover:text-sky-400 transition-colors duration-300 flex items-center gap-2">
+                <button className="text-blueb-700 font-semibold hover:text-sky-400 transition-colors duration-300 flex items-center gap-2">
                   READ MORE
                   <svg 
                     className="w-4 h-4" 
