@@ -10,6 +10,24 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
 
+    const carouselImages: string[] = [
+        "/about/banner00001.jpg",
+        "/about/banner00002.jpg",
+        "/about/banner00003.jpg",
+        "/about/banner00004.jpg",
+        "/about/banner00005.jpg",
+        "/about/banner00006.jpg",
+        "/about/banner00007.jpg",
+        "/about/banner00008.jpg",
+        "/about/banner00009.jpg",
+        "/about/banner00010.jpg",
+        "/about/banner00011.jpg",
+        "/about/banner00012.jpg",
+        "/about/banner00013.jpg",
+        "/about/banner00014.jpg",
+        "/about/banner00015.jpg",
+    ]
+
     return (
         <div>
 
@@ -33,7 +51,7 @@ export default function AboutPage() {
             <div className="flex flex-col w-full gap-10 my-10 bg-white responsive-padding rounded relative">
 
                 <div className="flex justify-center">
-                    <ImageCarousal />
+                    <ImageCarousal images={carouselImages}/>
                 </div>
 
 
