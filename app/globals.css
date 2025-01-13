@@ -117,15 +117,25 @@ html {
   0% {
     transform: translateX(0);
   }
-
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-1000%); /* Adjust for seamless looping */
   }
 }
 
 .animate-scroll {
-  animation: scroll 10s linear infinite;
+  display: flex;
+  animation: scroll 60s linear infinite;
 }
+
+.relative {
+  position: relative;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+
 
 .swiper {
   width: 100%;
