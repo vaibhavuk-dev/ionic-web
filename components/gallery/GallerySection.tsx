@@ -16,22 +16,22 @@ export default function GallerySection() {
     {
       category: "ced",
       images: [
-        "/gallery/ced/ced1.webp",
-        "/gallery/ced/ced2.webp",
-        "/gallery/ced/ced3.webp",
-        "/gallery/ced/ced4.webp",
-        "/gallery/ced/ced5.webp",
-        "/gallery/ced/ced6.webp",
-        "/gallery/ced/ced7.webp",
-        "/gallery/ced/ced8.webp"
+        "/galleryp/ced/ced1.webp",
+        "/galleryp/ced/ced2.webp",
+        "/galleryp/ced/ced3.webp",
+        "/galleryp/ced/ced4.webp",
+        "/galleryp/ced/ced5.webp",
+        "/galleryp/ced/ced6.webp",
+        "/galleryp/ced/ced7.webp",
+        "/galleryp/ced/ced8.webp"
       ]
     },
     {
       category: "dm",
       images: [
-        "/gallery/dm/dm1.webp",
-        "/gallery/dm/dm3.webp",
-        "/gallery/dm/dm5.webp",
+        "/galleryp/dm/dm1.webp",
+        "/galleryp/dm/dm3.webp",
+        "/galleryp/dm/dm5.webp",
       ]
     }
     // Add more categories and their images as needed

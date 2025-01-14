@@ -37,10 +37,10 @@ const BrochureDownloads = () => {
                   key={brochure.pdf}
                   className="bg-white shadow-lg rounded-lg p-6 text-cente flex flex-col items-center justify-center gap-3"
                 >
-                  <img className="h-64 w-fit rounded-xl" src={`/brochures/thumbnails/${brochure.thumbnail}`} />
+                  <img className="h-64 w-fit rounded-xl" src={`/brochuresp/thumbnails/${brochure.thumbnail}`} />
                   <h3 className="text-center text-xl font-medium text-text-color mb-2">{brochure.name}</h3>
                   <a
-                    href={`/brochures/pdfs/${brochure.pdf}`}
+                    href={`/brochuresp/pdfs/${brochure.pdf}`}
                     download
                   >
                     Download Brochure PDF
