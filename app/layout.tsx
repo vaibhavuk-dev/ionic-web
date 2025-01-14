@@ -5,6 +5,7 @@ import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import Breadcrumb from "@/components/homepage/Breadcrumb";
 import { GoogleTagManager } from "@next/third-parties/google";
+import Script from "next/script";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 const gtmID = process.env.GTM_CONTAINER_ID || "";
@@ -21,8 +22,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={montserrat.className}>
       <GoogleTagManager gtmId={gtmID} />
+      <Script
+          id="gtm-script"
+          src={`https://www.googletagmanager.com/gtag/js?id=${gtmID}`}
+          strategy="beforeInteractive" // Ensures GTM loads early
+        />
+      <body className={montserrat.className}>
+        <GoogleTagManager gtmId={gtmID} />
         <NavBar />
         <main>{children}</main>
         <Footer />

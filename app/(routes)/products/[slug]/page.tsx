@@ -1,27 +1,17 @@
 "use client"
 
 import { products } from "@/utils/const";
-import AnyQuestion from "@/components/AnyQuestion";
-import BlogsCarousal from "@/components/BlogsCarousal";
-import CaseStudiesCarousal from "@/components/CaseStudiesCarousal";
-import Footer from "@/components/Footer";
-import BlogArticlesGrid from "@/components/homepage/BlogArticlesGrid";
 import Breadcrumb from "@/components/homepage/Breadcrumb";
 import ContactForm from "@/components/homepage/ContactForm";
-import NewsArticlesGrid from "@/components/homepage/NewsArticlesGrid";
-import NavBar from "@/components/NavBar";
-import ProductGallery from "@/components/ProductGallery";
-import ProductHeroCard from "@/components/products/ProductHeroCard";
 import ProductPage from "@/components/products/ProductPage";
-import ProductsGrid from "@/components/products/ProductsGrid";
 import { useState } from "react";
 import { productDataType } from "@/utils/types";
 import { notFound } from "next/navigation";
 
-export default function Products1Page({
+export default function ProductsPage({
     params,
   }: {
-    params: { slug: string };
+    params: any;
   }) {
 
     const productData : productDataType = products?.find(p => p.slug === params.slug);
