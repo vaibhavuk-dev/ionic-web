@@ -30,8 +30,8 @@ export default function GallerySection() {
       category: "dm",
       images: [
         "/galleryp/dm/dm1_img.webp",
+        "/galleryp/dm/dm2_img.webp",
         "/galleryp/dm/dm3_img.webp",
-        "/galleryp/dm/dm5_img.webp",
       ]
     }
     // Add more categories and their images as needed
