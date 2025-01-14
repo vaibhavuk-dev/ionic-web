@@ -1,54 +1,55 @@
 import React from "react";
 
 const BrochureDownloads = () => {
+  // Example brochure data (You can replace this with your actual data)
+  const brochureCategories = [
+    {
+      category: "Water Treatment",
+      brochures: [
+        { name: "1 - DOSE - CL Smart digital chlorine dosing", pdf: "brochure1.pdf", thumbnail: "brochure1.jpg" },
+        { name: "Genox® Smart Digital Chlorine Dioxide Generator", pdf: "brochure2.pdf", thumbnail: "brochure2.jpg" },
+        { name: "ACF - Activated Carbon Filter", pdf: "brochure3.pdf", thumbnail: "brochure3.jpg" },
+        { name: "Capacitive Electro Desalination", pdf: "brochure4.pdf", thumbnail: "brochure4.jpg" },
+        // { name: "", pdf: "brochure5.pdf", thumbnail: "brochure5.jpg" },
+        { name: "I - DOSE - CT Smart digital chemical dosing", pdf: "brochure6.pdf", thumbnail: "brochure6.jpg" },
+        { name: "Lamella Clarifier", pdf: "brochure7.pdf", thumbnail: "brochure7.jpg" },
+        { name: "Polymix® - Poly-electrolyte Solution Preparation and Dosing System", pdf: "brochure8.pdf", thumbnail: "brochure8.jpg" },
+        { name: "Closed Loop Desal Reverse Osmosis RO-Matrix", pdf: "brochure9.pdf", thumbnail: "brochure9.jpg" },
+        { name: "TURBILOC® ACTIVE MULTI MEDIA FILTER", pdf: "brochure10.pdf", thumbnail: "brochure10.jpg" },
+        { name: "Auto- Water Softener", pdf: "brochure11.pdf", thumbnail: "brochure11.jpg" },
+        { name: "Zero Liquid Discharge", pdf: "brochure12.pdf", thumbnail: "brochure12.jpg" },
+        { name: "QUICK CYCLE AUTOMATIC D.M PLANT", pdf: "brochure13.pdf", thumbnail: "brochure13.jpg" },
+      ],
+    },
+  ];
+
   return (
     <div className="max-w-7xl mx-auto px-6 py-12">
-      <div className="text-center">
-        <h1 className="text-3xl font-bold text-primary mb-4">Download Our Brochures</h1>
-        <p className="text-lg text-text-color mb-8">
-          Discover our products and services through our informative brochures. Click on the download links below to get the details.
-        </p>
-      </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div className="bg-white shadow-lg rounded-lg p-6 text-center">
-          <img src="/brochure1.jpg" alt="Brochure 1" className="w-full h-48 object-cover mb-4 rounded-lg" />
-          <h3 className="text-xl font-semibold text-text-color mb-2">Water Treatment Solutions</h3>
-          <p className="text-sm text-text-color mb-4">Explore our water treatment systems that provide clean, sustainable solutions.</p>
-          <a
-            href="/brochures/water-treatment.pdf"
-            download
-            className="inline-block bg-secondary text-white px-6 py-2 rounded-lg hover:bg-secondary-light transition"
-          >
-            Download Brochure
-          </a>
-        </div>
+      <div className="space-y-12">
+        {brochureCategories.map((category) => (
+          <div key={category.category}>
+            {/* <h2 className="text-2xl font-semibold text-text-color mb-4">{category.category}</h2> */}
 
-        <div className="bg-white shadow-lg rounded-lg p-6 text-center">
-          <img src="/brochure2.jpg" alt="Brochure 2" className="w-full h-48 object-cover mb-4 rounded-lg" />
-          <h3 className="text-xl font-semibold text-text-color mb-2">Industrial Waste Water Treatment</h3>
-          <p className="text-sm text-text-color mb-4">Get insights into our advanced solutions for industrial waste water treatment.</p>
-          <a
-            href="/brochures/industrial-waste-water.pdf"
-            download
-            className="inline-block bg-secondary text-white px-6 py-2 rounded-lg hover:bg-secondary-light transition"
-          >
-            Download Brochure
-          </a>
-        </div>
-
-        <div className="bg-white shadow-lg rounded-lg p-6 text-center">
-          <img src="/brochure3.jpg" alt="Brochure 3" className="w-full h-48 object-cover mb-4 rounded-lg" />
-          <h3 className="text-xl font-semibold text-text-color mb-2">Hi-Purity Water Systems</h3>
-          <p className="text-sm text-text-color mb-4">Discover how our Hi-Purity Water Systems deliver the highest standards of purity.</p>
-          <a
-            href="/brochures/hi-purity-water.pdf"
-            download
-            className="inline-block bg-secondary text-white px-6 py-2 rounded-lg hover:bg-secondary-light transition"
-          >
-            Download Brochure
-          </a>
-        </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+              {category.brochures.map((brochure) => (
+                <div
+                  key={brochure.pdf}
+                  className="bg-white shadow-lg rounded-lg p-6 text-cente flex flex-col items-center justify-center gap-3"
+                >
+                  <img className="h-64 w-fit rounded-xl" src={`/brochures/thumbnails/${brochure.thumbnail}`} />
+                  <h3 className="text-center text-xl font-medium text-text-color mb-2">{brochure.name}</h3>
+                  <a
+                    href={`/brochures/pdfs/${brochure.pdf}`}
+                    download
+                  >
+                    Download Brochure PDF
+                  </a>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
