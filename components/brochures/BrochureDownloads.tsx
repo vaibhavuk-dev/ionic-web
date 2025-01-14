@@ -16,9 +16,9 @@ const BrochureDownloads = () => {
         { name: "Polymix® - Poly-electrolyte Solution Preparation and Dosing System", pdf: "brochure8.pdf", thumbnail: "brochure8.webp" },
         { name: "Closed Loop Desal Reverse Osmosis RO-Matrix", pdf: "brochure9.pdf", thumbnail: "brochure9.webp" },
         { name: "TURBILOC® ACTIVE MULTI MEDIA FILTER", pdf: "brochure10.pdf", thumbnail: "brochure10.webp" },
-        { name: "Auto- Water Softener", pdf: "brochure11.pdf", thumbnail: "brochure11.webp" },
-        { name: "Zero Liquid Discharge", pdf: "brochure12.pdf", thumbnail: "brochure12.webp" },
-        { name: "QUICK CYCLE AUTOMATIC D.M PLANT", pdf: "brochure13.pdf", thumbnail: "brochure13.webp" },
+        { name: "Auto- Water Softener", pdf: "brochure11.pdf", thumbnail: "brochure11.jpeg" },
+        { name: "Zero Liquid Discharge", pdf: "brochure12.pdf", thumbnail: "brochure12.jpeg" },
+        { name: "QUICK CYCLE AUTOMATIC D.M PLANT", pdf: "brochure13.pdf", thumbnail: "brochure13.jpeg" },
       ],
     },
   ];
