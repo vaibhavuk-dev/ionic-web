@@ -6,6 +6,8 @@ import { useState, useEffect } from "react";
 import BlogsCarousalNavBar from "./BlogsCarousalNavBar";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
+import { products } from "@/utils/const";
+import { productDataType } from "@/utils/types";
 
 export default function NavBar({ shouldWhite = false }: { shouldWhite?: boolean }) {
 
@@ -59,26 +61,14 @@ export default function NavBar({ shouldWhite = false }: { shouldWhite?: boolean 
     ],
   };
 
+  const waterTreatmentProducts = products?.filter((product: productDataType) => product?.category === "Water Treatment")?.map((product: productDataType) => ({
+    src: "/water_drop.svg",
+    label: product?.name || "Unnamed Product",  // Provide a fallback string if name is undefined
+    href: `/products/${product?.slug}`
+  }));
+
   const productItems: { [key: string]: { src: string; label: string; href: string }[] } = {
-    "Water Treatment": [
-      { src: "/water_drop.svg", label: "Oil-Loc", href: "/products/1" },
-      { src: "/water_drop.svg", label: "Silica-Loc", href: "/products/1" },
-      { src: "/water_drop.svg", label: "Nanofiltration", href: "/products/1" },
-      { src: "/water_drop.svg", label: "Ultrafiltration", href: "/products/1" },
-      { src: "/water_drop.svg", label: "Polymix Dosing System", href: "/products/1" },
-      { src: "/water_drop.svg", label: "Seawater Desalination", href: "/products/1" },
-      { src: "/water_drop.svg", label: "Quick Cycle Auto DM Plant", href: "/products/1" },
-      { src: "/water_drop.svg", label: "Hi - Purity Water Systems", href: "/products/1" },
-      { src: "/water_drop.svg", label: "Brackish Water Desalination", href: "/products/1" },
-      { src: "/water_drop.svg", label: "Closed Loop Desal RO Matrix", href: "/products/1" },
-      { src: "/water_drop.svg", label: "Hot Water Generation Systems", href: "/products/1" },
-      { src: "/water_drop.svg", label: "I-Dose Chemical Dosing System", href: "/products/1" },
-      { src: "/water_drop.svg", label: "Technology for Ammonia Removal", href: "/products/1" },
-      { src: "/water_drop.svg", label: "Capacitive Electro Desalination", href: "/products/1" },
-      { src: "/water_drop.svg", label: "Turbiloc Active Media Filtration", href: "/products/1" },
-      { src: "/water_drop.svg", label: "Lamella Inclined Plate Clarifier", href: "/products/1" },
-      { src: "/water_drop.svg", label: "Genox Smart Digital Chlorine Dioxide Generator", href: "/products/1" },
-    ],
+    "Water Treatment": waterTreatmentProducts,
     "Industrial Waste Water Treatment": [
       { src: "/water_drop.svg", label: "Eutectic Freeze Crystallization", href: "/products/1" },
       { src: "/water_drop.svg", label: "Advanced Photochemical Oxidation", href: "/products/1" },
@@ -262,7 +252,7 @@ export default function NavBar({ shouldWhite = false }: { shouldWhite?: boolean 
               setSelectedCategory("");
             }}
           >
-            <div className="w-[40%] text-xl flex flex-col gap-3 overflow-y-scroll">
+            <div className="w-[30%] text-xl flex flex-col gap-3 overflow-y-scroll">
               {dropdownContent[selectedMenu].map((item) => (
                 <p
                   key={item.label}
@@ -276,7 +266,7 @@ export default function NavBar({ shouldWhite = false }: { shouldWhite?: boolean 
             </div>
             <div className="border-r border-gray-300 mx-5"></div>
             {selectedCategory === "" && (
-              <div className="w-[60%]">
+              <div className="w-full">
                 <div>
                   <p className="font-bold text-3xl">{selectedMenu}</p>
                   {selectedMenu === "Products" ? <p className="font-medium text-lg mt-3">Explore our wide range of products.</p> : <p className="font-medium text-lg mt-3">Explore our services.</p>}
@@ -291,7 +281,9 @@ export default function NavBar({ shouldWhite = false }: { shouldWhite?: boolean 
                     {productItems[selectedCategory].map((product) => (
                       <Link key={product.label} href={product.href}>
                         <div className="group flex items-center justify-start gap-2 rounded-lg w-[1/2] py-2 px-3 hover:border hover:bg-blueb-700 hover:drop-shadow-xl" onMouseEnter={() => setHoveredProduct(product.label)}
-                          onMouseLeave={() => setHoveredProduct(null)}>
+                          onMouseLeave={() => setHoveredProduct(null)} onClick={() => {
+                            setSelectedMenu("");
+                            setSelectedCategory("");}}>
                           <img className="w-5 h-5" src={hoveredProduct === product.label ? "/water_drop_white.svg" : product.src} alt="" />
                           <p className="group-hover:text-white">{product.label}</p>
                         </div>

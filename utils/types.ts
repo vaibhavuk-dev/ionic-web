@@ -1,5 +1,6 @@
 export type productDataType = {
     name: string;
+    category: string;
     slug: string;
     tagline: string;
     description: string;

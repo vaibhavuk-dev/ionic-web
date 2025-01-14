@@ -19,8 +19,6 @@ export default function ProductsPage() {
 
     return (
         <div>
-
-
             <div
                 className="w-full"
                 style={{

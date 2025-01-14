@@ -2,6 +2,7 @@ export const products =
   [
     {
       "name": "Oil Loc® - Oil Removal System",
+      "category": "Water Treatment",
       "slug": "oil-loc-oil-removal-system",
       "tagline": "Oil-Free Water: The Absolute Choice for Clarity",
       "description": "Oil-Loc is an innovative oil separation plant designed to effectively remove oil contaminants from industrial wastewater. The system employs cartridge filter technology, ensuring superior separation of oil and water. Its compact, skid-mounted design makes installation and maintenance straightforward, while its robust, corrosion-resistant construction ensures long-term operation in harsh industrial conditions.",
@@ -32,6 +33,7 @@ export const products =
     },
     {
       "name": "Silica-Loc® - Silica Removal System",
+      "category": "Water Treatment",
       "slug": "silica-loc-silica-removal-system",
       "tagline": "Silica Solved: Precision Treatment, Absolute Results",
       "description": "Silica-Loc is a specialized filtration system designed to efficiently remove silica from water, ensuring the production of high-quality water for a wide range of industrial applications. It minimizes silica scale formation, which can cause damage to equipment and reduce operational efficiency.",
@@ -61,6 +63,7 @@ export const products =
     },
     {
       "name": "Amoloc® - Ammonia Removal System",
+      "category": "Water Treatment",
       "slug": "amoloc-ammonia-removal-system",
       "tagline": "Clear Solutions for Ammonia-Free Water",
       "description": "Ionic's Ammonia Removal System is a highly efficient treatment solution designed to remove ammonia from water, ensuring safe and clean discharge or reuse. It is ideal for industries such as power plants, agriculture, aquaculture, and municipal water treatment facilities.",
@@ -91,6 +94,7 @@ export const products =
     },
     {
       "name": "Turbiloc® - Active Multimedia Filter",
+      "category": "Water Treatment",
       "slug": "turbiloc-active-multimedia-filter",
       "tagline": "Turbid Water In, Crystal Clear Out: The Turbiloc Promise",
       "description": "Turbiloc-Active Multimedia Filter is a cutting-edge solution designed to replace traditional sand filters, offering enhanced filtration performance without the need for additional infrastructure investments. The system resists biofouling, bio-coagulation, and transient wormhole channeling, ensuring continuous operation without media recharging or replacement.",
@@ -121,6 +125,7 @@ export const products =
     },
     {
       "name": "ACF - Activated Carbon Filter",
+      "category": "Water Treatment",
       "slug": "acf-activated-carbon-filter",
       "tagline": "Pure Water, Absolute Clarity: The Power of Activated Carbon",
       "description": "Ionic Engineering Technology Pvt Ltd provides advanced Activated Carbon Filter (ACF) systems designed for efficient removal of contaminants, chemicals, and odors from water and air. These filters ensure high-quality water for various industrial applications, protecting equipment and improving operational efficiency.",
@@ -150,6 +155,7 @@ export const products =
     },
     {
       "name": "Nanofiltration",
+      "category": "Water Treatment",
       "slug": "nanofiltration",
       "tagline": "Fine Filtration for an Absolutely Clear Choice",
       "description": "Nanofiltration (NF) is a membrane filtration process that utilizes semi-permeable membranes with pore sizes ranging from 1 to 10 nanometers. This technology effectively removes divalent and larger ions, organic molecules, and certain pathogens from water, offering a balance between high-quality water production and operational efficiency.",
@@ -180,6 +186,7 @@ export const products =
     },
     {
       "name": "Ultrafiltration",
+      "category": "Water Treatment",
       "slug": "ultrafiltration",
       "tagline": "Ultra Clarity, Absolute Confidence",
       "description": "Ultrafiltration (UF) is a membrane filtration process that removes suspended solids, bacteria, viruses, and larger organic molecules from water. It is commonly used as a pre-treatment process for reverse osmosis systems and standalone filtration applications, offering an energy-efficient solution for water treatment.",
@@ -210,6 +217,7 @@ export const products =
     },
     {
       "name": "Reverse Osmosis (RO) System",
+      "category": "Water Treatment",
       "slug": "reverse-osmosis-system",
       "tagline": "Closed Loop, Open Possibilities: The Smart RO Solution",
       "description": "Reverse Osmosis (RO) is a highly effective, pressure-driven water purification process that separates pure water from salty or contaminated water using semi-permeable membranes. Widely used across industries, RO systems produce clean water for various applications, ensuring high efficiency and reliability.",
@@ -241,6 +249,7 @@ export const products =
     },
     {
       "name": "Quick Cycle Automatic DM Plant",
+      "category": "Water Treatment",
       "slug": "quick-cycle-automatic-dm-plant",
       "tagline": "Quick, Clean, and Reliable: Demineralization Made Simple",
       "description": "Ionic's Quick Cycle Automatic Demineralization (DM) Plant offers efficient and sustainable water treatment solutions. It utilizes advanced ion exchange resin technology to produce high-quality water while minimizing operational costs, chemical usage, and environmental impact.",
@@ -271,6 +280,7 @@ export const products =
     },
     {
       "name": "Capacitive Electro Desalination (CED)",
+      "category": "Water Treatment",
       "slug": "capacitive-electro-desalination",
       "tagline": "Eco-Friendly Desalination: Low-Energy, High-Performance Solutions",
       "description": "As the global population grows, the demand for sustainable water treatment solutions becomes more critical. IONIC's Capacitive Electro Desalination (CED) technology offers an innovative and eco-friendly approach to desalination, focusing on water reuse and resource conservation. Operating efficiently at ambient temperatures, CED delivers high-performance desalination while minimizing environmental impact. Ideal for industries seeking scalable, cost-effective, and sustainable solutions for water treatment and reuse, CED reduces operational costs and conserves water resources.",
@@ -303,6 +313,7 @@ export const products =
     },
     {
       "name": "Hi-Purity Water Systems",
+      "category": "Water Treatment",
       "slug": "hi-purity-water-systems",
       "tagline": "Uncompromised Purity: The Absolute Standard for High Performance",
       "description": "Hi-Purity Water Systems are designed to produce ultra-pure water that meets stringent quality standards required for critical industrial and scientific applications. These systems utilize advanced filtration and deionization technologies to remove even the smallest impurities, ensuring the highest levels of purity. Essential for industries like pharmaceuticals, biotechnology, semiconductor manufacturing, and research laboratories, they provide consistent, high-quality output while being energy-efficient, reducing operational costs.",
@@ -333,6 +344,7 @@ export const products =
     },
     {
       "name": "Seawater Desalination",
+      "category": "Water Treatment",
       "slug": "seawater-desalination",
       "tagline": "Turning Seawater into Freshwater: The Absolute Solution",
       "description": "Seawater desalination is a process designed to remove salt and other impurities from seawater, making it suitable for drinking, irrigation, and industrial use. This system utilizes advanced reverse osmosis (RO) technology to provide high-efficiency water desalination, ensuring a reliable supply of fresh water in coastal and seawater-laden areas. It is ideal for regions facing water scarcity or where freshwater resources are limited. The system is designed for flexibility and can meet varying water demands in applications such as municipal water supply, industrial process water, and agricultural irrigation.",
@@ -363,6 +375,7 @@ export const products =
     },
     {
       "name": "Brackish Water Desalination",
+      "category": "Water Treatment",
       "slug": "brackish-water-desalination",
       "tagline": "Freshwater from Brackish Sources: The Clear Choice for Sustainability",
       "description": "Brackish Water Desalination systems are designed to remove dissolved salts and other impurities from brackish water sources, making it suitable for industrial and municipal applications. These systems utilize reverse osmosis (RO) technology to efficiently separate salts and contaminants, providing high-quality water for industrial processes, agriculture, and drinking water supply. With optimized energy recovery and efficient membrane technology, these systems ensure reduced operational costs and reliable performance in areas with limited freshwater sources.",
@@ -393,6 +406,7 @@ export const products =
     },
     {
       "name": "Hot Water Generation Systems",
+      "category": "Water Treatment",
       "slug": "hot-water-generation-systems",
       "tagline": "Efficient Heating, Absolute Performance",
       "description": "Hot Water Generation Systems are designed to provide rapid and energy-efficient heating of water for a variety of industrial processes. These systems are especially beneficial in industries where high-temperature water is essential for operations such as sterilization, washing, and industrial process heating. The systems employ advanced heating technologies to ensure high performance, energy efficiency, and safety. Commonly used in the food and beverage industry, pharmaceutical sectors, textile and dyeing industries, and hotels, these systems are designed to meet the specific needs of each application, ensuring the water is heated to the required temperature without unnecessary energy consumption. Built with robust materials, these systems ensure durability, safety, and long service life.",
@@ -424,6 +438,7 @@ export const products =
     },
     {
       "name": "I-Dose® – Dosing System",
+      "category": "Water Treatment",
       "slug": "i-dose-dosing-system",
       "tagline": "Smart Dosing, Absolute Control",
       "description": "I-Dose Chemical Dosing System is a smart, compact, and IoT-enabled digital system designed to control the chemistry of cooling water. The system accurately doses specialty chemicals like scale inhibitors, corrosion inhibitors, anti-foulants, biocides, and more based on real-time measurements such as pH, flow, ORP, free chlorine, TDS, chlorine dioxide, and turbidity. This precision prevents common issues like scaling, corrosion, fouling, and biofilm growth, ensuring optimal cooling system performance. I-Dose avoids underdosing or overdosing by monitoring and controlling chemical addition with accuracy, ultimately optimizing the chemical treatment process. The system uses KPIs such as LSI (Langelier Saturation Index), RSI (Ryznar Saturation Index), and performance indicators like differential pressure across heat exchangers and cooling towers to evaluate system performance and ensure efficiency.",
@@ -457,6 +472,7 @@ export const products =
     },
     {
       "name": "Genox® Smart Digital Chlorine Dioxide Generator",
+      "category": "Water Treatment",
       "slug": "genox-smart-digital-chlorine-dioxide-generator",
       "tagline": "GENOX® – Smart Digital Chlorine Dioxide Generators: Safe, Reliable, Easy to Install, Configure, Operate, and Monitor!",
       "description": "Ionic's Chlorine Dioxide Generator is a cutting-edge, fully automated system designed to produce chlorine dioxide (ClO₂) on-site, ensuring safe and efficient disinfection. With a disinfection power 2.5 times greater than free chlorine, ClO₂ remains effective across a wide pH range, making it ideal for applications in potable water treatment, food processing, and wastewater management. The system utilizes sodium chlorite (NaClO₂) and hydrochloric acid (HCl) as precursor chemicals to generate ClO₂ with minimal by-products, ensuring environmental compliance. The advanced automation guarantees precise dosing and residual control, addressing challenges such as off-gassing, fluctuating chemical demands, and concentration variations. For large-capacity requirements, Ionic provides comprehensive turnkey project solutions and expert consultancy to optimize ClO₂ generation and its application in various industries.",
@@ -489,6 +505,7 @@ export const products =
 
     {
       "name": "Polymix® - Poly-electrolyte Solution Preparation and Dosing System",
+      "category": "Water Treatment",
       "slug": "polymix-poly-electrolyte-dosing-system",
       "tagline": "Perfectly Mixed, Perfectly Dosed: The Clear Choice",
       "description": "The Polymix Dosing System is a versatile and efficient manual/automatic continuous or batch-type preparation system designed to handle poly-electrolytes. It is specifically engineered to dissolve synthetic polymers for creating polymer solutions used in flocculation processes. This system serves as a key dissolving station, making it highly suitable for various industries such as water and wastewater treatment, paper manufacturing, mining, and the metals industry. The Polymix system ensures optimal dosing accuracy and consistency, improving the efficiency of chemical utilization and the effectiveness of treatment processes.",
@@ -520,6 +537,7 @@ export const products =
     },
     {
       "name": "Lamella Clarifier",
+      "category": "Water Treatment",
       "slug": "lamella-clarifier",
       "tagline": "Small in size, Big In performance",
       "description": "The Ionic Lamella Clarifier is a high-performance solution for solids removal and water clarification in large-scale water treatment systems. Utilizing inclined, overlapping plates, the system creates laminar flow conditions, ensuring hydraulic uniformity and the production of high-quality effluent. Designed to save space, the Lamella Clarifier significantly reduces the footprint required compared to traditional clarification equipment, making it ideal for industries and municipalities with limited installation space.",
@@ -551,6 +569,7 @@ export const products =
     },
     {
       "name": "Auto-Water Softener",
+      "category": "Water Treatment",
       "slug": "auto-water-softener",
       "tagline": "Efficient Solutions for Scale-Free Water and Long-Lasting Equipment",
       "description": "Water is essential to industrial operations, but hard water, rich in calcium and magnesium, creates significant challenges like scaling, reduced equipment efficiency, and higher maintenance costs. Our Water Softeners provide a reliable solution by removing hardness-causing ions, ensuring soft water that enhances efficiency, protects equipment, and lowers operational costs.",
@@ -581,7 +600,6 @@ export const products =
         ]
       }
     },
-    
   ]
   
 export const productsOld = [

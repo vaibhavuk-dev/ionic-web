@@ -16,6 +16,7 @@ import ProductPage from "@/components/products/ProductPage";
 import ProductsGrid from "@/components/products/ProductsGrid";
 import { useState } from "react";
 import { productDataType } from "@/utils/types";
+import { notFound } from "next/navigation";
 
 export default function Products1Page({
     params,
@@ -25,7 +26,7 @@ export default function Products1Page({
 
     const productData : productDataType = products?.find(p => p.slug === params.slug);
 
-    console.log(productData)
+    if (!productData) notFound();
 
     const [model, setModel] = useState("")
 
