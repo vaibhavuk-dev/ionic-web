@@ -81,9 +81,9 @@ export default async function Home() {
                             </p>
 
                             {/* Button */}
-                            <button className="px-6 py-3 text-white bg-blueb-gradient rounded shadow hover:bg-blueb-700">
+                            <Link href="/products" className="px-6 py-3 text-white bg-blueb-gradient rounded shadow hover:bg-blueb-700">
                                 Explore Products
-                            </button>
+                            </Link>
                         </div>
 
                     </div>
@@ -139,19 +139,20 @@ export default async function Home() {
                 <VisionMissionSection />
             </div>
 
-            <div className="flex flex-col w-full py-16 gap-16 mx-auto  bg-blueb-gradient  responsive-padding rounded shadow-md relative">
+            {/* <div className="flex flex-col w-full py-16 gap-16 mx-auto  bg-blueb-gradient  responsive-padding rounded shadow-md relative">
                 <Testimonials />
-            </div>
+            </div> */}
 
-            <div className="flex flex-col w-full py-16 gap-16 mx-auto bg-white responsive-padding rounded shadow-md relative">
+            {/* <div className="flex flex-col w-full py-16 gap-16 mx-auto bg-white responsive-padding rounded shadow-md relative">
                 <NewsArticlesGrid />
-            </div>
+            </div> */}
 
-            <div className="flex flex-col w-full py-16 gap-16 mx-auto  bg-blueb-gradient  responsive-padding rounded shadow-md relative">
+            {/* <div className="flex flex-col w-full py-16 gap-16 mx-auto  bg-blueb-gradient  responsive-padding rounded shadow-md relative">
                 <BlogArticlesGrid />
-            </div>
+            </div> */}
 
             <div className="flex flex-col w-full py-16 gap-16 mx-auto bg-white responsive-padding rounded shadow-md relative">
+                <hr></hr>
                 <ContactForm />
             </div>
 

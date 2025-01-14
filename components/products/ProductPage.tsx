@@ -24,7 +24,7 @@ export function ProductPage({productData}: {productData: productDataType}) {
         <p className="text-gray-700 leading-relaxed mb-4">
           {productData?.description}
         </p>
-        <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+        <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors" onClick={() => document.getElementById("contact-form")?.scrollIntoView({ behavior: "smooth" })}>
           Request Quote
         </button>
       </div>

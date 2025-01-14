@@ -98,10 +98,10 @@ export default function ContactPage() {
                             For those flying in, Pune International Airport is the nearest airport, making it easy to reach us by taxi or rideshare.
                         </p>
                     </div>
-                    <div className="w-full">
+                    {/* <div className="w-full">
                         <img src="/ioniclogo.png" alt="" className="object-contain w-full p-16 rounded-lg" />
                         <p className="w-full text-center mt-2 text-sm">Image showing location of metro station and office</p>
-                    </div>
+                    </div> */}
                 </div>
             </div>
 

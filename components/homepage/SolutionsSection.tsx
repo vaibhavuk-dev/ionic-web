@@ -10,7 +10,7 @@ export default function SolutionsSection() {
         sub: 'SOLUTIONS'
       },
       icon: <Droplets className="w-6 h-6" />,
-      image: "/placeholder.jpg",
+      image: "/homepage/oursolutions/ionicwatertreatment.png",
       description: "Ionic can reduce Capex by intelligent and innovative solutions, reduce water consumption, reduce power, reduce chemicals, reduce consumables and maintenance, increase productivity and reduce waste discharge. Our water treatment solutions are based on value engineering and designed to reduce life cycle cost.",
       imageAlt: "Water treatment facility"
     },
@@ -21,7 +21,7 @@ export default function SolutionsSection() {
         sub: 'TREATMENT'
       },
       icon: <Waves className="w-6 h-6" />,
-      image: "/placeholder.jpg",
+      image: "/homepage/oursolutions/ionicwastewater.png",
       description: "Treating waste water is more difficult than treating water, whether it is Sewage water or Industrial waste water. Our experience in dealing with diverse industries makes it possible to offer techno-economically optimum solution for treating industrial waste water.",
       imageAlt: "Waste water samples"
     },
@@ -32,7 +32,7 @@ export default function SolutionsSection() {
         sub: 'SOLUTIONS'
       },
       icon: <GitMerge className="w-6 h-6" />,
-      image: "/placeholder.jpg",
+      image: "/homepage/oursolutions/ionictotalwater.png",
       description: "Ionic Provides integrated solution for zero liquid discharge and water recycling system. Ionic can provide evaporators for achieving zero discharge requirement from industries and process using which water can be easily recycled.",
       imageAlt: "Integrated water system diagram"
     }
@@ -59,9 +59,9 @@ export default function SolutionsSection() {
             >
               {/* Image Container */}
               <div className="relative">
-                <div className="absolute top-4 left-4 bg-green-500 p-2 rounded-lg text-white">
+                {/* <div className="absolute top-4 left-4 bg-green-500 p-2 rounded-lg text-white">
                   {solution.icon}
-                </div>
+                </div> */}
                 <img 
                   src={solution.image} 
                   alt={solution.imageAlt}
