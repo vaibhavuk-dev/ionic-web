@@ -131,8 +131,10 @@ const ServicesPage = () => {
                     return (
                         <div
                             key={service.id}
-                            className="group bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-gray-100"
+                            className="relative cursor-pointer group bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 border border-blueb-950"
                         >
+                            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blueb-500 to-blueb-600 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+
                             <div className="p-8">
                                 {/* Icon */}
                                 <div className="h-14 w-14 bg-blue-50 rounded-lg p-3 mb-6 group-hover:bg-blue-600 transition-colors duration-300">
