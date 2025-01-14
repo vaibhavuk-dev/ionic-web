@@ -1,6 +1,24 @@
+"use client"
 import GallerySection from "@/components/gallery/GallerySection";
+import { useEffect } from "react";
 
 export default function GalleryPage() {
+
+    useEffect(() => {
+        // Block right-click globally
+        const handleRightClick = (event: any) => {
+          event.preventDefault();
+          alert('Right-click is disabled on this site');
+        };
+    
+        // Add event listener for right-click
+        document.addEventListener('contextmenu', handleRightClick);
+    
+        // Clean up the event listener on component unmount
+        return () => {
+          document.removeEventListener('contextmenu', handleRightClick);
+        };
+      }, []);
 
     return (
         <>
