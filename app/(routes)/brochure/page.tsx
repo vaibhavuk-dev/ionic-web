@@ -25,7 +25,7 @@ export default function BrochurePage() {
 
             <BrochureDownloads />
 
-            <div className="px-32 py-10">
+            {/* <div className="px-32 py-10">
                 <p className="text-xl font-semibold">Brochure</p>
                 <div className="grid grid-cols-4 gap-5">
                     {[1, 2, 3, 4, 5, 6, 7, 8, 9, 0].map((id, index) => (
@@ -35,7 +35,7 @@ export default function BrochurePage() {
                         </div>
                     ))}
                 </div>
-            </div>
+            </div> */}
         </div>
     )
 }
