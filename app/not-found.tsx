@@ -18,11 +18,8 @@ const NotFoundPage = () => {
 
         {/* Message */}
         <div className="space-y-4 px-4">
-          <p className="text-lg text-gray-600">
+          <p className="text-lg text-gray-600 text-center">
             Oops! It seems like the page you're looking for has taken an unexpected journey into the digital void.
-          </p>
-          <p className="text-gray-500">
-            Don't worry, even the best ionic solutions have their quirks sometimes.
           </p>
         </div>
 
