@@ -32,7 +32,7 @@ export default async function Home() {
                             We Treat Water - Differently
                         </h1>
                         <h2 className="text-center font-semibold text-white text-2xl responsive-padding">
-                            "Clear solution for trouble waters"
+                            "Clear solution for troubled waters"
                         </h2>
                     </div>
                     <p className="font-light text-white text-lg responsive-padding text-justify responsive-padding lg:w-1/2">
