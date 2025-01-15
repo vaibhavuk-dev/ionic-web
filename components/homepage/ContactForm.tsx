@@ -184,8 +184,9 @@ export default function ContactForm() {
                                     <h2 className="ml-4 text-xl font-semibold text-textcolorDark">Phone</h2>
                                 </div>
                                 <p className="text-textcolor mb-2">Mon-Fri from 9:30 AM to 6:30 PM.</p>
-                                <a href="tel:020-27475272" className="text-primary hover:underline">020-27475272</a><br />
-                                <a href="tel:8275486263" className="text-primary hover:underline">8275486263</a>
+                                <a href="tel:020-27475272" className="text-primary hover:underline">020-27475272/73</a><br />
+                                <a href="tel:020-29525874" className="text-primary hover:underline">020-29525874</a><br />
+                                <a href="tel:08275486263" className="text-primary hover:underline">08275486263</a>
                             </div>
 
                             {/* Office */}
@@ -201,10 +202,11 @@ export default function ContactForm() {
                                 </div>
                                 <p className="text-textcolor mb-2">Come say hello at our office HQ.</p>
                                 <p className="text-textcolor">
-                                    No 1, 5 & 12, Ground Floor, B Wing, Mahalaxmi Heights,<br />
-                                    Old Mumbai - Pune Hwy, next to Keys Hotel,<br />
-                                    Pimpri Colony, Pimpri-Chinchwad,<br />
-                                    Maharashtra 411019
+                                    <b>IONIC ENGINEERING TECHNOLOGY PVT LTD</b><br />
+                                    <span className='font-medium'>(An ISO 9001:2015 Certified Company)</span><br />
+                                    S. No. 1, 5, 11, 12 & 13, Ground Floor, B Wing,<br />
+                                    Mahalaxmi Heights, Mumbai-Pune Road, Pimpiri,<br />
+                                    Pune-18 ,Maharashtra, INDIA.
                                 </p>
                             </div>
                         </div>

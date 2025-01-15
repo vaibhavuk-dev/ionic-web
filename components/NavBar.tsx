@@ -130,7 +130,7 @@ export default function NavBar({ shouldWhite = false }: { shouldWhite?: boolean 
   };
 
   return (
-    
+
     <nav className={`sticky z-20 top-0 left-0 right-0  flex-col backdrop-blur-sm ${isScrolled ? "drop-shadow-xl" : ""} basic-transition`}>
       <MaintenanceBanner />
       <div className={`hidden lg:flex w-full ${isWhite ? "bg-white" : "bg-blueb-gradient"} items-center justify-center`}>
@@ -140,7 +140,7 @@ export default function NavBar({ shouldWhite = false }: { shouldWhite?: boolean 
           <Link href={"/"}>
             <img
               src={`${isWhite ? "/ioniclogo.png" : "/ioniclogo_white.png"}`}
-              className="h-16"
+              className="h-20"
               onMouseEnter={() => setSelectedMenu("")}
             />
           </Link>
@@ -183,7 +183,7 @@ export default function NavBar({ shouldWhite = false }: { shouldWhite?: boolean 
             <Link href={"/"}>
               <img
                 src={`${isWhite ? "/ioniclogo.png" : "/ioniclogo_white.png"}`}
-                className="h-12 w-auto"
+                className="h-14 w-auto"
                 onMouseEnter={() => setSelectedMenu("")}
               />
             </Link>
@@ -286,7 +286,8 @@ export default function NavBar({ shouldWhite = false }: { shouldWhite?: boolean 
                         <div className="group flex items-center justify-start gap-2 rounded-lg w-[1/2] py-2 px-3 hover:border hover:bg-blueb-700 hover:drop-shadow-xl" onMouseEnter={() => setHoveredProduct(product.label)}
                           onMouseLeave={() => setHoveredProduct(null)} onClick={() => {
                             setSelectedMenu("");
-                            setSelectedCategory("");}}>
+                            setSelectedCategory("");
+                          }}>
                           <img className="w-5 h-5" src={hoveredProduct === product.label ? "/water_drop_white.svg" : product.src} alt="" />
                           <p className="group-hover:text-white">{product.label}</p>
                         </div>
@@ -370,15 +371,17 @@ export default function NavBar({ shouldWhite = false }: { shouldWhite?: boolean 
 
           <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15122.922505541159!2d73.79250328511964!3d18.63118198564944!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b84e62f8c169%3A0xf6df110a3e44ab98!2sIonic%20Engineering%20Technology%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1716738071408!5m2!1sen!2sin" className="w-[80%] h-[400px]" loading="lazy" ></iframe>
           <div className="border-r border-gray-300 mx-5"></div>
-          <div className="w-[50%] text-lg flex flex-col gap-3">
+          <div className="w-[50%] text-md flex flex-col gap-3">
             <div className="mt-4">
-              <p className='py-2'><b>Contact:</b> <br /> 020-27475272 / 8275486263</p>
-              <p className='py-2'><b>Email:</b> <br /> contact@ionic.co.in / support@ionic.co.in</p>
-              <p className='py-2'><b>Address:</b> <br /> No 1, 5 & 12, Ground Floor, B Wing,
-                Mahalaxmi Heights, Old Mumbai -
-                Pune Hwy, next to Keys Hotel, Pimpri
-                Colony, Pimpri-Chinchwad,
-                Maharashtra, INDIA
+              <span className="font-bold text-lg">IONIC ENGINEERING TECHNOLOGY PVT LTD</span><br />
+              <span className='font-medium'>(An ISO 9001:2015 Certified Company)</span><br />
+              <hr className="my-2"></hr>
+              <p className='py-2'><span className='font-medium text-gray-600 text-md'>Contact:</span> <br />  020-27475272/73, 29525874 / 08275486263</p>
+              <p className='py-2'><span className='font-medium text-gray-600 text-md'>Email:</span> <br /> contact@ionic.co.in / support@ionic.co.in</p>
+              <p className='py-2'><span className='font-medium text-gray-600 text-md'>Address:</span> <br />
+                S. No. 1, 5, 11, 12 & 13, Ground Floor, B Wing,<br />
+                Mahalaxmi Heights, Mumbai-Pune Road, Pimpiri,<br />
+                Pune-18 ,Maharashtra, INDIA.
               </p>
               <Link href="/contact" onClick={() => { setSelectedMenu(""); setSelectedCategory("") }}>
                 <button className="mt-3 px-4 py-2 text-white rounded bg-blueb-700 border-white hover:bg-opacity-70 text-md">

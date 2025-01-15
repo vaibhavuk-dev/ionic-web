@@ -4,18 +4,22 @@ const Footer = () => {
   return (
     <footer id='footer' className="bg-gray-100 text-gray-700 py-8 responsive-padding relative">
       <div className="flex flex-col justify-between items-top">
-        <div className="container mx-auto flex flex-col lg:flex-row gap-6 items-center justify-center w-full ">
+        <div className="container mx-auto flex flex-col lg:flex-row gap-6 items-start justify-between w-full ">
 
           <img src="/ioniclogo.png" alt="Logo" className="h-20" />
 
-            <p className='text-center py-2'><b>Contact:</b> <br /> 020-27475272 / 8275486263</p>
+          <div>
             <p className='text-center py-2'><b>Email:</b> <br /> contact@ionic.co.in / support@ionic.co.in</p>
-            <p className='text-center py-2 lg:w-[500px]'><b>Address:</b> <br /> No 1, 5 & 12, Ground Floor, B Wing,
-              Mahalaxmi Heights, Old Mumbai -
-              Pune Hwy, next to Keys Hotel, Pimpri
-              Colony, Pimpri-Chinchwad,
-              Maharashtra 411019
-            </p>
+            <p className='text-center py-2'><b>Contact:</b> <br />  020-27475272/73, 29525874 <br></br> 08275486263</p>
+          </div>
+          <p className='text-center py-2 lg:w-[500px]'><b>Address:</b> <br />
+            <b>IONIC ENGINEERING TECHNOLOGY PVT LTD</b><br />
+            <span className='font-medium'>(An ISO 9001:2015 Certified Company)<br /></span>
+            S. No. 1, 5, 11, 12 & 13, Ground Floor, B Wing,<br />
+            Mahalaxmi Heights, Mumbai-Pune Road, Pimpiri,<br />
+            Pune-18 ,Maharashtra, INDIA.
+
+          </p>
         </div>
 
         {/* <div className="flex flex-row items-start lg:p-10 w-full lg:w-2/3 justify-evenly">
