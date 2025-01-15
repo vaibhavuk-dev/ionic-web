@@ -8,6 +8,7 @@ import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { products } from "@/utils/const";
 import { productDataType } from "@/utils/types";
+import MaintenanceBanner from "./MaintenanceBanner";
 
 export default function NavBar({ shouldWhite = false }: { shouldWhite?: boolean }) {
 
@@ -129,7 +130,9 @@ export default function NavBar({ shouldWhite = false }: { shouldWhite?: boolean 
   };
 
   return (
+    
     <nav className={`sticky z-20 top-0 left-0 right-0  flex-col backdrop-blur-sm ${isScrolled ? "drop-shadow-xl" : ""} basic-transition`}>
+      <MaintenanceBanner />
       <div className={`hidden lg:flex w-full ${isWhite ? "bg-white" : "bg-blueb-gradient"} items-center justify-center`}>
         <div
           className={`flex items-center w-full justify-between responsive-padding py-4`}
