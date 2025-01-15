@@ -56,7 +56,7 @@ export default function ContactPage() {
                             </div>
                             <h2 className="ml-4 text-xl font-semibold text-textcolorDark">Phone</h2>
                         </div>
-                        <p className="text-textcolor mb-2">Mon-Fri from 8am to 5pm.</p>
+                        <p className="text-textcolor mb-2">Mon-Fri from 9:30 AM to 6:30 PM.</p>
                         <a href="tel:020-27475272" className="text-primary hover:underline">020-27475272</a><br />
                         <a href="tel:8275486263" className="text-primary hover:underline">8275486263</a>
                     </div>
