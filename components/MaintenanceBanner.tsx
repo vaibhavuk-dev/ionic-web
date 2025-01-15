@@ -13,7 +13,7 @@ const MaintenanceBanner = () => {
             100% { transform: translateX(-100%); }
           }
           .scrolling-text {
-            animation: scroll 10s linear infinite;
+            animation: scroll 60s linear infinite;
             white-space: nowrap;
           }
         `}</style>
