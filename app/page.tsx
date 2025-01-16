@@ -17,38 +17,83 @@ export default async function Home() {
 
             <StickySidebar />
 
-            <div className="relative w-full h-screen">
+            <div className="relative w-full h-screen overflow-hidden">
+                {/* Video Background */}
                 <video
-                    className="fixed top-0 w-full h-full object-cover overflow-hidden"
+                    className="absolute inset-0 w-full h-full object-cover"
                     src="/bg_video.mp4"
                     autoPlay
                     muted
                     loop
+                    playsInline
                 />
 
-                <div className="fixed inset-0 flex flex-col gap-8 items-center justify-center bg-blueb-gradient-opacity-50 py-14 mt-20">
-                    <div className="flex flex-col gap-4 items-center">
-                        <h1 className="text-center font-bold text-white text-4xl responsive-padding">
-                            We Treat Water - Differently
-                        </h1>
-                        <h2 className="text-center font-semibold text-white text-2xl responsive-padding">
-                            "Clear solution for troubled waters"
-                        </h2>
+                {/* Gradient Overlay */}
+                <div className="fixed inset-0 flex flex-col gap-8 items-center justify-center bg-blueb-gradient-opacity-50"></div>
+
+                {/* Main Content Container */}
+                <div className="relative w-full h-full flex flex-col justify-between">
+                    {/* Centered Text Content */}
+                    <div className="flex-1 flex flex-col items-center justify-center px-4 md:px-6 pt-20">
+                        <div className="max-w-4xl w-full space-y-8">
+                            {/* Headlines */}
+                            <div className="space-y-4 text-center">
+                                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
+                                    We Treat Water - Differently
+                                </h1>
+                                <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold text-white">
+                                    "Clear solution for troubled waters"
+                                </h2>
+                            </div>
+
+                            {/* Poem */}
+                            <div className="space-y-3">
+                                <p className="font-light text-white text-base md:text-lg lg:text-xl text-center">
+                                    IONIC is our name, Clean water is our flame.
+                                </p>
+                                <p className="font-light text-white text-base md:text-lg lg:text-xl text-center">
+                                    We remove everything from water, Except - Hydrogen and oxygen,
+                                </p>
+                                <p className="font-light text-white text-base md:text-lg lg:text-xl text-center">
+                                    With every drop we treat, We make it even pure
+                                </p>
+                                <p className="font-light text-white text-base md:text-lg lg:text-xl text-center">
+                                    As we build a sustainable future We help create a livable Earth!
+                                </p>
+                                <p className="font-light text-white text-base md:text-lg lg:text-xl text-center">
+                                    So here's to IONIC A beacon of hope, Helping humanity to cope.
+                                </p>
+                            </div>
+
+                            {/* Highlight Box */}
+                            <div className="w-full bg-[#77B82A] py-3">
+                                <p className="text-center text-white text-base md:text-lg lg:text-xl">
+                                    We Remove Everything from Water{' '}
+                                    <span className="font-bold">Except - "Hydrogen & Oxygen"</span>
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                    <p className="font-light text-white text-lg responsive-padding text-justify responsive-padding lg:w-1/2">
-                        Ionic Engineering Technology Pvt. Ltd. pioneers ISO-certified water and wastewater treatment solutions with over 35 years of expertise. Led by industry veterans, we offer tailored services, emphasizing quality, performance, and sustainability.
-                    </p>
-                    <p className="text-center py-3 font-medium text-white text-lg lg:text-xl w-full bg-secondary responsive-padding mb-4">
-                        We Remove Everything from Water <span className="font-bold">Except - “Hydrogen & Oxygen”</span>
-                    </p>
-                    <img className="w-full flex lg:hidden flex-col items-center justify-center" src="/waterflow/flow.png" />
+
+                    {/* Bottom Pipeline Section */}
+                    <div className="relative w-full -mt-32">
+                        {/* Mobile Pipeline */}
+                        <img
+                            src="/waterflow/flow.png"
+                            alt="Water Treatment Process"
+                            className="w-full block lg:hidden"
+                        />
+
+                        {/* Desktop Pipeline */}
+                        <div className="hidden lg:block w-full">
+                            <img
+                                src="/waterflow/flow.png"
+                                alt="Water Treatment Process"
+                                className="w-full"
+                            />
+                        </div>
+                    </div>
                 </div>
-
-                <img className="w-full hidden lg:flex fixed bottom-0 flex-col items-center justify-center" src="/waterflow/flow.png" />
-
-                {/* <WaterflowComponent /> */}
-                {/* <ImageCarousalHome /> */}
-
             </div>
 
             <div className="flex w-full gap-10 mx-auto bg-white responsive-padding rounded shadow-md relative justify-center">
