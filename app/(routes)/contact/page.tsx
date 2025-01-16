@@ -45,7 +45,7 @@ export default function ContactPage() {
                         </p>
                     </div>
                     {/* <div className="w-full">
-                        <img src="/ioniclogo.png" alt="" className="object-contain w-full p-16 rounded-lg" />
+                        <img src="/logo/ionic_logo.gif" alt="" className="object-contain w-full p-16 rounded-lg" />
                         <p className="w-full text-center mt-2 text-sm">Image showing location of metro station and office</p>
                     </div> */}
                 </div>

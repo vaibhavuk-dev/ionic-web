@@ -139,7 +139,7 @@ export default function NavBar({ shouldWhite = false }: { shouldWhite?: boolean 
         >
           <Link href={"/"}>
             <img
-              src={`${isWhite ? "/ioniclogo.png" : "/ioniclogo_white.png"}`}
+              src={`${isWhite ? "/logo/ionic_logo.gif" : "/logo/ionic_logo_white.gif"}`}
               className="h-20"
               onMouseEnter={() => setSelectedMenu("")}
             />
@@ -182,7 +182,7 @@ export default function NavBar({ shouldWhite = false }: { shouldWhite?: boolean 
             <Menu size={24} className={`cursor-pointer ${isWhite ? "text-textcolor" : "text-white"} `} onClick={() => setIsSideBarActive(true)} />
             <Link href={"/"}>
               <img
-                src={`${isWhite ? "/ioniclogo.png" : "/ioniclogo_white.png"}`}
+                src={`${isWhite ? "/logo/ionic_logo.gif" : "/logo/ionic_logo_white.gif"}`}
                 className="h-14 w-auto"
                 onMouseEnter={() => setSelectedMenu("")}
               />
