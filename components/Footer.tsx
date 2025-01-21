@@ -54,6 +54,9 @@ const Footer = () => {
 
       <hr></hr>
       <div className='text-center pt-5 text-gray-400'>Ionic Engineering Pvt. Ltd. &copy; All Rights Reserved 2025</div>
+      <div className='text-center pt-1 text-gray-400'>(An ISO 9001:2015 Certified Company)</div>
+      
+
     </footer>
   );
 };
