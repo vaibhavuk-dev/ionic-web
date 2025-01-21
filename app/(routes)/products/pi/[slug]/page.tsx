@@ -12,7 +12,7 @@ export default async function ProductsPage({
 }) {
 
   // Ensure params are awaited properly
-  const { slug } = await Promise.resolve(params); // Await if `params` is potentially async
+  const { slug } = await Promise.resolve(params); // Await if `params` is potentially async 
 
   const query = `
  *[_type == "pi_products" && slug.current == $slug][0]{
