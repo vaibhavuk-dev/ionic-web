@@ -9,8 +9,9 @@ import { Menu, X } from "lucide-react";
 import { products } from "@/utils/const";
 import { productDataType } from "@/utils/types";
 import MaintenanceBanner from "./MaintenanceBanner";
+import { sanityClient } from "@/lib/sanity";
 
-export default function NavBar({ shouldWhite = false }: { shouldWhite?: boolean }) {
+export default function NavBar({ fetchedProducts, shouldWhite = false }: { fetchedProducts: any, shouldWhite?: boolean }) {
 
   const [isScrolled, setIsScrolled] = useState(false);
   const [selectedMenu, setSelectedMenu] = useState("");
@@ -25,7 +26,7 @@ export default function NavBar({ shouldWhite = false }: { shouldWhite?: boolean 
   const isWhite = shouldWhite || pathname == "/";
 
   useEffect(() => {
-    const handleScroll = () => {
+    const handleScroll = async () => {
       const scrollY = window.scrollY;
       const threshold1 = 10;
       setIsScrolled(scrollY > threshold1);
@@ -35,99 +36,59 @@ export default function NavBar({ shouldWhite = false }: { shouldWhite?: boolean 
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
+
   }, []);
 
   const navItems = [
     { label: "About us", route: "/about" },
     { label: "Products", route: "/products" },
     { label: "Services", route: "/services" },
-    // { label: "News & Blogs" },
     { label: "Gallery", route: "/gallery" },
     { label: "Contact us", route: "/contact" },
   ];
 
-  const dropdownContent: { [key: string]: { label: string; }[] } = {
-    Products: [
-      { label: "Water Treatment" },
-      // { label: "Industrial Waste Water Treatment" },
-      // { label: "Pi Products" },
-      // { label: "Pulsation Dampeners" },
-      // { label: "HIDRACAR For Industry" },
-      // { label: "HIDRACAR For Agriculture" },
-    ],
+  const productItems: { [key: string]: { src: string; label: string; href: string }[] } = {};
+
+  (fetchedProducts || [])?.forEach((product: any) => {
+    const categoryTitle = product.category?.title || "Uncategorized";
+    if (!productItems[categoryTitle]) {
+      productItems[categoryTitle] = [];
+    }
+    productItems[categoryTitle].push({
+      src: "/water_drop.svg",
+      label: product.name,
+      href: `/products/pi/${product?.slug?.current}`,
+    });
+  });
+
+  // Manually add categories and products
+  const manuallyAddedProducts = {
+    "Water Treatment": products?.filter((product: productDataType) => product?.category === "Water Treatment")?.map((product: productDataType) => ({
+      src: "/water_drop.svg",
+      label: product?.name || "Unnamed Product",  // Provide a fallback string if name is undefined
+      href: `/products/${product?.slug}`
+    }))
+    // Add other manual categories here
+  };
+
+  Object.entries(manuallyAddedProducts).forEach(([category, products]) => {
+    if (!productItems[category]) {
+      productItems[category] = [];
+    }
+    productItems[category].push(...products);
+  });
+
+  // Create dropdownContent dynamically
+  const dropdownContent = {
+    Products: Object.keys(productItems).map((category) => ({ label: category })),
     Services: [
-      { "label": "Consulting" },
-      { "label": "Maintenance" },
-      { "label": "Installation" },
+      { label: "Consulting" },
+      { label: "Maintenance" },
+      { label: "Installation" },
     ],
   };
 
-  const waterTreatmentProducts = products?.filter((product: productDataType) => product?.category === "Water Treatment")?.map((product: productDataType) => ({
-    src: "/water_drop.svg",
-    label: product?.name || "Unnamed Product",  // Provide a fallback string if name is undefined
-    href: `/products/${product?.slug}`
-  }));
-
-  const productItems: { [key: string]: { src: string; label: string; href: string }[] } = {
-    "Water Treatment": waterTreatmentProducts,
-    "Industrial Waste Water Treatment": [
-      { src: "/water_drop.svg", label: "Eutectic Freeze Crystallization", href: "/products/1" },
-      { src: "/water_drop.svg", label: "Advanced Photochemical Oxidation", href: "/products/1" },
-      { src: "/water_drop.svg", label: "Water Harvester Zero liquid Discharge", href: "/products/1" },
-    ],
-    "Pi Products": [
-      { src: "/water_drop.svg", label: "Total Alkalinity - AlkaSense®", href: "/products/1" },
-      { src: "/water_drop.svg", label: "Dissolved Air Flotation (DAF) - DAFSense", href: "/products/1" },
-      { src: "/water_drop.svg", label: "Charge Analyser - ChargeSense", href: "/products/1" },
-      { src: "/water_drop.svg", label: "Coagulation Controller - CoagSense", href: "/products/1" },
-      { src: "/water_drop.svg", label: "Conductivity Meter - ConductiSense", href: "/products/1" },
-      { src: "/water_drop.svg", label: "Chlorine Dioxide Analyser – DioSense", href: "/products/1" },
-      { src: "/water_drop.svg", label: "High Range Chlorine Dioxide Analyser - DioSense HR", href: "/products/1" },
-      { src: "/water_drop.svg", label: "UV254 Analyser – UV254Sense Probe", href: "/products/1" },
-      { src: "/water_drop.svg", label: "Turbidity Meter - TurbSense®", href: "/products/1" },
-      { src: "/water_drop.svg", label: "Dissolved Oxygen Meter - OxySense", href: "/products/1" },
-      { src: "/water_drop.svg", label: "UV254 Analyser - UV254Sense", href: "/products/1" },
-      { src: "/water_drop.svg", label: "Automatic Sensor Cleaning System", href: "/products/1" },
-      { src: "/water_drop.svg", label: "Remote Access - Control InSite - CRIUS®4.0", href: "/products/1" },
-      { src: "/water_drop.svg", label: "Streaming Current Monitor - StreamerSense", href: "/products/1" },
-      { src: "/water_drop.svg", label: "Residual Chlorine Monitoring - HaloSense", href: "/products/1" },
-      { src: "/water_drop.svg", label: "Residual Chlorine Monitoring - DPDSense", href: "/products/1" },
-      { src: "/water_drop.svg", label: "Residual Chlorine Monitoring - Chloribrid", href: "/products/1" },
-      { src: "/water_drop.svg", label: "Chlorine in Sodium Hypochlorite - HypoSense", href: "/products/1" },
-      { src: "/water_drop.svg", label: "Laboratory Charge Analyser - LabSense", href: "/products/1" },
-      { src: "/water_drop.svg", label: "Fluoride Monitor - FluoriSense", href: "/products/1" },
-      { src: "/water_drop.svg", label: "Particle Counter - ParticleSense", href: "/products/1" },
-      { src: "/water_drop.svg", label: "Peracetic Acid Analyser - PeraSense", href: "/products/1" },
-      { src: "/water_drop.svg", label: "Hydrogen Peroxide Analyser - PeroxiSense", href: "/products/1" },
-      { src: "/water_drop.svg", label: "pH Meter - pHSense", href: "/products/1" },
-      { src: "/water_drop.svg", label: "Suspended Solids Monitor - SoliSense®", href: "/products/1" },
-      { src: "/water_drop.svg", label: "Ozone Analyser - OzoSense", href: "/products/1" },
-      { src: "/water_drop.svg", label: "ORP Monitor - ORPSense", href: "/products/1" },
-    ],
-    "Pulsation Dampeners": [
-      { "src": "/water_drop.svg", "label": "Bladder pulsation damper", "href": "/products/bladder-pulsation-damper" },
-      { "src": "/water_drop.svg", "label": "Bellows pulsation damper", "href": "/products/bellows-pulsation-damper" },
-      { "src": "/water_drop.svg", "label": "Membrane pulsation damper", "href": "/products/membrane-pulsation-damper" },
-      { "src": "/water_drop.svg", "label": "In-line pulsation damper", "href": "/products/in-line-pulsation-damper" },
-      { "src": "/water_drop.svg", "label": "Accessories", "href": "/products/accessories" },
-      { "src": "/water_drop.svg", "label": "Parts and spares", "href": "/products/parts-and-spares" }
-    ],
-    "HIDRACAR For Industry": [
-      { "src": "/water_drop.svg", "label": "Oleo-pneumatic accumulators", "href": "/products/oleo-pneumatic-accumulators" },
-      { "src": "/water_drop.svg", "label": "Nitrogen gas spring", "href": "/products/nitrogen-gas-spring" },
-      { "src": "/water_drop.svg", "label": "Oleo-pneumatic shockabsorber", "href": "/products/oleo-pneumatic-shockabsorber" },
-      { "src": "/water_drop.svg", "label": "Hydrostatic dynamometers", "href": "/products/hydrostatic-dynamometers" },
-      { "src": "/water_drop.svg", "label": "Tensioners for conveyor belts", "href": "/products/tensioners-for-conveyor-belts" },
-      { "src": "/water_drop.svg", "label": "Air storage tank", "href": "/products/air-storage-tank" },
-      { "src": "/water_drop.svg", "label": "Starters for diesel engines", "href": "/products/starters-for-diesel-engines" }
-    ],
-    "HIDRACAR For Agriculture": [
-      { "src": "/water_drop.svg", "label": "Accumulators for agriculture", "href": "/products/accumulators-for-agriculture" },
-      { "src": "/water_drop.svg", "label": "Oleo-pneumatic suspension cylinders", "href": "/products/oleo-pneumatic-suspension-cylinders" },
-      { "src": "/water_drop.svg", "label": "Integrated oleo-pneumatic suspension cylinders", "href": "/products/integrated-oleo-pneumatic-suspension-cylinders" },
-      { "src": "/water_drop.svg", "label": "Ole-pneumatic springs", "href": "/products/ole-pneumatic-springs" }
-    ]
-  };
+  console.log(navItems, dropdownContent, productItems, manuallyAddedProducts);
 
   return (
 

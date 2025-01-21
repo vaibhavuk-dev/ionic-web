@@ -25,6 +25,9 @@ body {
   }
 }
 
+.sectiongap {
+  @apply mt-10 md:mt-12
+}
 
 html {
   p {

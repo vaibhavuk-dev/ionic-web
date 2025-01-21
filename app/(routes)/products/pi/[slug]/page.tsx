@@ -1,42 +1,71 @@
-"use client"
-
-import { products } from "@/utils/const";
 import Breadcrumb from "@/components/homepage/Breadcrumb";
 import ContactForm from "@/components/homepage/ContactForm";
-import ProductPage from "@/components/products/ProductPage";
-import { useState } from "react";
-import { productDataType } from "@/utils/types";
-import { notFound } from "next/navigation";
 import PIProductPage from "@/components/products/PIProductPage";
+import { sanityClient } from "@/lib/sanity";
+import { notFound } from "next/navigation";
 
-export default function ProductsPage({
-    params,
-  }: {
-    params: any;
-  }) {
 
-    // const productData : productDataType = products?.find(p => p.slug === params.slug);
+export default async function ProductsPage({
+  params,
+}: {
+  params: any
+}) {
 
-    // if (!productData) notFound();
+  // Ensure params are awaited properly
+  const { slug } = await Promise.resolve(params); // Await if `params` is potentially async
 
-    const [model, setModel] = useState("")
+  const query = `
+ *[_type == "pi_products" && slug.current == $slug][0]{
+   name,
+   shortDescription,
+   slug,
+   order,
+   mainImage{
+     asset->{
+       _id,
+       url
+     },
+     alt
+   },
+   "category": category->{
+     title,
+     slug,
+     order
+   },
+   sections[]{
+     title,
+     content
+   }
+ }`;
+
+  try {
+    const productData = await sanityClient.fetch(query, { slug });
+
+    if (!productData) {
+      return notFound();
+    }
+
 
     return (
-        <>
-            <Breadcrumb />
+      <>
+        <Breadcrumb />
 
-            <div className="w-full reponsive-padding">
-            <PIProductPage/>
-            </div>
+        <div className="w-full reponsive-padding">
+          <PIProductPage productData={productData} />
+        </div>
 
-           <div className="flex flex-col w-full py-16 gap-16 mx-auto bg-white responsive-padding rounded shadow-md relative">
-           
-                           {/* <ProductsGrid type="carousel" products={products}/> */}
-                           <hr></hr>
-                           <ContactForm />
-           
-                       </div>
+        <div className="flex flex-col w-full py-16 gap-16 mx-auto bg-white responsive-padding rounded shadow-md relative">
 
-        </>
+          {/* <ProductsGrid type="carousel" products={products}/> */}
+          <hr></hr>
+          <ContactForm />
+
+        </div>
+
+      </>
     )
+  } catch (error) {
+    console.error('Error fetching product data:', error);
+    return notFound();
+  }
 }
