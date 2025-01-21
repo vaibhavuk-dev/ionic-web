@@ -25,15 +25,16 @@ export default async function RootLayout({
   // Fetch data from Sanity
 const fetchedProducts = await sanityClient.fetch(`
   *[_type == "pi_products"]{
-    name,
+  name,
+  slug,
+  order,
+  "nameLength": string::length(name),
+  "category": category->{
+    title,
     slug,
-    order,
-    "category": category->{
-      title,
-      slug,
-      order
-    }
-  } | order(category.order asc) | order(order asc)
+    order
+  },
+} | order(category.order asc, nameLength asc)
 `);
 
   return (

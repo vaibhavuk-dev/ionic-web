@@ -62,14 +62,19 @@ export default function NavBar({ fetchedProducts, shouldWhite = false }: { fetch
   });
 
   // Manually add categories and products
-  const manuallyAddedProducts = {
-    "Water Treatment": products?.filter((product: productDataType) => product?.category === "Water Treatment")?.map((product: productDataType) => ({
+const manuallyAddedProducts = {
+  "Water Treatment": products
+    ?.filter((product: productDataType) => product?.category === "Water Treatment")
+    ?.map((product: productDataType) => ({
       src: "/water_drop.svg",
-      label: product?.name || "Unnamed Product",  // Provide a fallback string if name is undefined
+      label: product?.name || "Unnamed Product", // Provide a fallback string if name is undefined
       href: `/products/${product?.slug}`
     }))
-    // Add other manual categories here
-  };
+    ?.sort((a, b) => (a.label.length || 0) - (b.label.length || 0)), // Sort by the length of the product name
+    
+  // Add other manual categories here
+};
+
 
   Object.entries(manuallyAddedProducts).forEach(([category, products]) => {
     if (!productItems[category]) {
