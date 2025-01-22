@@ -12,8 +12,8 @@ const montserrat = Montserrat({ subsets: ["latin"] });
 const gtmID = process.env.GTM_CONTAINER_ID || "";
 
 export const metadata: Metadata = {
-  title: "Ionic Engineering",
-  description: "",
+  title: "Ionic Engineering Technology Pvt Ltd",
+  description: "Clear solution for troubled waters",
 };
 
 export default async function RootLayout({
