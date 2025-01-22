@@ -1,4 +1,6 @@
-import React from "react";
+"use client"
+import React, { useState } from "react";
+import ContactForm from "../homepage/ContactForm";
 
 const BrochureDownloads = () => {
   // Example brochure data (You can replace this with your actual data)
@@ -23,9 +25,11 @@ const BrochureDownloads = () => {
     },
   ];
 
-  return (
-    <div className="max-w-7xl mx-auto px-6 py-12">
+  const [showForm, setShowForm] = useState(false);
 
+  return (
+    <>
+    <div className="max-w-7xl mx-auto px-6 py-12">
       <div className="space-y-12">
         {brochureCategories.map((category) => (
           <div key={category.category}>
@@ -40,8 +44,8 @@ const BrochureDownloads = () => {
                   <img className="h-64 w-fit rounded-xl" src={`/brochuresp/thumbnails/${brochure.thumbnail}`} />
                   <h3 className="text-center text-xl font-medium text-text-color mb-2">{brochure.name}</h3>
                   <a
-                    href={`/brochuresp/pdfs/${brochure.pdf}`}
-                    download
+                    // href={`/brochuresp/pdfs/${brochure.pdf}`}
+                    href={`#contact-form`}
                   >
                     Download Brochure PDF
                   </a>
@@ -52,6 +56,11 @@ const BrochureDownloads = () => {
         ))}
       </div>
     </div>
+    <div className="flex flex-col w-full py-16 gap-16 mx-auto bg-white responsive-padding rounded shadow-md relative">
+                    <ContactForm />
+                </div>
+    
+    </>
   );
 };
 
