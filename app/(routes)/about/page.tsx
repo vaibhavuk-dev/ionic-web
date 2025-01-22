@@ -48,7 +48,7 @@ export default function AboutPage() {
                 </div>
             </div>
 
-            <div className="flex flex-col w-full gap-10 my-10 bg-white responsive-padding rounded relative">
+            <div className="flex flex-col w-full gap-10 my-10 bg-white responsive-padding rounded relative justify-center">
 
                 <div className="flex justify-center">
                     <ImageCarousal images={carouselImages}/>
@@ -61,7 +61,7 @@ export default function AboutPage() {
                 </div>
             </div>
 
-            <div className="flex w-full gap-10 mx-auto bg-blueb-gradient responsive-padding rounded relative">
+            <div className="flex w-full gap-10 mx-auto bg-blueb-gradient responsive-padding rounded relative justify-center">
 
                 <img
                     className="absolute inset-0 w-full h-full object-cover img-gradient-opacity "
@@ -103,7 +103,7 @@ export default function AboutPage() {
                 </section>
             </div>
 
-            <div className="flex w-full gap-10 mx-auto bg-white responsive-padding rounded relative">
+            <div className="flex w-full gap-10 mx-auto bg-white responsive-padding rounded relative justify-center">
 
                 <section className="bg-white my-16">
                     <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
@@ -141,7 +141,7 @@ export default function AboutPage() {
                 </section>
             </div>
 
-            <div className="flex w-full gap-10 mx-auto bg-blueb-gradient responsive-padding rounded relative">
+            <div className="flex w-full gap-10 mx-auto bg-blueb-gradient responsive-padding rounded relative justify-center">
 
                 <img
                     className="absolute inset-0 w-full h-full object-cover img-gradient-opacity "
@@ -181,7 +181,7 @@ export default function AboutPage() {
                 </section>
             </div>
 
-            <div className="flex w-full gap-10 mx-auto bg-white responsive-padding rounded relative">
+            <div className="flex w-full gap-10 mx-auto bg-white responsive-padding rounded relative justify-center">
 
                 <section className="bg-white my-16">
                     <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
