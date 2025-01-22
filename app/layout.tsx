@@ -39,14 +39,14 @@ const fetchedProducts = await sanityClient.fetch(`
 
   return (
     <html lang="en">
-      {/* <GoogleTagManager gtmId={gtmID} /> */}
-      {/* <Script
+      <GoogleTagManager gtmId={gtmID} />
+      <Script
           id="gtm-script"
           src={`https://www.googletagmanager.com/gtag/js?id=${gtmID}`}
           strategy="beforeInteractive" // Ensures GTM loads early
-        /> */}
+        />
       <body className={montserrat.className}>
-        {/* <GoogleTagManager gtmId={gtmID} /> */}
+        <GoogleTagManager gtmId={gtmID} />
         <NavBar fetchedProducts={fetchedProducts}/>
         <main>{children}</main>
         <Footer />
