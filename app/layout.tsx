@@ -13,7 +13,7 @@ const gtmID = process.env.GTM_CONTAINER_ID || "";
 
 export const metadata: Metadata = {
   title: "Ionic Engineering Technology Pvt Ltd",
-  description: "Clear solution for troubled waters",
+  description: "Advanced Engineering Solutions for Water Treatment & Chlorine Dioxide Genrators",
 };
 
 export default async function RootLayout({
