@@ -19,16 +19,11 @@ body {
   }
 }
 
-p {
-  text-align: justify;
-  text-align-last: left;
-}
-
-/* @layer base {
+@layer base {
   p {
     @apply text-justify;
   }
-} */
+}
 
 .sectiongap {
   @apply mt-10 md:mt-12
