@@ -29,10 +29,10 @@ export default function ContactPage() {
                 </div>
             </div>
 
-            <div className="mt-12 responsive-padding">
-                <div className="container lg:flex gap-10">
+            <div className="mt-12 mx-auto responsive-padding">
+                <div className="container lg:flex gap-10 mx-auto">
                     <div className="w-full">
-                        <p className="text-2xl font-semibold text-blueb-700">How to Reach Us</p>
+                        <p className="text-2xl lg:text-4xl font-bold text-blueb-700">How to Reach Us</p>
                         <p className="text-md w-fit  mt-3 text-justify">
                             <span className="font-semibold">By Metro:</span><br />
                             The nearest metro station is PCMC Metro Station, located just 500 meters away.

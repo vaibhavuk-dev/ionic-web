@@ -220,17 +220,17 @@ export default function AboutPage() {
             </div>
 
 
-            <div className="flex flex-col pt-5 pb-10 responsive-padding gap-5 items-center justify-center">
+            <div className="flex w-full gap-10 mx-auto bg-white responsive-padding rounded relative justify-center">
 
-                <div className="w-full flex flex-col lg:flex-row gap-10 mt-10">
-                    <div className="w-full border border-blueb-500 p-5 rounded-lg justify-start items-center flex flex-col gap-3">
+                <div className="w-full flex flex-col lg:flex-row gap-10 mt-10 mx-auto">
+                    <div className="w-full border border-blueb-500 p-5 rounded-lg justify-start items-center flex flex-col gap-3 mx-auto">
                         <p className="text-2xl font-bold text-blueb-700 uppercase">OUR MISSION</p>
                         <p className="text-lmd font-bold uppercase">Mission – To Treat Water &quot;Differently&quot;</p>
                         <p className="text-center">IONIC will be a performance oriented and customer centric company to present globally.</p>
                         <p className="text-center">Increasing our footprint and market share Year On Year (YOY) in the markets we operate.</p>
                         <p className="text-center">Be one of the best solutions providers with innovative solutions which will be different, stimulating and productive, and one that can significantly reduce technical risks and costs, ensuring maximum returns to our customers and shareholders.</p>
                     </div>
-                    <div className="w-full border border-blueb-500 p-5 rounded-lg justify-start items-center flex flex-col gap-3">
+                    <div className="w-full border border-blueb-500 p-5 rounded-lg justify-start items-center flex flex-col gap-3 mx-auto">
                         <p className="text-2xl font-bold text-green-700 uppercase">OUR VISION</p>
                         <p className="text-lmd font-bold uppercase">Vision – Helping Create a Livable Planet</p>
                         <p className="text-center">To Supply and implement solutions which meet and exceed the needs and expectations of our clients by continuously providing them the solutions to reduce their water footprint and life cycle cost of water and wastewater treatment by research and development(R&D) on new processes, technologies and products.</p>
@@ -240,11 +240,6 @@ export default function AboutPage() {
                 </div>
 
             </div>
-
-            <div style={{ backgroundImage: `url("/about/water-drop-bg.jpeg")` }}>
-
-            </div>
-
 
             {/* <GlobalPresence /> */}
 
