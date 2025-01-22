@@ -49,9 +49,9 @@ const PIProductPage = ({ productData }: { productData: any }) => {
                 <a href='#contact-form' className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
                   Get Quote
                 </a>
-                <a href='/brochure' className="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50 transition-colors">
+                {/* <a href='/brochure' className="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50 transition-colors">
                   Download Brochure
-                </a>
+                </a> */}
               </div>
             </div>
           </div>
