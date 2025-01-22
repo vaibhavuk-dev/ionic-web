@@ -51,7 +51,7 @@ export default function VisionMissionSection() {
         <div className="container mx-auto ">
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
           {features.map((feature, index) => (
-            <div key={index} className="flex flex-col items-center text-center border p-4 rounded-lg border-blueb-300">
+            <div key={index} className="flex flex-col items-center text-center border p-4 rounded-lg border-blueb-300 transition-transform duration-300 hover:scale-105">
               <div className="flex items-center justify-center h-20 w-20 rounded-full bg-greeng-50 text-greeng-600 mb-4">
                 {feature.icon}
               </div>

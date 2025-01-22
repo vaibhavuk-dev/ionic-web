@@ -13,7 +13,7 @@ export default function Breadcrumb() {
     text.charAt(0).toUpperCase() + text.slice(1).toLowerCase();
 
   return (
-    <nav className="flex items-center text-sm text-gray-600 responsive-padding py-4" aria-label="breadcrumb">
+    <nav className="flex items-center text-sm text-gray-600  max-w-7xl mx-auto mt-5 py-4" aria-label="breadcrumb">
       <ul className="flex space-x-2">
         {/* Home Link */}
         <li>

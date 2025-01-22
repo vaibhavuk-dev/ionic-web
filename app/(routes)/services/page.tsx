@@ -100,98 +100,102 @@ const ServicesPage = () => {
 
     return (
         <>
-        <div
-        className="flex items-center"
-        style={{
-            backgroundImage: "url('/banner/bridge-banner.jpg')",
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-        }}
-    >
-        <div className="flex flex-col justify-center bg-secondary w-full h-full bg-opacity-90 text-center responsive-padding py-4 lg:py-8">
-            <h1 className="text-3xl lg:text-4xl font-bold text-white drop-shadow-lg">Our Services</h1>
-            <h2 className="text-md lg:text-xl font-light text-white drop-shadow-lg mt-2">
-            Comprehensive water treatment solutions tailored to your needs
-            </h2>
-        </div>
-    </div>
-        <div className="max-w-7xl mx-auto px-4 py-12">
-            {/* Hero Section */}
-            {/* <div className="text-center mb-16">
+            <div
+                className="flex items-center"
+                style={{
+                    backgroundImage: "url('/banner/bridge-banner.jpg')",
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                }}
+            >
+                <div className="flex flex-col justify-center bg-secondary w-full h-full bg-opacity-90 text-center responsive-padding py-4 lg:py-8">
+                    <h1 className="text-3xl lg:text-4xl font-bold text-white drop-shadow-lg">Our Services</h1>
+                    <h2 className="text-md lg:text-xl font-light text-white drop-shadow-lg mt-2">
+                        Comprehensive water treatment solutions tailored to your needs
+                    </h2>
+                </div>
+            </div>
+            <div className="max-w-7xl mx-auto px-4 py-12">
+                {/* Hero Section */}
+                {/* <div className="text-center mb-16">
                 <h1 className="text-4xl font-bold text-blueb-950 mb-4">Our Services</h1>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                     Comprehensive water treatment solutions tailored to your needs
                 </p>
             </div> */}
 
-            {/* Services Grid */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {services.map((service) => {
-                    const Icon = service.icon;
-                    return (
-                        <div
-                            key={service.id}
-                            className="relative cursor-pointer group bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 border border-blueb-950"
-                        >
-                            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blueb-500 to-blueb-600 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+                {/* Services Grid */}
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {services.map((service) => {
+                        const Icon = service.icon;
+                        return (
+                            <div
+                                key={service.id}
+                                className="relative cursor-pointer group bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 border border-blueb-950"
+                            >
+                                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blueb-500 to-blueb-600 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
 
-                            <div className="p-8">
-                                {/* Icon */}
-                                <div className="h-14 w-14 bg-blue-50 rounded-lg p-3 mb-6 group-hover:bg-blue-600 transition-colors duration-300">
-                                    <Icon className="h-full w-full text-blue-600 group-hover:text-white transition-colors duration-300" />
+                                <div className="p-8">
+                                    {/* Icon */}
+                                    <div className="h-14 w-14 bg-blue-50 rounded-lg p-3 mb-6 group-hover:bg-blue-600 transition-colors duration-300">
+                                        <Icon className="h-full w-full text-blue-600 group-hover:text-white transition-colors duration-300" />
+                                    </div>
+
+                                    {/* Content */}
+                                    <h3 className="text-2xl font-semibold text-blueb-950 mb-2">
+                                        {service.title}
+                                    </h3>
+                                    <p className="text-blue-600 font-medium mb-4 italic">
+                                        "{service.tagline}"
+                                    </p>
+                                    <p className="text-gray-600 mb-6">
+                                        {service.description}
+                                    </p>
+
+                                    {/* Features */}
+                                    <ul className="space-y-2 mb-12">
+                                        {service.features.map((feature, index) => (
+                                            <li key={index} className="flex items-center text-gray-600">
+                                                <ChevronRight className="w-4 h-4 text-blue-600 mr-2" />
+                                                {feature}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                    
+                                    {/* CTA Button */}
+                                    <div className="mt-auto absolute bottom-0 my-6">
+                                        <button className="inline-flex items-center text-blueb-600 font-semibold group-hover:text-blueb-800 transition-colors duration-300">
+                                            Learn More
+                                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                            </svg>
+                                        </button>
+                                    </div>
                                 </div>
-
-                                {/* Content */}
-                                <h3 className="text-2xl font-semibold text-blueb-950 mb-2">
-                                    {service.title}
-                                </h3>
-                                <p className="text-blue-600 font-medium mb-4 italic">
-                                    "{service.tagline}"
-                                </p>
-                                <p className="text-gray-600 mb-6">
-                                    {service.description}
-                                </p>
-
-                                {/* Features */}
-                                <ul className="space-y-2 mb-6">
-                                    {service.features.map((feature, index) => (
-                                        <li key={index} className="flex items-center text-gray-600">
-                                            <ChevronRight className="w-4 h-4 text-blue-600 mr-2" />
-                                            {feature}
-                                        </li>
-                                    ))}
-                                </ul>
-
-                                {/* CTA Button */}
-                                {/* <button className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-800 transition-colors duration-300">
-                                    Learn More
-                                    <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
-                                </button> */}
                             </div>
-                        </div>
-                    );
-                })}
-            </div>
+                        );
+                    })}
+                </div>
 
-            {/* Contact CTA */}
-            <div className="mt-16 text-center">
-                <div className="bg-blue-50 rounded-xl p-8">
-                    <h2 className="text-2xl font-semibold text-blueb-950 mb-4">
-                        Need Help Choosing the Right Service?
-                    </h2>
-                    <p className="text-gray-600 mb-6 text-center">
-                        Our experts are here to understand your requirements and recommend the best solutions.
-                    </p>
-                    <a href="#contact-form" className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-300">
-                        Contact Us Today
-                    </a>
+                {/* Contact CTA */}
+                <div className="mt-16 text-center">
+                    <div className="bg-blue-50 rounded-xl p-8">
+                        <h2 className="text-2xl font-semibold text-blueb-950 mb-4">
+                            Need Help Choosing the Right Service?
+                        </h2>
+                        <p className="text-gray-600 mb-6 text-center">
+                            Our experts are here to understand your requirements and recommend the best solutions.
+                        </p>
+                        <a href="#contact-form" className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-300">
+                            Contact Us Today
+                        </a>
+                    </div>
+                </div>
+
+                <div className="flex flex-col w-full py-16 gap-16 mx-auto rounded relative">
+                    <ContactForm />
                 </div>
             </div>
-
-            <div className="flex flex-col w-full py-16 gap-16 mx-auto rounded relative">
-                <ContactForm />
-            </div>
-        </div>
         </>
     );
 };

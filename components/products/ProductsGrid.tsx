@@ -17,12 +17,12 @@ export default function ProductSection({ products, type = "grid" }: { products: 
   const router = useRouter();
 
   return (
-    <div className="">
+    <div className="max-w-7xl mx-auto">
 
       {products.length == 0 && <p>No product match found.</p>}
 
       {type === "grid" && 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mx-auto">
         {products.map((product: any, index: number) => (
           <div
             key={index}

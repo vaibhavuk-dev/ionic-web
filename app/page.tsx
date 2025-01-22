@@ -17,7 +17,7 @@ export default async function Home() {
 
             <StickySidebar />
 
-            <div className="relative w-full h-screen overflow-hidden">
+            <div className="relative w-full max-h-screen overflow-hidden">
                 {/* Video Background */}
                 <video
                     className="absolute inset-0 w-full h-full object-cover"
@@ -48,19 +48,19 @@ export default async function Home() {
 
                             {/* Poem */}
                             <div className="space-y-3">
-                                <p className="font-light text-white text-base md:text-lg lg:text-xl text-center">
+                                <p className="font-light text-white text-base md:text-lg lg:text-xl text-center italic">
                                     IONIC is our name, Clean water is our flame.
                                 </p>
-                                <p className="font-light text-white text-base md:text-lg lg:text-xl text-center">
+                                <p className="font-light text-white text-base md:text-lg lg:text-xl text-center italic">
                                     We remove everything from water, Except - Hydrogen and oxygen,
                                 </p>
-                                <p className="font-light text-white text-base md:text-lg lg:text-xl text-center">
+                                <p className="font-light text-white text-base md:text-lg lg:text-xl text-center italic">
                                     With every drop we treat, We make it even pure
                                 </p>
-                                <p className="font-light text-white text-base md:text-lg lg:text-xl text-center">
+                                <p className="font-light text-white text-base md:text-lg lg:text-xl text-center italic">
                                     As we build a sustainable future We help create a livable Earth!
                                 </p>
-                                <p className="font-light text-white text-base md:text-lg lg:text-xl text-center">
+                                <p className="font-light text-white text-base md:text-lg lg:text-xl text-center italic">
                                     So here's to IONIC A beacon of hope, Helping humanity to cope.
                                 </p>
                             </div>
@@ -76,7 +76,7 @@ export default async function Home() {
                     </div>
 
                     {/* Bottom Pipeline Section */}
-                    <div className="relative w-full -mt-32">
+                    <div className="relative w-full mt-4 max-w-7xl mx-auto items-center justify-center">
                         {/* Mobile Pipeline */}
                         <img
                             src="/waterflow/flow.png"

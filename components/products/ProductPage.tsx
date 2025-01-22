@@ -12,7 +12,7 @@ import { productDataType } from '@/utils/types';
 
 export function ProductPage({productData}: {productData: productDataType}) {
   return (
-    <div className="py-8 responsive-padding">
+    <div className="py-8 max-w-7xl mx-auto">
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-blue-50 to-blue-100 rounded-xl p-8 mb-8">
         <h1 className="text-3xl font-bold text-gray-900 mb-2">

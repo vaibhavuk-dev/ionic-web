@@ -156,7 +156,7 @@ export default function ContactForm() {
                 {/* Contact Methods */}
                 <div className='flex flex-col h-full overflow-hidden items-center justify-center'>
                     <div className='w-full h-1/2 flex flex-col gap-12'>
-                        <div className="w-full h-1/2 grid grid-cols-1 gap-12">
+                        <div className="w-full h-1/2 flex flex-col md:grid grid-cols-2 gap-12">
                             {/* Email */}
                             <div>
                                 <div className="flex items-center mb-4">
@@ -225,7 +225,7 @@ export default function ContactForm() {
                 <div className="w-full lg:w-1/2 bg-primary rounded-2xl px-5 py-3">
 
 
-                    <div className="w-full bg-primary rounded-2xl p-8">
+                    <div className="w-full bg-primary rounded-2xl p-2 md:p-8">
                         <div className="flex mb-6 space-x-4">
                             <button
                                 onClick={() => {

@@ -5,7 +5,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import BlogsCarousalNavBar from "./BlogsCarousalNavBar";
 import { usePathname } from "next/navigation";
-import { Menu, X } from "lucide-react";
+import { Info, Menu, X } from "lucide-react";
 import { products } from "@/utils/const";
 import { productDataType } from "@/utils/types";
 import MaintenanceBanner from "./MaintenanceBanner";
@@ -25,6 +25,17 @@ export default function NavBar({ fetchedProducts, shouldWhite = false }: { fetch
 
   const isWhite = shouldWhite || pathname == "/";
 
+  const blogData = [
+    { post_title: "Scientist found new way to treat Waste Water", post_slug: "/blogs/1", post_image: "/blogs/blog1.png" },
+    { post_title: "Why Municipal Wastewater Treatment Is Important?", post_slug: "/blogs/1", post_image: "/blogs/blog4.png" },
+  ];
+
+  const newsData = [
+    { post_title: "Decentralized Wastewater Treatment for a Chinese Village", post_slug: "/news/1", post_image: "/casestudy/cs2.png" },
+    { post_title: "Environment-Friendly Waste Water Treatment | Case Study", post_slug: "/news/1", post_image: "/casestudy/cs3.png" },
+  ];
+
+
   useEffect(() => {
     const handleScroll = async () => {
       const scrollY = window.scrollY;
@@ -40,6 +51,7 @@ export default function NavBar({ fetchedProducts, shouldWhite = false }: { fetch
   }, []);
 
   const navItems = [
+    { label: "Home", route: "/" },
     { label: "About us", route: "/about" },
     { label: "Products", route: "/products" },
     { label: "Services", route: "/services" },
@@ -62,18 +74,18 @@ export default function NavBar({ fetchedProducts, shouldWhite = false }: { fetch
   });
 
   // Manually add categories and products
-const manuallyAddedProducts = {
-  "Water Treatment": products
-    ?.filter((product: productDataType) => product?.category === "Water Treatment")
-    ?.map((product: productDataType) => ({
-      src: "/water_drop.svg",
-      label: product?.name || "Unnamed Product", // Provide a fallback string if name is undefined
-      href: `/products/${product?.slug}`
-    }))
-    ?.sort((a, b) => (a.label.length || 0) - (b.label.length || 0)), // Sort by the length of the product name
-    
-  // Add other manual categories here
-};
+  const manuallyAddedProducts = {
+    "Water Treatment": products
+      ?.filter((product: productDataType) => product?.category === "Water Treatment")
+      ?.map((product: productDataType) => ({
+        src: "/water_drop.svg",
+        label: product?.name || "Unnamed Product", // Provide a fallback string if name is undefined
+        href: `/products/${product?.slug}`
+      }))
+      ?.sort((a, b) => (a.label.length || 0) - (b.label.length || 0)), // Sort by the length of the product name
+
+    // Add other manual categories here
+  };
 
 
   Object.entries(manuallyAddedProducts).forEach(([category, products]) => {
@@ -101,12 +113,12 @@ const manuallyAddedProducts = {
       <MaintenanceBanner />
       <div className={`hidden lg:flex w-full ${isWhite ? "bg-white" : "bg-blueb-gradient"} items-center justify-center`}>
         <div
-          className={`flex items-center w-full justify-between responsive-padding py-4`}
+          className={`flex items-center w-full justify-between py-4 max-w-7xl mx-auto`}
         >
           <Link href={"/"}>
             <img
               src={`${isWhite ? "/logo/ionic_logo.gif" : "/logo/ionic_logo_white.gif"}`}
-              className="h-20"
+              className="h-24"
               onMouseEnter={() => setSelectedMenu("")}
             />
           </Link>
@@ -119,7 +131,7 @@ const manuallyAddedProducts = {
               <Link key={item.label} href={item.route} onClick={() => setSelectedMenu("")}>
                 <p
                   className={`${isWhite ? `text-textcolor` : `text-white`
-                    } text-lg font-medium border-expand mx-5 py-2 cursor-pointer ${isHovered ? '' : 'mouse-leave'} ${pathname?.split("/")?.[1] && item.label.toLowerCase()?.includes(pathname?.split("/")?.[1]) ? 'border-b-2 border-secondary' : ''}`}
+                    } text-lg font-medium border-expand mx-5 py-2 cursor-pointer ${isHovered ? '' : 'mouse-leave'} ${(pathname == item.route) ? 'border-b-2 border-secondary' : ''}`}
                   aria-current="page"
                   onMouseEnter={() => { setSelectedMenu(item.label); setIsHovered(true) }}
                   onMouseLeave={() => setIsHovered(false)}
@@ -189,7 +201,8 @@ const manuallyAddedProducts = {
                 </ul>
                 <Link href="/brochure">
                   <button className="mx-5 my-4 px-2 py-2 text-white rounded bg-secondary border-white hover:bg-opacity-70 text-md font-semibold"
-                    onMouseEnter={() => setSelectedMenu("")}>
+                    onMouseEnter={() => setSelectedMenu("")}
+                    onClick={() => setIsSideBarActive(false)}>
                     Get Brochure
                   </button>
                 </Link>
@@ -211,152 +224,268 @@ const manuallyAddedProducts = {
         selectedMenu && <hr className="bg-gray-300 h-1"></hr>
       }
 
-      {
-        selectedMenu && selectedMenu == "Products" && dropdownContent[selectedMenu] && (
-          <div
-            className="flex bg-white py-10 px-32 shadow-xl basic-transition max-h-[80vh]"
-            onMouseEnter={() => setSelectedMenu(selectedMenu)}
-            onMouseLeave={() => {
-              setSelectedMenu("");
-              setSelectedCategory("");
-            }}
-          >
-            <div className="w-[30%] text-xl flex flex-col gap-3 overflow-y-scroll">
+      {selectedMenu && selectedMenu == "Products" && dropdownContent[selectedMenu] && (
+        <div
+          className="bg-white py-8 basic-transition max-h-[70vh]"
+          onMouseEnter={() => setSelectedMenu(selectedMenu)}
+          onMouseLeave={() => {
+            setSelectedMenu("");
+            setSelectedCategory("");
+          }}
+        >
+          <div className="flex max-w-7xl mx-auto px-6">
+            <div className="w-[30%] text-xl flex flex-col gap-3 pr-5 max-h-[60vh] overflow-y-auto custom-scrollbar">
               {dropdownContent[selectedMenu].map((item) => (
                 <p
                   key={item.label}
-                  className={`flex items-center px-2 w-fit hover:font-semibold cursor-pointer ${selectedCategory === item.label && "font-semibold"}`}
+                  className={`flex items-center px-4 py-2 rounded-md w-fit hover:font-semibold cursor-pointer ${
+                    selectedCategory === item.label ? "font-semibold bg-gray-100" : ""
+                  }`}
                   onMouseEnter={() => setSelectedCategory(item.label)}
                 >
                   {item.label}
-                  {(selectedMenu == "Products" && item.label in productItems) && <img className="w-5 h-5" src="/right-arrow.svg" alt="" />}
+                  {selectedMenu == "Products" && item.label in productItems && (
+                    <img className="w-4 h-4 ml-2" src="/right-arrow.svg" alt="" />
+                  )}
                 </p>
               ))}
             </div>
-            <div className="border-r border-gray-300 mx-5"></div>
+            <div className="border-r border-gray-300 mx-6"></div>
             {selectedCategory === "" && (
-              <div className="w-full">
-                <div>
-                  <p className="font-bold text-3xl">{selectedMenu}</p>
-                  {selectedMenu === "Products" ? <p className="font-medium text-lg mt-3">Explore our wide range of products.</p> : <p className="font-medium text-lg mt-3">Explore our services.</p>}
-                </div>
+              <div className="w-full p-4">
+                <p className="font-bold text-3xl">{selectedMenu}</p>
+                <p className="font-medium text-lg mt-3">
+                  {selectedMenu === "Products" 
+                    ? "Explore our wide range of products."
+                    : "Explore our services."}
+                </p>
               </div>
             )}
             {selectedMenu === "Products" && selectedCategory && selectedCategory in productItems && (
-              <div className="w-[60%] overflow-y-scroll">
-                <div className="text-md flex flex-col">
-                  <p className="text-sm text-gray-600 py-3">{selectedCategory}</p>
-                  <div className="grid grid-cols-2 gap-3">
-                    {productItems[selectedCategory].map((product) => (
-                      <Link key={product.label} href={product.href}>
-                        <div className="group flex items-center justify-start gap-2 rounded-lg w-[1/2] py-2 px-3 hover:border hover:bg-blueb-700 hover:drop-shadow-xl" onMouseEnter={() => setHoveredProduct(product.label)}
-                          onMouseLeave={() => setHoveredProduct(null)} onClick={() => {
-                            setSelectedMenu("");
-                            setSelectedCategory("");
-                          }}>
-                          <img className="w-5 h-5" src={hoveredProduct === product.label ? "/water_drop_white.svg" : product.src} alt="" />
-                          <p className="group-hover:text-white">{product.label}</p>
-                        </div>
-                      </Link>
-                    ))}
-                  </div>
+              <div className="w-[70%] max-h-[60vh] overflow-y-auto custom-scrollbar pl-2">
+                <p className="text-sm text-gray-600 py-3 px-4">{selectedCategory}</p>
+                <div className="grid grid-cols-2 gap-4 px-4">
+                  {productItems[selectedCategory].map((product) => (
+                    <Link key={product.label} href={product.href}>
+                      <div 
+                        className="group flex items-center gap-3 rounded-lg p-4 hover:bg-blueb-700 hover:shadow-lg transition-all"
+                        onMouseEnter={() => setHoveredProduct(product.label)}
+                        onMouseLeave={() => setHoveredProduct(null)}
+                        onClick={() => {
+                          setSelectedMenu("");
+                          setSelectedCategory("");
+                        }}
+                      >
+                        <img 
+                          className="w-6 h-6" 
+                          src={hoveredProduct === product.label ? "/water_drop_white.svg" : product.src} 
+                          alt="" 
+                        />
+                        <p className="group-hover:text-white">{product.label}</p>
+                      </div>
+                    </Link>
+                  ))}
                 </div>
               </div>
             )}
+          </div>
+        </div>
+      )}
+
+      {
+        false && selectedMenu === "News & Blogs" && (
+          <div 
+            className="bg-white basic-transition"
+            onMouseEnter={() => setSelectedMenu("News & Blogs")} 
+            onMouseLeave={() => { 
+              setSelectedMenu(""); 
+              setSelectedCategory("") 
+            }}
+          >
+            <div className="max-w-7xl mx-auto py-8 px-6">
+              <div className="flex">
+                <div className="w-[40%] text-xl flex flex-col gap-4">
+                  <Link 
+                    href="/blogs"
+                    className={`px-4 py-2 rounded-md w-fit hover:bg-gray-100 hover:font-semibold transition-all ${
+                      selectedCategory === "Blogs" ? "font-semibold bg-gray-100" : ""
+                    }`}
+                    onMouseEnter={() => setSelectedCategory("Blogs")}
+                  >
+                    Blogs
+                  </Link>
+                  <Link 
+                    href="/news"
+                    className={`px-4 py-2 rounded-md w-fit hover:bg-gray-100 hover:font-semibold transition-all ${
+                      selectedCategory === "News" ? "font-semibold bg-gray-100" : ""
+                    }`}
+                    onMouseEnter={() => setSelectedCategory("News")}
+                  >
+                    News
+                  </Link>
+                </div>
+    
+                <div className="border-r border-gray-300 mx-6"></div>
+    
+                <div className="w-[60%] px-4">
+                  {selectedCategory === "" && (
+                    <div>
+                      <p className="font-bold text-3xl">News & Blogs</p>
+                      <p className="font-medium text-lg mt-3">Explore our latest news and blogs.</p>
+                    </div>
+                  )}
+    
+                  {selectedCategory === "Blogs" && (
+                    <div>
+                      <p className="text-xl font-semibold mb-4">Blogs</p>
+                      <BlogsCarousalNavBar data={blogData} />
+                    </div>
+                  )}
+    
+                  {selectedCategory === "News" && (
+                    <div>
+                      <p className="text-xl font-semibold mb-4">News</p>
+                      <BlogsCarousalNavBar data={newsData} />
+                    </div>
+                  )}
+                </div>
+              </div>
+            </div>
           </div>
         )
       }
 
       {
-        selectedMenu === "News & Blogs" && <div className="flex bg-white py-10 px-32 shadow-xl basic-transition" onMouseEnter={() => setSelectedMenu("News & Blogs")} onMouseLeave={() => { setSelectedMenu(""); setSelectedCategory("") }}>
-          <div className="w-[40%] text-xl flex flex-col gap-3">
-            <Link className={`flex items-center px-2 w-fit hover:font-semibold cursor-pointer ${selectedCategory === "Blogs" && "font-semibold"}`}
-              onMouseEnter={() => setSelectedCategory("Blogs")} href={"/blogs"}>
-              Blogs
-            </Link>
-            <Link className={`flex items-center px-2 w-fit hover:font-semibold cursor-pointer ${selectedCategory === "News" && "font-semibold"}`}
-              onMouseEnter={() => setSelectedCategory("News")} href={"/news"}            >
-              News
-            </Link>
+        false && selectedMenu === "About us" && (
+          <div 
+            className="bg-white basic-transition"
+            onMouseEnter={() => setSelectedMenu("About us")} 
+            onMouseLeave={() => { 
+              setSelectedMenu(""); 
+              setSelectedCategory("") 
+            }}
+          >
+            <div className="max-w-7xl mx-auto py-8 px-6">
+              <div className="flex">
+                <div className="w-[40%] text-xl flex flex-col gap-4">
+                  <Link 
+                    href="/about"
+                    className={`group px-4 py-2 rounded-md w-fit hover:bg-gray-100 transition-all ${
+                      selectedCategory === "About Us" ? "font-semibold bg-gray-100" : ""
+                    }`}
+                    onMouseEnter={() => setSelectedCategory("")}
+                  >
+                    <div className="flex items-center space-x-3">
+                      <span>About Us</span>
+                    </div>
+                  </Link>
+                  
+                  <Link 
+                    href="/careers"
+                    className={`group px-4 py-2 rounded-md w-fit hover:bg-gray-100 transition-all ${
+                      selectedCategory === "Careers" ? "font-semibold bg-gray-100" : ""
+                    }`}
+                    onMouseEnter={() => setSelectedCategory("")}
+                  >
+                    <div className="flex items-center space-x-3">
+                      <span>Careers</span>
+                    </div>
+                  </Link>
+                </div>
+      
+                <div className="border-r border-gray-300 mx-6" />
+      
+                {selectedCategory === "" && (
+                  <div className="w-[60%] px-4">
+                    <h2 className="font-bold text-3xl mb-4">About</h2>
+                    <div className="space-y-6">
+                      <p className="font-medium text-lg">Explore our company's journey and opportunities.</p>
+                      <div className="grid grid-cols-2 gap-4">
+                        <div className="p-4 rounded-lg bg-gray-50 hover:bg-gray-100 transition-all">
+                          <h3 className="font-semibold text-lg mb-2">Our Mission</h3>
+                          <p className="text-gray-600">Leading innovation in engineering solutions for a sustainable future.</p>
+                        </div>
+                        <div className="p-4 rounded-lg bg-gray-50 hover:bg-gray-100 transition-all">
+                          <h3 className="font-semibold text-lg mb-2">Join Our Team</h3>
+                          <p className="text-gray-600">Discover exciting opportunities to grow with us.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
           </div>
-          <div className="border-r border-gray-300 mx-5"></div>
-          {selectedCategory === "" && <div className="w-[60%]">
-            <div className="">
-              <p className="font-bold text-3xl">News & Blogs</p>
-              <p className="font-medium text-lg mt-3">Explore our latest news and blogs.</p>
-            </div>
-          </div>}
-
-          {selectedCategory === "Blogs" && <div className="w-[60%]">
-            <div className="">
-              <p className="text-xl w-fit font-semibold">Blogs</p>
-              <BlogsCarousalNavBar
-                data={[
-                  { post_title: "Scientist found new way to treat Waste Water", post_slug: "/blogs/1", post_image: "/blogs/blog1.png" },
-                  { post_title: "Why Municipal Wastewater Treatment Is Important?", post_slug: "/blogs/1", post_image: "/blogs/blog4.png" },
-                ]} />
-            </div>
-          </div>}
-
-          {selectedCategory === "News" && <div className="w-[60%]">
-            <div className="">
-              <p className="text-xl w-fit font-semibold">News</p>
-              <BlogsCarousalNavBar
-                data={[
-                  { post_title: "Decentralized Wastewater Treatment for a Chinese Village", post_slug: "/news/1", post_image: "/casestudy/cs2.png" },
-                  { post_title: "Environment-Friendly Waste Water Treatment | Case Study", post_slug: "/news/1", post_image: "/casestudy/cs3.png" },
-                ]} />
-            </div>
-          </div>}
-        </div>
+        )
       }
 
       {
-        false && selectedMenu === "About us" && <div className="flex bg-white py-10 px-32 shadow-xl basic-transition" onMouseEnter={() => setSelectedMenu("About us")} onMouseLeave={() => { setSelectedMenu(""); setSelectedCategory("") }}>
-          <div className="w-[40%] text-xl flex flex-col gap-3">
-            <Link href={"/about"} className={`flex items-center px-2 w-fit hover:font-semibold cursor-pointer ${selectedCategory === "About Us" && "font-semibold"}`} onMouseEnter={() => setSelectedCategory("")}>
-              About Us
-            </Link>
-            <Link href={"/careers"} className={`flex items-center px-2 w-fit hover:font-semibold cursor-pointer ${selectedCategory === "Careers" && "font-semibold"}`} onMouseEnter={() => setSelectedCategory("")}>
-              Careers
-            </Link>
-          </div>
-          <div className="border-r border-gray-300 mx-5"></div>
-          {selectedCategory === "" && <div className="w-[60%]">
-            <div className="">
-              <p className="font-bold text-3xl">About</p>
-              <p className="font-medium text-lg mt-3">Explore our wide range of products.</p>
+        selectedMenu === "Contact us" && (
+          <div 
+            className="bg-white basic-transition"
+            onMouseEnter={() => setSelectedMenu("Contact us")} 
+            onMouseLeave={() => { 
+              setSelectedMenu(""); 
+              setSelectedCategory("") 
+            }}
+          >
+            <div className="max-w-7xl mx-auto py-8 px-6">
+              <div className="flex gap-6">
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15122.922505541159!2d73.79250328511964!3d18.63118198564944!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b84e62f8c169%3A0xf6df110a3e44ab98!2sIonic%20Engineering%20Technology%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1716738071408!5m2!1sen!2sin" 
+                  className="w-[60%] h-[400px] rounded-lg shadow-md" 
+                  loading="lazy" 
+                />
+                
+                <div className="border-r border-gray-300" />
+                
+                <div className="w-[40%] flex flex-col">
+                  <div className="space-y-4">
+                    <div>
+                      <h3 className="font-bold text-lg">IONIC ENGINEERING TECHNOLOGY PVT LTD</h3>
+                      <p className="font-medium text-gray-600">(An ISO 9001:2015 Certified Company)</p>
+                    </div>
+                    
+                    <hr className="border-gray-200" />
+                    
+                    <div className="space-y-4">
+                      <div>
+                        <p className="font-medium text-gray-600">Contact:</p>
+                        <p>020-27475272/73, 29525874 / 08275486263</p>
+                      </div>
+                      
+                      <div>
+                        <p className="font-medium text-gray-600">Email:</p>
+                        <p>contact@ionic.co.in / support@ionic.co.in</p>
+                      </div>
+                      
+                      <div>
+                        <p className="font-medium text-gray-600">Address:</p>
+                        <p>
+                          S. No. 1, 5, 11, 12 & 13, Ground Floor, B Wing,<br />
+                          Mahalaxmi Heights, Mumbai-Pune Road, Pimpiri,<br />
+                          Pune-18, Maharashtra, INDIA.
+                        </p>
+                      </div>
+                    </div>
+                    
+                    <Link 
+                      href="/contact" 
+                      onClick={() => { 
+                        setSelectedMenu(""); 
+                        setSelectedCategory("") 
+                      }}
+                    >
+                      <button className="px-6 py-2 text-white bg-blueb-700 rounded-md hover:bg-opacity-90 transition-all mt-6">
+                        Contact Us
+                      </button>
+                    </Link>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>}
-
-        </div>
-      }
-
-      {
-        selectedMenu === "Contact us" && <div className="flex bg-white py-10 px-32 shadow-xl basic-transition" onMouseEnter={() => setSelectedMenu("Contact us")} onMouseLeave={() => { setSelectedMenu(""); setSelectedCategory("") }}>
-
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15122.922505541159!2d73.79250328511964!3d18.63118198564944!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b84e62f8c169%3A0xf6df110a3e44ab98!2sIonic%20Engineering%20Technology%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1716738071408!5m2!1sen!2sin" className="w-[80%] h-[400px]" loading="lazy" ></iframe>
-          <div className="border-r border-gray-300 mx-5"></div>
-          <div className="w-[50%] text-md flex flex-col gap-3">
-            <div className="mt-4">
-              <span className="font-bold text-lg">IONIC ENGINEERING TECHNOLOGY PVT LTD</span><br />
-              <span className='font-medium'>(An ISO 9001:2015 Certified Company)</span><br />
-              <hr className="my-2"></hr>
-              <p className='py-2'><span className='font-medium text-gray-600 text-md'>Contact:</span> <br />  020-27475272/73, 29525874 / 08275486263</p>
-              <p className='py-2'><span className='font-medium text-gray-600 text-md'>Email:</span> <br /> contact@ionic.co.in / support@ionic.co.in</p>
-              <p className='py-2'><span className='font-medium text-gray-600 text-md'>Address:</span> <br />
-                S. No. 1, 5, 11, 12 & 13, Ground Floor, B Wing,<br />
-                Mahalaxmi Heights, Mumbai-Pune Road, Pimpiri,<br />
-                Pune-18 ,Maharashtra, INDIA.
-              </p>
-              <Link href="/contact" onClick={() => { setSelectedMenu(""); setSelectedCategory("") }}>
-                <button className="mt-3 px-4 py-2 text-white rounded bg-blueb-700 border-white hover:bg-opacity-70 text-md">
-                  Contact Us
-                </button>
-              </Link>
-            </div>
           </div>
-        </div>
+        )
       }
 
     </nav >
