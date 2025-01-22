@@ -1,6 +1,7 @@
 "use client"
 import React, { useState } from "react";
 import ContactForm from "../homepage/ContactForm";
+import DownloadBrochureForm from "./DownloadBrochureForm";
 
 const BrochureDownloads = () => {
   // Example brochure data (You can replace this with your actual data)
@@ -29,37 +30,39 @@ const BrochureDownloads = () => {
 
   return (
     <>
-    <div className="max-w-7xl mx-auto px-6 py-12">
-      <div className="space-y-12">
-        {brochureCategories.map((category) => (
-          <div key={category.category}>
-            {/* <h2 className="text-2xl font-semibold text-text-color mb-4">{category.category}</h2> */}
+      <div className="max-w-7xl mx-auto px-6 py-12">
+        <div className="space-y-12">
+          {brochureCategories.map((category) => (
+            <div key={category.category}>
+              {/* <h2 className="text-2xl font-semibold text-text-color mb-4">{category.category}</h2> */}
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-              {category.brochures.map((brochure) => (
-                <div
-                  key={brochure.pdf}
-                  className="bg-white shadow-lg rounded-lg p-6 text-cente flex flex-col items-center justify-center gap-3"
-                >
-                  <img className="h-64 w-fit rounded-xl" src={`/brochuresp/thumbnails/${brochure.thumbnail}`} />
-                  <h3 className="text-center text-xl font-medium text-text-color mb-2">{brochure.name}</h3>
-                  <a
-                    // href={`/brochuresp/pdfs/${brochure.pdf}`}
-                    href={`#contact-form`}
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                {category.brochures.map((brochure) => (
+                  <div
+                    key={brochure.pdf}
+                    className="bg-white shadow-lg rounded-lg p-6 text-cente flex flex-col items-center justify-center gap-3"
                   >
-                    Download Brochure PDF
-                  </a>
-                </div>
-              ))}
+                    <img className="h-64 w-fit rounded-xl" src={`/brochuresp/thumbnails/${brochure.thumbnail}`} />
+                    <h3 className="text-center text-xl font-medium text-text-color mb-2">{brochure.name}</h3>
+                    <button
+                      // href={`/brochuresp/pdfs/${brochure.pdf}`}
+                      onClick={() => setShowForm(true)}
+                    >
+                      Download Brochure PDF
+                    </button>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
-    <div className="flex flex-col w-full py-16 gap-16 mx-auto bg-white responsive-padding rounded shadow-md relative">
-                    <ContactForm />
-                </div>
-    
+      <div className="flex flex-col w-full py-16 gap-16 mx-auto bg-white responsive-padding rounded shadow-md relative">
+        <ContactForm />
+      </div>
+      {
+        showForm && <DownloadBrochureForm isOpen={showForm} onClose={() => setShowForm(false)} brochureInfo={{ name: "1 - DOSE - CL Smart digital chlorine dosing", pdf: "i-dose-cl-chlorine-dosing.pdf", thumbnail: "brochure1.webp" }}/>
+      }
     </>
   );
 };

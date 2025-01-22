@@ -1,6 +1,6 @@
 // app/api/send-email/route.ts
 import { NextResponse } from 'next/server';
-import { SendGridEmail } from '@/lib/sendgrid';
+import { SendGridEmail, SendGridEmailToUser } from '@/lib/sendgrid';
 
 export async function POST(request: Request) {
     try {
@@ -26,10 +26,19 @@ export async function POST(request: Request) {
             );
         }
 
-        await SendGridEmail(body);
+        if (body.type == 'contact' || body.type == 'appointment') {
+            await SendGridEmail(body);
+        } else if (body.type == 'brochureDownload') {
+            await SendGridEmailToUser(body);
+        } else {
+            return NextResponse.json(
+                { message: 'Invalid type' },
+                { status: 400 }
+            );
+        }
 
         return NextResponse.json(
-            { message: 'Email sent successfully' },
+            { message: `${body.type} Email sent successfully` },
             { status: 200 }
         );
     } catch (error) {

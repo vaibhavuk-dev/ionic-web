@@ -1,6 +1,5 @@
 "use client"
 import { useState } from 'react';
-import { SendGridEmail } from '@/lib/sendgrid'; // We'll create this
 interface FormData {
     firstName: string;
     lastName: string;
