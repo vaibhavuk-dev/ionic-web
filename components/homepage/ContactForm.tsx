@@ -353,7 +353,7 @@ export default function ContactForm() {
                                     />
                                     <label htmlFor="privacy" className="ml-2 text-white">
                                         You agree to our friendly{' '}
-                                        <a href="#" className="underline">privacy policy</a>.
+                                        <a href="/privacy-policy" target='_blank' className="underline">privacy policy</a>.
                                     </label>
                                 </div>
 
@@ -495,7 +495,7 @@ export default function ContactForm() {
                                     />
                                     <label htmlFor="appointmentPrivacy" className="ml-2 text-white">
                                         You agree to our friendly{' '}
-                                        <a href="#" className="underline">privacy policy</a>.
+                                        <a href="/privacy-policy" target='_blank' className="underline">privacy policy</a>.
                                     </label>
                                 </div>
 

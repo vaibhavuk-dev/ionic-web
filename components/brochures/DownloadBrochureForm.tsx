@@ -190,7 +190,7 @@ const DownloadBrochureForm = ({ isOpen, onClose, brochureInfo }: any) => {
                 onChange={(e) => setFormData({ ...formData, agreeToPrivacy: e.target.checked })}
               />
               <label htmlFor="privacy" className="ml-2 text-sm text-gray-600">
-                I agree to the privacy policy and terms of service
+                I agree to the <a href="/privacy-policy" target='_blank' className="underline">privacy policy</a>.
               </label>
             </div>
 
