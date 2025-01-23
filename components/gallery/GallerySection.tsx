@@ -7,9 +7,14 @@ export default function GallerySection() {
 
   const filters = [
     { id: 'all', label: 'All' },
+    { id: 'clo2', label: 'Genox® Smart Digital Chlorine Dioxide Generator' },
+    { id: 'zld', label: 'Zero Liquid Discharge' },
     { id: 'ced', label: 'Capacitive Electro Desalination (CED)' },
     { id: 'dm', label: 'Quick Cycle Automatic DM Plant' },
-    { id: 'zld', label: 'Zero Liquid Discharge' },
+    // { id: 'drum', label: '' },
+    { id: 'lamella', label: 'Lamella Clarifier' },
+    { id: 'polymix', label: 'Polymix® - Poly-electrolyte Solution Preparation and Dosing System' },
+    { id: 'ro', label: 'Reverse Osmosis (RO) System' },
     // Add more filters as needed
   ];
 
@@ -17,22 +22,78 @@ export default function GallerySection() {
     {
       category: "ced",
       images: [
-        "/galleryp/ced/ced1_img.webp",
-        "/galleryp/ced/ced2_img.webp",
-        "/galleryp/ced/ced3_img.webp",
-        "/galleryp/ced/ced4_img.webp",
-        "/galleryp/ced/ced5_img.webp",
-        "/galleryp/ced/ced6_img.webp",
-        "/galleryp/ced/ced7_img.webp",
-        "/galleryp/ced/ced8_img.webp"
+        "/galleryp/ced/ced_1.webp",
+        "/galleryp/ced/ced_2.webp",
+        "/galleryp/ced/ced_3.webp",
+        "/galleryp/ced/ced_4.webp",
+        "/galleryp/ced/ced_5.webp",
+        "/galleryp/ced/ced_6.webp",
+        "/galleryp/ced/ced_7.webp",
+        "/galleryp/ced/ced_8.webp"
+      ]
+    },
+    {
+      category: "clo2",
+      images: [
+        "/galleryp/clo2/clo2_1.webp",
+        "/galleryp/clo2/clo2_2.webp",
+        "/galleryp/clo2/clo2_3.webp",
+        "/galleryp/clo2/clo2_4.webp",
+        "/galleryp/clo2/clo2_5.webp",
+        "/galleryp/clo2/clo2_6.webp",
+        "/galleryp/clo2/clo2_7.webp",
+        "/galleryp/clo2/clo2_8.webp",
+        "/galleryp/clo2/clo2_9.webp",
+        "/galleryp/clo2/clo2_10.webp",
+        "/galleryp/clo2/clo2_11.webp",
+        "/galleryp/clo2/clo2_12.webp"
       ]
     },
     {
       category: "dm",
       images: [
-        "/galleryp/dm/dm1_img.webp",
-        "/galleryp/dm/dm2_img.webp",
-        "/galleryp/dm/dm3_img.webp",
+        "/galleryp/dm/dm_1.webp",
+        "/galleryp/dm/dm_2.webp",
+        "/galleryp/dm/dm_3.webp",
+        "/galleryp/dm/dm_4.webp",
+        "/galleryp/dm/dm_5.webp"
+      ]
+    },
+    {
+      category: "drum",
+      images: [
+        "/galleryp/drum/drum_1.webp"
+      ]
+    },
+    {
+      category: "lamella",
+      images: [
+        "/galleryp/lamella/lamella_1.webp",
+        "/galleryp/lamella/lamella_2.webp",
+        "/galleryp/lamella/lamella_3.webp",
+        "/galleryp/lamella/lamella_4.webp",
+        "/galleryp/lamella/lamella_5.webp",
+        "/galleryp/lamella/lamella_6.webp",
+        "/galleryp/lamella/lamella_7.webp"
+      ]
+    },
+    {
+      category: "polymix",
+      images: [
+        "/galleryp/polymix/polymix_1.webp",
+        "/galleryp/polymix/polymix_2.webp",
+        "/galleryp/polymix/polymix_3.webp",
+        "/galleryp/polymix/polymix_4.webp",
+        "/galleryp/polymix/polymix_5.webp",
+      ]
+    },
+    {
+      category: "ro",
+      images: [
+        "/galleryp/ro/ro_1.webp",
+        "/galleryp/ro/ro_2.webp",
+        "/galleryp/ro/ro_3.webp",
+        "/galleryp/ro/ro_4.webp",
       ]
     },
     {
@@ -44,7 +105,7 @@ export default function GallerySection() {
         "/galleryp/zld/zld_4.webp",
         "/galleryp/zld/zld_5.webp",
       ]
-    }
+    },
     // Add more categories and their images as needed
   ];
 
@@ -79,6 +140,10 @@ export default function GallerySection() {
                   className="bg-white rounded-xl overflow-hidden transition duration-300 transform hover:scale-105"
                 >
                   <div className="relative h-64">
+                    <img
+                    src="/logo/ionic_logo.gif"
+                    className='absolute bottom-2 right-2 h-10 bg-white rounded p-2'
+                    />
                     <img
                       src={image}
                       alt={`Gallery image ${index + 1}`}
