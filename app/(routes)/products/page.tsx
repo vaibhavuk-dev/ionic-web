@@ -1,13 +1,72 @@
 "use client"
 import NavBar from "@/components/NavBar";
 import ProductsGrid from "@/components/products/ProductsGrid";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Search } from 'lucide-react';
 import ContactForm from "@/components/homepage/ContactForm";
 import Footer from "@/components/Footer";
 import { products } from "../../../utils/const"
+import CompanyCategorySelector from "@/components/products/CompanyCategorySelector";
+import { sanityClient } from "@/lib/sanity";
 
 export default function ProductsPage() {
+
+    const queryCompanies = `
+    *[_type == "companies"]{
+      logo{
+        asset->{
+          _id,
+          url
+        },
+        alt
+      },
+      name,
+      slug,
+      description,
+      order,
+      website
+    } | order(order asc)`;
+
+    const queryCategories = `
+    *[_type == "pi_products_categories"]{
+      name,
+      slug,
+      "company": company->{
+        name,
+        slug,
+        order
+      },
+      order
+    }`;
+
+    const [companies, setCompanies] = useState([]);
+    const [categories, setCategories] = useState([]);
+
+    const [selectedCompany, setSelectedCompany] = useState<any>(null);
+    const [selectedCategory, setSelectedCategory] = useState<any>(null);
+
+    const handleCompanySelect = (company: any) => {
+        setSelectedCompany(company);
+        setSelectedCategory(null);
+    };
+
+    const handleCategorySelect = (category: any) => {
+        setSelectedCategory(category);
+    };
+
+    useEffect(() => {
+        async function fetchData() {
+            const [fetchedCompanies, fetchedCategories] = await Promise.all([
+                sanityClient.fetch(queryCompanies),
+                sanityClient.fetch(queryCategories)
+            ]);
+            setCompanies(fetchedCompanies);
+            setCategories(fetchedCategories);
+            setSelectedCompany(fetchedCompanies[0]);
+            setSelectedCategory(fetchedCategories.filter((category: any) => category?.company?.name === fetchedCompanies?.[0]?.name)?.[0]);
+        }
+        fetchData();
+    }, [])
 
     const [searchQuery, setSearchQuery] = useState('');
 
@@ -61,9 +120,9 @@ export default function ProductsPage() {
                 </div>
             </div>
             {/* bg-gradient-to-b from-gray-50 to-white py-16 */}
-            <div className="flex flex-col w-full py-16 gap-16 mx-auto bg-white responsive-padding rounded shadow-md relative">
-
-                <ProductsGrid products={products?.filter((product: any) => product?.name?.toLowerCase()?.includes(searchQuery?.toLowerCase()))} />
+            <div className="flex flex-col w-full py-6 gap-16 mx-auto bg-white responsive-padding rounded shadow-md relative">
+                <CompanyCategorySelector companies={companies} categories={categories} selectedCompany={selectedCompany} selectedCategory={selectedCategory} handleCompanySelect={handleCompanySelect} handleCategorySelect={handleCategorySelect}/>
+                <ProductsGrid products={products?.filter((product: any) => (product?.category === selectedCategory?.name) && product?.name?.toLowerCase()?.includes(searchQuery?.toLowerCase()))}/>
                 <hr></hr>
                 <ContactForm />
 
