@@ -7,8 +7,9 @@ export default function GallerySection() {
 
   const filters = [
     { id: 'all', label: 'All' },
-    { id: 'ced', label: 'CED' },
-    { id: 'dm', label: 'DM' }
+    { id: 'ced', label: 'Capacitive Electro Desalination (CED)' },
+    { id: 'dm', label: 'Quick Cycle Automatic DM Plant' },
+    { id: 'zld', label: 'Zero Liquid Discharge' },
     // Add more filters as needed
   ];
 
@@ -32,6 +33,16 @@ export default function GallerySection() {
         "/galleryp/dm/dm1_img.webp",
         "/galleryp/dm/dm2_img.webp",
         "/galleryp/dm/dm3_img.webp",
+      ]
+    },
+    {
+      category: "zld",
+      images: [
+        "/galleryp/zld/zld_1.webp",
+        "/galleryp/zld/zld_2.webp",
+        "/galleryp/zld/zld_3.webp",
+        "/galleryp/zld/zld_4.webp",
+        "/galleryp/zld/zld_5.webp",
       ]
     }
     // Add more categories and their images as needed
@@ -65,7 +76,7 @@ export default function GallerySection() {
               item.images.map((image, index) => (
                 <div 
                   key={index}
-                  className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
+                  className="bg-white rounded-xl overflow-hidden transition duration-300 transform hover:scale-105"
                 >
                   <div className="relative h-64">
                     <img
