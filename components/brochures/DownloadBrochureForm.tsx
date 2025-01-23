@@ -41,7 +41,7 @@ const DownloadBrochureForm = ({ isOpen, onClose, brochureInfo }: any) => {
         body: JSON.stringify({
           ...formData,
           brochure: brochureInfo,
-          type: 'brochureDownload' 
+          type: 'download'
         }),
       });
 
@@ -53,8 +53,16 @@ const DownloadBrochureForm = ({ isOpen, onClose, brochureInfo }: any) => {
 
       setSubmitStatus({
         type: 'success',
-        message: 'Thank you! The brochure has been sent to your email.'
+        message: 'Thank you! The brochure will start downloading soon.'
       });
+
+      // Trigger the download after successful email
+      const link = document.createElement('a');
+      link.href = `/brochuresp/pdfs/${brochureInfo.pdf}`;
+      link.download = brochureInfo.name;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
 
       // Reset form
       setFormData({
@@ -96,8 +104,8 @@ const DownloadBrochureForm = ({ isOpen, onClose, brochureInfo }: any) => {
 
         <div className="p-6">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">Download Brochure</h2>
-          <p className="text-gray-600 mb-6">
-            Please fill out this form to receive the brochure for {brochureInfo?.name} in your email.
+          <p className="text-gray-600 mb-6 text-left">
+            Please fill out this form to download the brochure for {brochureInfo?.name}.
           </p>
 
           <form onSubmit={handleSubmit} className="space-y-4">
@@ -188,11 +196,10 @@ const DownloadBrochureForm = ({ isOpen, onClose, brochureInfo }: any) => {
 
             {submitStatus.message && (
               <div
-                className={`p-4 rounded-lg ${
-                  submitStatus.type === 'success'
+                className={`p-4 rounded-lg ${submitStatus.type === 'success'
                     ? 'bg-green-100 text-green-700'
                     : 'bg-red-100 text-red-700'
-                }`}
+                  }`}
               >
                 {submitStatus.message}
               </div>

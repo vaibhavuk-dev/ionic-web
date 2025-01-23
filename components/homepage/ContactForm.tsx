@@ -4,6 +4,7 @@ interface FormData {
     firstName: string;
     lastName: string;
     email: string;
+    phone: string;
     company: string;
     message: string;
     agreeToPrivacy: boolean;
@@ -13,6 +14,8 @@ interface AppointmentData {
     firstName: string;
     lastName: string;
     email: string;
+    phone: string;
+    company: string;
     date: string;
     time: string;
     purpose: string;
@@ -24,6 +27,7 @@ export default function ContactForm() {
         firstName: '',
         lastName: '',
         email: '',
+        phone: '',
         company: '',
         message: '',
         agreeToPrivacy: false
@@ -34,6 +38,8 @@ export default function ContactForm() {
         firstName: '',
         lastName: '',
         email: '',
+        phone: '',
+        company: '',
         date: '',
         time: '',
         purpose: '',
@@ -86,6 +92,7 @@ export default function ContactForm() {
                 firstName: '',
                 lastName: '',
                 email: '',
+                phone: '',
                 company: '',
                 message: '',
                 agreeToPrivacy: false
@@ -131,6 +138,8 @@ export default function ContactForm() {
                 firstName: '',
                 lastName: '',
                 email: '',
+                phone: '',
+                company: '',
                 date: '',
                 time: '',
                 purpose: '',
@@ -297,6 +306,18 @@ export default function ContactForm() {
                                 </div>
 
                                 <div>
+                                    <label htmlFor="phone" className="block text-white mb-2">Phone</label>
+                                    <input
+                                        type="tel"
+                                        id="phone"
+                                        className="w-full px-4 py-3 rounded-lg bg-white"
+                                        placeholder="+91 99999 99999"
+                                        value={formData.phone}
+                                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                                    />
+                                </div>
+
+                                <div>
                                     <label htmlFor="company" className="block text-white mb-2">Company</label>
                                     <input
                                         type="text"
@@ -325,6 +346,7 @@ export default function ContactForm() {
                                     <input
                                         type="checkbox"
                                         id="privacy"
+                                        required
                                         className="h-4 w-4 rounded border-gray-300"
                                         checked={formData.agreeToPrivacy}
                                         onChange={(e) => setFormData({ ...formData, agreeToPrivacy: e.target.checked })}
@@ -389,6 +411,30 @@ export default function ContactForm() {
                                         placeholder="you@example.com"
                                         value={appointmentData.email}
                                         onChange={(e) => setAppointmentData({ ...appointmentData, email: e.target.value })}
+                                    />
+                                </div>
+
+                                <div>
+                                    <label htmlFor="appointmentPhone" className="block text-white mb-2">Phone</label>
+                                    <input
+                                        type="tel"
+                                        id="appointmentPhone"
+                                        className="w-full px-4 py-3 rounded-lg bg-white"
+                                        placeholder="+91 99999 99999"
+                                        value={appointmentData.phone}
+                                        onChange={(e) => setAppointmentData({ ...appointmentData, phone: e.target.value })}
+                                    />
+                                </div>
+
+                                <div>
+                                    <label htmlFor="appointmentCompany" className="block text-white mb-2">Company</label>
+                                    <input
+                                        type="text"
+                                        id="appointmentCompany"
+                                        className="w-full px-4 py-3 rounded-lg bg-white"
+                                        placeholder="Company Name"
+                                        value={appointmentData.company}
+                                        onChange={(e) => setAppointmentData({ ...appointmentData, company: e.target.value })}
                                     />
                                 </div>
 
