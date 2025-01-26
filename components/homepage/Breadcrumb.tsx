@@ -24,12 +24,17 @@ export default function Breadcrumb() {
 
         {pathParts.map((part, index) => {
           const href = `/${pathParts.slice(0, index + 1).join("/")}`;
-          const isLast = index === pathParts.length - 1;
+          const isLast = index > 0;
 
           return (
             <li key={href} className="flex items-center space-x-2">
               {/* Separator */}
-              <span>/</span>
+              
+              {isLast ? (
+                <span className="text-gray-400">/</span>
+              ) : (
+                <span>/</span>
+              )}
 
               {/* Dynamic Breadcrumb Link */}
               {isLast ? (

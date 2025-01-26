@@ -105,8 +105,6 @@ export default function NavBar({ fetchedProducts, shouldWhite = false }: { fetch
     ],
   };
 
-  console.log(navItems, dropdownContent, productItems, manuallyAddedProducts);
-
   return (
 
     <nav className={`sticky z-20 top-0 left-0 right-0  flex-col backdrop-blur-sm ${isScrolled ? "drop-shadow-xl" : ""} basic-transition`}>

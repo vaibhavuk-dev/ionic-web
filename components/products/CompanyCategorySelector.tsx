@@ -13,7 +13,7 @@ export default function CompanyCategorySelector({ companies, categories, selecte
           <div
             key={company.id}
             onClick={() => handleCompanySelect(company)}
-            className={`
+            className={`flex gap-6 items-center
               p-4 border rounded-lg cursor-pointer text-center
               transition-all duration-300
               ${selectedCompany?.name === company.name
@@ -26,9 +26,9 @@ export default function CompanyCategorySelector({ companies, categories, selecte
                 ? urlFor(company?.logo).url()
                 : "/product-placeholder.jpg"}
               alt={company.name}
-              className="mx-auto h-20 mb-2"
+              className="mx-auto h-10 mb-2"
             />
-            <p className='text-center'>{company.name}</p>
+            <p className='hidden lg:flex text-left font-semibold'>{company.name} {company.name?.includes("Ionic") ? "" : "(Partner)"}</p>
           </div>
         ))}
       </div>
