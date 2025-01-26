@@ -4,7 +4,7 @@ export default function VisionMissionSection() {
   const features = [
     {
       title: "OUR VISION",
-      subtitle: "Helping Create a Livable Planet",
+      subtitle: "Helping Create a Liveable Planet",
       description: "To help customers understand the True Cost of Water and help them make an informed decision to reach their sustainability goals.",
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">

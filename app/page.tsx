@@ -42,7 +42,7 @@ export default async function Home() {
                                     We Treat Water - Differently
                                 </h1>
                                 <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold text-white">
-                                    "Clear solution for troubled waters"
+                                    “Clear solution for troubled waters”
                                 </h2>
                             </div>
 
@@ -55,10 +55,10 @@ export default async function Home() {
                                     We remove everything from water, Except - Hydrogen and oxygen,
                                 </p>
                                 <p className="font-light text-white text-base md:text-lg lg:text-xl text-center italic">
-                                    With every drop we treat, we make it even more pure
+                                    With every drop we treat, We make it even more pure
                                 </p>
                                 <p className="font-light text-white text-base md:text-lg lg:text-xl text-center italic">
-                                    As we build a sustainable future we help create a livable Earth!
+                                    As we build a sustainable future, We help create a liveable Earth!
                                 </p>
                                 <p className="font-light text-white text-base md:text-lg lg:text-xl text-center italic">
                                     So here's to IONIC A beacon of hope, Helping humanity to cope.

@@ -232,7 +232,7 @@ export default function AboutPage() {
                     </div>
                     <div className="w-full border border-blueb-500 p-5 rounded-lg justify-start items-center flex flex-col gap-3">
                         <p className="text-2xl font-bold text-green-700 uppercase">OUR VISION</p>
-                        <p className="text-lmd font-bold uppercase">Vision – Helping Create a Livable Planet</p>
+                        <p className="text-lmd font-bold uppercase">Vision – Helping Create a Liveable Planet</p>
                         <p className="text-center">To Supply and implement solutions which meet and exceed the needs and expectations of our clients by continuously providing them the solutions to reduce their water footprint and life cycle cost of water and wastewater treatment by research and development(R&D) on new processes, technologies and products.</p>
                         <p className="text-center">To help customers understand the True Cost of Water and help them make an informed decision to reach their sustainability goals.</p>
                         <p className="text-center"></p>
