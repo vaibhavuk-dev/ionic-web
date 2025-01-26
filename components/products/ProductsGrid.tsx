@@ -31,48 +31,72 @@ export default function ProductSection({ products, type = "grid" }: { products: 
             >
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blueb-500 to-blueb-600 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
 
-              <div className="p-8">
-                {product.mainImage?.asset ? <div className="">
-                  <div className="bg-gray-100 rounded-lg w-fit flex items-center justify-center">
-                    <img
-                      src={
-                        product.mainImage?.asset
-                          ? urlFor(product.mainImage).url()
-                          : "/product-placeholder.jpg"
-                      }
-                      alt={product.mainImage?.alt || "Product Image"}
-                      className="h-16 object-contain"
-                    />
+              <div className="p-8 flex flex-col flex-grow">
+                {product.mainImage?.asset ? (
+                  <div className="">
+                    <div className="bg-gray-100 rounded-lg w-fit flex items-center justify-center">
+                      <img
+                        src={
+                          product.mainImage?.asset
+                            ? urlFor(product.mainImage).url()
+                            : "/product-placeholder.jpg"
+                        }
+                        alt={product.mainImage?.alt || "Product Image"}
+                        className="h-16 object-contain"
+                      />
+                    </div>
                   </div>
-                </div> :
+                ) : (
                   <div className="h-16 w-16 bg-blueb-100 text-blueb-600 rounded-lg p-4 group-hover:bg-blueb-600 group-hover:text-white transition-colors duration-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-8 w-8"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
+                      />
                     </svg>
                   </div>
-                }
+                )}
                 <div className="min-h-[80px] mt-6">
                   <h3 className="text-2xl font-semibold text-blueb-950 mb-2">
                     {product.name}
                   </h3>
                 </div>
 
-                {product?.tagline && <div className="min-h-[100px]">
-                  <p className="text-lg font-medium text-blueb-600 mb-4">
-                    {product.tagline}
-                  </p>
-                </div>}
+                {product?.tagline && (
+                  <div className="min-h-[100px]">
+                    <p className="text-lg font-medium text-blueb-600 mb-4">
+                      {product.tagline}
+                    </p>
+                  </div>
+                )}
 
-                {product?.shortDescription && <div className="min-h-[180px]">
-                  <p className="text-gray-600 mb-6 line-clamp-6">
-                    {product.shortDescription}
-                  </p>
-                </div>}
+                {product?.shortDescription && (
+                  <div className="min-h-[180px] flex-grow">
+                    <p className="text-gray-600 mb-6 line-clamp-6">
+                      {product.shortDescription}
+                    </p>
+                  </div>
+                )}
 
+                {/* Keep Learn More Button at Bottom */}
                 <div className="mt-auto pt-5">
                   <button className="inline-flex items-center text-blueb-600 font-semibold group-hover:text-blueb-800 transition-colors duration-300">
                     Learn More
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform duration-300"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
                   </button>

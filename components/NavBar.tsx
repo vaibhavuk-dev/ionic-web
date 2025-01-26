@@ -62,37 +62,15 @@ export default function NavBar({ fetchedProducts, shouldWhite = false }: { fetch
   const productItems: { [key: string]: { src: string; label: string; href: string }[] } = {};
 
   (fetchedProducts || [])?.forEach((product: any) => {
-    const categoryTitle = product.category?.title || "Uncategorized";
+    const categoryTitle = product.category?.name || "Uncategorized";
     if (!productItems[categoryTitle]) {
       productItems[categoryTitle] = [];
     }
     productItems[categoryTitle].push({
       src: "/water_drop.svg",
       label: product.name,
-      href: `/products/pi/${product?.slug?.current}`,
+      href: `/products/${product?.category?.slug?.current}/${product?.slug?.current}`,
     });
-  });
-
-  // Manually add categories and products
-  const manuallyAddedProducts = {
-    "Water Treatment": products
-      ?.filter((product: productDataType) => product?.category === "Water Treatment")
-      ?.map((product: productDataType) => ({
-        src: "/water_drop.svg",
-        label: product?.name || "Unnamed Product", // Provide a fallback string if name is undefined
-        href: `/products/${product?.slug}`
-      }))
-      ?.sort((a, b) => (a.label.length || 0) - (b.label.length || 0)), // Sort by the length of the product name
-
-    // Add other manual categories here
-  };
-
-
-  Object.entries(manuallyAddedProducts).forEach(([category, products]) => {
-    if (!productItems[category]) {
-      productItems[category] = [];
-    }
-    productItems[category].push(...products);
   });
 
   // Create dropdownContent dynamically
