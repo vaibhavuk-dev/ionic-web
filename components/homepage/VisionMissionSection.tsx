@@ -5,7 +5,7 @@ export default function VisionMissionSection() {
     {
       title: "OUR VISION",
       subtitle: "Helping Create a Livable Planet",
-      description: "To help customer understand the True Cost of Water and help them take an informed decision to reach their sustainable goals.",
+      description: "To help customers understand the True Cost of Water and help them make an informed decision to reach their sustainability goals.",
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />

@@ -76,7 +76,7 @@ export default function AboutPage() {
                             {/* Section Label with Background */}
                             <div className="relative flex mb-4 gap-5 items-center justify-start w-full">
                                 <p className="inline-block text-primary font-semibold uppercase px-2 bg-primaryLight rounded-md">
-                                    About us
+                                    About Us
                                 </p>
                                 <div className="border-t-2 border-primaryLight mt-1 w-16"></div>
                             </div>
@@ -129,7 +129,7 @@ export default function AboutPage() {
 
                             {/* Supporting Text */}
                             <p className="text-textcolor mb-6">
-                                When we started, our goal was never to be just another supplier. We wanted to be a solutions provider that truly understood the unique needs of each client. We ask the right question: “What is the True Cost of Water?” Water and wastewater treatment is often taken for granted, with many organizations ignoring the importance of technology, quality, performance, monitoring, operation, and maintenance. This can lead to poor performance, repeated failures, high power consumption, increased chemical costs, high maintenance, and water wastage.
+                                When we started, our goal was never to be just another supplier. We want to be a solutions provider that truly understands the unique needs of each client. We ask the right question: “What is the True Cost of Water?” Water and wastewater treatment is often taken for granted, with many organizations ignoring the importance of technology, quality, performance, monitoring, operation, and maintenance. This can lead to poor performance, repeated failures, high power consumption, increased chemical costs, high maintenance, and water wastage.
                                 <br></br><br></br>
                                 Unfortunately, many management teams are unaware that their system is full of “holes,” and their money is leaking out like water. They often fail to realize that their profitability depends on the efficiency and sustainability of their manufacturing processes, and they don’t ask the necessary questions to ensure their operations are optimized.
                                 <br></br><br></br>
@@ -156,7 +156,7 @@ export default function AboutPage() {
                             {/* Section Label with Background */}
                             <div className="relative flex mb-4 gap-5 items-center justify-start w-full">
                                 <p className="inline-block text-primary font-semibold uppercase px-2 bg-primaryLight rounded-md">
-                                    About us
+                                    About Us
                                 </p>
                                 <div className="border-t-2 border-primaryLight mt-1 w-16"></div>
                             </div>
@@ -234,7 +234,7 @@ export default function AboutPage() {
                         <p className="text-2xl font-bold text-green-700 uppercase">OUR VISION</p>
                         <p className="text-lmd font-bold uppercase">Vision – Helping Create a Livable Planet</p>
                         <p className="text-center">To Supply and implement solutions which meet and exceed the needs and expectations of our clients by continuously providing them the solutions to reduce their water footprint and life cycle cost of water and wastewater treatment by research and development(R&D) on new processes, technologies and products.</p>
-                        <p className="text-center">To help customers understand the True Cost of Water and help them take an informed decision to reach their sustainable goals.</p>
+                        <p className="text-center">To help customers understand the True Cost of Water and help them make an informed decision to reach their sustainability goals.</p>
                         <p className="text-center"></p>
                     </div>
                 </div>

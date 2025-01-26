@@ -55,10 +55,10 @@ export default async function Home() {
                                     We remove everything from water, Except - Hydrogen and oxygen,
                                 </p>
                                 <p className="font-light text-white text-base md:text-lg lg:text-xl text-center italic">
-                                    With every drop we treat, We make it even pure
+                                    With every drop we treat, we make it even more pure
                                 </p>
                                 <p className="font-light text-white text-base md:text-lg lg:text-xl text-center italic">
-                                    As we build a sustainable future We help create a livable Earth!
+                                    As we build a sustainable future we help create a livable Earth!
                                 </p>
                                 <p className="font-light text-white text-base md:text-lg lg:text-xl text-center italic">
                                     So here's to IONIC A beacon of hope, Helping humanity to cope.
@@ -122,7 +122,7 @@ export default async function Home() {
 
                             {/* Supporting Text */}
                             <p className="text-textcolor mb-6">
-                                Water is the most precious resource, essential for life, yet often taken for granted. Despite its critical importance, water scarcity has led to conflicts, exploitation, and commercialization, transforming what was once free into an expensive necessity. If we don't act responsibly now, we risk leaving future generations a world with insufficient water, threatening livelihoods and society itself. While nature offers abundant seawater, its conversion remains costly, and no alternative to water exists. As individuals with the ability to think and act, let us commit to conserving water and addressing the crisis as part of our responsibility toward a sustainable future. At Ionic, we invite you to explore our innovative water and wastewater solutions, designed to highlight the true value of water and secure a better tomorrow.
+                                Water is the most precious resource, essential for life, yet often taken for granted. Despite its critical importance, water scarcity has led to conflicts, exploitation, and commercialization, transforming what was once free into an expensive necessity. If we don't act responsibly now, we risk leaving future generations with a world with insufficient water, threatening livelihoods and society itself. While nature offers abundant seawater, its conversion remains costly, and no alternative to water exists. As individuals with the ability to think and act, let us commit to conserving water and addressing the crisis as part of our responsibility toward a sustainable future. At Ionic, we invite you to explore our innovative water and wastewater solutions, designed to highlight the true value of water and secure a better tomorrow.
                             </p>
 
                             {/* Button */}
@@ -162,7 +162,7 @@ export default async function Home() {
 
                             {/* Supporting Text */}
                             <p className="text-white mb-6">
-                                We are delighted to share that Ionic Engineering Technology Pvt. Ltd. has been awarded the prestigious. "G.S.Parkhe Award for Innovation In Entrepreneurship" by MCCIA ( Mahratta Chamber Of Commerce, Industries and Agriculture). MCCIA is a ninety year old chamber of commerce. Ionic was selected out of 160 entries for the innovation award and adjudged the winner by a panel of Eminent Industrialist. The innovation award was provided for the "Water Harvester" Zero Liquid Discharge Project we completed for Toyota Industries India at Bangalore in which we convert the industrial waste water into reusable water. The technological process of converting Wastewater into Clear and Clean reusable water helps the industries achieve sustainable environment friendly manufacturing operations meeting Corporate Social Environmental Responsibility (CSER) initiative and government environmental compliance regulatory requirement.
+                                We are delighted to share that Ionic Engineering Technology Pvt. Ltd. has been awarded the prestigious. "G.S.Parkhe Award for Innovation In Entrepreneurship" by MCCIA ( Mahratta Chamber Of Commerce, Industries and Agriculture). MCCIA is a ninety year old chamber of commerce. Ionic was selected out of 160 entries for the innovation award and adjudged the winner by a panel of Eminent Industrialists. The innovation award was provided for the "Water Harvester" Zero Liquid Discharge Project we completed for Toyota Industries India at Bangalore in which we convert the industrial waste water into reusable water. The technological process of converting Wastewater into Clear and Clean reusable water helps the industries achieve sustainable environment friendly manufacturing operations meeting Corporate Social Environmental Responsibility (CSER) initiative and government environmental compliance regulatory requirement.
                             </p>
                         </div>
 

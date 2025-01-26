@@ -11,7 +11,7 @@ export default function SolutionsSection() {
       },
       icon: <Droplets className="w-6 h-6" />,
       image: "/homepage/oursolutions/ionicwatertreatment.png",
-      description: "Ionic can reduce Capex by intelligent and innovative solutions, reduce water consumption, reduce power, reduce chemicals, reduce consumables and maintenance, increase productivity and reduce waste discharge. Our water treatment solutions are based on value engineering and designed to reduce life cycle cost.",
+      description: "Ionic can reduce Capex through intelligent and innovative solutions that reduce water consumption, reduce power, reduce chemicals, reduce consumables and maintenance, increase productivity and reduce waste discharge. Our water treatment solutions are based on value engineering and designed to reduce life cycle cost.",
       imageAlt: "Water treatment facility"
     },
     {
@@ -22,7 +22,7 @@ export default function SolutionsSection() {
       },
       icon: <Waves className="w-6 h-6" />,
       image: "/homepage/oursolutions/ionicwastewater.png",
-      description: "Treating waste water is more difficult than treating water, whether it is Sewage water or Industrial waste water. Our experience in dealing with diverse industries makes it possible to offer techno-economically optimum solution for treating industrial waste water.",
+      description: "Treating waste water is more difficult than treating water, whether it is sewage water or industrial waste water. Our experience in dealing with diverse industries makes it possible to offer techno-economically optimum solutions for treating industrial waste water.",
       imageAlt: "Waste water samples"
     },
     {
@@ -33,7 +33,7 @@ export default function SolutionsSection() {
       },
       icon: <GitMerge className="w-6 h-6" />,
       image: "/homepage/oursolutions/ionictotalwater.png",
-      description: "Ionic Provides integrated solution for zero liquid discharge and water recycling system. Ionic can provide evaporators for achieving zero discharge requirement from industries and process using which water can be easily recycled.",
+      description: "Ionic Provides integrated solutions for zero liquid discharge and water recycling systems. Ionic can provide evaporators for achieving zero discharge requirements from industries and processes using which water can be easily recycled.",
       imageAlt: "Integrated water system diagram"
     }
   ];
