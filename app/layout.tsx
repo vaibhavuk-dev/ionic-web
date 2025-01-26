@@ -23,7 +23,7 @@ export default async function RootLayout({
 }>) {
 
   // Fetch data from Sanity
-const fetchedProducts = await sanityClient.fetch(`
+  const fetchedProducts = await sanityClient.fetch(`
   *[
         _type == "my_products" || _type == "pi_products"
     ]{
@@ -42,14 +42,34 @@ const fetchedProducts = await sanityClient.fetch(`
   return (
     <html lang="en">
       <GoogleTagManager gtmId={gtmID} />
-      <Script
+      <head>
+        <Script
           id="gtm-script"
           src={`https://www.googletagmanager.com/gtag/js?id=${gtmID}`}
           strategy="beforeInteractive" // Ensures GTM loads early
         />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                // Prevent zoom via Ctrl+ and Ctrl+wheel
+                const preventZoom = (e) => {
+                  if (e.ctrlKey || e.metaKey) {
+                    e.preventDefault();
+                  }
+                };
+
+                document.addEventListener('keydown', preventZoom);
+                document.addEventListener('wheel', preventZoom, { passive: false });
+              })();
+            `,
+          }}
+        />
+      </head>
       <body className={montserrat.className}>
         <GoogleTagManager gtmId={gtmID} />
-        <NavBar fetchedProducts={fetchedProducts}/>
+        <NavBar fetchedProducts={fetchedProducts} />
         <main>{children}</main>
         <Footer />
       </body>
