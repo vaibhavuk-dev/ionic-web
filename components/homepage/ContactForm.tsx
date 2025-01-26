@@ -159,7 +159,6 @@ export default function ContactForm() {
     return (
         <div className="w-full relative bg-white mx-auto  container" id="contact-form">
             <h1 className="text-4xl font-bold text-textcolorDark mb-8">Chat to our friendly team</h1>
-            <p className="text-textcolor mb-12">We'd love to hear from you. Please fill out this form or shoot us an email.</p>
 
             <div className="w-full flex flex-col lg:flex-row gap-12">
                 {/* Contact Methods */}
@@ -191,7 +190,7 @@ export default function ContactForm() {
                                     </div>
                                     <h2 className="ml-4 text-xl font-semibold text-textcolorDark">Phone</h2>
                                 </div>
-                                <p className="text-textcolor mb-2">Mon-Fri from 9:30 AM to 6:30 PM.</p>
+                                <p className="text-textcolor mb-2">Mon-Sat from 9:30 AM to 6:30 PM.</p>
                                 <a href="tel:020-27475272" className="text-primary hover:underline">020-27475272/73</a><br />
                                 <a href="tel:020-29525874" className="text-primary hover:underline">020-29525874</a><br />
                                 <a href="tel:08275486263" className="text-primary hover:underline">08275486263</a>
