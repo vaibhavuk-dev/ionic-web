@@ -118,7 +118,7 @@ export default function GallerySection() {
             <button
               key={filter.id}
               onClick={() => setActiveFilter(filter.id)}
-              className={`px-6 py-2 rounded-full transition-colors ${
+              className={`px-6 py-2 rounded-full transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg ${
                 activeFilter === filter.id
                   ? 'bg-blue-700 text-white'
                   : 'bg-white text-gray-600 hover:bg-gray-100'

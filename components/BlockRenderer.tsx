@@ -55,8 +55,8 @@ const components = {
     // Ex. 1: customizing common list types
     bullet: ({ children }: any) => (
       <div className="flex items-center gap-3 bg-white p-4 rounded-lg border">
-              <CheckCircle2 className="text-green-500 w-5 h-5" />
-              <span>{children}</span>
+              <CheckCircle2 className="text-green-500 w-[5%]" />
+              <span className='w-[95%]'>{children}</span>
             </div>
       // <li
       //   style={{ listStyleType: 'disc', paddingLeft: '0.5em', marginBottom: '0.5em' }}

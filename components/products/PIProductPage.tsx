@@ -5,13 +5,10 @@ import BlockRenderer from "../BlockRenderer";
 import { urlFor } from "@/lib/sanity";
 
 const PIProductPage = ({ productData }: { productData: any }) => {
-  // Set the first section as the default active tab
-  const [activeTab, setActiveTab] = useState(productData.sections[0]?.title || "");
-
   return (
-    <div className="min-h-[60vh] max-w-7xl mx-auto">
+    <div className="max-w-7xl mx-auto">
       {/* Product Header */}
-      <div className="bg-white shadow-sm">
+      <div className="bg-white">
         <div className="w-full py-8">
           <div className="flex flex-col md:flex-row gap-8">
             {/* Product Image */}
@@ -59,35 +56,15 @@ const PIProductPage = ({ productData }: { productData: any }) => {
       </div>
 
       {/* Product Details */}
-      <div className="w-full mx-auto px-4 py-12">
-        {/* Navigation Tabs */}
-        <div className="flex gap-8 border-b border-gray-200 mb-8 overflow-x-auto">
-          {productData.sections.map((section: any) => (
-            <button
-              key={section.title}
-              className={`pb-4 px-2 font-medium transition-colors ${
-                activeTab === section.title
-                  ? "text-blue-600 border-b-2 border-blue-600"
-                  : "text-gray-500 hover:text-gray-700"
-              }`}
-              onClick={() => setActiveTab(section.title)}
-            >
-              {section.title}
-            </button>
-          ))}
-        </div>
-
+      <div className="w-full mx-auto px-4 mt-12">
         {/* Content Sections */}
-        <div className="bg-white rounded-lg shadow-sm py-6 md:py-8">
-          {productData.sections.map(
-            (section: any) =>
-              activeTab === section.title && (
-                <div key={section.title} className="prose max-w-none">
-                  <h2 className="text-2xl font-semibold mb-4">{section.title}</h2>
-                  <BlockRenderer content={section?.content} />
-                </div>
-              )
-          )}
+        <div className="bg-white mt-6 md:mt-8">
+          {productData.sections.map((section: any) => (
+            <div key={section.title} className="prose max-w-none mb-12">
+              <h2 className="text-2xl font-semibold mb-4">{section.title}</h2>
+              <BlockRenderer content={section?.content} />
+            </div>
+          ))}
         </div>
       </div>
     </div>

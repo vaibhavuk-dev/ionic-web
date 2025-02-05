@@ -158,7 +158,7 @@ export default function ContactForm() {
 
     return (
         <div className="w-full relative bg-white mx-auto  container" id="contact-form">
-            <h1 className="text-4xl font-bold text-textcolorDark mb-8">Chat to our friendly team</h1>
+            <h1 className="text-4xl font-bold text-textcolorDark mb-8">Get in touch with our expert team</h1>
 
             <div className="w-full flex flex-col lg:flex-row gap-12">
                 {/* Contact Methods */}
@@ -175,7 +175,7 @@ export default function ContactForm() {
                                     </div>
                                     <h2 className="ml-4 text-xl font-semibold text-textcolorDark">Email</h2>
                                 </div>
-                                <p className="text-textcolor mb-2">Our friendly team is here to help.</p>
+                                {/* <p className="text-textcolor mb-2">Our friendly team is here to help.</p> */}
                                 <a href="mailto:contact@ionic.co.in" className="text-primary hover:underline">contact@ionic.co.in</a><br />
                                 <a href="mailto:support@ionic.co.in" className="text-primary hover:underline">support@ionic.co.in</a>
                             </div>
@@ -207,7 +207,7 @@ export default function ContactForm() {
                                     </div>
                                     <h2 className="ml-4 text-xl font-semibold text-textcolorDark">Office</h2>
                                 </div>
-                                <p className="text-textcolor mb-2">Come say hello at our office HQ.</p>
+                                {/* <p className="text-textcolor mb-2">Come say hello at our office HQ.</p> */}
                                 <p className="text-textcolor">
                                     <b>IONIC ENGINEERING TECHNOLOGY PVT LTD</b><br />
                                     <span className='font-medium'>(An ISO 9001:2015 Certified Company)</span><br />

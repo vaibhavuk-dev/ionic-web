@@ -37,7 +37,7 @@ export default async function Home() {
                     <div className="flex-1 flex flex-col items-center justify-center px-4 md:px-6 pt-20">
                         <div className="max-w-4xl w-full space-y-8">
                             {/* Headlines */}
-                            <div className="space-y-4 text-center">
+                            <div className="space-y-3 text-center">
                                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
                                     We Treat Water - Differently
                                 </h1>
@@ -47,7 +47,7 @@ export default async function Home() {
                             </div>
 
                             {/* Poem */}
-                            <div className="space-y-3">
+                            <div className="space-y-2">
                                 <p className="font-light text-white text-base md:text-lg lg:text-xl text-center italic">
                                     IONIC is our name, Clean water is our flame.
                                 </p>
@@ -76,7 +76,7 @@ export default async function Home() {
                     </div>
 
                     {/* Bottom Pipeline Section */}
-                    <div className="relative w-full mt-4 max-w-7xl mx-auto items-center justify-center">
+                    <div className="relative w-full mt-4 max-w-4xl mx-auto items-center justify-center">
                         {/* Mobile Pipeline */}
                         <img
                             src="/waterflow/flow.png"

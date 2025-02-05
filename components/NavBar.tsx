@@ -94,13 +94,13 @@ export default function NavBar({ fetchedProducts, shouldWhite = false }: { fetch
           <Link href={"/"}>
             <img
               src={`${isWhite ? "/logo/ionic_logo.gif" : "/logo/ionic_logo_white.gif"}`}
-              className="h-24"
+              className="h-16"
               onMouseEnter={() => setSelectedMenu("")}
             />
           </Link>
 
           <div
-            className={` py-6 flex ${isWhite ? `text-black` : `text-white`
+            className={` py-3 flex ${isWhite ? `text-black` : `text-white`
               } basic-transition text-lg font-normal  h-full gap-6`}
           >
             {navItems.map((item) => (
