@@ -9,6 +9,7 @@ import StickySidebar from "@/components/homepage/StickySidebar";
 import Testimonials from "@/components/homepage/Testimonials";
 import VisionMissionSection from "@/components/homepage/VisionMissionSection";
 import Link from "next/link";
+import * as motion from "motion/react-client"
 
 export default async function Home() {
 
@@ -32,12 +33,16 @@ export default async function Home() {
                 <div className="fixed inset-0 flex flex-col gap-8 items-center justify-center bg-blueb-gradient-opacity-50"></div>
 
                 {/* Main Content Container */}
-                <div className="relative w-full h-full flex flex-col justify-between">
+                <motion.div
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 5.0 }} className="relative w-full h-full flex flex-col justify-between">
                     {/* Centered Text Content */}
                     <div className="flex-1 flex flex-col items-center justify-center px-4 md:px-6 pt-20">
                         <div className="max-w-4xl w-full space-y-8">
                             {/* Headlines */}
-                            <div className="space-y-3 text-center">
+                            <div className="space-y-4 text-center">
                                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
                                     We Treat Water - Differently
                                 </h1>
@@ -47,7 +52,7 @@ export default async function Home() {
                             </div>
 
                             {/* Poem */}
-                            <div className="space-y-2">
+                            <div className="space-y-3">
                                 <p className="font-light text-white text-base md:text-lg lg:text-xl text-center italic">
                                     IONIC is our name, Clean water is our flame.
                                 </p>
@@ -76,7 +81,7 @@ export default async function Home() {
                     </div>
 
                     {/* Bottom Pipeline Section */}
-                    <div className="relative w-full mt-4 max-w-4xl mx-auto items-center justify-center">
+                    <div className="relative w-full mt-4 max-w-7xl mx-auto items-center justify-center">
                         {/* Mobile Pipeline */}
                         <img
                             src="/waterflow/flow.png"
@@ -93,13 +98,18 @@ export default async function Home() {
                             />
                         </div>
                     </div>
-                </div>
+                </motion.div>
             </div>
 
             <div className="flex w-full gap-10 mx-auto bg-white responsive-padding rounded shadow-md relative justify-center">
 
                 <section className="bg-white my-16">
-                    <div className="container mx-auto  grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <motion.div
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 5.0 }}
+                        className="container mx-auto  grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
 
                         {/* Right Column */}
                         <img className="w-full rounded-lg h-2/3 md:h-2/3 object-contain" src="/homepage/ionicglobe.png" alt="Descriptive Alt Text" />
@@ -131,7 +141,7 @@ export default async function Home() {
                             </Link>
                         </div>
 
-                    </div>
+                    </motion.div>
                 </section>
             </div>
 
@@ -144,7 +154,13 @@ export default async function Home() {
                 />
 
                 <section className="relative z-10 my-16">
-                    <div className="container mx-auto  grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <motion.div
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 5.0 }}
+                        className="container mx-auto  grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+
                         {/* Left Colum</section>n */}
                         <div>
                             {/* Section Label with Background */}
@@ -168,21 +184,37 @@ export default async function Home() {
 
                         {/* Right Column */}
                         <img className="bg-secondaryLight rounded-lg object-cover" src="/homepage/ionicaward.jpg" alt="Descriptive Alt Text" />
-                    </div>
+
+                    </motion.div>
                 </section>
             </div>
 
-            <div className="flex flex-col w-full py-12 gap-16 mx-auto bg-white responsive-padding rounded shadow-md relative">
+            <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 5.0 }}
+                className="flex flex-col w-full py-12 gap-16 mx-auto bg-white responsive-padding rounded shadow-md relative">
                 <SolutionsSection />
-            </div>
+            </motion.div>
 
-            <div className="flex flex-col w-full py-16 gap-16 mx-auto  bg-blueb-gradient  responsive-padding rounded shadow-md relative">
+            <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 5.0 }}
+                className="flex flex-col w-full py-16 gap-16 mx-auto  bg-blueb-gradient  responsive-padding rounded shadow-md relative">
                 <ClientsSection />
-            </div>
+            </motion.div>
 
-            <div className="flex flex-col w-full py-16 gap-16 mx-auto bg-white responsive-padding rounded shadow-md relative">
+            <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 5.0 }}
+                className="flex flex-col w-full py-16 gap-16 mx-auto bg-white responsive-padding rounded shadow-md relative">
                 <VisionMissionSection />
-            </div>
+            </motion.div>
 
             {/* <div className="flex flex-col w-full py-16 gap-16 mx-auto  bg-blueb-gradient  responsive-padding rounded shadow-md relative">
                 <Testimonials />
@@ -196,10 +228,15 @@ export default async function Home() {
                 <BlogArticlesGrid />
             </div> */}
 
-            <div className="flex flex-col w-full py-16 gap-16 mx-auto bg-white responsive-padding rounded shadow-md relative">
+            <motion.div
+                initial={{ opacity: 1 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 5.0 }}
+                className="flex flex-col w-full py-16 gap-16 mx-auto bg-white responsive-padding rounded shadow-md relative">
                 <hr></hr>
                 <ContactForm />
-            </div>
+            </motion.div>
 
 
         </div>

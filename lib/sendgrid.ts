@@ -1,4 +1,10 @@
 import { sendEmail } from "./awsses";
+import { createClient } from '@supabase/supabase-js';
+
+const supabase = createClient(
+  process.env.NEXT_PUBLIC_SUPABASE_URL!,
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+);
 
 const getFormattedDate = (date: string) => {
     return new Date(date).toLocaleDateString('en-US', {
@@ -253,9 +259,65 @@ export async function SendGridEmail(data: any) {
     };
 
     try {
+        // Store in Supabase first
+        const { error: dbError } = await supabase
+            .from('contact_submissions')
+            .insert({
+                type: data.type,
+                first_name: data.firstName,
+                last_name: data.lastName,
+                email: data.email,
+                phone: data.phone,
+                company: data.company,
+                message: data.type === 'contact' ? data.message : 
+                        data.type === 'appointment' ? data.purpose : null,
+                appointment_date: data.type === 'appointment' ? data.date : null,
+                appointment_time: data.type === 'appointment' ? data.time : null,
+                brochure_details: data.type === 'download' ? data.brochure : null,
+                email_subject: subject,
+                email_status: 'pending' as const,
+                created_at: new Date().toISOString()
+            });
+
+        if (dbError) {
+            console.error('Supabase Insert Error:', dbError);
+        }
+
+        // Send email
         await sendEmail(msg);
+
+        // Update status to sent
+        if (!dbError) {
+            const { error: updateError } = await supabase
+                .from('contact_submissions')
+                .update({ 
+                    email_status: 'sent',
+                    email_sent_at: new Date().toISOString()
+                })
+                .eq('email', data.email)
+                .eq('created_at', new Date().toISOString());
+
+            if (updateError) {
+                console.error('Supabase Update Error:', updateError);
+            }
+        }
+
         return { success: true };
     } catch (error) {
+        // Update status to failed if email sending fails
+        const { error: updateError } = await supabase
+            .from('contact_submissions')
+            .update({ 
+                email_status: 'failed',
+                error_message: error instanceof Error ? error.message : 'Unknown error'
+            })
+            .eq('email', data.email)
+            .eq('created_at', new Date().toISOString());
+
+        if (updateError) {
+            console.error('Supabase Update Error:', updateError);
+        }
+
         console.error('AWS SES Error:', error);
         throw new Error('Failed to send email');
     }
