@@ -3,10 +3,10 @@
 import React, { useState } from 'react';
 
 export default function GallerySection() {
-  const [activeFilter, setActiveFilter] = useState('all');
+  const [activeFilter, setActiveFilter] = useState('clo2');
 
   const filters = [
-    { id: 'all', label: 'All' },
+    // { id: 'all', label: 'All' },
     { id: 'clo2', label: 'Genox® Smart Digital Chlorine Dioxide Generator' },
     { id: 'zld', label: 'Zero Liquid Discharge' },
     { id: 'ced', label: 'Capacitive Electro Desalination (CED)' },
@@ -36,11 +36,11 @@ export default function GallerySection() {
       category: "clo2",
       images: [
         "/galleryp/clo2/clo2_1.webp",
-        "/galleryp/clo2/clo2_2.webp",
+        // "/galleryp/clo2/clo2_2.webp",
         "/galleryp/clo2/clo2_3.webp",
         "/galleryp/clo2/clo2_4.webp",
         "/galleryp/clo2/clo2_5.webp",
-        "/galleryp/clo2/clo2_6.webp",
+        // "/galleryp/clo2/clo2_6.webp",
         "/galleryp/clo2/clo2_7.webp",
         "/galleryp/clo2/clo2_8.webp",
         "/galleryp/clo2/clo2_9.webp",
@@ -53,7 +53,7 @@ export default function GallerySection() {
       category: "dm",
       images: [
         "/galleryp/dm/dm_1.webp",
-        "/galleryp/dm/dm_2.webp",
+        // "/galleryp/dm/dm_2.webp",
         "/galleryp/dm/dm_3.webp",
         "/galleryp/dm/dm_4.webp",
         "/galleryp/dm/dm_5.webp"
@@ -81,7 +81,7 @@ export default function GallerySection() {
       category: "polymix",
       images: [
         "/galleryp/polymix/polymix_1.webp",
-        "/galleryp/polymix/polymix_2.webp",
+        // "/galleryp/polymix/polymix_2.webp",
         "/galleryp/polymix/polymix_3.webp",
         "/galleryp/polymix/polymix_4.webp",
         "/galleryp/polymix/polymix_5.webp",
@@ -103,7 +103,7 @@ export default function GallerySection() {
         "/galleryp/zld/zld_2.webp",
         "/galleryp/zld/zld_3.webp",
         "/galleryp/zld/zld_4.webp",
-        "/galleryp/zld/zld_5.webp",
+        // "/galleryp/zld/zld_5.webp",
       ]
     },
     // Add more categories and their images as needed

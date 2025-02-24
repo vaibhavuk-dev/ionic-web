@@ -52,6 +52,10 @@ export default async function RootLayout({
     <html lang="en">
       <GoogleTagManager gtmId={gtmID} />
       <head>
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Sofia&display=swap"
+        />
         <Script
           id="gtm-script"
           src={`https://www.googletagmanager.com/gtag/js?id=${gtmID}`}

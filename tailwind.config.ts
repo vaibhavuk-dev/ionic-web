@@ -8,6 +8,9 @@ module.exports = withMT({
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sofia: ['Alex Brush', 'cursive'],
+      },
       colors: {
         primary: "#0556A7",
         secondary: "#74AD19",
@@ -18,6 +21,7 @@ module.exports = withMT({
         textcolorDark: "#111111",
         bgLogoBlue: "#edfaff",
         complementary: "#fb8604",
+        headlineColor: "#0556A7",
         'blueb': {
           50: '#f0f7ff',
           100: '#e0eefe',

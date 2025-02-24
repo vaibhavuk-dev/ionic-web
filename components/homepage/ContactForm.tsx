@@ -158,7 +158,7 @@ export default function ContactForm() {
 
     return (
         <div className="w-full relative bg-white mx-auto  container" id="contact-form">
-            <h1 className="text-4xl font-bold text-textcolorDark mb-8">Get in touch with our expert team</h1>
+            <h1 className="text-4xl font-bold text-headlineColor mb-8">Get in touch with our expert team</h1>
 
             <div className="w-full flex flex-col lg:flex-row gap-12">
                 {/* Contact Methods */}

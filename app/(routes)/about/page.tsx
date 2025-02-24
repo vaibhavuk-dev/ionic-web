@@ -123,7 +123,7 @@ export default function AboutPage() {
                             </div>
 
                             {/* Main Heading */}
-                            <h2 className="text-3xl md:text-4xl font-bold text-textColorDark leading-tight mb-4">
+                            <h2 className="text-3xl md:text-4xl font-bold text-headlineColor leading-tight mb-4">
                                 Our Philosophy
                             </h2>
 
@@ -201,7 +201,7 @@ export default function AboutPage() {
                             </div>
 
                             {/* Main Heading */}
-                            <h2 className="text-3xl md:text-4xl font-bold text-textColorDark leading-tight mb-4">
+                            <h2 className="text-3xl md:text-4xl font-bold text-headlineColor leading-tight mb-4">
                                 Our Solution
                             </h2>
 

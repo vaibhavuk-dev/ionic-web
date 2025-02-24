@@ -37,35 +37,35 @@ export default async function Home() {
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 5.0 }} className="relative w-full h-full flex flex-col justify-between">
+                    transition={{ duration: 1.0 }} className="relative w-full h-full flex flex-col justify-between">
                     {/* Centered Text Content */}
                     <div className="flex-1 flex flex-col items-center justify-center px-4 md:px-6 pt-20">
                         <div className="max-w-4xl w-full space-y-8">
                             {/* Headlines */}
                             <div className="space-y-4 text-center">
                                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
-                                    We Treat Water - Differently
+                                    “Clear & Clean Solution<br></br>For Troubled Water”
                                 </h1>
                                 <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold text-white">
-                                    “Clear solution for troubled waters”
+                                    We Treat Water - Differently
                                 </h2>
                             </div>
 
                             {/* Poem */}
                             <div className="space-y-3">
-                                <p className="font-light text-white text-base md:text-lg lg:text-xl text-center italic">
+                                <p className="font-sofia font-light text-white text-base md:text-lg lg:text-xl text-center italic">
                                     IONIC is our name, Clean water is our flame.
                                 </p>
-                                <p className="font-light text-white text-base md:text-lg lg:text-xl text-center italic">
+                                <p className="font-sofia font-light text-white text-base md:text-lg lg:text-xl text-center italic">
                                     We remove everything from water, Except - Hydrogen and oxygen,
                                 </p>
-                                <p className="font-light text-white text-base md:text-lg lg:text-xl text-center italic">
+                                <p className="font-sofia font-light text-white text-base md:text-lg lg:text-xl text-center italic">
                                     With every drop we treat, We make it even more pure
                                 </p>
-                                <p className="font-light text-white text-base md:text-lg lg:text-xl text-center italic">
+                                <p className="font-sofia font-light text-white text-base md:text-lg lg:text-xl text-center italic">
                                     As we build a sustainable future, We help create a liveable Earth!
                                 </p>
-                                <p className="font-light text-white text-base md:text-lg lg:text-xl text-center italic">
+                                <p className="font-sofia font-light text-white text-base md:text-lg lg:text-xl text-center italic">
                                     So here's to IONIC A beacon of hope, Helping humanity to cope.
                                 </p>
                             </div>
@@ -108,7 +108,7 @@ export default async function Home() {
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 5.0 }}
+                        transition={{ duration: 1.0 }}
                         className="container mx-auto  grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
 
                         {/* Right Column */}
@@ -126,7 +126,7 @@ export default async function Home() {
                             </div>
 
                             {/* Main Heading */}
-                            <h2 className="text-3xl md:text-4xl font-bold text-textColorDark leading-tight mb-4">
+                            <h2 className="text-3xl md:text-4xl font-bold text-headlineColor leading-tight mb-4">
                                 Securing Tomorrow by Saving Water Today
                             </h2>
 
@@ -158,7 +158,7 @@ export default async function Home() {
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 5.0 }}
+                        transition={{ duration: 1.0 }}
                         className="container mx-auto  grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
 
                         {/* Left Colum</section>n */}
@@ -193,7 +193,7 @@ export default async function Home() {
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 5.0 }}
+                transition={{ duration: 1.0 }}
                 className="flex flex-col w-full py-12 gap-16 mx-auto bg-white responsive-padding rounded shadow-md relative">
                 <SolutionsSection />
             </motion.div>
@@ -202,7 +202,7 @@ export default async function Home() {
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 5.0 }}
+                transition={{ duration: 1.0 }}
                 className="flex flex-col w-full py-16 gap-16 mx-auto  bg-blueb-gradient  responsive-padding rounded shadow-md relative">
                 <ClientsSection />
             </motion.div>
@@ -211,7 +211,7 @@ export default async function Home() {
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 5.0 }}
+                transition={{ duration: 1.0 }}
                 className="flex flex-col w-full py-16 gap-16 mx-auto bg-white responsive-padding rounded shadow-md relative">
                 <VisionMissionSection />
             </motion.div>
@@ -232,7 +232,7 @@ export default async function Home() {
                 initial={{ opacity: 1 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 5.0 }}
+                transition={{ duration: 1.0 }}
                 className="flex flex-col w-full py-16 gap-16 mx-auto bg-white responsive-padding rounded shadow-md relative">
                 <hr></hr>
                 <ContactForm />
