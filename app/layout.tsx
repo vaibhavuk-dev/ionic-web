@@ -7,12 +7,9 @@ import Breadcrumb from "@/components/homepage/Breadcrumb";
 import { GoogleTagManager } from "@next/third-parties/google";
 import Script from "next/script";
 import { sanityClient } from "@/lib/sanity";
-<<<<<<< Updated upstream
-=======
 import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 import { cookies } from "next/headers";
 import StickySidebar from "@/components/homepage/StickySidebar";
->>>>>>> Stashed changes
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 const gtmID = process.env.GTM_CONTAINER_ID || "";
@@ -23,11 +20,8 @@ export const metadata: Metadata = {
     "Advanced Engineering Solutions for Water Treatment & Chlorine Dioxide Genrators",
 };
 
-<<<<<<< Updated upstream
-=======
 export const dynamic = "force-dynamic";
 
->>>>>>> Stashed changes
 export default async function RootLayout({
   children,
 }: Readonly<{

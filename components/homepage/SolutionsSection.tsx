@@ -10,16 +10,10 @@ export default function SolutionsSection() {
         sub: "SOLUTIONS",
       },
       icon: <Droplets className="w-6 h-6" />,
-<<<<<<< Updated upstream
-      image: "/homepage/oursolutions/ionicwatertreatment.png",
-      description: "Ionic can reduce Capex through intelligent and innovative solutions that reduce water consumption, reduce power, reduce chemicals, reduce consumables and maintenance, increase productivity and reduce waste discharge. Our water treatment solutions are based on value engineering and designed to reduce life cycle cost.",
-      imageAlt: "Water treatment facility"
-=======
       image: "/homepage/oursolutions/ionicwastewater.png",
       description:
         "Ionic can reduce Capex through intelligent and innovative solutions that reduce water consumption, reduce power, reduce chemicals, reduce consumables and maintenance, increase productivity and reduce waste discharge. Our water treatment solutions are based on value engineering and designed to reduce life cycle cost.",
       imageAlt: "Water treatment facility",
->>>>>>> Stashed changes
     },
     {
       id: "waste-water",
@@ -28,16 +22,10 @@ export default function SolutionsSection() {
         sub: "TREATMENT",
       },
       icon: <Waves className="w-6 h-6" />,
-<<<<<<< Updated upstream
-      image: "/homepage/oursolutions/ionicwastewater.png",
-      description: "Treating waste water is more difficult than treating water, whether it is sewage water or industrial waste water. Our experience in dealing with diverse industries makes it possible to offer techno-economically optimum solutions for treating industrial waste water.",
-      imageAlt: "Waste water samples"
-=======
       image: "/homepage/oursolutions/ionicwatertreatment.png",
       description:
         "Treating waste water is more difficult than treating water, whether it is sewage water or industrial waste water. Our experience in dealing with diverse industries makes it possible to offer techno-economically optimum solutions for treating industrial waste water.",
       imageAlt: "Waste water samples",
->>>>>>> Stashed changes
     },
     {
       id: "integrated",

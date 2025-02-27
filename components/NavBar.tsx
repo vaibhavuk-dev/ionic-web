@@ -127,26 +127,16 @@ export default function NavBar({
         >
           <Link href={"/"}>
             <img
-<<<<<<< Updated upstream
-              src={`${isWhite ? "/logo/ionic_logo.gif" : "/logo/ionic_logo_white.gif"}`}
-              className="h-24"
-=======
               src={`${isWhite ? "/logo/ionic_logo.png" : "/logo/ionic_logo_white.png"}`}
               className="h-20"
->>>>>>> Stashed changes
               onMouseEnter={() => setSelectedMenu("")}
             />
           </Link>
 
           <div
-<<<<<<< Updated upstream
-            className={` py-6 flex ${isWhite ? `text-black` : `text-white`
-              } basic-transition text-lg font-normal  h-full gap-6`}
-=======
             className={` py-3 flex ${
               isWhite ? `text-black` : `text-white`
             } basic-transition text-lg font-normal  h-full gap-6`}
->>>>>>> Stashed changes
           >
             {navItems.map((item) => (
               <Link
