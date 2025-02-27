@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="flex flex-col justify-between items-top">
         <div className="container mx-auto flex flex-col lg:flex-row gap-6 items-center justify-between w-full ">
 
-          <img src="/logo/ionic_logo.gif" alt="Logo" className="h-24" />
+          <img src="/logo/ionic_logo.png" alt="Logo" className="h-24" />
 
           <div>
             <p className='text-center py-2'><b>Email:</b> <br /> contact@ionic.co.in / support@ionic.co.in</p>
