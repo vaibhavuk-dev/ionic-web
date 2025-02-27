@@ -1,12 +1,6 @@
-import Footer from "@/components/Footer";
-import NavBar from "@/components/NavBar";
-import BlogArticlesGrid from "@/components/homepage/BlogArticlesGrid";
 import ClientsSection from "@/components/homepage/ClientsSection";
 import ContactForm from "@/components/homepage/ContactForm";
-import NewsArticlesGrid from "@/components/homepage/NewsArticlesGrid";
 import SolutionsSection from "@/components/homepage/SolutionsSection";
-import StickySidebar from "@/components/homepage/StickySidebar";
-import Testimonials from "@/components/homepage/Testimonials";
 import VisionMissionSection from "@/components/homepage/VisionMissionSection";
 import Link from "next/link";
 import * as motion from "motion/react-client";
