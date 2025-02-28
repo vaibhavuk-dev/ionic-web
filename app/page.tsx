@@ -112,8 +112,8 @@ export default async function Home() {
           >
             {/* Right Column */}
             <img
-              className="w-full rounded-lg h-2/3 md:h-2/3 object-contain"
-              src="/homepage/ionicglobe.png"
+              className="w-full rounded-lg object-contain"
+              src="/homepage/ionicglobe.jpg"
               alt="Descriptive Alt Text"
             />
 

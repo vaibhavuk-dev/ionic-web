@@ -299,20 +299,12 @@ export default function AboutPage() {
         <section className="bg-white my-16">
           <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             {/* Right Column */}
-            <div className="w-full grid grid-cols-1 md:grid-cols-2 items-center gap-3">
-              {carouselImages?.map(
-                (image: string, index: number) =>
-                  index < 6 && (
                     <img
-                      key={index}
-                      src={image}
-                      alt={`Image ${index + 1}`}
+                      src={"/about/solutions_collage.png"}
                       className="bg-secondaryLight rounded-lg object-cover"
                     />
-                  ),
-              )}
               {/* <img className="bg-secondaryLight rounded-lg h-64 md:h-full object-cover" src="/blogs/blog2.png" alt="Descriptive Alt Text" /> */}
-            </div>
+            
 
             {/* Left Column */}
             <div>
