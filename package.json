@@ -23,6 +23,7 @@
     "next": "^15.1.4",
     "react": "^18",
     "react-dom": "^18",
+    "supabase": "^2.19.7",
     "swiper": "^11.2.1"
   },
   "devDependencies": {
