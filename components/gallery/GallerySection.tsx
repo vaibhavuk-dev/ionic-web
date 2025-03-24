@@ -141,7 +141,7 @@ export default function GallerySection() {
                 >
                   <div className="relative h-64">
                     <img
-                    src="/logo/ionic_logo.gif"
+                    src="/logo/ionic_logo.png"
                     className='absolute bottom-2 right-2 h-10 bg-white rounded p-2'
                     />
                     <img

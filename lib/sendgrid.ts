@@ -70,7 +70,7 @@ export async function SendGridEmail(data: any) {
                     <body>
                         <div class="container">
                             <div class="header">
-                                <img src="https://www.ionic.co.in/logo/ionic_logo_white.gif" alt="Ionic Engineering" class="logo">
+                                <img src="https://www.ionic.co.in/logo/ionic_logo_white.png" alt="Ionic Engineering" class="logo">
                                 <h1>New Contact Form Submission</h1>
                             </div>
                             
@@ -139,7 +139,7 @@ export async function SendGridEmail(data: any) {
                     <body>
                         <div class="container">
                             <div class="header">
-                                <img src="https://www.ionic.co.in/logo/ionic_logo_white.gif" alt="Ionic Engineering" class="logo">
+                                <img src="https://www.ionic.co.in/logo/ionic_logo_white.png" alt="Ionic Engineering" class="logo">
                                 <h1>New Appointment Request</h1>
                             </div>
                             
@@ -210,7 +210,7 @@ export async function SendGridEmail(data: any) {
                     <body>
                         <div class="container">
                             <div class="header">
-                                <img src="https://www.ionic.co.in/logo/ionic_logo_white.gif" alt="Ionic Engineering" class="logo">
+                                <img src="https://www.ionic.co.in/logo/ionic_logo_white.png" alt="Ionic Engineering" class="logo">
                                 <h1>New Brochure Download</h1>
                             </div>
                             
@@ -382,7 +382,7 @@ export async function SendGridEmail(data: any) {
 //             <html>
 //             <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto;">
 //                 <div style="padding: 20px;">
-//                     <img src="https://www.ionic.co.in/logo/ionic_logo.gif" alt="Ionic Engineering Technology Logo" style="max-width: 200px; margin-bottom: 20px;">
+//                     <img src="https://www.ionic.co.in/logo/ionic_logo.png" alt="Ionic Engineering Technology Logo" style="max-width: 200px; margin-bottom: 20px;">
                     
 //                     <h2 style="color: #003366;">Thank You for Your Interest</h2>
                     
