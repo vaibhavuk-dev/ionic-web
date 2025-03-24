@@ -1,16 +1,17 @@
 "use client";
-import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 type PostData = {
     post_title: string;
     post_slug: string;
     post_image: string;
+    post_description: string;
 };
 
 type DataType = PostData[];
 
-export default function ExpertReviews({ data }: { data: DataType }) {
+export default function BlogsGrid({ data }: { data: DataType }) {
     const [isLarge, setIsLarge] = useState(false);
     const [isMedium, setIsMedium] = useState(false);
 
@@ -54,29 +55,29 @@ export default function ExpertReviews({ data }: { data: DataType }) {
             <div className=" w-full overflow-hidden grid grid-cols-3 gap-10">
                 {data &&
                     data.map((post, index) => (
-                        <a
-                            key={index}
-                            style={{ translate: `${-100 * imageIndex}%` }}
-                            className={`w-full flex flex-col transition-all bg-primaryLight rounded-xl shadow-md basic-transition   gap-2  flex-shrink-0 flex-grow-0 justify-start cursor-pointer`}
-                            // href={post.post_slug}
-                            target="_blank"
-                        >
-                            <div className="relative">
-                                <img
-                                    src={post.post_image ? post.post_image : ""}
-                                    alt="postimgae"
-                                    className=" w-full h-52 object-cover rounded-xl"
-                                />
-                                <p className="absolute -bottom-3 left-2 bg-white py-1 px-2 rounded-lg text-xs">Blog</p>
-                            </div>
-                            <div className="flex flex-col w-full pt-2 pb-3 px-4">
-                                <h3 className="font-semibold text-primary text-xl">
-                                    {post.post_title}
-                                </h3>
-                                <p className="mt-2 font-light text-base">The desalination plant Fluence provided via a BOOT contract supplies fresh water for a resort complex.</p>
+                        <Link href={post.post_slug} target="_blank">
+                            <div
+                                key={index}
+                                style={{ translate: `${-100 * imageIndex}%` }}
+                                className={`w-full flex flex-col transition-all bg-primaryLight rounded-xl shadow-md basic-transition   gap-2  flex-shrink-0 flex-grow-0 justify-start cursor-pointer`}
+                            >
+                                <div className="relative">
+                                    <img
+                                        src={post.post_image ? post.post_image : ""}
+                                        alt="postimgae"
+                                        className=" w-full h-52 object-cover rounded-xl"
+                                    />
+                                    <p className="absolute -bottom-3 left-2 bg-white py-1 px-2 rounded-lg text-xs">Blog</p>
+                                </div>
+                                <div className="flex flex-col w-full pt-2 pb-3 px-4">
+                                    <h3 className="font-semibold text-primary text-xl">
+                                        {post.post_title}
+                                    </h3>
+                                    <p className="mt-2 font-light text-base">{post.post_description}</p>
 
+                                </div>
                             </div>
-                        </a>
+                        </Link>
                     ))}
             </div>
             {/* {data.length > 4 ? (

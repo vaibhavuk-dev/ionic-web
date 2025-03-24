@@ -30,32 +30,6 @@ export default function NavBar({
 
   const isWhite = shouldWhite || pathname == "/";
 
-  const blogData = [
-    {
-      post_title: "Scientist found new way to treat Waste Water",
-      post_slug: "/blogs/1",
-      post_image: "/blogs/blog1.png",
-    },
-    {
-      post_title: "Why Municipal Wastewater Treatment Is Important?",
-      post_slug: "/blogs/1",
-      post_image: "/blogs/blog4.png",
-    },
-  ];
-
-  const newsData = [
-    {
-      post_title: "Decentralized Wastewater Treatment for a Chinese Village",
-      post_slug: "/news/1",
-      post_image: "/casestudy/cs2.png",
-    },
-    {
-      post_title: "Environment-Friendly Waste Water Treatment | Case Study",
-      post_slug: "/news/1",
-      post_image: "/casestudy/cs3.png",
-    },
-  ];
-
   useEffect(() => {
     const handleScroll = async () => {
       const scrollY = window.scrollY;
@@ -75,8 +49,8 @@ export default function NavBar({
     { label: "Solutions", route: "/solutions/pharma-industry-solutions" },
     { label: "Products", route: "/products" },
     { label: "Services", route: "/services" },
-    { label: "Gallery", route: "/gallery" },
-    { label: "Contact us", route: "/contact" },
+    { label: "Blogs", route: "/blogs" },
+    { label: "Gallery", route: "/gallery" }
   ];
 
   const productItems: {
@@ -118,7 +92,6 @@ export default function NavBar({
     <nav
       className={`sticky z-20 top-0 left-0 right-0  flex-col backdrop-blur-sm ${isScrolled ? "drop-shadow-xl" : ""} basic-transition`}
     >
-      <MaintenanceBanner />
       <div
         className={`hidden lg:flex w-full ${isWhite ? "bg-white" : "bg-blueb-gradient"} items-center justify-center`}
       >
@@ -421,7 +394,7 @@ export default function NavBar({
           </div>
         )}
 
-      {false && selectedMenu === "News & Blogs" && (
+      {selectedMenu === "News & Blogs" && (
         <div
           className="bg-white basic-transition"
           onMouseEnter={() => setSelectedMenu("News & Blogs")}
@@ -469,7 +442,7 @@ export default function NavBar({
                   </div>
                 )}
 
-                {selectedCategory === "Blogs" && (
+                {/* {selectedCategory === "Blogs" && (
                   <div>
                     <p className="text-xl font-semibold mb-4">Blogs</p>
                     <BlogsCarousalNavBar data={blogData} />
@@ -481,7 +454,7 @@ export default function NavBar({
                     <p className="text-xl font-semibold mb-4">News</p>
                     <BlogsCarousalNavBar data={newsData} />
                   </div>
-                )}
+                )} */}
               </div>
             </div>
           </div>
