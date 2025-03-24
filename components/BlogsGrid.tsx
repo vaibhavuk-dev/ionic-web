@@ -55,7 +55,7 @@ export default function BlogsGrid({ data }: { data: DataType }) {
             <div className=" w-full overflow-hidden grid grid-cols-3 gap-10">
                 {data &&
                     data.map((post, index) => (
-                        <Link href={post.post_slug} target="_blank">
+                        <Link href={post.post_slug}>
                             <div
                                 key={index}
                                 style={{ translate: `${-100 * imageIndex}%` }}
@@ -70,12 +70,12 @@ export default function BlogsGrid({ data }: { data: DataType }) {
                                     <p className="absolute -bottom-3 left-2 bg-white py-1 px-2 rounded-lg text-xs">Blog</p>
                                 </div>
                                 <div className="flex flex-col w-full pt-2 pb-3 px-4">
-                                    <h3 className="font-semibold text-primary text-xl">
+                                    <h3 className="font-semibold text-primary text-xl line-clamp-3  min-h-[4.5rem]">
                                         {post.post_title}
                                     </h3>
-                                    <p className="mt-2 font-light text-base">{post.post_description}</p>
-
+                                    <p className="mt-2 font-light text-base line-clamp-3">{post.post_description}</p>
                                 </div>
+
                             </div>
                         </Link>
                     ))}

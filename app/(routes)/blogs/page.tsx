@@ -9,7 +9,7 @@ import { notFound } from "next/navigation";
 export default async function BlogsPage() {
 
     const query = `
-    *[_type == "blog"]{
+    *[_type == "blog"] | order(publishedAt desc) {
       title,
       slug,
       author,
