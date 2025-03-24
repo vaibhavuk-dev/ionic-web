@@ -259,10 +259,14 @@ export async function SendGridEmail(data: any) {
     };
 
     try {
+        const submissionId = crypto.randomUUID(); // Generate unique ID
+        const createdAt = new Date().toISOString(); // Store timestamp once
+    
         // Store in Supabase first
         const { error: dbError } = await supabase
             .from('contact_submissions')
             .insert({
+                unique_id: submissionId,  // Store unique ID
                 type: data.type,
                 first_name: data.firstName,
                 last_name: data.lastName,
@@ -275,52 +279,62 @@ export async function SendGridEmail(data: any) {
                 appointment_time: data.type === 'appointment' ? data.time : null,
                 brochure_details: data.type === 'download' ? data.brochure : null,
                 email_subject: subject,
-                email_status: 'pending' as const,
-                created_at: new Date().toISOString()
+                email_status: 'pending',
+                created_at: createdAt
             });
-
+    
         if (dbError) {
             console.error('Supabase Insert Error:', dbError);
+            return { success: false, error: dbError };
         }
+    
+        try {
+            // Send email
+            await sendEmail(msg);
 
-        // Send email
-        await sendEmail(msg);
-
-        // Update status to sent
-        if (!dbError) {
-            const { error: updateError } = await supabase
+            console.log("Email sent successfully", submissionId);
+    
+            // Update status to 'sent' if email succeeds
+            const { data: updateData, error: updateError } = await supabase
                 .from('contact_submissions')
                 .update({ 
                     email_status: 'sent',
                     email_sent_at: new Date().toISOString()
                 })
-                .eq('email', data.email)
-                .eq('created_at', new Date().toISOString());
+                .eq('unique_id', submissionId)  // Use unique ID for update
+                .select() // Use `.select()` to check what got updated
+
+            console.log("Supabase Update Response:", updateData, submissionId); // Log result
 
             if (updateError) {
                 console.error('Supabase Update Error:', updateError);
             }
+    
+            return { success: true };
+    
+        } catch (emailError) {
+            console.error('AWS SES Error:', emailError);
+    
+            // Update status to 'failed' if email sending fails
+            const { error: updateError } = await supabase
+                .from('contact_submissions')
+                .update({ 
+                    email_status: 'failed',
+                    error_message: emailError instanceof Error ? emailError.message : 'Unknown error'
+                })
+                .eq('id', submissionId);  // Use unique ID for update
+    
+            if (updateError) {
+                console.error('Supabase Update Error:', updateError);
+            }
+    
+            throw new Error('Failed to send email');
         }
-
-        return { success: true };
     } catch (error) {
-        // Update status to failed if email sending fails
-        const { error: updateError } = await supabase
-            .from('contact_submissions')
-            .update({ 
-                email_status: 'failed',
-                error_message: error instanceof Error ? error.message : 'Unknown error'
-            })
-            .eq('email', data.email)
-            .eq('created_at', new Date().toISOString());
-
-        if (updateError) {
-            console.error('Supabase Update Error:', updateError);
-        }
-
-        console.error('AWS SES Error:', error);
-        throw new Error('Failed to send email');
+        console.error('Unexpected Error:', error);
+        return { success: false, error };
     }
+    
 }
 
 // export async function SendGridEmailToUser(data: DownloadBrochure) {
