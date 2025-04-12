@@ -10,6 +10,7 @@ import { sanityClient } from "@/lib/sanity";
 import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 import { cookies } from "next/headers";
 import StickySidebar from "@/components/homepage/StickySidebar";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 const gtmID = process.env.GTM_CONTAINER_ID || "";
@@ -91,6 +92,7 @@ export default async function RootLayout({
         <StickySidebar />
         <main>{children}</main>
         <Footer />
+        <SpeedInsights />
       </body>
     </html>
   );
