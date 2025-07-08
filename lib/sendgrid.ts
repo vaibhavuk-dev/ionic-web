@@ -253,7 +253,7 @@ export async function SendGridEmail(data: any) {
     }
 
     const msg = {
-        to: 'thisisvuk1@gmail.com',
+        to: ['support@ionic.co.in', 'contact@ionic.co.in'],
         subject,
         body
     };
@@ -285,7 +285,7 @@ export async function SendGridEmail(data: any) {
     
         if (dbError) {
             console.error('Supabase Insert Error:', dbError);
-            return { success: false, error: dbError };
+            // return { success: false, error: dbError };
         }
     
         try {
