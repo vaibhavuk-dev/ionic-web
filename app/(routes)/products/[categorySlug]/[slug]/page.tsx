@@ -2,6 +2,7 @@
 import Breadcrumb from "@/components/homepage/Breadcrumb";
 import ContactForm from "@/components/homepage/ContactForm";
 import ProductPage from "@/components/products/ProductPage";
+import ProductPageTest from "@/components/products/ProductPageTest";
 import { sanityClient } from "@/lib/sanity";
 import { notFound } from "next/navigation";
 
@@ -52,9 +53,9 @@ export default async function ProductsPage({
       <>
         <Breadcrumb />
 
-        <ProductPage productData={productData} />
+        {slug == "genox-smart-digital-chlorine-dioxide-generator" ? <ProductPageTest /> : <ProductPage productData={productData} />}
 
-        <div className="flex flex-col w-full py-16 gap-16 mx-auto bg-white responsive-padding rounded shadow-md relative">
+        <div className="flex flex-col w-full mt-10 gap-6 mx-auto bg-white responsive-padding rounded shadow-md relative">
 
           {/* <ProductsGrid type="carousel" products={products}/> */}
           <hr></hr>
