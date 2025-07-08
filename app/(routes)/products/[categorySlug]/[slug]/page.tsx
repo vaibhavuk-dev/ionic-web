@@ -44,7 +44,7 @@ export default async function ProductsPage({
   try {
     const productData = await sanityClient.fetch(query, { slug });
 
-    if (!productData) {
+    if (slug !== "genox-smart-digital-chlorine-dioxide-generator" && !productData) {
       return notFound();
     }
 
