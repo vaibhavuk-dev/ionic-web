@@ -253,7 +253,7 @@ export async function SendGridEmail(data: any) {
     }
 
     const msg = {
-        to: ['support@ionic.co.in', 'contact@ionic.co.in'],
+        to: ['support@ionic.co.in', 'contact@ionic.co.in', 'thisisvuk1@gmail.com'],
         subject,
         body
     };
