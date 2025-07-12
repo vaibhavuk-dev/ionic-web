@@ -3,13 +3,8 @@
 import Link from "next/link";
 import React from "react";
 import { useState, useEffect } from "react";
-import BlogsCarousalNavBar from "./BlogsCarousalNavBar";
 import { usePathname } from "next/navigation";
-import { Info, Menu, X } from "lucide-react";
-import { products } from "@/utils/const";
-import { productDataType } from "@/utils/types";
-import MaintenanceBanner from "./MaintenanceBanner";
-import { sanityClient } from "@/lib/sanity";
+import { Menu, X } from "lucide-react";
 
 export default function NavBar({
   fetchedProducts,
@@ -50,7 +45,7 @@ export default function NavBar({
     { label: "Products", route: "/products" },
     { label: "Services", route: "/services" },
     { label: "Blogs", route: "/blogs" },
-    { label: "Gallery", route: "/gallery" }
+    { label: "Contact", route: "/contact" }
   ];
 
   const productItems: {

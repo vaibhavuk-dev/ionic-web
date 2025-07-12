@@ -55,7 +55,7 @@ export default async function ProductsPage({
 
         {slug == "genox-smart-digital-chlorine-dioxide-generator" ? <ProductPageTest /> : <ProductPage productData={productData} />}
 
-        <div className="flex flex-col w-full mt-10 gap-6 mx-auto bg-white responsive-padding rounded shadow-md relative">
+        <div className="flex flex-col w-full mb-12 gap-6 mx-auto bg-white responsive-padding rounded shadow-md relative">
 
           {/* <ProductsGrid type="carousel" products={products}/> */}
           <hr></hr>

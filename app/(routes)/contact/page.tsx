@@ -28,26 +28,59 @@ export default function ContactPage() {
                     </h2>
                 </div>
             </div>
-
             <div className="mt-12 mx-auto responsive-padding">
-                <div className="container lg:flex gap-10 mx-auto">
-                    <div className="w-full">
-                        <p className="text-2xl lg:text-4xl font-bold text-blueb-700">How to Reach Us</p>
-                        <p className="text-md w-fit  mt-3 text-justify">
-                            <span className="font-semibold">By Metro:</span><br />
-                            The nearest metro station is PCMC Metro Station, located just 500 meters away.
-                            <br /><br />
-                            <span className="font-semibold">By Train:</span><br />
-                            If you are traveling by train, the Pune Railway Station is the closest major station, providing convenient access to our location.
-                            <br /><br />
-                            <span className="font-semibold">By Air:</span><br />
-                            For those flying in, Pune International Airport is the nearest airport, making it easy to reach us by taxi or rideshare.
-                        </p>
-                    </div>
-                    {/* <div className="w-full">
-                        <img src="/logo/ionic_logo.png" alt="" className="object-contain w-full p-16 rounded-lg" />
-                        <p className="w-full text-center mt-2 text-sm">Image showing location of metro station and office</p>
-                    </div> */}
+            <p className="text-2xl lg:text-4xl font-bold text-blueb-700">How to Reach Us</p>
+            </div>
+            
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 mx-auto responsive-padding mt-12 mb-4">
+                <div className="bg-white rounded shadow-md p-5">
+                    <img src="/transports/metro.webp" className="w-full h-48 object-cover" alt="By Metro" />
+                    <p className="text-2xl font-bold text-blueb-700 mt-2">By Metro</p>
+                    <p className="text-md mt-3">
+                        The nearest metro station is PCMC Metro Station, located just 500 meters away.
+                        <br /><br />
+                        1. From PCMC Metro Station, take the exit towards the service road.
+                        <br />
+                        2. Turn left and walk for 300 meters.
+                        <br />  
+                        3. Turn right and walk for 150 meters.
+                        <br />
+                        4. Our office is located on the left side of the road.
+                    </p>
+                </div>
+                <div className="bg-white rounded shadow-md p-5">
+                    <img src="/transports/railway.avif" className="w-full h-48 object-cover" alt="By Train" />
+                    <p className="text-2xl font-bold text-blueb-700 mt-2">By Train</p>
+                    <p className="text-md mt-3">
+                        If you are traveling by train, the Pune Railway Station is the closest major station.
+                        <br /><br />
+                        1. From Pune Railway Station, hire a cab and drive to the PCMC Metro Station.
+                        <br />
+                        2. From PCMC Metro Station, take the exit towards the service road.
+                        <br />
+                        3. Turn left and walk for 300 meters.
+                        <br />
+                        4. Turn right and walk for 150 meters.
+                        <br />
+                        5. Our office is located on the left side of the road.
+                    </p>
+                </div>
+                <div className="bg-white rounded shadow-md p-5">
+                    <img src="/transports/airport.jpeg" className="w-full h-48 object-cover" alt="By Air" />
+                    <p className="text-2xl font-bold text-blueb-700 mt-2">By Air</p>
+                    <p className="text-md mt-3">
+                        The nearest airport is Pune International Airport, located 20 kilometers from our office.
+                        <br /><br />
+                        1. From Pune International Airport, hire a cab and drive to the PCMC Metro Station.
+                        <br />
+                        2. From PCMC Metro Station, take the exit towards the service road.
+                        <br />
+                        3. Turn left and walk for 300 meters.
+                        <br />
+                        4. Turn right and walk for 150 meters.
+                        <br />
+                        5. Our office is located on the left side of the road.
+                    </p>
                 </div>
             </div>
 
