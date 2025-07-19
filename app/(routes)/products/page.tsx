@@ -166,7 +166,7 @@ export default function ProductsPage() {
           handleCompanySelect={handleCompanySelect}
           handleCategorySelect={handleCategorySelect}
         />
-        {selectedCompany?.name?.includes("Ionic") ? (
+        {/* {selectedCompany?.name?.includes("Ionic") ? (
           <div className="flex py-6 justify-between gap-3 bg-white">
             <ZoomableImage
               src="/products/products_ppt_1.jpeg"
@@ -179,7 +179,7 @@ export default function ProductsPage() {
           </div>
         ) : (
           <></>
-        )}
+        )} */}
         <ProductsGrid
           products={products?.filter(
             (product: any) =>

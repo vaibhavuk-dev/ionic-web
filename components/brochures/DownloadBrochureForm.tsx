@@ -57,12 +57,17 @@ const DownloadBrochureForm = ({ isOpen, onClose, brochureInfo }: any) => {
       });
 
       // Trigger the download after successful email
-      const link = document.createElement('a');
-      link.href = `/brochuresp/pdfs/${brochureInfo.pdf}`;
-      link.download = brochureInfo.name;
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
+      // const link = document.createElement('a');
+      // link.href = brochureInfo.pdf?.includes('sanity') ? brochureInfo.pdf : `/brochuresp/pdfs/${brochureInfo.pdf}`;
+      // link.download = brochureInfo.name;
+      // document.body.appendChild(link);
+      // link.click();
+      // document.body.removeChild(link);
+
+      const pdfUrl = brochureInfo.pdf?.includes('sanity')
+        ? brochureInfo.pdf
+        : `/brochuresp/pdfs/${brochureInfo.pdf}`;
+      window.open(pdfUrl, '_blank');
 
       // Reset form
       setFormData({
@@ -197,8 +202,8 @@ const DownloadBrochureForm = ({ isOpen, onClose, brochureInfo }: any) => {
             {submitStatus.message && (
               <div
                 className={`p-4 rounded-lg ${submitStatus.type === 'success'
-                    ? 'bg-green-100 text-green-700'
-                    : 'bg-red-100 text-red-700'
+                  ? 'bg-green-100 text-green-700'
+                  : 'bg-red-100 text-red-700'
                   }`}
               >
                 {submitStatus.message}

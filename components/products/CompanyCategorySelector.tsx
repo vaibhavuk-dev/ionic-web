@@ -33,7 +33,7 @@ export default function CompanyCategorySelector({ companies, categories, selecte
         ))}
       </div>
 
-      {selectedCompany && (
+      {selectedCompany && categories?.filter((category: any) => category?.company?.name == selectedCompany?.name).length > 1 && (
         <div>
           <h3 className="text-xl font-semibold mb-4">
             Select Categories

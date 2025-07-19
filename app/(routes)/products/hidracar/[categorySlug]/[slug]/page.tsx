@@ -36,11 +36,23 @@ export default async function ProductsPage({
    sections[]{
      title,
      content
-   }
+   },
+   brochures[]{
+     name,
+     category,
+     pdf{
+       asset->{
+       _id,
+       url
+       }
+    }
+  }
  }`;
 
   try {
     const productData = await sanityClient.fetch(query, { slug });
+
+    console.log(productData);
 
     if (!productData) {
       return notFound();

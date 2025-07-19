@@ -8,6 +8,8 @@ const SampleImageComponent = ({value, isInline}: any) => {
   return (
     <img
       src={urlBuilder()
+        .projectId(process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || '')
+        .dataset(process.env.NEXT_PUBLIC_SANITY_DATASET || 'production')
         .image(value)
         .width(isInline ? 100 : 800)
         .fit('max')

@@ -11,9 +11,9 @@ import {
     Handshake
 } from 'lucide-react';
 import BlockRenderer from '../BlockRenderer';
-import DownloadBrochureForm from '../brochures/DownloadBrochureForm';
 import { productJson } from './data';
 import ClientsSection from '../homepage/ClientsSection';
+import DownloadBrochureForm from '../brochures/DownloadBrochureForm';
 
 function renderIcon(title: string): React.ReactNode {
     if (title?.toLowerCase()?.includes("application")) {
@@ -69,7 +69,7 @@ export default function ProductPageTest() {
                     <p className="text-gray-700 leading-relaxed mb-6 text-lg">
                         {productJson.description}
                     </p>
-                    <div className="flex flex-wrap gap-4">
+                    {/* <div className="flex flex-wrap gap-4">
                         <button
                             onClick={() => setSelectedBrochure({ name: productJson.name, category: "Waste Water", pdf: productJson.actions[0].href || "" })}
                             className="bg-blue-600 text-white px-7 py-2.5 rounded-lg shadow hover:bg-blue-700 transition-all font-semibold text-base"
@@ -82,7 +82,7 @@ export default function ProductPageTest() {
                         >
                             {productJson.actions[1].label}
                         </button>
-                    </div>
+                    </div> */}
                 </div>
             </div>
 
